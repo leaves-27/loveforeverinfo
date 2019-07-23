@@ -1,0 +1,102 @@
+page {
+    background-color: #F3F3F3;
+}
+.my-info{
+    height: 315rpx;
+    background-image: linear-gradient(-164deg, rgba(243,59,61,0.50) 100%, rgba(240,60,63,0.00) 100%);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+}
+.my-info_main{
+    flex: 1;
+    display: flex;
+    box-sizing: border-box;
+}
+.my-info_bar{
+    height: 88rpx;
+    line-height: 88rpx;
+    display: block;
+    background-color: #333333;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.main_main{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.main_bar{
+    width: 88rpx;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 88rpx;
+    height: 88rpx;
+}
+.private-text{
+    flex: 1;
+    padding-left: 20rpx;
+}
+
+.name{}
+.phone{
+}
+.qr{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.score{
+    margin-right: 50rpx;
+}
+
+.order-status{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200rpx;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    margin-bottom: 5px;
+}
+.order-status_item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item_icon{
+    width: 40rpx;
+    height: 40rpx;
+    margin-bottom: 20rpx;
+}
+.item_text{
+
+}
+.my-adress{
+    height: 100rpx;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.my-adress_icon{
+    width: 40rpx;
+    height: 40rpx;
+}
+.my-adress_desc{
+    margin-left: 20rpx;
+}

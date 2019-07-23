@@ -1,6 +1,4 @@
 {
-  "usingComponents": {},
-  "window": {
-    "backgroundColor": "#F3F3F3"
-  }
+  "navigationBarTitleText": "查看启动日志",
+  "usingComponents": {}
 }

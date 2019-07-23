@@ -1,52 +1,8 @@
-/**index.wxss**/
-.my-info{
-    width: 100%;
-    height: 315rpx;
-    background-image: linear-gradient(-164deg, rgba(243,59,61,0.50) 100%, rgba(240,60,63,0.00) 100%);
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
 }
-.my-info_main{
-    flex: 1;
-    display: flex;
-    box-sizing: border-box;
+.log-item {
+  margin: 10rpx;
 }
-.my-info_bar{
-    height: 88rpx;
-}
-
-.main_main{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-}
-.main_bar{
-    width: 88rpx;
-}
-
-.logo{
-    width: 88rpx;
-    height: 88rpx;
-}
-.private-text{
-    flex: 1;
-}
-
-.name{}
-.phone{}
-.qr{}
-
-.score{}
-
-.order-status{
-    background-color: #FFFFFF;
-}
-.my-adress{
-    background-color: #FFFFFF;
-    margin-top: 5px;
-}
-
-.my-adress_icon{}
-.my-adress_desc{}

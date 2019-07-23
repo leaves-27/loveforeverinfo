@@ -1,32 +1,6 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="my-info">
-    <view class="my-info_main">
-      <view class="main_main">
-        <image class="logo" src="" />
-        <view class="private-text">
-          <view class="name">{{ name }}</view>
-          <view class="phone">{{ phone }}</view>
-        </view>
-      </view>
-      <view class="main_bar">
-        <image class="qr" src="qrUrl" />
-      </view>
-    </view>
-    <view class="my-info_bar">
-      <view class="score">
-        积分：{{ score }}
-      </view>
-    </view>
-  </view>
-  <view class="order-status" wx:if="orderStatus">
-    <view wx:for="item in orderStatus">
-      <image src="item.iconUrl" />
-      <view>{{ item.name }}</view>
-    </view>
-  </view>
-  <view class="my-adress">
-    <image class="my-adress_icon" src="" />
-    <view class="my-adress_desc">我的地址</view>
-  </view>
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
 </view>
