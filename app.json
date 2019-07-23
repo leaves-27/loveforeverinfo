@@ -11,12 +11,15 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "position": "bottom",
     "list": [{
       "iconPath": "images/icon_my.png",
+      "selectedIconPath": "images/icon_down.png",
       "pagePath": "pages/index/index",
       "text": "喜燕"
     }, {
-      "iconPath": "images/icon_down.png",
+      "iconPath": "images/icon_my.png",
+      "selectedIconPath": "images/icon_down.png",
       "pagePath": "pages/my/my",
       "text": "我的"
     }]
