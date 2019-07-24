@@ -14,6 +14,28 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+const getCurrentRoute = ()=>{
+  let pages = getCurrentPages();
+  let currPage = null;
+  if (pages.length) {
+    currPage = pages[pages.length - 1];
+  }
+  return currPage;
+};
+
+const getQuery = ()=>{
+  const { options = {} } = getCurrentRoute() || {};
+  const query = {};
+  Object.keys(options).map((item)=>{
+    query[`${item.slice(1)}`] = options[item];
+  });
+  return query;
 }
+
+module.exports = {
+  formatTime,
+  getCurrentRoute,
+  getQuery
+}
+
+

@@ -34,7 +34,6 @@ Page({
     })
   },
   goMyOrder($event){
-    console.log('$event:', $event)
     const { item } = $event.currentTarget.dataset;
     const { id } = item;
 

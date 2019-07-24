@@ -1,5 +1,4 @@
-//logs.js
-const util = require('../../utils/util.js')
+import { getQuery } from '../../utils/util.js';
 
 Page({
   data: {
@@ -44,13 +43,13 @@ Page({
     }]
   },
   onLoad: function () {
+    const { id = '0' } = getQuery();
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+      selectedTabId: id
     })
   },
-  tabClick(){
+  tabClick($event){
+    const { item } = $event.currentTarget.dataset;
 
   }
 })

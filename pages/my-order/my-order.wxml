@@ -1,24 +1,25 @@
 <!--logs.wxml-->
 <view class="orders">
   <view class="tabs">
-    <block wx:for="tabs">
+    <block wx:for="{{ tabs }}">
       <view
         wx:if="{{ selectedTabId === item.id }}"
-        class="tab"
+        class="tab tab--selected"
         bind="tabClick">
         {{ item.name }}
+        <view class="line-selected"></view>
       </view>
       <view
+        wx:else
         class="tab"
-        bind="tabClick">
+        bind="tabClick"
+        data="{{ item }}">
         {{ item.name }}
       </view>
-
     </block>
-
   </view>
   <view class="items">
-    <view class="item" wx:for="orders">
+    <view class="item" wx:for="{{ orders }}">
       <view class="item_header">
         <view class="header_main">
           {{ item.time }}

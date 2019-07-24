@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "喜燕",
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "我的订单",
+  "backgroundColor": "#F3F3F3"
 }

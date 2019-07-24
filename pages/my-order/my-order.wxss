@@ -1,8 +1,35 @@
-.log-list {
+.orders{}
+.tabs{
   display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: #FFFFFF;
+  margin-bottom: 24rpx;
+  height: 88rpx;
+  align-items: center;
 }
-.log-item {
-  margin: 10rpx;
+.tab{
+  flex: 1;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #919191;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: normal;
 }
+.tab--selected{
+  font-family: PingFangSC-Regular;
+  font-size: 28px;
+  color: #FE0000;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.line--selected{
+  width: 44rpx;
+  height: 4rpx;
+  background-color: #FE0000;
+}
+.items{}
+.item_header{}
+.item_content{}
+.item_footer{}
