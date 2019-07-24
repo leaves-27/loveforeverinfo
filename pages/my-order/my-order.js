@@ -1,4 +1,5 @@
 import { getQuery } from '../../utils/util.js';
+import getOrders from '../../apis/getOrders.js';
 const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
 
 Page({
@@ -43,14 +44,18 @@ Page({
       deliveryFee: 10
     }]
   },
-  computed: {
-
-  },
   onLoad: function () {
     const { id = '0' } = getQuery();
     this.setData({
       selectedTabId: id
-    })
+    });
+
+    // getOrders(id).then((result)=>{
+    //   const { items = [] } = result;
+    //   this.setData({
+    //     orders: items
+    //   })
+    // });
   },
   tabClick($event){
     const { item = {} } = $event.currentTarget.dataset;
@@ -63,6 +68,6 @@ Page({
 
   },
   goPay(){
-    
+
   }
 })
