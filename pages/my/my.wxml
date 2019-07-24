@@ -10,7 +10,11 @@
         </view>
       </view>
       <view class="main_bar">
-        <image class="qr" src="{{ qrUrl }}" />
+        <image
+          class="qr"
+          src="{{ qrUrl }}"
+          bindtap="goMyQr"
+        />
       </view>
     </view>
     <view class="my-info_bar">

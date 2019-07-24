@@ -1,0 +1,59 @@
+page {
+  background-color: #FF0000;
+}
+.content{
+  margin-top: 100rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.content_header{
+  height: 40rpx;
+  background-color: aqua;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.content_main{
+  padding-top: 60rpx;
+  background-color: #FFFFFF;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-bottom: 50rpx;
+}
+.content_boundary{
+  height: 40rpx;
+  background-color: #F3F3F3;
+}
+.content_footer{
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  text-align: center;
+
+  padding-top: 30rpx;
+  padding-bottom: 60rpx;
+}
+
+.name{
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.qr{
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.userLogo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: -80rpx;
+  z-index: 100;
+  margin-left: -40rpx;
+}
