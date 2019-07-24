@@ -1,10 +1,10 @@
 import qs from 'qs';
-
-const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
+// import getUserInfo from '../../apis/getUserInfo';
+import getUserInfo from '../../mock/getUserInfo';
+import { placeholderUrl } from '../../utils/util';
 
 Page({
   data: {
-    score: 200000,
     orderStatus: [{
       id: '1',
       name: '待付款',
@@ -22,11 +22,12 @@ Page({
       name: '全部',
       iconUrl: placeholderUrl
     }],
-    name: '疯趣的二师兄',
-    phone: '135****8888',
-    qrUrl: placeholderUrl,
-    logoUrl: placeholderUrl,
-    addressIconUrl: placeholderUrl
+    name: '',
+    phone: '',
+    score: 0,
+    qrUrl: '',
+    logoUrl: '',
+    addressIconUrl: ''
   },
   goMyQr() {
     wx.navigateTo({
@@ -44,6 +45,44 @@ Page({
       url: `../my-order/my-order?$${qs.stringify(query)}`
     })
   },
-  onLoad: function () {
+  getUserInfo(){
+    return new Promise(async (resolve, reject)=>{
+      resolve({
+        code: 1,
+        data: {
+          name: '疯趣的二师兄',
+          phone: '135****8888',
+          score: 200000,
+          qrUrl: placeholderUrl,
+          logoUrl: placeholderUrl,
+          addressIconUrl: placeholderUrl
+        }
+      })
+    })
+  },
+  onLoad(){
+    this.getUserInfo().then((result)=>{
+      const { code, data, message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+      const {
+        name,
+        phone,
+        score,
+        qrUrl,
+        logoUrl,
+        addressIconUrl
+      } = data;
+
+      this.setData({
+        name,
+        phone,
+        score,
+        qrUrl,
+        logoUrl,
+        addressIconUrl
+      })
+    })
   },
 })
