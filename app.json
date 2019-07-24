@@ -2,7 +2,8 @@
   "pages": [
     "pages/my/my",
     "pages/index/index",
-    "pages/my-qr/my-qr"
+    "pages/my-qr/my-qr",
+    "pages/my-order/my-order"
   ],
   "window": {
     "backgroundTextStyle": "light",

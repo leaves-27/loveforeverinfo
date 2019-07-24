@@ -24,7 +24,11 @@
     </view>
   </view>
   <view class="order-status" wx:if="{{ orderStatus }}">
-    <view class="order-status_item" wx:for="{{ orderStatus }}">
+    <view
+      wx:for="{{ orderStatus }}"
+      class="order-status_item"
+      bindtap="goMyOrder"
+      data-item="{{ item }}">
       <image class="item_icon" src="{{ item.iconUrl }}" />
       <view class="item_text">{{ item.name }}</view>
     </view>

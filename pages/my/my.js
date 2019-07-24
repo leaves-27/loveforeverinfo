@@ -1,6 +1,4 @@
-//index.js
-//获取应用实例
-const app = getApp()
+import qs from 'qs';
 
 const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
 
@@ -8,19 +6,19 @@ Page({
   data: {
     score: 200000,
     orderStatus: [{
-      id: '001',
+      id: '1',
       name: '待付款',
       iconUrl: placeholderUrl
     }, {
-      id: '002',
+      id: '2',
       name: '配送中',
       iconUrl: placeholderUrl
     }, {
-      id: '003',
+      id: '3',
       name: '已签收',
       iconUrl: placeholderUrl
     }, {
-      id: '004',
+      id: '0',
       name: '全部',
       iconUrl: placeholderUrl
     }],
@@ -30,9 +28,21 @@ Page({
     logoUrl: placeholderUrl,
     addressIconUrl: placeholderUrl
   },
-  goMyQr: function() {
+  goMyQr() {
     wx.navigateTo({
       url: '../my-qr/my-qr'
+    })
+  },
+  goMyOrder($event){
+    console.log('$event:', $event)
+    const { item } = $event.currentTarget.dataset;
+    const { id } = item;
+
+    const query = {
+      id
+    };
+    wx.navigateTo({
+      url: `../my-order/my-order?$${qs.stringify(query)}`
     })
   },
   onLoad: function () {

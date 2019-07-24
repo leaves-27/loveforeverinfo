@@ -1,0 +1,53 @@
+<!--logs.wxml-->
+<view class="orders">
+  <view class="tabs">
+    <block wx:for="tabs">
+      <view
+        wx:if="{{ selectedTabId === item.id }}"
+        class="tab"
+        bind="tabClick">
+        {{ item.name }}
+      </view>
+      <view
+        class="tab"
+        bind="tabClick">
+        {{ item.name }}
+      </view>
+
+    </block>
+
+  </view>
+  <view class="items">
+    <view class="item" wx:for="orders">
+      <view class="item_header">
+        <view class="header_main">
+          {{ item.time }}
+        </view>
+        <view class="header_bar">
+          {{ item.name }}
+        </view>
+      </view>
+      <view class="item_content">
+        <view class="content_main">
+          <view class="main_main">
+            <image src="{{ item.menuLogo }}" />
+            <view class="menu">
+              <view class="menu_name">{{ item.name }}</view>
+              <view class="menu_price">{{ item.price }}</view>
+            </view>
+          </view>
+          <view class="main_bar">
+            x{{ amount }}
+          </view>
+        </view>
+        <view class="content_bar">
+          实付款：￥{{ item.money }}(含运费 ￥{{ item.deliveryFee }})
+        </view>
+      </view>
+      <view class="item_footer">
+        <button class="button button--default">取消订单</button>
+        <button class="button button--red">支付</button>
+      </view>
+    </view>
+  </view>
+</view>
