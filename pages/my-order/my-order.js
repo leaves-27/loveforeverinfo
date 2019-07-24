@@ -59,4 +59,10 @@ Page({
       selectedTabId: id
     })
   },
+  cancelOrder(){
+
+  },
+  goPay(){
+    
+  }
 })
