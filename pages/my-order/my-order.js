@@ -1,4 +1,5 @@
 import { getQuery } from '../../utils/util.js';
+const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
 
 Page({
   data: {
@@ -20,7 +21,7 @@ Page({
       time: '2019-6-17  12:00:12',
       status: 1,
       name: '喜燕周年装',
-      menuLogoUrl: '',
+      menuLogoUrl: placeholderUrl,
       price: 380.88,
       amount: 1,
       deliveryFee: 10
@@ -28,7 +29,7 @@ Page({
       time: '2019-6-17  12:00:12',
       status: 2,
       name: '喜燕周年装',
-      menuLogoUrl: '',
+      menuLogoUrl: placeholderUrl,
       price: 380.88,
       amount: 1,
       deliveryFee: 10
@@ -36,7 +37,7 @@ Page({
       time: '2019-6-17  12:00:12',
       status: 3,
       name: '喜燕周年装',
-      menuLogoUrl: '',
+      menuLogoUrl: placeholderUrl,
       price: 380.88,
       amount: 1,
       deliveryFee: 10
@@ -49,7 +50,10 @@ Page({
     })
   },
   tabClick($event){
-    const { item } = $event.currentTarget.dataset;
-
+    const { item = {} } = $event.currentTarget.dataset;
+    const { id } = item;
+    this.setData({
+      selectedTabId: id
+    })
   }
 })

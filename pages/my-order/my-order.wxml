@@ -4,16 +4,15 @@
     <block wx:for="{{ tabs }}">
       <view
         wx:if="{{ selectedTabId === item.id }}"
-        class="tab tab--selected"
-        bind="tabClick">
+        class="tab tab--selected">
         {{ item.name }}
-        <view class="line-selected"></view>
+        <view class="line--selected"></view>
       </view>
       <view
         wx:else
         class="tab"
-        bind="tabClick"
-        data="{{ item }}">
+        bindtap="tabClick"
+        data-item="{{ item }}">
         {{ item.name }}
       </view>
     </block>
@@ -25,29 +24,30 @@
           {{ item.time }}
         </view>
         <view class="header_bar">
-          {{ item.name }}
+          {{ item.status }}
         </view>
       </view>
       <view class="item_content">
         <view class="content_main">
           <view class="main_main">
-            <image src="{{ item.menuLogo }}" />
-            <view class="menu">
-              <view class="menu_name">{{ item.name }}</view>
-              <view class="menu_price">{{ item.price }}</view>
+            <image class="menu-logo" src="{{ item.menuLogoUrl }}" />
+            <view class="menu-intro">
+              <view class="menu-intro_name">{{ item.name }}</view>
+              <view class="menu-intro_price">{{ item.price }}</view>
             </view>
           </view>
           <view class="main_bar">
-            x{{ amount }}
+            x{{ item.amount }}
           </view>
         </view>
         <view class="content_bar">
-          实付款：￥{{ item.money }}(含运费 ￥{{ item.deliveryFee }})
+          <view class="fee fee--default">实付款：</view>
+          <view class="fee fee--strong">￥{{ item.money }}(含运费 ￥{{ item.deliveryFee }})</view>
         </view>
       </view>
       <view class="item_footer">
         <button class="button button--default">取消订单</button>
-        <button class="button button--red">支付</button>
+        <button class="button button--red button-interval--small">支付</button>
       </view>
     </view>
   </view>
