@@ -43,6 +43,9 @@ Page({
       deliveryFee: 10
     }]
   },
+  computed: {
+
+  },
   onLoad: function () {
     const { id = '0' } = getQuery();
     this.setData({
@@ -55,5 +58,5 @@ Page({
     this.setData({
       selectedTabId: id
     })
-  }
+  },
 })

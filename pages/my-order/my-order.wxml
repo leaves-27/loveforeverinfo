@@ -23,8 +23,9 @@
         <view class="header_main">
           {{ item.time }}
         </view>
-        <view class="header_bar">
-          {{ item.status }}
+        <view
+          class="header_bar">
+          {{ tabs[item.status].name }}
         </view>
       </view>
       <view class="item_content">
@@ -42,7 +43,12 @@
         </view>
         <view class="content_bar">
           <view class="fee fee--default">实付款：</view>
-          <view class="fee fee--strong">￥{{ item.money }}(含运费 ￥{{ item.deliveryFee }})</view>
+          <view class="fee fee--strong">￥ {{
+              item.price * item.amount + item.deliveryFee
+            }}(含运费 ￥{{
+              item.deliveryFee
+            }})
+          </view>
         </view>
       </view>
       <view class="item_footer">
