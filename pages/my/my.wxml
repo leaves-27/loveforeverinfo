@@ -3,7 +3,7 @@
   <view class="my-info">
     <view class="my-info_main">
       <view class="main_main">
-        <image class="logo" src="{{ logoUrl }}" />
+        <image class="logo" src="{{ userLogoUrl }}" />
         <view class="private-text">
           <view class="name">{{ name }}</view>
           <view class="phone">{{ phone }}</view>

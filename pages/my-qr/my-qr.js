@@ -1,12 +1,32 @@
-const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
+import {getQuery} from "../../utils/util";
+import getMyQr from "../../mock/getMyQr";
 
 Page({
   data: {
-    name: '疯趣的二师兄',
-    qrUrl: placeholderUrl,
-    userLogoUrl: placeholderUrl
+    name: '',
+    userLogoUrl: '',
+    qrUrl: '',
   },
   onLoad: function () {
+    const { name = '', userLogoUrl = '' } = getQuery();
 
+    console.log('query:', getQuery());
+    this.setData({
+      name,
+      userLogoUrl
+    });
+    getMyQr().then((result)=>{
+      const { code, data, message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+      const {
+        qrUrl,
+      } = data;
+
+      this.setData({
+        qrUrl,
+      })
+    })
   }
 })

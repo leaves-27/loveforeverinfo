@@ -1,16 +1,34 @@
-export default (status)=>{
-	return new Promise(async (resolve, reject)=>{
-		wx.request({
-			url: 'getOrders', //
-			data: {
-				status,
-			},
-			header: {
-				'content-type': 'application/json' // 默认值
-			},
-			success (res) {
-				resolve(res)
-			}
-		});
-	})
-}
+import { placeholderUrl } from '../utils/util';
+
+export default ()=> new Promise( (resolve, reject)=>{
+	setTimeout(()=>{
+		resolve({
+			code: 1,
+			data: [{
+				time: '2019-6-17  12:00:12',
+				status: 1,
+				name: '喜燕周年装',
+				menuLogoUrl: placeholderUrl,
+				price: 380.88,
+				amount: 1,
+				deliveryFee: 10
+			}, {
+				time: '2019-6-17  12:00:12',
+				status: 2,
+				name: '喜燕周年装',
+				menuLogoUrl: placeholderUrl,
+				price: 380.88,
+				amount: 1,
+				deliveryFee: 10
+			}, {
+				time: '2019-6-17  12:00:12',
+				status: 3,
+				name: '喜燕周年装',
+				menuLogoUrl: placeholderUrl,
+				price: 380.88,
+				amount: 1,
+				deliveryFee: 10
+			}]
+		})
+	}, 1000);
+});

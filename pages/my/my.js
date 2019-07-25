@@ -1,37 +1,26 @@
 import qs from 'qs';
 // import getUserInfo from '../../apis/getUserInfo';
 import getUserInfo from '../../mock/getUserInfo';
-import { placeholderUrl } from '../../utils/util';
+import { getOrderStatus, placeholderUrl } from '../../utils/util';
 
 Page({
   data: {
-    orderStatus: [{
-      id: '1',
-      name: '待付款',
-      iconUrl: placeholderUrl
-    }, {
-      id: '2',
-      name: '配送中',
-      iconUrl: placeholderUrl
-    }, {
-      id: '3',
-      name: '已签收',
-      iconUrl: placeholderUrl
-    }, {
-      id: '0',
-      name: '全部',
-      iconUrl: placeholderUrl
-    }],
+    orderStatus: getOrderStatus(),
     name: '',
     phone: '',
     score: 0,
-    qrUrl: '',
-    logoUrl: '',
+    qrUrl: placeholderUrl,
+    userLogoUrl: '',
     addressIconUrl: ''
   },
   goMyQr() {
+    const query = {
+      name: this.data.name,
+      userLogoUrl: this.data.userLogoUrl
+    };
+    console.log('query1:', query);
     wx.navigateTo({
-      url: '../my-qr/my-qr'
+      url: `../my-qr/my-qr?$${qs.stringify(query,  { encodeValuesOnly: true })}`
     })
   },
   goMyOrder($event){
@@ -56,7 +45,7 @@ Page({
         phone,
         score,
         qrUrl,
-        logoUrl,
+        userLogoUrl,
         addressIconUrl
       } = data;
 
@@ -65,7 +54,7 @@ Page({
         phone,
         score,
         qrUrl,
-        logoUrl,
+        userLogoUrl,
         addressIconUrl
       })
     })

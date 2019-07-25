@@ -2,7 +2,7 @@
   <view class="content_header"></view>
   <view class="content_main">
     <view class="name">{{ name }}</view>
-    <image class="qr" src="{{ qrUrl }}" />
+    <image class="qr" src="{{ userLogoUrl }}" />
     <image class="userLogo" src="{{ userLogoUrl }}" />
   </view>
   <view class="content_boundary"></view>

@@ -1,18 +1,5 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
+const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
+import qs from 'qs';
 
 const getCurrentRoute = ()=>{
   let pages = getCurrentPages();
@@ -27,18 +14,37 @@ const getQuery = ()=>{
   const { options = {} } = getCurrentRoute() || {};
   const query = {};
   Object.keys(options).map((item)=>{
+    console.log('decoder:', qs.parse(item, { decode : true }));
     query[`${item.slice(1)}`] = options[item];
   });
   return query;
-}
+};
 
-const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
+const getOrderStatus = ()=>{
+  return [{
+    id: '1',
+    name: '待付款',
+    iconUrl: placeholderUrl
+  }, {
+    id: '2',
+    name: '配送中',
+    iconUrl: placeholderUrl
+  }, {
+    id: '3',
+    name: '已签收',
+    iconUrl: placeholderUrl
+  }, {
+    id: '0',
+    name: '全部',
+    iconUrl: placeholderUrl
+  }]
+};
 
 module.exports = {
-  formatTime,
+  placeholderUrl,
   getCurrentRoute,
   getQuery,
-  placeholderUrl
+  getOrderStatus
 }
 
 
