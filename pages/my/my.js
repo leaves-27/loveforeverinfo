@@ -45,23 +45,8 @@ Page({
       url: `../my-order/my-order?$${qs.stringify(query)}`
     })
   },
-  getUserInfo(){
-    return new Promise(async (resolve, reject)=>{
-      resolve({
-        code: 1,
-        data: {
-          name: '疯趣的二师兄',
-          phone: '135****8888',
-          score: 200000,
-          qrUrl: placeholderUrl,
-          logoUrl: placeholderUrl,
-          addressIconUrl: placeholderUrl
-        }
-      })
-    })
-  },
   onLoad(){
-    this.getUserInfo().then((result)=>{
+    getUserInfo().then((result)=>{
       const { code, data, message } = result;
       if (code !== 1) {
         throw new Error(message || '请求错误');

@@ -1,7 +1,7 @@
 import { placeholderUrl } from '../utils/util';
 
-export default ()=>{
-	return new Promise(async (resolve, reject)=>{
+export default ()=> new Promise( (resolve, reject)=>{
+	setTimeout(()=>{
 		resolve({
 			code: 1,
 			data: {
@@ -13,5 +13,5 @@ export default ()=>{
 				addressIconUrl: placeholderUrl
 			}
 		})
-	})
-}
+	}, 1000);
+});
