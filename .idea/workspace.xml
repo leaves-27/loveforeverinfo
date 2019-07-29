@@ -28,20 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="348">
-                <caret line="64" selection-start-line="64" selection-end-line="64" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../workspace4/temp.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="405">
-                <caret line="27" column="6" lean-forward="true" selection-end-line="30" />
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -174,12 +162,12 @@
       <workItem from="1563929659194" duration="5889000" />
       <workItem from="1563935782597" duration="1099000" />
       <workItem from="1564012273765" duration="3014000" />
-      <workItem from="1564443636060" duration="581000" />
+      <workItem from="1564443636060" duration="780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21247000" />
+    <option name="totallyTimeSpent" value="21446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="247" y="23" width="1193" height="723" extended-state="0" />
@@ -418,8 +406,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="348">
-            <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
