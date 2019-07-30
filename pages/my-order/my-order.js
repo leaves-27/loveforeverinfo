@@ -1,6 +1,7 @@
 import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../apis/getOrders.js';
 import getOrders from "../../mock/getOrders";
+import qs from "qs";
 
 Page({
   data: {
@@ -42,6 +43,18 @@ Page({
     const { id } = item;
     this.setData({
       selectedTabId: id
+    })
+  },
+  goOrderDetail($event){
+    console.log('test', $event);
+    const { item } = $event.currentTarget.dataset;
+    const { id } = item;
+
+    const query = {
+      id
+    };
+    wx.navigateTo({
+      url: `../order-detail/order-detail?$${qs.stringify(query)}`
     })
   },
   cancelOrder(){

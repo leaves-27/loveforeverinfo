@@ -1,7 +1,8 @@
 <!--logs.wxml-->
 <view class="orders">
   <view class="tabs">
-    <block wx:for="{{ tabs }}">
+    <block
+      wx:for="{{ tabs }}">
       <view
         wx:if="{{ selectedTabId === item.id }}"
         class="tab tab--selected">
@@ -18,7 +19,11 @@
     </block>
   </view>
   <view class="items">
-    <view class="item" wx:for="{{ orders }}">
+    <view
+      wx:for="{{ orders }}"
+      bindtap="goOrderDetail"
+      data-item="{{ item }}"
+      class="item">
       <view class="item_header">
         <view class="header_main">
           {{ item.time }}
