@@ -30,22 +30,27 @@
   justify-content: flex-start;
   align-items: center;
 }
+.address_icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.address_desc{
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #363433;
+}
+
 .arrow{
   width: 28.3rpx;
   height: 28.3rpx;
 }
 
-
 .good{
   background-color: #FFFFFF;
   padding-left: 24rpx;
   padding-right: 24rpx;
-  padding-top: 30rpx;
-  padding-bottom: 30rpx;
-}
-.content_main{
-  display: flex;
-  padding-bottom: 58rpx;
 }
 .content_bar{
   display: flex;
@@ -55,6 +60,8 @@
 .main_main{
   display: flex;
   flex: 1;
+  padding-bottom: 32rpx;
+  padding-top: 30rpx;
 }
 
 .main_bar{
@@ -86,6 +93,11 @@
   padding-top: 25rpx;
   padding-bottom: 25rpx;
 }
+.order-item_icon{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
 .order-item_key{
   font-family: PingFangSC-Regular;
   font-size: 28rpx;
@@ -99,6 +111,60 @@
   color: #262626;
   text-align: right;
   line-height: 32rpx;
+}
+.count-control{
+  display: flex;
+}
+.count-control_add{
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border: 1rpx solid #E5E5E5;
+}
+.count-control_value{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 88rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border: 1rpx solid #E5E5E5;
+}
+.count-control_delete{
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border: 1rpx solid #E5E5E5;
+}
+.pay_header{
+  margin-top: 28rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #616161;
+  margin-bottom: 16rpx;
+}
+.pay_body{
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: #FFFFFF;
+  margin-bottom: 16rpx;
+}
+.pay_footer{
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 22rpx;
+  color: #919191;
+  letter-spacing: 0;
+  text-align: left;
+}
+.pay-item{
+  justify-content: flex-start;
 }
 
 input[type="text"],input[type="password"],textarea,button{
@@ -141,3 +207,5 @@ button::after {
 .button-interval--small{
   margin-left: 16rpx;
 }
+
+

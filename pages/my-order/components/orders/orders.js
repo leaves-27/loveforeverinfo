@@ -1,4 +1,4 @@
-import { getQuery } from '../../../../utils/util.js';
+import { getQuery, goPay } from '../../../../utils/util.js';
 // import getOrders from '../../../../apis/getOrders.js';
 import getOrders from "../../../../mock/getOrders";
 import qs from "qs";
@@ -68,16 +68,6 @@ Component({
     cancelOrder(){
 
     },
-    goPay($event){
-      const { item } = $event.currentTarget.dataset;
-      const { id } = item;
-
-      const query = {
-        id
-      };
-      wx.navigateTo({
-        url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
-      })
-    }
+    goPay,
   }
 })

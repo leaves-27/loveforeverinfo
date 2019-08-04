@@ -10,7 +10,7 @@
         {{ item.time }}
       </view>
       <view
-              class="header_bar">
+        class="header_bar">
         {{ tabs[item.status].name }}
       </view>
     </view>
@@ -39,14 +39,24 @@
     </view>
     <view class="item_footer">
       <button
-        data-item="{{ item }}"
+        data-id="{{ item.id }}"
         class="button button--default"
         bindtap="cancelOrder">取消订单</button>
       <button
-        data-item="{{ item }}"
+        wx:if="{{ item.status === '1' }}"
         class="button button--red button-interval--small"
-        bindtap="goPay"
-      >支付</button>
+        data-id="{{ item.id }}"
+        bindtap="goPay">支付</button>
+      <button
+        wx:elif="{{ item.status === '2' }}"
+        class="button button--red button-interval--small"
+        data-id="{{ item.id }}"
+        bindtap="goPay">再次购买</button>
+      <button
+        wx:elif="{{ item.status === '3' }}"
+        class="button button--red button-interval--small"
+        data-id="{{ item.id }}"
+        bindtap="goPay">配送中</button>
     </view>
   </view>
 </view>

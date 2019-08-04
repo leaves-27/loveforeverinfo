@@ -1,4 +1,5 @@
 const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
+
 import qs from 'qs';
 
 const getCurrentRoute = ()=>{
@@ -40,11 +41,22 @@ const getOrderStatus = ()=>{
   }]
 };
 
+const  goPay = function($event){
+  const { id } = $event.currentTarget.dataset;
+  const query = {
+    id
+  };
+  wx.navigateTo({
+    url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
+  })
+}
+
 module.exports = {
   placeholderUrl,
   getCurrentRoute,
   getQuery,
-  getOrderStatus
+  getOrderStatus,
+  goPay,
 }
 
 

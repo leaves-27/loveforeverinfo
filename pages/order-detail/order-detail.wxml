@@ -6,13 +6,10 @@
         待付款
       </view>
       <view class="order-status" wx:elif="{{ order.status === '2' }}">
-
+        配送中
       </view>
       <view class="order-status" wx:elif="{{ order.status === '3' }}">
-
-      </view>
-      <view class="order-status" wx:elif="{{ order.status === '4' }}">
-
+        已签收
       </view>
       <view class="order-desc">
         {{ order.desc }}
@@ -102,7 +99,19 @@
   </view>
   <view  class="order-detail_footer">
     <button
+      wx:if="{{ order.status === '1' }}"
       class="button button--active"
-      bindtap="cancelOrder">取消订单</button>
+      data-id="{{ order.id }}"
+      bindtap="goPay">支付</button>
+    <button
+      wx:elif="{{ order.status === '2' }}"
+      class="button button--active"
+      data-id="{{ order.id }}"
+      bindtap="goDeliveryDetail">配送中</button>
+    <button
+      wx:elif="{{ order.status === '3' }}"
+      class="button button--active"
+      data-id="{{ order.id }}"
+      bindtap="goBuy">再次购买</button>
   </view>
 </view>

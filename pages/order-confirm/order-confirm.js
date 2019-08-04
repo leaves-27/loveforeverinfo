@@ -5,7 +5,7 @@ import { placeholderUrl } from '../../utils/util';
 
 Page({
   data: {
-    consigneeAdressDesc: '',
+    consigneeAdressDesc: '杭州市西湖区蒋村花园晴川街街道西溪花园红柿苑xxx号',
     iconAddressUrl: placeholderUrl,
     arrowRightUrl: placeholderUrl,
     deliveryWays: [{

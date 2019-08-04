@@ -33,8 +33,8 @@
       <view class="item_text">{{ item.name }}</view>
     </view>
   </view>
-  <view class="my-adress">
-    <image class="my-adress_icon" src="{{ addressIconUrl }}" />
-    <view class="my-adress_desc">我的地址</view>
+  <view class="address">
+    <image class="address_icon" src="{{ addressIconUrl }}" />
+    <view class="address_desc">我的地址</view>
   </view>
 </view>

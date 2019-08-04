@@ -3,7 +3,9 @@
     "pages/my/my",
     "pages/index/index",
     "pages/my-qr/my-qr",
-    "pages/my-order/my-order"
+    "pages/my-order/my-order",
+    "pages/order-detail/order-detail",
+    "pages/order-confirm/order-confirm"
   ],
   "window": {
     "backgroundTextStyle": "light",

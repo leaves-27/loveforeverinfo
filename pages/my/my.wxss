@@ -81,7 +81,7 @@
 .item_text{
 
 }
-.my-adress{
+.address{
     height: 100rpx;
     padding-left: 32rpx;
     padding-right: 32rpx;
@@ -89,11 +89,10 @@
     align-items: center;
     background-color: #FFFFFF;
 }
-
-.my-adress_icon{
+.address_icon{
     width: 40rpx;
     height: 40rpx;
 }
-.my-adress_desc{
+.address_desc{
     margin-left: 20rpx;
 }
