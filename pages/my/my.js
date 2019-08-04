@@ -18,7 +18,6 @@ Page({
       name: this.data.name,
       userLogoUrl: this.data.userLogoUrl
     };
-    console.log('query1:', query);
     wx.navigateTo({
       url: `../my-qr/my-qr?$${qs.stringify(query,  { encodeValuesOnly: true })}`
     })

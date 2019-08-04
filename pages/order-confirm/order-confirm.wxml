@@ -5,7 +5,7 @@
       <image class="address_icon" src="{{ iconAddressUrl }}" />
     </view>
     <view class="header_middle address_desc">
-      {{ consigneeAdressDesc }}
+      {{ address.desc }}
     </view>
     <view class="header_right">
       <image class="arrow" src="{{ arrowRightUrl }}"></image>
@@ -57,6 +57,7 @@
       <view class="pay_body">
         <view
           wx:for="{{ payWays }}"
+          wx:key="{{ payId }}"
           class="order-item pay-item" >
           <image class="order-item_icon" src="{{ item.iconUrl }}" />
           <view
@@ -77,7 +78,7 @@
   </view>
   <view class="order-confirm_footer">
     <button
-            class="button button--active"
-            bindtap="submitOrder">提交订单</button>
+      class="button button--active"
+      bindtap="submitOrder">提交订单</button>
   </view>
 </view>

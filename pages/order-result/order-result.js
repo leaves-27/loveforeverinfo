@@ -6,12 +6,10 @@ import { placeholderUrl } from '../../utils/util';
 Page({
   data: {
     waitPayIconUrl: '../../images/icon--wait-pay.png',
-    user: {
-      name: '疯趣的二师兄',
-      phone: '135****8888',
-      userLogoUrl: placeholderUrl,
-      addressIconUrl: placeholderUrl,
-      address: '浙江杭州市江干区明月桥路38号'
+    status: {
+      iconUrl: '',
+      title: '',
+      desc: '请耐心等待销售代表确认'
     },
     good: {
       name: '喜燕周年装',

@@ -1,42 +1,10 @@
 <!--logs.wxml-->
 <view class="order-detail">
-  <view class="order-detail_header">
-    <view class="header_main">
-      <view class="order-status" wx:if="{{ order.status === '1' }}">
-        待付款
-      </view>
-      <view class="order-status" wx:elif="{{ order.status === '2' }}">
-
-      </view>
-      <view class="order-status" wx:elif="{{ order.status === '3' }}">
-
-      </view>
-      <view class="order-status" wx:elif="{{ order.status === '4' }}">
-
-      </view>
-      <view class="order-desc">
-        {{ order.desc }}
-      </view>
-    </view>
-    <view class="header_bar">
-      <image class="icon--wait-pay" src="{{ waitPayIconUrl }}" />
-    </view>
-  </view>
   <view  class="order-detail_body">
-    <view class="user">
-      <view class="user_bar">
-        <view class="icon--address">
-          <image src="{{ iconAddressUrl }}" />
-        </view>
-      </view>
-      <view class="user_main">
-        <view class="name-phone">
-          {{ user.name }} {{ user.phone }}
-        </view>
-        <view class="address">
-          {{ user.address }}
-        </view>
-      </view>
+    <view class="status">
+      <image class="status_icon" src="{{ status.iconUrl }}"></image>
+      <view class="status_title">{{ status.title }}</view>
+      <view class="status_desc">{{ status.desc }}</view>
     </view>
     <view class="good content_main">
       <view class="main_main">
@@ -85,9 +53,9 @@
       </view>
     </view>
   </view>
-  <view  class="order-detail_footer">
-    <button
-      class="button button--active"
-      bindtap="cancelOrder">取消订单</button>
-  </view>
+<!--  <view  class="order-detail_footer">-->
+<!--    <button-->
+<!--      class="button button&#45;&#45;active"-->
+<!--      bindtap="cancelOrder">取消订单</button>-->
+<!--  </view>-->
 </view>
