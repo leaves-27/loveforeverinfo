@@ -11,6 +11,9 @@ Page({
     deliveryWays: [{
       id: 1,
       name: '快递配送'
+    }, {
+      id: 2,
+      name: 'xxx'
     }],
     good: {
       name: '喜燕周年装',
