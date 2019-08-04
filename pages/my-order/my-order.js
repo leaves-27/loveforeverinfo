@@ -1,7 +1,4 @@
 import { getQuery } from '../../utils/util.js';
-// import getOrders from '../../apis/getOrders.js';
-import getOrders from "../../mock/getOrders";
-import qs from "qs";
 
 Page({
   data: {
@@ -19,48 +16,18 @@ Page({
       name: "已签收"
     }],
     selectedTabId: "",
-    orders: []
   },
   onLoad: function () {
     const { id = '0' } = getQuery();
     this.setData({
       selectedTabId: id
     });
-
-    getOrders().then((result)=>{
-      const { code, data = [], message } = result;
-      if (code !== 1) {
-        throw new Error(message || '请求错误');
-      }
-
-      this.setData({
-        orders: data
-      })
-    })
   },
-  tabClick($event){
+  tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
     const { id } = item;
     this.setData({
       selectedTabId: id
     })
-  },
-  goOrderDetail($event){
-    console.log('test', $event);
-    const { item } = $event.currentTarget.dataset;
-    const { id } = item;
-
-    const query = {
-      id
-    };
-    wx.navigateTo({
-      url: `../order-detail/order-detail?$${qs.stringify(query)}`
-    })
-  },
-  cancelOrder(){
-
-  },
-  goPay(){
-
   }
 })

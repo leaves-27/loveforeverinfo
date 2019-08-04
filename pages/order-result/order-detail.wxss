@@ -105,13 +105,7 @@ button::after {
   color: #FFFFFF;
 }
 
-.good{
-  background-color: #FFFFFF;
-  padding-left: 24rpx;
-  padding-right: 24rpx;
-  padding-top: 30rpx;
-  padding-bottom: 30rpx;
-}
+
 .content_main{
   display: flex;
   padding-bottom: 58rpx;
@@ -121,6 +115,7 @@ button::after {
   justify-content: flex-end;
   padding-bottom: 28rpx;
 }
+
 .main_main{
   display: flex;
   flex: 1;
@@ -167,7 +162,13 @@ button::after {
   justify-content: center;
   align-items: center;
 }
-
+.good{
+  background-color: #FFFFFF;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
 .order{
   background-color: #FFFFFF;
   padding-left: 24rpx;

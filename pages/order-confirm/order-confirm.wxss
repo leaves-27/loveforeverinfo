@@ -1,0 +1,143 @@
+.order-confirm_header{
+  margin-bottom: 16rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 152rpx;
+  display: flex;
+  background-color: #FFFFFF;
+}
+.order-confirm_body{
+  margin-bottom: 141rpx;
+}
+.order-confirm_footer{
+
+}
+.header_left{
+  width: 46rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header_middle{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header_right{
+  width: 28.3rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.arrow{
+  width: 28.3rpx;
+  height: 28.3rpx;
+}
+
+
+.good{
+  background-color: #FFFFFF;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.content_main{
+  display: flex;
+  padding-bottom: 58rpx;
+}
+.content_bar{
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 28rpx;
+}
+.main_main{
+  display: flex;
+  flex: 1;
+}
+
+.main_bar{
+  display: flex;
+  align-items: flex-end;
+}
+
+.menu-logo{
+  width: 144rpx;
+  height: 144rpx;
+}
+.menu-intro{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+.menu-intro_price{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #FE0000;
+}
+
+.order-item{
+  border-top: 1rpx solid #EEEEEE;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+.order-item_key{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #919191;
+  letter-spacing: 0;
+  line-height: 40rpx;
+}
+.order-item_value{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #262626;
+  text-align: right;
+  line-height: 32rpx;
+}
+
+input[type="text"],input[type="password"],textarea,button{
+  outline-style: none;
+  -webkit-appearance: none;
+  padding: 0;
+  padding: 0;
+  margin: 0;
+  margin: 0;
+  outline: none;
+}
+button::after {
+  border: none;
+}
+
+.button{
+  display: inline-block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+
+  border-radius: 4rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  text-align: center;
+  color: #FFFFFF;
+}
+.button--default{
+  background-image: none;
+  background-color: #FFFFFF;
+  border: 2rpx solid #DDDDDD;
+  color: #1E1E1E;
+}
+.button--active{
+  background-image: linear-gradient(-140deg, #FF6060 0%, #FE0000 100%);
+  color: #FFFFFF;
+  border: none;
+}
+
+.button-interval--small{
+  margin-left: 16rpx;
+}

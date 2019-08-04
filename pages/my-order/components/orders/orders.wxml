@@ -1,0 +1,52 @@
+<view class="items">
+  <view
+    wx:for="{{ tabOrders }}"
+    wx:key="{{ item.id }}"
+    bindtap="goOrderDetail"
+    data-item="{{ item }}"
+    class="item">
+    <view class="item_header">
+      <view class="header_main">
+        {{ item.time }}
+      </view>
+      <view
+              class="header_bar">
+        {{ tabs[item.status].name }}
+      </view>
+    </view>
+    <view class="item_content">
+      <view class="content_main">
+        <view class="main_main">
+          <image class="menu-logo" src="{{ item.menuLogoUrl }}" />
+          <view class="menu-intro">
+            <view class="menu-intro_name">{{ item.name }}</view>
+            <view class="menu-intro_price">{{ item.price }}</view>
+          </view>
+        </view>
+        <view class="main_bar">
+          x{{ item.amount }}
+        </view>
+      </view>
+      <view class="content_bar">
+        <view class="fee fee--default">实付款：</view>
+        <view class="fee fee--strong">￥ {{
+          item.price * item.amount + item.deliveryFee
+          }}(含运费 ￥{{
+          item.deliveryFee
+          }})
+        </view>
+      </view>
+    </view>
+    <view class="item_footer">
+      <button
+        data-item="{{ item }}"
+        class="button button--default"
+        bindtap="cancelOrder">取消订单</button>
+      <button
+        data-item="{{ item }}"
+        class="button button--red button-interval--small"
+        bindtap="goPay"
+      >支付</button>
+    </view>
+  </view>
+</view>

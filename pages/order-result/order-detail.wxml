@@ -19,22 +19,7 @@
       </view>
     </view>
     <view class="header_bar">
-      <image
-        wx:if="{{ order.status === '1' }}"
-        class="icon--wait-pay"
-        src="{{ waitPayIconUrl }}"  />
-      <image
-        wx:elif="{{ order.status === '2' }}"
-        class="icon--wait-pay"
-        src="{{ waitPayIconUrl }}"  />
-      <image
-        wx:elif="{{ order.status === '3' }}"
-        class="icon--wait-pay"
-        src="{{ waitPayIconUrl }}"  />
-      <image
-        wx:elif="{{ order.status === '4' }}"
-        class="icon--wait-pay"
-        src="{{ waitPayIconUrl }}"  />
+      <image class="icon--wait-pay" src="{{ waitPayIconUrl }}" />
     </view>
   </view>
   <view  class="order-detail_body">

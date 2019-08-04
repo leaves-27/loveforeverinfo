@@ -6,7 +6,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 			code: 1,
 			data: [{
 				time: '2019-6-17  12:00:12',
-				status: 1,
+				status: '1',
 				name: '喜燕周年装',
 				menuLogoUrl: placeholderUrl,
 				price: 380.88,
@@ -14,7 +14,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 				deliveryFee: 10
 			}, {
 				time: '2019-6-17  12:00:12',
-				status: 2,
+				status: '2',
 				name: '喜燕周年装',
 				menuLogoUrl: placeholderUrl,
 				price: 380.88,
@@ -22,7 +22,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 				deliveryFee: 10
 			}, {
 				time: '2019-6-17  12:00:12',
-				status: 3,
+				status: '3',
 				name: '喜燕周年装',
 				menuLogoUrl: placeholderUrl,
 				price: 380.88,
