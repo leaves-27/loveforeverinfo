@@ -17,7 +17,7 @@ Page({
     other: '',
     iconAddressUrl: placeholderUrl,
     arrowRightUrl: placeholderUrl,
-    deliveryWay: 1,
+    deliveryWay: 1
   },
   methods: {
     submitOrder(){
@@ -60,7 +60,7 @@ Page({
     },
     deliveryWayChange(){
 
-    },
+    }
   },
   onLoad: function () {
     const { id = '0' } = getQuery();
@@ -72,5 +72,5 @@ Page({
       const { address, deliveryWays, good, payWays, other} = data;
       this.setData({ address, deliveryWays, good, payWays, other});
     })
-  },
+  }
 })

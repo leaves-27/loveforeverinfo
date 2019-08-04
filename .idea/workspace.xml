@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mock/getOrderConfirm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/submitOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wxss/button.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-result/order-detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-result/order-detail.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-result/order-detail.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-result/order-detail.wxss" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="285">
+              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
                 <element signature="e#219#268#0" expanded="true" />
               </folding>
@@ -74,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/order-result/order-result.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="35">
               <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -95,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/order-detail/order-detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="412">
               <caret line="32" column="9" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="e#62#117#0" expanded="true" />
@@ -314,12 +300,12 @@
       <workItem from="1564012273765" duration="3014000" />
       <workItem from="1564443636060" duration="4669000" />
       <workItem from="1564702760778" duration="4964000" />
-      <workItem from="1564873384916" duration="17025000" />
+      <workItem from="1564873384916" duration="17128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47324000" />
+    <option name="totallyTimeSpent" value="47427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="490" y="23" width="1193" height="723" extended-state="0" />
@@ -687,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-result/order-result.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="35">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -697,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-detail/order-detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="412">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="e#62#117#0" expanded="true" />
@@ -707,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding>
             <element signature="e#219#268#0" expanded="true" />
           </folding>
