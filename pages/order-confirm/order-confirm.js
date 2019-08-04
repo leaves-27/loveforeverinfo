@@ -34,14 +34,19 @@ Page({
       name: '线下支付'
     }],
   },
-  countAdd(){
+  methods: {
+    submitOrder(){
 
-  },
-  countDelete(){
+    },
+    countAdd(){
 
-  },
-  deliveryWayChange(){
+    },
+    countDelete(){
 
+    },
+    deliveryWayChange(){
+
+    },
   },
   onLoad: function () {
     // const { id = '0' } = getQuery();
