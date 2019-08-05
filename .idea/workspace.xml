@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-qr/my-qr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-qr/my-qr.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/my.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,12 +18,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/my/my.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="30">
+              <caret line="2" column="70" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="e#272#1565#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="47" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <element signature="e#74#123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,10 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>miniprogram-computed</find>
-      <find>items</find>
-      <find>tabClick</find>
-      <find>getQuery</find>
       <find>selectedTabId</find>
       <find>placeholderUrl</find>
       <find>iconAddressUrl</find>
@@ -61,6 +103,10 @@
       <find>order-item</find>
       <find>deliveryWayChange</find>
       <find>deliveryWays</find>
+      <find>my-info</find>
+      <find>findIndex</find>
+      <find>userLogoUrl</find>
+      <find>qr</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages</dir>
@@ -72,12 +118,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apis/getOrders.js" />
         <option value="$PROJECT_DIR$/apis/getUserInfo.js" />
         <option value="$PROJECT_DIR$/mock/getMyQr.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/my-qr/my-qr.wxml" />
-        <option value="$PROJECT_DIR$/pages/my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/mock/getUserInfo.js" />
         <option value="$PROJECT_DIR$/pages/order-confirm/order-detail.wxml" />
@@ -96,7 +140,6 @@
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/order-result/order-detail.json" />
-        <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" />
         <option value="$PROJECT_DIR$/wxss/button.wxss" />
         <option value="$PROJECT_DIR$/pages/login/login.json" />
@@ -123,12 +166,15 @@
         <option value="$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.js" />
         <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxss" />
+        <option value="$PROJECT_DIR$/pages/my/my.js" />
+        <option value="$PROJECT_DIR$/pages/my-qr/my-qr.js" />
+        <option value="$PROJECT_DIR$/pages/my-qr/my-qr.wxss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="246" />
-    <option name="y" value="199" />
+    <option name="x" value="272" />
+    <option name="y" value="198" />
     <option name="width" value="1193" />
     <option name="height" value="723" />
   </component>
@@ -154,6 +200,12 @@
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="my-qr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,15 +261,17 @@
       <workItem from="1564970816654" duration="198000" />
       <workItem from="1564972299064" duration="10000" />
       <workItem from="1564972907495" duration="1281000" />
-      <workItem from="1565014109618" duration="1104000" />
+      <workItem from="1565014109618" duration="1154000" />
+      <workItem from="1565016346988" duration="72000" />
+      <workItem from="1565043248289" duration="2247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53167000" />
+    <option name="totallyTimeSpent" value="55536000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="246" y="199" width="1193" height="723" extended-state="0" />
+    <frame x="272" y="198" width="1193" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24979044" />
@@ -243,14 +297,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/order-result/order-detail.js" />
-    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-result/order-detail.json" />
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -445,16 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="e#74#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -473,15 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="63" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,8 +599,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/my.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        <state relative-caret-position="30">
+          <caret line="2" column="70" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#74#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-qr/my-qr.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#272#1565#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

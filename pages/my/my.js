@@ -19,7 +19,7 @@ Page({
       userLogoUrl: this.data.userLogoUrl
     };
     wx.navigateTo({
-      url: `../my-qr/my-qr?$${qs.stringify(query,  { encodeValuesOnly: true })}`
+      url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
   },
   goMyOrder($event){

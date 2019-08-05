@@ -1,5 +1,6 @@
-import {getQuery} from "../../utils/util";
+import { getQuery, placeholderUrl } from "../../utils/util";
 import getMyQr from "../../mock/getMyQr";
+import qs from 'qs';
 
 Page({
   data: {
@@ -9,8 +10,6 @@ Page({
   },
   onLoad: function () {
     const { name = '', userLogoUrl = '' } = getQuery();
-
-    console.log('query:', getQuery());
     this.setData({
       name,
       userLogoUrl
