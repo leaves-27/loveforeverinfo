@@ -25,7 +25,7 @@ export default (id)=> new Promise( (resolve, reject)=>{
 					name: '快递配送'
 				}, {
 					id: 2,
-					name: 'xxx'
+					name: '自提'
 				}],
 				good: {
 					name: '喜燕周年装',

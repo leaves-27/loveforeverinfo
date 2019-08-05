@@ -21,7 +21,7 @@
     "list": [{
       "iconPath": "images/icon_my.png",
       "selectedIconPath": "images/icon_down.png",
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/order-confirm/order-confirm",
       "text": "喜燕"
     }, {
       "iconPath": "images/icon_my.png",

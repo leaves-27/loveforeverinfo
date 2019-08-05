@@ -42,13 +42,13 @@ const getOrderStatus = ()=>{
 };
 
 const  goPay = function($event){
-  const { id } = $event.currentTarget.dataset;
-  const query = {
-    id
-  };
-  wx.navigateTo({
-    url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
-  })
+  // const { id } = $event.currentTarget.dataset;
+  // const query = {
+  //   id
+  // };
+  // wx.navigateTo({
+  //   url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
+  // })
 }
 
 module.exports = {

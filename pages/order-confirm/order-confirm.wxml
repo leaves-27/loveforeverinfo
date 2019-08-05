@@ -27,7 +27,7 @@
           <view
             class="count-control_delete"
             bindtap="countDelete"> - </view>
-          <input class="count-control_value" value="{{ good.amount }}" />
+          <input class="count-control_value" value="{{ amount }}" />
           <view
             class="count-control_add"
             bindtap="countAdd"> + </view>
@@ -36,9 +36,9 @@
       <view class="order-item">
         <view class="order-item_key">配送方式</view>
         <view class="order-item_value">
-          <picker mode="region" bindchange="deliveryWayChange" value="{{ deliveryWay }}" range="{{ deliveryWays }}">
+          <picker mode="selector" bindchange="deliveryWayChange" value="{{ deliveryWay }}" range-key="name" range="{{ deliveryWays }}">
             <view class="picker">
-              {{ deliveryWay }}
+              {{ deliveryWayName }}
             </view>
           </picker>
         </view>
@@ -58,7 +58,9 @@
         <view
           wx:for="{{ payWays }}"
           wx:key="{{ payId }}"
-          class="order-item pay-item" >
+          class="order-item pay-item {{ item.id === payId ? 'pay-item--active' : ''}}"
+          data-id="{{ item.id }}"
+          bindtap="payWayChange">
           <image class="order-item_icon" src="{{ item.iconUrl }}" />
           <view
             wx:if="{{ item.id === 2 }}"

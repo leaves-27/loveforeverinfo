@@ -149,8 +149,6 @@
   margin-bottom: 16rpx;
 }
 .pay_body{
-  padding-left: 24rpx;
-  padding-right: 24rpx;
   background-color: #FFFFFF;
   margin-bottom: 16rpx;
 }
@@ -165,6 +163,14 @@
 }
 .pay-item{
   justify-content: flex-start;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.pay-item--active{
+  background-color: #FE0000;
+}
+.pay-item--active .order-item_key{
+  color: #FFFFFF;
 }
 
 input[type="text"],input[type="password"],textarea,button{
@@ -207,5 +213,6 @@ button::after {
 .button-interval--small{
   margin-left: 16rpx;
 }
+
 
 

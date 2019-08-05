@@ -1,7 +1,9 @@
 //app.js
-import qs from "qs";
-
+import { patchPage, patchComponent } from 'miniprogram-computed';
 App({
+  deps: {
+    patchPage, patchComponent
+  },
   onLaunch: function () {
     const isLogin = false;
     // if (!isLogin){
