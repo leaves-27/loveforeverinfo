@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/my.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,15 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="482">
-                <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/pages/my/my.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -32,7 +31,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>header_bar</find>
       <find>miniprogram-computed</find>
       <find>items</find>
       <find>tabClick</find>
@@ -54,14 +52,15 @@
       <find>consigneeAdressDesc</find>
       <find>button</find>
       <find>order</find>
-      <find>order-item</find>
       <find>content_main</find>
       <find>submitOrder</find>
       <find>countDelete</find>
       <find>countAdd</find>
       <find>pay_body</find>
-      <find>deliveryWayChange</find>
       <find>patchPage</find>
+      <find>order-item</find>
+      <find>deliveryWayChange</find>
+      <find>deliveryWays</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages</dir>
@@ -73,10 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/my/my.json" />
-        <option value="$PROJECT_DIR$/pages/my-qr/my-qr.wxss" />
-        <option value="$PROJECT_DIR$/pages/my-qr/my-qr.json" />
-        <option value="$PROJECT_DIR$/app.wxss" />
         <option value="$PROJECT_DIR$/apis/getOrders.js" />
         <option value="$PROJECT_DIR$/apis/getUserInfo.js" />
         <option value="$PROJECT_DIR$/mock/getMyQr.js" />
@@ -99,7 +94,6 @@
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.js" />
-        <option value="$PROJECT_DIR$/pages/my/my.wxss" />
         <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/order-result/order-detail.json" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
@@ -120,16 +114,21 @@
         <option value="$PROJECT_DIR$/mock/getOrderConfirm.js" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxss" />
-        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.wxml" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.wxss" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.json" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.js" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
+        <option value="$PROJECT_DIR$/pages/my/my.wxss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="247" />
-    <option name="y" value="134" />
+    <option name="x" value="246" />
+    <option name="y" value="199" />
     <option name="width" value="1193" />
     <option name="height" value="723" />
   </component>
@@ -144,6 +143,17 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,15 +206,18 @@
       <workItem from="1564873384916" duration="17177000" />
       <workItem from="1564893224452" duration="499000" />
       <workItem from="1564963663360" duration="2599000" />
-      <workItem from="1564970816654" duration="114000" />
+      <workItem from="1564970816654" duration="198000" />
+      <workItem from="1564972299064" duration="10000" />
+      <workItem from="1564972907495" duration="1281000" />
+      <workItem from="1565014109618" duration="1104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50688000" />
+    <option name="totallyTimeSpent" value="53167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="247" y="134" width="1193" height="723" extended-state="0" />
+    <frame x="246" y="199" width="1193" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24979044" />
@@ -230,57 +243,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-detail.wxss" />
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-detail.wxml" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-detail/order-detail.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-result/order-detail.js" />
     <entry file="file://$PROJECT_DIR$/pages/index/index.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -453,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/getOrderConfirm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -514,31 +469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="10" />
-          <folding>
-            <element signature="e#119#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="63" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-            <element signature="e#272#321#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,10 +491,89 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="482">
-            <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+          <first_editor relative-caret-position="1080">
+            <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/order-confirm-item.js" />
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/order-confirm-item.wxml" />
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="19" selection-end-line="73" />
+          <folding>
+            <element signature="e#119#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#272#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/components/delivery-way/delivery-way.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
         </state>
       </provider>
     </entry>

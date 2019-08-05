@@ -1,0 +1,15 @@
+<view class="order-item">
+  <view class="order-item_key">配送方式</view>
+  <view class="order-item_value">
+    <picker
+      mode="selector"
+      value="{{ selectedDeliveryIndex }}"
+      range="{{ deliveryWays }}"
+      range-key="name"
+      bindchange="deliveryWayChange" >
+      <view class="picker">
+        {{ deliveryWays[selectedDeliveryIndex].name }}
+      </view>
+    </picker>
+  </view>
+</view>

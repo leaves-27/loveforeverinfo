@@ -23,10 +23,10 @@ Page({
     deliveryWays: [],
     good: {},
     payWays: [],
-    other: '',
+    other: '', // 备注
     iconAddressUrl: placeholderUrl,
     arrowRightUrl: placeholderUrl,
-    deliveryWayId: 1,
+    deliveryId: 1,
     amount: 1,
     payId: '',
   },
@@ -85,7 +85,6 @@ Page({
     // });
   },
   countAdd(){
-    console.log('test:');
     this.setData({
       amount: this.data.amount + 1
     });
@@ -94,20 +93,20 @@ Page({
     if (this.data.amount === 1){
       return;
     }
-
     this.setData({
       amount: this.data.amount - 1
     });
   },
-  deliveryWayChange(data){
-    console.log(data);
+  deliveryWayChange($event){
+    const { deliveryId } = $event.detai;
+    this.setData({
+      deliveryId
+    })
   },
   payWayChange($event){
     const { id } = $event.currentTarget.dataset;
-
     this.setData({
       payId: id
-    })
-
+    });
   }
 })

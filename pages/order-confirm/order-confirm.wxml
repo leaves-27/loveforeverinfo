@@ -12,7 +12,6 @@
     </view>
   </view>
   <view class="order-confirm_body">
-
     <view class="good content_main">
       <view class="main_main">
         <image class="menu-logo" src="{{ good.menuLogoUrl }}" />
@@ -33,16 +32,11 @@
             bindtap="countAdd"> + </view>
         </view>
       </view>
-      <view class="order-item">
-        <view class="order-item_key">配送方式</view>
-        <view class="order-item_value">
-          <picker mode="selector" bindchange="deliveryWayChange" value="{{ deliveryWay }}" range-key="name" range="{{ deliveryWays }}">
-            <view class="picker">
-              {{ deliveryWayName }}
-            </view>
-          </picker>
-        </view>
-      </view>
+      <deliverywaychange
+        deliveryWays="{{ deliveryWays }}"
+        deliveryId="{{ deliveryId }}"
+        bind:deliverywaychange="deliveryWayChange"
+      />
       <view class="order-item">
         <view class="order-item_key">备注</view>
         <view class="order-item_value">
