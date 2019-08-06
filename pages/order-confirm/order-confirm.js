@@ -11,8 +11,6 @@ import { placeholderUrl } from '../../utils/util';
 import qs from "qs";
 
 
-
-
 const { patchPage } = getApp().deps;
 console.log('l:',  patchPage);
 
@@ -48,41 +46,44 @@ Page({
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }
-      const { address, deliveryWays, good, payWays, other} = data;
+      const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
       this.setData({ address, deliveryWays, good, payWays, other});
     })
   },
   submitOrder(){
-    console.log('======1111111111111');
+    if (!this.data.payId){
+      wx.showToast({
+        title: '请先选择支付方式',
+        icon: 'none',
+        duration: 2000
+      });
+    }
     // 提交订单成功后
-    // submitOrder({
-    //   adress: {
-    //     id: '',
-    //     desc: ''
-    //   },
-    //   goodId: '',
-    //   count: '',
-    //   deliveryWayId: '',
-    //   desc: '',
-    //   payWayId: ''
-    // }).then((result)=>{
-    //   console.log('================');
-    //   // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
-    //   const { code, data = [], message } = result;
-    //   if (code !== 1) {
-    //     throw new Error(message || '请求错误');
-    //   }
-    //
-    //   const { id = '0' } = getQuery();
-    //   const query = {
-    //     id
-    //   };
-    //   wx.navigateTo({
-    //     url: `../order-result/order-result?$${qs.stringify(query)}`
-    //   })
-    // }).catch(()=>{
-    //
-    // });
+    submitOrder({
+      adressId: this.data.address.id,
+      goodId: this.data.good.id,
+      amount: this.data.amount,
+      deliveryId: this.deliveryId,
+      desc: this.data.other,
+      payId: this.data.payId
+    }).then((result)=>{
+      console.log('================');
+      // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
+      const { code, data = [], message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      const { id = '0' } = getQuery();
+      const query = {
+        statusId: ''
+      };
+      wx.navigateTo({
+        url: `../order-result/order-result?$${qs.stringify(query)}`
+      })
+    }).catch(()=>{
+
+    });
   },
   countAdd(){
     this.setData({
@@ -98,7 +99,7 @@ Page({
     });
   },
   deliveryWayChange($event){
-    const { deliveryId } = $event.detai;
+    const { deliveryId } = $event.detail;
     this.setData({
       deliveryId
     })

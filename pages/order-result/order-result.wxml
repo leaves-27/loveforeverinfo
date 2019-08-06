@@ -1,11 +1,9 @@
 <!--logs.wxml-->
 <view class="order-detail">
   <view  class="order-detail_body">
-    <view class="status">
-      <image class="status_icon" src="{{ status.iconUrl }}"></image>
-      <view class="status_title">{{ status.title }}</view>
-      <view class="status_desc">{{ status.desc }}</view>
-    </view>
+    <order-status
+      statusId="{{ statusId }}"
+    />
     <view class="good content_main">
       <view class="main_main">
         <image class="menu-logo" src="{{ good.menuLogoUrl }}" />
@@ -14,41 +12,46 @@
           <view class="menu-intro_price">{{ good.price }}</view>
         </view>
       </view>
-      <view class="main_bar">
-        x{{ good.amount }}
-      </view>
     </view>
     <view class="order">
       <view class="order-item">
         <view class="order-item_key">
-          订单编号
+          购买数量
         </view>
         <view class="order-item_value">
-          {{ order.code }}
+          {{ order.count }}
         </view>
       </view>
       <view class="order-item">
         <view class="order-item_key">
-          创建时间
+          订单金额
         </view>
         <view class="order-item_value">
-          {{ order.createTime }}
+          {{ order.amount }}
         </view>
       </view>
       <view class="order-item">
         <view class="order-item_key">
-          付款时间
+          配送方式
         </view>
         <view class="order-item_value">
-          {{ order.payTime }}
+          {{ order.deliveryId === '1' ? '快递' : '自提' }}
         </view>
       </view>
       <view class="order-item">
         <view class="order-item_key">
-          成交时间
+          邮费
         </view>
         <view class="order-item_value">
-          {{ order.successTime }}
+          {{ order.deliveryFee }}
+        </view>
+      </view>
+      <view class="order-item">
+        <view class="order-item_key">
+          备注
+        </view>
+        <view class="order-item_value">
+          {{ order.desc }}
         </view>
       </view>
     </view>

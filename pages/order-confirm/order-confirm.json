@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "delivery-way": "./components/delivery-way/delivery-way"
+  },
   "navigationBarTitleText": "订单确认",
   "backgroundColor": "#F3F3F3"
 }

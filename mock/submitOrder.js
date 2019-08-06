@@ -2,17 +2,21 @@ import { placeholderUrl } from '../utils/util';
 import getOrders from './getOrders';
 
 export default ({
-  adress = {
-    id: '',
-    desc: ''
-  },
+  adressId = '',
   goodId = '',
-  count = '',
-  deliveryWayId = '',
+  amount = 1,
+  deliveryId = '',
   desc = '',
-  payWayId = ''
+  payId = ''
 })=>{
-	console.log('================11');
+	console.log('================11', {
+		adressId,
+		goodId,
+		amount,
+		deliveryId,
+		desc,
+		payId
+	});
 	return new Promise( (resolve, reject)=>{
 		setTimeout(()=>{
 			resolve({

@@ -24,28 +24,14 @@
   text-align: right;
   line-height: 32rpx;
 }
-.status_icon{
-  width: 96rpx;
-  height: 96rpx;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.status_title{
-  font-family: PingFangSC-Medium;
-  font-size: 32rpx;
-  color: #3B3938;
-  text-align: center;
-}
-.status_desc{
-  font-family: PingFangSC-Regular;
-  font-size: 24rpx;
-  color: #919191;
-  text-align: center;
-}
 .content_main{
   display: flex;
+  padding-top: 23rpx;
   padding-bottom: 58rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: #FFFFFF;
+  margin-top: 16rpx;
 }
 .content_bar{
   display: flex;

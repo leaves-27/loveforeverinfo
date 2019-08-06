@@ -32,7 +32,7 @@
             bindtap="countAdd"> + </view>
         </view>
       </view>
-      <deliverywaychange
+      <delivery-way
         deliveryWays="{{ deliveryWays }}"
         deliveryId="{{ deliveryId }}"
         bind:deliverywaychange="deliveryWayChange"
