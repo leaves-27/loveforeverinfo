@@ -33,10 +33,7 @@ Page({
       const { name } = this.data.payWays.find((item)=>{
       return item.id === this.data.deliveryWayId
       }) || {};
-
-      console.log('name:', name);
       return name;
-      // return 'xx'
     }
   },
   onLoad: function () {
@@ -48,6 +45,14 @@ Page({
       }
       const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
       this.setData({ address, deliveryWays, good, payWays, other});
+    })
+  },
+  goAddress(){
+    const query = {
+      adressId: ''
+    };
+    wx.navigateTo({
+      url: `../address/address?$${qs.stringify(query)}`
     })
   },
   submitOrder(){

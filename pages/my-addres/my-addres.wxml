@@ -1,0 +1,76 @@
+<!--logs.wxml-->
+<view class="address">
+  <view class="tabs">
+    <block
+      wx:for="{{ tabs }}">
+      <view
+        wx:if="{{ selectedTabId === item.id }}"
+        class="tab tab--selected">
+        {{ item.name }}
+        <view class="line--selected"></view>
+      </view>
+      <view
+        wx:else
+        class="tab"
+        bindtap="tabChange"
+        data-item="{{ item }}">
+        {{ item.name }}
+      </view>
+    </block>
+  </view>
+  <view class="content">
+    <view
+      wx:if="{{ selectedTabId === tabs[0].id }}"
+      class="points">
+      <view
+        wx:for="points"
+        class="point-item">
+        <view class="point-item_main">
+          <view class="point_title">
+            提货点{{ index }}
+          </view>
+          <view class="point_content">
+            {{ item.desc }}
+          </view>
+        </view>
+        <view class="point-item_bar">
+          <radio value="{{ item.id }}" checked="{{ item.isChecked }}" />
+        </view>
+      </view>
+    </view>
+    <view
+      wx:else>
+      <view class="form-item">
+        <view class="form-item_key">
+          收货人
+        </view>
+        <view class="form-item_value">
+          <input value="{{ address }}" placeholder="请输入收货人地址" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item_key">
+          手机号
+        </view>
+        <view class="form-item_value">
+          <input value="{{ address }}" placeholder="请填写收货人手机号" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item_key">
+          所在地区
+        </view>
+        <view class="form-item_value">
+          <picker mode="region" bindchange="bindRegionChange" value="{{ region }}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="form-item">
+        <textarea value="{{ addressDetail }}" placeholder="详细地址(例：街道/小区/门牌号)" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="status">
+  <image class="status_icon" src="{{ status.iconUrl }}"></image>
+  <view class="status_title">{{ status.title }}</view>
+  <view class="status_desc">{{ status.desc }}</view>
+</view>
