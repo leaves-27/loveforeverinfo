@@ -46,9 +46,12 @@ const  goPay = function($event){
   // const query = {
   //   id
   // };
-  // wx.navigateTo({
-  //   url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
-  // })
+  const query = {
+    statusId: 0
+  };
+  wx.navigateTo({
+    url: `../order-result/order-result?$${qs.stringify(query)}`
+  });
 }
 
 module.exports = {
