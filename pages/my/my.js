@@ -33,6 +33,11 @@ Page({
       url: `../my-order/my-order?$${qs.stringify(query)}`
     })
   },
+  goMyAdress(){
+    wx.navigateTo({
+      url: `../my-address/my-address`
+    })
+  },
   onLoad(){
     getUserInfo().then((result)=>{
       const { code, data, message } = result;

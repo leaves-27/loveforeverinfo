@@ -52,7 +52,7 @@ Page({
       adressId: ''
     };
     wx.navigateTo({
-      url: `../address/address?$${qs.stringify(query)}`
+      url: `../my-address/my-address?$${qs.stringify(query)}`
     })
   },
   submitOrder(){

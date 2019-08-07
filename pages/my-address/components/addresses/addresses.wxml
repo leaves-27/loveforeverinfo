@@ -1,0 +1,21 @@
+<view class="addresses">
+  <view
+    wx:for="{{ newAddresses }}"
+    class="addresses-item">
+    <view class="item_main">
+      <view class="name-phone">
+        {{ item.name }} {{ item.phone }}
+      </view>
+      <view class="address">
+        {{ item.address }}
+      </view>
+    </view>
+    <view class="boundary"></view>
+    <view class="item_bar">
+      <view
+        bindtap="addressChange"
+        data-id="{{ item.id }}"
+        class="radio {{ item.id === selectedAddressId ? 'radio--active' : '' }}"></view>设为收货地址
+    </view>
+  </view>
+</view>

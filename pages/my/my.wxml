@@ -33,7 +33,9 @@
       <view class="item_text">{{ item.name }}</view>
     </view>
   </view>
-  <view class="address">
+  <view
+    class="address"
+    bindtap="goMyAdress">
     <image class="address_icon" src="{{ addressIconUrl }}" />
     <view class="address_desc">我的地址</view>
   </view>

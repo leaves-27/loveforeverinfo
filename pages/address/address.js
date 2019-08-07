@@ -1,7 +1,10 @@
 import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../apis/getOrders.js';
-import getOrders from "../../mock/getOrders";
-import { placeholderUrl } from '../../utils/util';
+// import submitPoint from '../../apis/submitPoint';
+// import submitAddress from '../../apis/submitAddress';
+import getPoints from "../../mock/getPoints";
+import submitPoint from '../../mock/submitPoint';
+import submitAddress from '../../mock/submitAddress';
 
 Page({
   data: {
@@ -12,9 +15,16 @@ Page({
       id: '2',
       name: '送货上门'
     }],
-    selectedTabId: '',
-    customItem: '请选择省市区',
-    addressId: ''
+    points: [],
+    selectedTabId: '1',
+    selectedPointId: '02',
+    addressId: '',
+    name: '',
+    phone: '',
+    address: {
+      region: ['浙江省', '杭州市', '西湖区'],
+      detail: ''
+    }
   },
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
@@ -23,8 +33,68 @@ Page({
       selectedTabId: id
     })
   },
+  selectedPoint($event){
+    const { id = '' } = $event.currentTarget.dataset;
+
+    this.setData({
+      selectedPointId: id,
+    });
+    submitPoint({ pointId: id }).then((result)=>{
+      const { code, data = [], message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      wx.navigateTo({
+        url: `../my-address/my-address`
+      })
+    }).catch((error)=>{
+
+    })
+  },
+  bindRegionChange: function (e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  save(){
+    submitAddress({
+      name: this.data.name,
+      phone: this.data.phone,
+      address: `${this.data.address.region.join('')}${this.data.address.detail}`
+    }).then((result)=>{
+      const { code, data = [], message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      wx.navigateTo({
+        url: `../my-address/my-address`
+      })
+    }).catch((error)=>{
+
+    })
+  },
   onLoad: function () {
-    const { addressId = '0' } = getQuery();
+    const { addressId } = getQuery();
+
+    if(addressId){
+      // 拉取地址信息
+    }else {
+
+    }
+    getPoints().then((result)=>{
+      const { code, data = [], message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      this.setData({
+        points: data
+      })
+    }).catch((error)=>{
+
+    });
     this.setData({
       addressId
     });

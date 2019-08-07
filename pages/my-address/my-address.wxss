@@ -1,0 +1,26 @@
+page{
+  background-color: #F3F3F3;
+}
+
+.button{
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+
+  border-radius: 6rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+}
+.button--disabled{
+  background: #DEDEDE;
+  color: #666666;
+}
+.button--active{
+  background-image: linear-gradient(-140deg, #FF6060 0%, #FE0000 100%);
+  color: #FFFFFF;
+  border: none;
+}
