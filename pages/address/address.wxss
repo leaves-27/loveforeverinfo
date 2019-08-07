@@ -109,8 +109,10 @@
 }
 
 .button{
-  display: inline-block;
-  width: 100%;
+  display: block;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  margin-top: 40rpx;
   height: 100rpx;
   line-height: 100rpx;
 

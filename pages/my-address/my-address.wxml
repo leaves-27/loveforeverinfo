@@ -5,7 +5,7 @@
     selectedAddressId="{{ selectedAddressId }}"
     bind:addressChange="addressChange"
   />
-<!--  <view-->
-<!--    class="button button&#45;&#45;disabled"-->
-<!--    bindtap="goCreateAddress">添加新地址</view>-->
+  <view
+    class="button button--disabled"
+    bindtap="goCreateAddress">添加新地址</view>
 </view>
