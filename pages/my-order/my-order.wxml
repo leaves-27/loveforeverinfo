@@ -1,6 +1,6 @@
 <!--logs.wxml-->
 <view class="orders">
-  <view class="tabs">
+  <view class="tabs>
     <block
       wx:for="{{ tabs }}">
       <view
@@ -18,8 +18,14 @@
       </view>
     </block>
   </view>
+
   <orders
+    wx:if="tabs.length > 0"
     selectedTabId="{{ selectedTabId }}"
     tabs="{{ tabs }}"
+  />
+  <exception
+    wx:else
+    text="暂无订单"
   />
 </view>

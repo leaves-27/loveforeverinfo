@@ -1,0 +1,10 @@
+.exception{
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exception_text{
+  color: #F3F3F3;
+}
