@@ -11,7 +11,7 @@ Page({
     score: 0,
     qrUrl: placeholderUrl,
     userLogoUrl: '',
-    addressIconUrl: ''
+    addressIconUrl: '../../images/address.png'
   },
   goMyQr() {
     const query = {
@@ -50,7 +50,6 @@ Page({
         score,
         qrUrl,
         userLogoUrl,
-        addressIconUrl
       } = data;
 
       this.setData({
@@ -59,7 +58,6 @@ Page({
         score,
         qrUrl,
         userLogoUrl,
-        addressIconUrl
       })
     })
   },

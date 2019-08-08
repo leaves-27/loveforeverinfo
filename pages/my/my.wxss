@@ -58,6 +58,8 @@
 
 .score{
     margin-right: 50rpx;
+    background: url("../../images/xiyan.png") no-repeat 60rpx center;
+    background-size: 70rpx 36rpx;
 }
 
 .order-status{
@@ -78,12 +80,13 @@
     justify-content: center;
 }
 .item_icon{
-    width: 40rpx;
-    height: 40rpx;
+    width: 56rpx;
+    height: 56rpx;
     margin-bottom: 20rpx;
 }
 .item_text{
-
+    font-size: 24rpx;
+    color: #616161;
 }
 .address{
     height: 100rpx;

@@ -25,19 +25,19 @@ const getOrderStatus = ()=>{
   return [{
     id: '1',
     name: '待付款',
-    iconUrl: placeholderUrl
+    iconUrl: '../../images/waitpay.png'
   }, {
     id: '2',
     name: '配送中',
-    iconUrl: placeholderUrl
+    iconUrl: '../../images/deliverying.png'
   }, {
     id: '3',
     name: '已签收',
-    iconUrl: placeholderUrl
+    iconUrl: '../../images/signed.png'
   }, {
     id: '0',
     name: '全部',
-    iconUrl: placeholderUrl
+    iconUrl: '../../images/all.png'
   }]
 };
 

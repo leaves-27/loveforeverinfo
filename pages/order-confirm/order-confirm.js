@@ -20,10 +20,18 @@ Page({
     address: {},
     deliveryWays: [],
     good: {},
-    payWays: [],
+    payWays: [{
+      id: '1',
+      iconUrl: '../../images/wxpay.png',
+      name: '微信支付'
+    }, {
+      id: '2',
+      iconUrl: '../../images/offlinepay.png',
+      name: '线下支付'
+    }],
     other: '', // 备注
-    iconAddressUrl: placeholderUrl,
-    arrowRightUrl: placeholderUrl,
+    iconAddressUrl: '../../images/address_selected.png',
+    arrowRightUrl: '../../images/arrow_right.png',
     deliveryId: 1,
     amount: 1,
     payId: '',
@@ -44,7 +52,7 @@ Page({
         throw new Error(message || '请求错误');
       }
       const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
-      this.setData({ address, deliveryWays, good, payWays, other});
+      this.setData({ address, deliveryWays, good, other});
     })
   },
   goAddress(){

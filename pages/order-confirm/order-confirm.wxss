@@ -31,8 +31,8 @@
   align-items: center;
 }
 .address_icon{
-  width: 40rpx;
-  height: 40rpx;
+  width: 26rpx;
+  height: 37rpx;
 }
 .address_desc{
   padding-left: 16rpx;
@@ -43,8 +43,8 @@
 }
 
 .arrow{
-  width: 28.3rpx;
-  height: 28.3rpx;
+  width: 12rpx;
+  height: 20rpx;
 }
 
 .good{
