@@ -19,9 +19,11 @@
   </view>
 
   <orders
-    wx:if="tabs.length > 0"
+    wx:if="{{ orders.length > 0 }}"
     selectedTabId="{{ selectedTabId }}"
     tabs="{{ tabs }}"
+    orders="{{ orders }}"
+    bind:cancelorder="cancelOrder"
   />
   <exception
     wx:else

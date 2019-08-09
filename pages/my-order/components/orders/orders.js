@@ -1,12 +1,14 @@
 import { getQuery, goPay } from '../../../../utils/util.js';
-// import getOrders from '../../../../apis/getOrders.js';
-import getOrders from "../../../../mock/getOrders";
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
 
 Component({
   behaviors: [computedBehavior],
   properties: {
+    orders: {
+      type: Array,
+      value: []
+    },
     tabs: {
       type: Array,
       value: []
@@ -15,9 +17,6 @@ Component({
       type: String,
       value: ''
     }
-  },
-  data: {
-    orders: [],
   },
   computed: {
     tabOrders(){
@@ -32,25 +31,6 @@ Component({
         })
       }
       return orders;
-    },
-  },
-  lifetimes: {
-    ready () {
-      const { id = '0' } = getQuery();
-      this.setData({
-        selectedTabId: id
-      });
-
-      getOrders().then((result)=>{
-        const { code, data = [], message } = result;
-        if (code !== 1) {
-          throw new Error(message || '请求错误');
-        }
-
-        this.setData({
-          orders: data
-        })
-      })
     },
   },
   methods: {
@@ -76,11 +56,10 @@ Component({
       if (index > -1){
         orders.splice(index ,1);
       }
-      console.log('orders:', orders);
-      this.setData({
-        orders,
-      })
 
+      this.triggerEvent('cancelorder', {
+        orders
+      })
     },
     goBuy($event){
 

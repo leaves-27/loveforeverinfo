@@ -4,7 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 240rpx;
+  padding-bottom: 100rpx;
 }
 .exception_text{
-  color: #F3F3F3;
+  color: #919191;
 }
