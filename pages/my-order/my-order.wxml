@@ -1,8 +1,7 @@
 <!--logs.wxml-->
 <view class="orders">
-  <view class="tabs>
-    <block
-      wx:for="{{ tabs }}">
+  <view class="tabs">
+    <block wx:for="{{ tabs }}">
       <view
         wx:if="{{ selectedTabId === item.id }}"
         class="tab tab--selected">
