@@ -12,7 +12,7 @@
       <view class="main_bar">
         <image
           class="qr"
-          src="{{ qrUrl }}"
+          src="../../images/qr.png"
           bindtap="goMyQr"
         />
       </view>

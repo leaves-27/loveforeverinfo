@@ -48,7 +48,6 @@ Page({
         name,
         phone,
         score,
-        qrUrl,
         userLogoUrl,
       } = data;
 
@@ -56,7 +55,6 @@ Page({
         name,
         phone,
         score,
-        qrUrl,
         userLogoUrl,
       })
     })
