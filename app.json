@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/index/index",
+    "pages/my/my",
     "pages/my-qr/my-qr",
     "pages/my-order/my-order",
     "pages/order-detail/order-detail",
@@ -23,7 +23,7 @@
     "color": "#7F8389",
     "selectedColor": "#FE0000",
     "list": [{
-      "pagePath": "pages/order-confirm/order-confirm",
+      "pagePath": "pages/index/index",
       "text": "喜燕",
       "iconPath": "images/home.png",
       "selectedIconPath": "images/home_selected.png"

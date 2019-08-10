@@ -1,0 +1,25 @@
+<view  class="order-detail_body">
+  <view class="user">
+    <view class="user_bar">
+      <view class="icon--address">
+        <image src="../../../../images/address_selected.png" />
+      </view>
+    </view>
+    <view class="user_main">
+      <view class="name-phone">
+        {{ order.user.name }} {{ order.user.phone }}
+      </view>
+      <view class="address">
+        {{ order.user.address }}
+      </view>
+    </view>
+  </view>
+  <good
+    id="{{ order.id }}"
+    name="{{ order.good.name }}"
+    price="{{ order.good.price }}"
+    logoUrl="{{ order.good.menuLogoUrl }}"
+    amount="{{ order.amount }}"
+  />
+  <kvs items = "{{ kvs }}" />
+</view>

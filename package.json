@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@leaves-27/good": "^1.0.0",
+    "@leaves-27/kvs": "^1.0.0",
     "axios": "^0.19.0",
     "miniprogram-computed": "^1.0.0",
     "qs": "^6.7.0"

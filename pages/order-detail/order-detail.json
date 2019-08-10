@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "order-body": "./components/order-body/order-body"
+  },
   "navigationBarTitleText": "订单详情",
   "backgroundColor": "#F3F3F3"
 }

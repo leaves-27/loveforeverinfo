@@ -4,11 +4,8 @@ import { placeholderUrl, getQuery, goPay } from '../../utils/util';
 
 Page({
   data: {
-    user: {},
-    good: {},
     order: {},
     waitPayIconUrl: '../../images/icon--wait-pay.png',
-    iconAddressUrl: placeholderUrl
   },
   onLoad: function () {
     const { id = '0' } = getQuery();
@@ -22,21 +19,18 @@ Page({
         throw new Error(message || '请求错误');
       }
       const { user = {}, good = {}, order = {} } = data;
-
       this.setData({
-        user,
-        good,
-        order
+        order: {
+          ...order,
+          user,
+          good
+        },
       })
     })
   },
   methods: {
     goPay,
-    goBuy(){
-
-    },
-    goDeliveryDetail(){
-
-    }
+    goBuy(){},
+    goDeliveryDetail(){}
   }
 })

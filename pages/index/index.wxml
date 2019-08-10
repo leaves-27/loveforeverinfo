@@ -1,4 +1,5 @@
-<!--logs.wxml-->
-<view class="container log-list">
-
+<view class="container">
+    <view
+        class="button button--active"
+        bindtap="goConfirmPay" data-item="{{ good }}">我是商品,点我</view>
 </view>

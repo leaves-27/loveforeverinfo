@@ -26,7 +26,6 @@ export default (id)=> new Promise( (resolve, reject)=>{
 					name: '喜燕周年装',
 					menuLogoUrl: placeholderUrl,
 					price: 380.88,
-					amount: 1,
 					deliveryFee: 10
 				},
 				order: {
@@ -35,7 +34,8 @@ export default (id)=> new Promise( (resolve, reject)=>{
 					createTime: '',
 					payTime: '',
 					successTime: '',
-					desc: '20分钟后自动关闭'
+					desc: '20分钟后自动关闭',
+					amount: 1,
 				},
 			}
 		});

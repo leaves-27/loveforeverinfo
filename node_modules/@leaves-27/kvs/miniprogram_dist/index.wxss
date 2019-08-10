@@ -1,0 +1,26 @@
+.order{
+  background-color: #FFFFFF;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.order-item{
+  border-top: 1rpx solid #EEEEEE;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+.order-item_key{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #919191;
+  letter-spacing: 0;
+  line-height: 40rpx;
+}
+.order-item_value{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #262626;
+  text-align: right;
+  line-height: 32rpx;
+}

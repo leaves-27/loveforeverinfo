@@ -1,0 +1,12 @@
+<view class="good">
+    <view class="good_main">
+        <image class="menu-logo" src="{{ logoUrl }}" />
+        <view class="menu-intro">
+            <view class="menu-intro_name">{{ name }}</view>
+            <view class="menu-intro_price">{{ price }}</view>
+        </view>
+    </view>
+    <view wx:if="{{ !!amount }}" class="good_bar">
+        x{{ amount }}
+    </view>
+</view>
