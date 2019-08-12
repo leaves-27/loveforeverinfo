@@ -1,6 +1,7 @@
 const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
 
 import qs from 'qs';
+import { staticPrifix } from '../config/index';
 
 const getCurrentRoute = ()=>{
   let pages = getCurrentPages();
@@ -25,19 +26,19 @@ const getOrderStatus = ()=>{
   return [{
     id: '1',
     name: '待付款',
-    iconUrl: '../../images/waitpay.png'
+    iconUrl: `${staticPrifix}/waitpay.png`
   }, {
     id: '2',
     name: '配送中',
-    iconUrl: '../../images/deliverying.png'
+    iconUrl: `${staticPrifix}/deliverying.png`
   }, {
     id: '3',
     name: '已签收',
-    iconUrl: '../../images/signed.png'
+    iconUrl: `${staticPrifix}/signed.png`
   }, {
     id: '0',
     name: '全部',
-    iconUrl: '../../images/all.png'
+    iconUrl: `${staticPrifix}/all.png`
   }]
 };
 

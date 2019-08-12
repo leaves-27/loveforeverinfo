@@ -1,15 +1,20 @@
 import { getQuery, placeholderUrl } from "../../utils/util";
 import getMyQr from "../../mock/getMyQr";
 import qs from 'qs';
+// import { staticPrifix } from '../../config/index'
+import { staticPrifix } from '../../mock/config';
 
 Page({
   data: {
     name: '',
     userLogoUrl: '',
     qrUrl: '',
+    qrBorderTop: `${staticPrifix}/qr_border-top.png`,
+    qrBoundary: `${staticPrifix}/qr_border-middle.png`
   },
   onLoad: function () {
     const { name = '', userLogoUrl = '' } = getQuery();
+    console.log('userLogoUrl', getQuery());
     this.setData({
       name,
       userLogoUrl

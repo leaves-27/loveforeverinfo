@@ -2,16 +2,18 @@ import qs from 'qs';
 // import getUserInfo from '../../apis/getUserInfo';
 import getUserInfo from '../../mock/getUserInfo';
 import { getOrderStatus, placeholderUrl } from '../../utils/util';
-
+// import { staticPrifix } from '../../config/index'
+import { staticPrifix } from '../../mock/config';
 Page({
   data: {
     orderStatus: getOrderStatus(),
     name: '',
     phone: '',
     score: 0,
-    qrUrl: placeholderUrl,
     userLogoUrl: '',
-    addressIconUrl: '../../images/address.png'
+    qrUrl: `${staticPrifix}/qr.png`,
+    addressIconUrl: `${staticPrifix}/address.png`,
+    scoreLogoUrl: `${staticPrifix}//xiyan.png`
   },
   goMyQr() {
     const query = {

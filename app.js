@@ -18,7 +18,7 @@ App({
   goAuthorize(){
 
   },
-  onLaunch: function () {   
+  onLaunch: function () {
     // 进入后，判断用户是否授权。若已授权，则获取用户信息。否则弹框获取用户授权。然后再获取用户信息。
     // const isAuthedUserInfo = wx.getStorageSync('isAuthedUserInfo') || false;
     // if (!isAuthedUserInfo) {

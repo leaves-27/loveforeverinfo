@@ -15,12 +15,13 @@
 .my-info_bar{
     height: 104rpx;
     line-height: 104rpx;
-    display: block;
+    display: flex;
     background: -webkit-linear-gradient(left, #564847 , #38372F);
     border-top-left-radius: 24rpx;
     border-top-right-radius: 24rpx;
     color: #FFFFFF;
     text-align: right;
+    align-items: center;
 }
 
 .main_main{
@@ -55,13 +56,15 @@
     width: 52rpx;
     height: 52rpx;
 }
-
-.score{
-    margin-right: 50rpx;
-    background: url("../../images/xiyan.png") no-repeat 60rpx center;
-    background-size: 70rpx 36rpx;
+.score_logo-url{
+    width: 70rpx;
+    height: 36rpx;
+    margin-left: 50rpx;
 }
-
+.score_value{
+    padding-right: 50rpx;
+    flex: 1;
+}
 .order-status{
     background-color: #FFFFFF;
     display: flex;

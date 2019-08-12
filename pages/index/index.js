@@ -8,7 +8,7 @@ Page({
       price: 'xx'
     }
   },
-  goConfirmPay($event){
+  goConfirmPay($event) {
     const { item } = $event.currentTarget.dataset;
     const { id } = item;
 

@@ -12,13 +12,14 @@
       <view class="main_bar">
         <image
           class="qr"
-          src="../../images/qr.png"
+          src="{{ qrUrl }}"
           bindtap="goMyQr"
         />
       </view>
     </view>
     <view class="my-info_bar">
-      <view class="score">
+      <image class="score_logo-url" src="{{ scoreLogoUrl }}" />
+      <view class="score_value">
         积分：{{ score }}
       </view>
     </view>
