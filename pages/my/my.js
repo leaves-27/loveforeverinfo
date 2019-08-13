@@ -1,9 +1,10 @@
 import qs from 'qs';
+import { getOrderStatus } from '../../utils/util';
+import { staticPrifix } from '../../config/index'
+
 // import getUserInfo from '../../apis/getUserInfo';
 import getUserInfo from '../../mock/getUserInfo';
-import { getOrderStatus, placeholderUrl } from '../../utils/util';
-// import { staticPrifix } from '../../config/index'
-import { staticPrifix } from '../../mock/config';
+
 Page({
   data: {
     orderStatus: getOrderStatus(),

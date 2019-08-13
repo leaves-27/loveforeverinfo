@@ -1,8 +1,7 @@
-import { getQuery, placeholderUrl } from "../../utils/util";
+import { getQuery } from "../../utils/util";
+import { staticPrifix } from '../../config/index'
+
 import getMyQr from "../../mock/getMyQr";
-import qs from 'qs';
-// import { staticPrifix } from '../../config/index'
-import { staticPrifix } from '../../mock/config';
 
 Page({
   data: {

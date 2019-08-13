@@ -19,15 +19,15 @@
       <image
         wx:if="{{ order.status === '1' }}"
         class="icon--wait-pay"
-        src="../../images/waitpay_detail.png"  />
+        src="{{ waitPayIconUrl }}"  />
       <image
         wx:elif="{{ order.status === '2' }}"
         class="icon--wait-pay"
-        src="../../images/deliverying_detail.png"  />
+        src="{{ deliveryingDetailIconUrl }}"  />
       <image
         wx:elif="{{ order.status === '3' }}"
         class="icon--wait-pay"
-        src="../../images/singed_detail.png"  />
+        src="{{ singedDetailIconUrl }}"  />
     </view>
   </view>
   <order-body order="{{ order }}" />

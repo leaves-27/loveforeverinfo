@@ -1,4 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
+import { staticPrifix } from '../../config/index'
 
 Component({
   behaviors: [computedBehavior],
@@ -7,6 +8,9 @@ Component({
       type: Object,
       value: {}
     }
+  },
+  data: {
+    addressIconUrl: `${staticPrifix}/address_selected.png`
   },
   computed: {
     kvs(){

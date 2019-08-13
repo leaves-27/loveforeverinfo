@@ -2,7 +2,7 @@
   <view class="user">
     <view class="user_bar">
       <view class="icon--address">
-        <image src="../../../../images/address_selected.png" />
+        <image src="{{ addressIconUrl }}" />
       </view>
     </view>
     <view class="user_main">

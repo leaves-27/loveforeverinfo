@@ -1,15 +1,12 @@
 import computedBehavior from 'miniprogram-computed';
+import qs from "qs";
 import { getQuery } from '../../utils/util';
+import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
 import getOrderConfirm from "../../mock/getOrderConfirm";
-
 // import submitOrder from '../../apis/submitOrder';
 import submitOrder from "../../mock/submitOrder";
-
-import { placeholderUrl } from '../../utils/util';
-import qs from "qs";
-
 
 const { patchPage } = getApp().deps;
 console.log('l:',  patchPage);
@@ -22,16 +19,16 @@ Page({
     good: {},
     payWays: [{
       id: '1',
-      iconUrl: '../../images/wxpay.png',
+      iconUrl: `${staticPrifix}/wxpay.png`,
       name: '微信支付'
     }, {
       id: '2',
-      iconUrl: '../../images/offlinepay.png',
+      iconUrl: `${staticPrifix}/offlinepay.png`,
       name: '线下支付'
     }],
     other: '', // 备注
-    iconAddressUrl: '../../images/address_selected.png',
-    arrowRightUrl: '../../images/arrow_right.png',
+    iconAddressUrl: `${staticPrifix}/address_selected.png`,
+    arrowRightUrl: `${staticPrifix}/arrow_right.png`,
     deliveryId: 1,
     amount: 1,
     payId: '',

@@ -1,11 +1,14 @@
+import { staticPrifix } from '../../config/index'
+
 // import getOrderDetail from '../../apis/getOrderDetail.js';
 import getOrderDetail from "../../mock/getOrderDetail";
-import { placeholderUrl, getQuery, goPay } from '../../utils/util';
 
 Page({
   data: {
     order: {},
-    waitPayIconUrl: '../../images/icon--wait-pay.png',
+    waitPayIconUrl: `${staticPrifix}/icon--wait-pay.png`,
+    deliveryingDetailIconUrl: `${staticPrifix}/deliverying_detail.png`,
+    singedDetailIconUrl: `${staticPrifix}/singed_detail.png`
   },
   onLoad: function () {
     const { id = '0' } = getQuery();
