@@ -27,6 +27,7 @@
   <view class="order-status" wx:if="{{ orderStatus }}">
     <view
       wx:for="{{ orderStatus }}"
+      wx:key="{{ index }}"
       class="order-status_item"
       bindtap="goMyOrder"
       data-item="{{ item }}">
