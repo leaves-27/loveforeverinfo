@@ -1,4 +1,5 @@
 import { staticPrifix } from '../../config/index'
+import { goPay, getQuery } from '../../utils/util';
 
 // import getOrderDetail from '../../apis/getOrderDetail.js';
 import getOrderDetail from "../../mock/getOrderDetail";

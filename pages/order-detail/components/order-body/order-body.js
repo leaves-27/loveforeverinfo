@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { staticPrifix } from '../../config/index'
+import { staticPrifix } from '../../../../config/index'
 
 Component({
   behaviors: [computedBehavior],

@@ -8,9 +8,6 @@ import getOrderConfirm from "../../mock/getOrderConfirm";
 // import submitOrder from '../../apis/submitOrder';
 import submitOrder from "../../mock/submitOrder";
 
-const { patchPage } = getApp().deps;
-console.log('l:',  patchPage);
-
 Page({
   behaviors: [computedBehavior],
   data: {
