@@ -7,7 +7,7 @@ import getOrderDetail from "../../mock/getOrderDetail";
 Page({
   data: {
     order: {},
-    waitPayIconUrl: `${staticPrifix}/icon--wait-pay.png`,
+    waitPayIconUrl: `${staticPrifix}/waitpay_detail.png`,
     deliveryingDetailIconUrl: `${staticPrifix}/deliverying_detail.png`,
     singedDetailIconUrl: `${staticPrifix}/singed_detail.png`
   },
