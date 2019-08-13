@@ -32,9 +32,7 @@ Page({
       })
     })
   },
-  methods: {
-    goPay,
-    goBuy(){},
-    goDeliveryDetail(){}
-  }
+  goPay,
+  goBuy(){},
+  goDeliveryDetail(){}
 })
