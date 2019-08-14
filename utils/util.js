@@ -55,12 +55,20 @@ const  goPay = function($event){
   });
 }
 
+const UserType = {
+  'DOCTOR': 'DOCTOR',
+  'SALES_REPRESENTATIVE': 'SALES_REPRESENTATIVE',
+  'COURIER': 'COURIER',
+  'CUSTOMER': 'CUSTOMER'
+}
+
 module.exports = {
   placeholderUrl,
   getCurrentRoute,
   getQuery,
   getOrderStatus,
   goPay,
+  UserType,
 }
 
 

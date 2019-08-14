@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { placeholderUrl } from '../../utils/util.js';
+import { placeholderUrl, UserType } from '../../utils/util.js';
 
 Page({
   behaviors: [computedBehavior],
@@ -10,14 +10,14 @@ Page({
   },
   computed: {
     loginLogoUrl(){
-      if (this.data.type === 1){ // 医生
+      if (this.data.type === UserType['DOCUTOR']){ // 医生 doctor
         return '1';
-      } else if (this.data.type === 2){ // 医药代表
+      } else if (this.data.type === UserType['SALES_REPRESENTATIVE']){ // 医药代表sales representative
         return '2';
-      } else if (this.data.type === 3){ // 派送员
+      } else if (this.data.type === UserType['COURIER']){ // 派送员 courier
         return '3';
       }
-      return placeholderUrl; //普通用户
+      return placeholderUrl; //普通用户 customer
     },
   },
   methods:{
