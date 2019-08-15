@@ -1,3 +1,5 @@
+import { apiPrifix } from '../config/index';
+
 export default (status)=>{
 	return new Promise(async (resolve, reject)=>{
 		// wx.request({
