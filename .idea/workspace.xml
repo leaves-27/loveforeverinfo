@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +16,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.js">
+        <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,8 +121,8 @@
         <option value="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/pages/doctor/doctor.json" />
         <option value="$PROJECT_DIR$/pages/doctor/doctor.wxml" />
-        <option value="$PROJECT_DIR$/pages/doctor/doctor.js" />
         <option value="$PROJECT_DIR$/pages/doctor/components/orders/orders.js" />
+        <option value="$PROJECT_DIR$/pages/doctor/doctor.js" />
       </list>
     </option>
   </component>
@@ -154,21 +154,6 @@
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="doctor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="orders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
@@ -272,12 +257,12 @@
       <workItem from="1566183908555" duration="384000" />
       <workItem from="1566184660264" duration="73000" />
       <workItem from="1566185008686" duration="3099000" />
-      <workItem from="1566256866676" duration="995000" />
+      <workItem from="1566256866676" duration="1078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123531000" />
+    <option name="totallyTimeSpent" value="123614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="247" y="92" width="1193" height="805" extended-state="0" />
@@ -620,17 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#176#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -663,6 +637,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

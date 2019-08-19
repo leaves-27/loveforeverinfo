@@ -1,8 +1,5 @@
-import qs from 'qs';
-import { getOrderStatus } from '../../utils/util';
-import { staticPrifix } from '../../config/index'
-
 // import getUserInfo from '../../apis/getUserInfo';
+// import getOrders from '../../apis/getOrders';
 import getUserInfo from '../../mock/getUserInfo';
 import getOrders from "../../mock/getOrders";
 
