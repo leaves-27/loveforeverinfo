@@ -54,7 +54,7 @@ Page({
       adressId: ''
     };
     wx.navigateTo({
-      url: `../my-address/my-address?$${qs.stringify(query)}`
+      url: `../address/address?$${qs.stringify(query)}`
     })
   },
   submitOrder(){

@@ -2,7 +2,7 @@ import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../apis/getOrders.js';
 // import submitPoint from '../../apis/submitPoint';
 // import submitAddress from '../../apis/submitAddress';
-import getPoints from "../../mock/getPoints";
+import getPoints from "../../mock/getTakeGoodPoints";
 import submitPoint from '../../mock/submitPoint';
 import submitAddress from '../../mock/submitAddress';
 

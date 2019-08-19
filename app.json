@@ -9,7 +9,8 @@
     "pages/order-result/order-result",
     "pages/login/login",
     "pages/address/address",
-    "pages/my-address/my-address"
+    "pages/my-address/my-address",
+    "pages/doctor/doctor"
   ],
   "window": {
     "backgroundTextStyle": "light",

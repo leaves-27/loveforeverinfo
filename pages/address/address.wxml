@@ -29,7 +29,7 @@
               提货点{{ index }}
             </view>
             <view class="point_content">
-              {{ item.desc }}
+              {{ item.address }}
             </view>
           </view>
           <view class="point-item_bar">

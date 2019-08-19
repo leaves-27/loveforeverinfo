@@ -9,13 +9,13 @@
           <view class="phone">{{ phone }}</view>
         </view>
       </view>
-      <view class="main_bar">
-        <image
-          class="qr"
-          src="{{ qrUrl }}"
-          bindtap="goMyQr"
-        />
-      </view>
+<!--      <view class="main_bar">-->
+<!--        <image-->
+<!--          class="qr"-->
+<!--          src="{{ qrUrl }}"-->
+<!--          bindtap="goMyQr"-->
+<!--        />-->
+<!--      </view>-->
     </view>
     <view class="my-info_bar">
       <image class="score_logo-url" src="{{ scoreLogoUrl }}" />
