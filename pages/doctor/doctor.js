@@ -11,7 +11,6 @@ Page({
     name: '',
     phone: '',
     userLogoUrl: '',
-    orders: [],
     tabs: [{
       id: '01',
       name: '销售概况'
@@ -19,18 +18,8 @@ Page({
       id: '02',
       name: '消费者信息'
     }],
+    orders: [],
     selectedTabId: '01'
-  },
-  goMyOrder($event){
-    const { item } = $event.currentTarget.dataset;
-    const { id } = item;
-
-    const query = {
-      id
-    };
-    wx.navigateTo({
-      url: `../my-order/my-order?$${qs.stringify(query)}`
-    })
   },
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;

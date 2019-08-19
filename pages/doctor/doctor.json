@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "orders": "./components/orders/orders"
+  },
   "navigationBarTitleText": "我的",
   "backgroundColor": "#F3F3F3"
 }

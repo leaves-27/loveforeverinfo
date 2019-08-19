@@ -30,26 +30,8 @@
       </view>
     </block>
   </view>
-  <view class="orders">
-    <view class="order" wx:for="{{ orders }}">
-      <view class="order_header" wx:if="{{ selectedTabId ===  '01' }}">
-        {{ item.createTime }}
-      </view>
-      <view class="order_body">
-        <view class="good">
-          <view class="good_main">
-            <image class="menu-logo" src="{{ item.good.logoUrl }}" />
-            <view class="menu-intro">
-              <view wx:if="{{ selectedTabId ===  '01' }}" class="menu-intro_name">{{ item.good.name }}</view>
-              <view wx:else class="menu-intro_name">{{ item.user.name }}</view>
-              <view class="menu-intro_price">购买数量:{{ item.count }}个</view>
-            </view>
-          </view>
-          <view class="good_bar">
-            合计:<view>{{ item.good.price }}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+  <orders
+    orders="{{ orders }}"
+    selectedTabId="{{ selectedTabId }}"
+  />
 </view>
