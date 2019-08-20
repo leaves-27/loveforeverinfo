@@ -44,9 +44,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/doctor/doctor",
-					"pathName": "pages/doctor/doctor",
+					"id": 0,
+					"name": "pages/medicalor/medicalor",
+					"pathName": "pages/medicalor/medicalor",
+					"query": "",
 					"scene": null
 				}
 			]
