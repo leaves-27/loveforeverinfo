@@ -25,6 +25,11 @@ Page({
       url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
   },
+  goLogin(){
+    wx.navigateTo({
+      url: `../login/login`
+    });
+  },
   goMyOrder($event){
     const { item } = $event.currentTarget.dataset;
     const { id } = item;

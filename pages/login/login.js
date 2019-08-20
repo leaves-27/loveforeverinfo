@@ -1,5 +1,6 @@
 import computedBehavior from 'miniprogram-computed';
 import { placeholderUrl, UserType } from '../../utils/util.js';
+import login from '../../mock/login';
 
 Page({
   behaviors: [computedBehavior],
@@ -23,6 +24,7 @@ Page({
   methods:{
     goLogin(){
       login().then((item)=>{
+        const { code, data } = item;
         if(code !== 1){
           wx.showToast({
             title: '登录失败，请稍后重试'
@@ -31,6 +33,19 @@ Page({
           wx.showToast({
             title: '登录成功'
           });
+
+          if (data.userType === 1){
+            wx.navigateTo({
+              url: `../doctor/doctor`
+            })
+          }
+
+          if (data.userType === 2){
+            wx.navigateTo({
+              url: `../medicalor/medicalor`
+            })
+          }
+
         }
       }).catch((error)=>{
         wx.showToast({

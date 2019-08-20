@@ -41,4 +41,10 @@
     <image class="address_icon" src="{{ addressIconUrl }}" />
     <view class="address_desc">我的地址</view>
   </view>
+  <view
+    class="address"
+    bindtap="goLogin">
+    <image class="address_icon" src="{{ addressIconUrl }}" />
+    <view class="address_desc">登录</view>
+  </view>
 </view>
