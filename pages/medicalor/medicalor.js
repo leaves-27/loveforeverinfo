@@ -2,7 +2,7 @@ import qs from 'qs';
 // import getUserInfo from '../../apis/getUserInfo';
 // import getOrders from '../../apis/getOrders';
 import getUserInfo from '../../mock/getUserInfo';
-import getDoctors from "../../mock/getDoctors";
+import getMyDoctors from "../../mock/getMyDoctors";
 import {staticPrifix} from "../../config/index";
 
 Page({
@@ -25,7 +25,7 @@ Page({
     })
   },
   onLoad(){
-    Promise.all([getUserInfo(), getDoctors()]).then((result)=>{
+    Promise.all([getUserInfo(), getMyDoctors()]).then((result)=>{
       const { code, data, message } = result[0] || {};
       if (code !== 1) {
         throw new Error(message || '请求错误');

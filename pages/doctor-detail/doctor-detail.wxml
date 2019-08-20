@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="my-info">
+    <view class="my-info_main">
+      <view class="main_main">
+        <image class="logo" src="{{ logoUrl }}" />
+        <view class="private-text">
+          <view class="name">{{ name }}</view>
+        </view>
+      </view>
+      <view class="main_bar">
+        <view class="score">
+          <view class="score_value">{{ score }}</view>
+          <view class="score_label">当前积分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="columns">
+    <view class="column">
+      <view class="column_label">联系方式</view>
+      <view class="column_value">{{ phone }}</view>
+    </view>
+    <view class="column">
+      <view class="column_label">客户数量</view>
+      <view class="column_value">{{ userCount }}</view>
+    </view>
+
+    <view class="column">
+      <view class="column_label">所属医院</view>
+      <view class="column_value">{{ hospital }}</view>
+    </view>
+
+    <view class="column">
+      <view class="column_label">所属科室</view>
+      <view class="column_value">{{ department }}</view>
+    </view>
+
+    <view class="column">
+      <view class="column_label">医生职别</view>
+      <view class="column_value">{{ level }}</view>
+    </view>
+  </view>
+</view>

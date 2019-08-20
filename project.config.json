@@ -41,12 +41,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": 0,
 					"name": "pages/medicalor/medicalor",
 					"pathName": "pages/medicalor/medicalor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/doctor-detail/doctor-detail",
+					"pathName": "pages/doctor-detail/doctor-detail",
 					"query": "",
 					"scene": null
 				}

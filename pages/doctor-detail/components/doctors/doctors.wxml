@@ -5,7 +5,7 @@
       <image class="doctor_logo" src="{{ item.logoUrl }}" />
       <view class="doctor_intro">
         <view class="doctor-intro_name">{{ item.name }}</view>
-        <view class="doctor-intro_unit">{{ item.hospital }} {{ item.department }}</view>
+        <view class="doctor-intro_unit">{{ item.unit }}</view>
       </view>
       <image class="doctor_more" bind:tap="goDoctorDetail" src="{{ arrowRightUrl }}"></image>
     </view>

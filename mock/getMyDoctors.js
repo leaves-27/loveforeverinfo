@@ -8,12 +8,14 @@ export default ()=> new Promise( (resolve, reject)=>{
 				id: '01',
 				name: '张医生',
 				logoUrl: placeholderUrl,
-				unit: '市妇女儿童医院 妇产科'
+				hospital: '市妇女儿童医院',
+				department: '妇产科',
 			}, {
 				id: '02',
 				name: '张医生',
 				logoUrl: placeholderUrl,
-				unit: '市妇女儿童医院 妇产科'
+				hospital: '市妇女儿童医院',
+				department: '妇产科',
 			}]
 		})
 	}, 1000);
