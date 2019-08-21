@@ -1,5 +1,5 @@
 page {
-  background-image: -webkit-linear-gradient(left, #D02128, #FE0000);
+  background-image: -webkit-linear-gradient(left, #FFB548, #F37100);
 }
 .content{
   margin-top: 100rpx;

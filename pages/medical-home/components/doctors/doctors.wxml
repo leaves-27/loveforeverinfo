@@ -1,13 +1,17 @@
 <view class="doctors">
   <view class="doctors_header">合作专家</view>
   <view class="doctors_body">
-    <view class="doctor" wx:for="{{ doctors }}">
+    <view
+      wx:for="{{ doctors }}"
+      bind:tap="goDoctorDetail"
+      data-item="{{ item }}"
+      class="doctor">
       <image class="doctor_logo" src="{{ item.logoUrl }}" />
       <view class="doctor_intro">
         <view class="doctor-intro_name">{{ item.name }}</view>
-        <view class="doctor-intro_unit">{{ item.unit }}</view>
+        <view class="doctor-intro_unit">{{ item.hospital }} {{ item.department }}</view>
       </view>
-      <image class="doctor_more" bind:tap="goDoctorDetail" src="{{ arrowRightUrl }}"></image>
+      <image class="doctor_more" src="{{ arrowRightUrl }}"></image>
     </view>
   </view>
 </view>

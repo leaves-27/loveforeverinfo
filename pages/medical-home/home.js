@@ -1,15 +1,13 @@
 import qs from 'qs';
-// import getUserInfo from '../../apis/getUserInfo';
-// import getOrders from '../../apis/getOrders';
+import { staticPrifix } from "../../config/index";
 import getUserInfo from '../../mock/getUserInfo';
 import getMyDoctors from "../../mock/getMyDoctors";
-import {staticPrifix} from "../../config/index";
 
 Page({
   data: {
     name: '',
     phone: '',
-    userLogoUrl: '',
+    logoUrl: '',
     score: 0,
     orderCount: 0,
     doctors: [],
@@ -18,10 +16,15 @@ Page({
   goMyQr() {
     const query = {
       name: this.data.name,
-      userLogoUrl: this.data.userLogoUrl
+      userLogoUrl: this.data.logoUrl
     };
     wx.navigateTo({
-      url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
+      url: `../medical-my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
+    })
+  },
+  goMyOrder() {
+    wx.navigateTo({
+      url: `../medical-my-order/my-order`
     })
   },
   onLoad(){
@@ -48,7 +51,7 @@ Page({
       }
 
       this.setData({
-        userLogoUrl,
+        logoUrl: userLogoUrl,
         name,
         phone,
         score,
