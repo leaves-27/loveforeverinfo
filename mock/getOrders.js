@@ -32,7 +32,8 @@ export default ()=> new Promise( (resolve, reject)=>{
 				"receiveTime": "签收时间",
 				"payWayId": "支付方式id",
 				"status": "订单状态",
-				"count": 1
+				"count": 1,
+				"deliveryStatus": "2"
 			}, {
 				"user": {
 					"id": "消费者Id",
@@ -61,7 +62,8 @@ export default ()=> new Promise( (resolve, reject)=>{
 				"receiveTime": "签收时间",
 				"payWayId": "支付方式id",
 				"status": "订单状态",
-				"count": 1
+				"count": 1,
+				"deliveryStatus": "1"
 			}]
 		})
 	}, 1000);

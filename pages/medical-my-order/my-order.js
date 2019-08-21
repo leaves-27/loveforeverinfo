@@ -15,9 +15,9 @@ Page({
     orders: []
   },
   onLoad: function () {
-    const { id = '0' } = getQuery();
+    // const { id = '0' } = getQuery();
     this.setData({
-      selectedTabId: id
+      selectedTabId: '1'
     });
 
     getOrders().then((result)=>{

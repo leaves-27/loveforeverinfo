@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/components/doctors/doctors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/components/doctors/doctors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/components/doctors/doctors.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/components/doctors/doctors.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/doctor-detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/doctor-detail.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/doctor-detail.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor-detail/doctor-detail.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/components/doctors/doctors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/components/doctors/doctors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/components/doctors/doctors.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/components/doctors/doctors.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/medicalor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/medicalor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/medicalor.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medicalor/medicalor.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-qr/my-qr.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/getOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/getOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,14 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/medical-home/components/doctors/doctors.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="24" column="34" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mock/getOrders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -53,8 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user</find>
-      <find>user_bar</find>
       <find>icon--address</find>
       <find>order-detail_footer</find>
       <find>order-confirm_footer</find>
@@ -83,6 +76,8 @@
       <find>login</find>
       <find>getDoctors</find>
       <find>main_main</find>
+      <find>selectedTabId</find>
+      <find>getOrders</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages</dir>
@@ -104,7 +99,6 @@
         <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
         <option value="$PROJECT_DIR$/pages/address/address.wxml" />
         <option value="$PROJECT_DIR$/mock/getOrderConfirm.js" />
-        <option value="$PROJECT_DIR$/mock/getOrders.js" />
         <option value="$PROJECT_DIR$/pages/doctor/doctor.wxss" />
         <option value="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxss" />
         <option value="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml" />
@@ -140,11 +134,12 @@
         <option value="$PROJECT_DIR$/pages/medical-representative/home/home.wxml" />
         <option value="$PROJECT_DIR$/pages/medical-representative/my-order/my-order.json" />
         <option value="$PROJECT_DIR$/app.json" />
-        <option value="$PROJECT_DIR$/pages/medical-my-order/my-order.js" />
-        <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/pages/medical-home/home.js" />
         <option value="$PROJECT_DIR$/pages/medical-home/components/doctors/doctors.js" />
+        <option value="$PROJECT_DIR$/pages/medical-my-order/my-order.js" />
+        <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" />
+        <option value="$PROJECT_DIR$/mock/getOrders.js" />
       </list>
     </option>
   </component>
@@ -170,34 +165,18 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-home" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-home" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="doctors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-my-qr" type="462c0819:PsiDirectoryNode" />
+              <item name="medical-my-order" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,12 +274,12 @@
       <workItem from="1566184660264" duration="73000" />
       <workItem from="1566185008686" duration="3099000" />
       <workItem from="1566256866676" duration="4923000" />
-      <workItem from="1566342351355" duration="4953000" />
+      <workItem from="1566342351355" duration="5516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132412000" />
+    <option name="totallyTimeSpent" value="132975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="276" y="23" width="1193" height="805" extended-state="0" />
@@ -344,30 +323,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="49" selection-start-line="49" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/medicalor/components/doctors/doctors.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -453,13 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/getOrders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -667,22 +615,6 @@
     <entry file="file://$PROJECT_DIR$/pages/medical-home/home.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/my-order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -707,6 +639,44 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/my-order.wxss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/my-order.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/my-order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/getOrders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
         </state>
       </provider>
     </entry>

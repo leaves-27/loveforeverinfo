@@ -21,15 +21,12 @@ Component({
   computed: {
     tabOrders(){
       const orders = [];
-      if (this.data.selectedTabId === '0'){
-        orders.push(...this.data.orders);
-      } else {
-        this.data.orders.forEach((item)=>{
-          if(this.data.selectedTabId === item.status){
-            orders.push(item);
-          }
-        })
-      }
+      this.data.orders.forEach((item)=>{
+        if(this.data.selectedTabId === item.deliveryStatus){
+          orders.push(item);
+        }
+      });
+      console.log('orders:', orders);
       return orders;
     },
   },
