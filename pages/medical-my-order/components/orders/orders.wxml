@@ -1,62 +1,59 @@
 <view class="items">
   <view
-    wx:for="{{ tabOrders }}"
+    wx:for="{{ newOrders }}"
     wx:key="{{ item.id }}"
     bindtap="goOrderDetail"
     data-item="{{ item }}"
     class="item">
-    <view class="item_header">
-      <view class="header_main">
-        {{ item.time }}
-      </view>
-      <view
-        class="header_bar">
-        {{ tabs[item.status].name }}
-      </view>
-    </view>
     <view class="item_content">
       <view class="content_main">
         <view class="main_main">
-          <image class="menu-logo" src="{{ item.menuLogoUrl }}" />
+          <image class="menu-logo" src="{{ item.good.logoUrl }}" />
           <view class="menu-intro">
-            <view class="menu-intro_name">{{ item.name }}</view>
-            <view class="menu-intro_price">{{ item.price }}</view>
+            <view class="menu-intro_name">
+              {{ item.good.name }}
+              <view
+                  wx:if="{{ item.payWayId === '1' }}"
+                  class="pay-way pay-way--offline">线下支付</view>
+              <view
+                  wx:if="{{ item.payWayId === '2' }}"
+                  class="pay-way pay-way--wx">微信支付</view>
+            </view>
+            <view class="menu-intro_price">{{ item.good.price }}</view>
           </view>
         </view>
         <view class="main_bar">
-          x{{ item.amount }}
+          x{{ item.count }}
         </view>
       </view>
-      <view class="content_bar">
-        <view class="fee fee--default">实付款：</view>
-        <view class="fee fee--strong">￥ {{
-          item.price * item.amount + item.deliveryFee
-          }}(含运费 ￥{{
-          item.deliveryFee
-          }})
-        </view>
-      </view>
+      <kvs items = "{{ item.kvs }}"></kvs>
     </view>
     <view class="item_footer">
       <button
+        wx:if="{{ item.status === '2' }}"
         data-id="{{ item.id }}"
         class="button button--default"
         catchtap="cancelOrder">取消订单</button>
       <button
-        wx:if="{{ item.status === '1' }}"
+        wx:if="{{ item.status === '2' }}"
         class="button button--red button-interval--small"
         data-id="{{ item.id }}"
-        catchtap="goPay">支付</button>
-      <button
+        catchtap="goPay">确认订单</button>
+      <span
         wx:elif="{{ item.status === '2' }}"
-        class="button button--red button-interval--small"
+        class="status-button status-button--red status-button-interval--small"
         data-id="{{ item.id }}"
-        catchtap="goBuy">再次购买</button>
-      <button
+        catchtap="goScanDeliveyDetail">已确认订单 > </span>
+      <span
         wx:elif="{{ item.status === '3' }}"
-        class="button button--red button-interval--small"
+        class="status-button status-button--yellow status-button-interval--small"
         data-id="{{ item.id }}"
-        catchtap="goScanDeliveyDetail">配送中</button>
+        catchtap="goBuy">开始配送 > </span>
+      <span
+        wx:elif="{{ item.status === '3' }}"
+        class="status-button status-button--red status-button-interval--small"
+        data-id="{{ item.id }}"
+        catchtap="goBuy">配送中</span>
     </view>
   </view>
 </view>
