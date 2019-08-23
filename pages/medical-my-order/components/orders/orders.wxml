@@ -13,10 +13,10 @@
             <view class="menu-intro_name">
               {{ item.good.name }}
               <view
-                  wx:if="{{ item.payWayId === '1' }}"
+                  wx:if="{{ selectedTabId === '1' && item.payWayId === '1' }}"
                   class="pay-way pay-way--offline">线下支付</view>
               <view
-                  wx:if="{{ item.payWayId === '2' }}"
+                  wx:if="{{ selectedTabId === '1' && item.payWayId === '2' }}"
                   class="pay-way pay-way--wx">微信支付</view>
             </view>
             <view class="menu-intro_price">{{ item.good.price }}</view>
@@ -27,8 +27,11 @@
         </view>
       </view>
       <kvs items = "{{ item.kvs }}"></kvs>
+
     </view>
-    <view class="item_footer">
+    <view
+      wx:if="{{ selectedTabId === '1' }}"
+      class="item_footer item_footer--align-right">
       <button
         wx:if="{{ item.status === '2' }}"
         data-id="{{ item.id }}"
@@ -40,20 +43,29 @@
         data-id="{{ item.id }}"
         catchtap="goPay">确认订单</button>
       <span
-        wx:elif="{{ item.status === '2' }}"
+        wx:elif="{{ item.status === '3' }}"
         class="status-button status-button--red status-button-interval--small"
         data-id="{{ item.id }}"
         catchtap="goScanDeliveyDetail">已确认订单 > </span>
       <span
-        wx:elif="{{ item.status === '3' }}"
+        wx:elif="{{ item.status === '4' }}"
         class="status-button status-button--yellow status-button-interval--small"
         data-id="{{ item.id }}"
         catchtap="goBuy">开始配送 > </span>
       <span
-        wx:elif="{{ item.status === '3' }}"
+        wx:elif="{{ item.status === '5' }}"
         class="status-button status-button--red status-button-interval--small"
         data-id="{{ item.id }}"
         catchtap="goBuy">配送中</span>
+    </view>
+    <view
+      wx:else
+      class="item_footer item_footer--align-center">
+      <view
+        class="button_more-detail"
+        data-item="{{ item }}"
+        bind:tap="goOrderDetail"
+      >更多详情</view>
     </view>
   </view>
 </view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "kvs": "@leaves-27/kvs",
+    "good": "@leaves-27/good"
+  }
+}

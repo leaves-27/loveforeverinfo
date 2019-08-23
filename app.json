@@ -12,7 +12,8 @@
     "pages/doctor/doctor",
     "pages/medical-home/home",
     "pages/medical-my-order/my-order",
-    "pages/medical-my-qr/my-qr"
+    "pages/medical-my-qr/my-qr",
+    "pages/medical-order-detail/order-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -16,15 +16,21 @@
   margin-bottom: 22rpx;
 }
 .item_content{
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 .item_footer{
   border-top: 1rpx solid #F1F1F1;
   height: 104rpx;
   display: flex;
-  justify-content: flex-end;
+
   align-items: center;
+}
+.item_footer--align-right{
+  justify-content: flex-end;
+}
+.item_footer--align-center{
+  justify-content: center;
 }
 
 .content_main{
@@ -106,9 +112,17 @@ button::after {
 .button-interval--small{
   margin-left: 16rpx;
 }
+
+.button_more-detail{
+  height: 36rpx;
+  line-height: 36rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #262626;
+  text-align: center;
+}
 .status-button{
   display: inline-block;
-  width: 128rpx;
   height: 56rpx;
   line-height: 56rpx;
 
