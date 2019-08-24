@@ -1,0 +1,66 @@
+.progresses{
+
+}
+.progress{
+  display: flex;
+}
+.progress_icon{
+  width: 66rpx;
+}
+.progress_desc{
+  flex: 1;
+  padding-top: 32rpx;
+  padding-bottom: 32rpx;
+}
+.desc_title{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #262626;
+  margin-bottom: 8rpx;
+}
+.desc_time{
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #919191;
+}
+.icon{
+  width: 66rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon_top{
+  flex: 1;
+  width: 2rpx;
+  height: 100%;
+}
+.icon_middle{}
+.icon_bottom{
+  flex: 1;
+  width: 2rpx;
+  height: 100%;
+}
+
+.icon--default{
+  background-color: #DEDEDE;
+}
+.icon--active{
+  background-color: #F23B51;
+}
+.circle--small{
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 7rpx;
+}
+.circle--big{
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 14rpx;
+  background-color: rgba(254, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

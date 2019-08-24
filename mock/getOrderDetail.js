@@ -1,4 +1,3 @@
-import { placeholderUrl } from '../utils/util';
 import getOrders from './getOrders';
 
 export default (id)=> new Promise( (resolve, reject)=>{
@@ -10,7 +9,7 @@ export default (id)=> new Promise( (resolve, reject)=>{
 		}
 		const order = data.find((item)=>{
 			return item.orderCode === id;
-		}) || {};
+		}) || null;
 
 		resolve({
 			code: 1,

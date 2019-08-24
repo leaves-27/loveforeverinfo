@@ -31,7 +31,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 					"name": "李师傅",
 					"phone": "1555321124",
 					"address": "浙江杭州市江干区明月桥路38号",
-					"fee": "8.12"
+					"fee": "8.12",
+					"startTime": "2019-6-17  12:00:12",
+					"endTime": "2019-6-17  12:00:12",
 				},
 				"pay": {
 					"wayId": "2",
@@ -39,10 +41,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 				},
 				"orderCode": "243543657578698898986571",
 				"createTime": "2019-6-17  12:00:12",
-				"deliveryStartTime": "2019-6-17  12:00:12",
-				"deliveryEndTime": "2019-6-17  12:00:12",
+				"confirmTime": "2019-6-17  12:00:12",
 				"receiveTime": "2019-6-17  12:00:12",
-				"status": "2", // 已支付
+				"status": "2", // 已签收
 				"count": 1,
 			}, {
 				"user": {
@@ -62,7 +63,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 					"name": "李师傅",
 					"phone": "1555321124",
 					"address": "浙江杭州市江干区明月桥路38号",
-					"fee": "8.12"
+					"fee": "8.12",
+					"startTime": "2019-6-17  12:00:12",
+					"endTime": "2019-6-17  12:00:12",
 				},
 				"pay": {
 					"wayId": "2",
@@ -70,10 +73,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 				},
 				"orderCode": "243543657578698898986572",
 				"createTime": "2019-6-17  12:00:12",
-				"deliveryStartTime": "2019-6-17  12:00:12",
-				"deliveryEndTime": "2019-6-17  12:00:12",
+				"confirmTime": "2019-6-17  12:00:12",
 				"receiveTime": "2019-6-17  12:00:12",
-				"status": "3", // 已确认
+				"status": "3", // 已签收
 				"count": 1,
 			}, {
 				"user": {
@@ -93,7 +95,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 					"name": "李师傅",
 					"phone": "1555321124",
 					"address": "浙江杭州市江干区明月桥路38号",
-					"fee": "8.12"
+					"fee": "8.12",
+					"startTime": "2019-6-17  12:00:12",
+					"endTime": "2019-6-17  12:00:12",
 				},
 				"pay": {
 					"wayId": "2",
@@ -101,11 +105,10 @@ export default ()=> new Promise( (resolve, reject)=>{
 				},
 				"orderCode": "243543657578698898986573",
 				"createTime": "2019-6-17  12:00:12",
-				"deliveryStartTime": "2019-6-17  12:00:12",
-				"deliveryEndTime": "2019-6-17  12:00:12",
+				"confirmTime": "2019-6-17  12:00:12",
 				"receiveTime": "2019-6-17  12:00:12",
-				"status": "4", // 开始配送
-				"count": 1
+				"status": "4", //
+				"count": 1,
 			}, {
 				"user": {
 					"id": "000000111112",
@@ -124,7 +127,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 					"name": "李师傅",
 					"phone": "1555321124",
 					"address": "浙江杭州市江干区明月桥路38号",
-					"fee": "8.12"
+					"fee": "8.12",
+					"startTime": "2019-6-17  12:00:12",
+					"endTime": "2019-6-17  12:00:12",
 				},
 				"pay": {
 					"wayId": "2",
@@ -132,8 +137,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 				},
 				"orderCode": "243543657578698898986574",
 				"createTime": "2019-6-17  12:00:12",
-				"deliveryStartTime": "2019-6-17  12:00:12",
-				"deliveryEndTime": "2019-6-17  12:00:12",
+				"confirmTime": "2019-6-17  12:00:12",
 				"receiveTime": "2019-6-17  12:00:12",
 				"status": "6", // 已签收
 				"count": 1,

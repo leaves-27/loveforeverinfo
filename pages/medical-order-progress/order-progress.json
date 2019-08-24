@@ -1,7 +1,8 @@
 {
   "usingComponents": {
-    "order-body": "./components/order-body/order-body"
+    "progress": "./components/order-progress/order-progress",
+    "exception": "../../components/exception/exception"
   },
-  "navigationBarTitleText": "订单详情",
+  "navigationBarTitleText": "订单进度",
   "backgroundColor": "#F3F3F3"
 }
