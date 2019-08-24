@@ -8,12 +8,16 @@
     <view class="progress" wx:for="{{ progress }}">
       <view class="progress_icon icon" wx:if="{{ item.id > status * 1 }}">
         <view class="{{ index === 0 ? 'icon_top' : 'icon_top icon--default' }}"></view>
-        <view class="icon_middle icon--default"></view>
+        <view class="icon_middle">
+          <view class="circle--small icon--default"></view>
+        </view>
         <view class="{{ index === (progress.length - 1) ? 'icon_bottom' : 'icon_bottom icon--default' }}"></view>
       </view>
       <view class="progress_icon icon" wx:else>
         <view class="{{ index === 0 ? 'icon_top' : 'icon_top icon--active' }}"></view>
-        <view class="icon_middle icon--active"></view>
+        <view class="icon_middle circle--big">
+          <view class="circle--small icon--active"></view>
+        </view>
         <view class="{{ item.id === status * 1 ? 'icon_bottom icon--default' : 'icon_bottom icon--active' }}"></view>
       </view>
       <view class="progress_desc">

@@ -13,6 +13,8 @@
 .order-progress_body{
   background-color: #FFFFFF;
   border-top:1rpx solid #EEEEEE;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
 }
 
 .title{
@@ -32,9 +34,10 @@
   display: flex;
 }
 .progress_icon{
-
+  width: 66rpx;
 }
 .progress_desc{
+  flex: 1;
   padding-top: 32rpx;
   padding-bottom: 32rpx;
 }
@@ -62,12 +65,7 @@
   width: 2rpx;
   height: 100%;
 }
-.icon_middle{
-  width: 28rpx;
-  height: 28rpx;
-  border-radius: 14rpx;
-  background-color: rgba(254, 0, 0, 0.1);
-}
+.icon_middle{}
 .icon_bottom{
   flex: 1;
   width: 2rpx;
@@ -79,4 +77,19 @@
 }
 .icon--active{
   background-color: #F23B51;
+}
+.circle--small{
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 7rpx;
+}
+.circle--big{
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 14rpx;
+  background-color: rgba(254, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
