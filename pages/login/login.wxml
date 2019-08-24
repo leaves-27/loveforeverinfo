@@ -1,7 +1,7 @@
 <!--logs.wxml-->
 <view class="container">
     <view class="main">
-        <image class="login-logo" src="{{ loginLogoUrl }}" />
+        <image class="login-logo" src="{{ logoUrl }}" />
     </view>
     <input
         class="input"

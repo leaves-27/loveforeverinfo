@@ -9,6 +9,7 @@ Page({
     phone: '',
     validationCode: '',
     isLogining: false,
+    logoUrl: placeholderUrl
   },
   computed: {
     loginLogoUrl(){
