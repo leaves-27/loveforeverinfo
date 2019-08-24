@@ -4,15 +4,17 @@
         <image class="login-logo" src="{{ loginLogoUrl }}" />
     </view>
     <input
-        wx:if="{{ type === 1 }}"
-        class="input"
-        value="{{ name }}" placeholder="你的尊称" maxlength="10" />
-    <input
         class="input"
         value="{{ phone }}"
         placeholder="请输入11位手机号码"
-        maxlength="11" />
-    <button
+        maxlength="11"
+        bind:change="changePhone"
+    />
+    <view
+        wx:if="{{ isLogining }}"
+        class="button button--default">登录</view>
+    <view
+        wx:else
         bindtap="goLogin"
-        class="button button--disabled">登录</button>
+        class="button button--active">登录</view>
 </view>
