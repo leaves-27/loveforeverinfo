@@ -1,0 +1,29 @@
+<!--logs.wxml-->
+<view class="order-progress">
+  <view class="order-progress_header">
+    <view class="title">订单编号: {{ orderCode }}</view>
+    <view class="desc">如订单长时间未开始配送，请及时联系公司负责人</view>
+  </view>
+  <view class="order-progress_body">
+    <view class="progress" wx:for="{{ progress }}">
+      <view class="progress_icon icon" wx:if="{{ item.id > status * 1 }}">
+        <view class="{{ index === 0 ? 'icon_top' : 'icon_top icon--default' }}"></view>
+        <view class="icon_middle icon--default"></view>
+        <view class="{{ index === (progress.length - 1) ? 'icon_bottom' : 'icon_bottom icon--default' }}"></view>
+      </view>
+      <view class="progress_icon icon" wx:else>
+        <view class="{{ index === 0 ? 'icon_top' : 'icon_top icon--active' }}"></view>
+        <view class="icon_middle icon--active"></view>
+        <view class="{{ item.id === status * 1 ? 'icon_bottom icon--default' : 'icon_bottom icon--active' }}"></view>
+      </view>
+      <view class="progress_desc">
+        <view class="desc_title">
+          {{ item.name }}
+        </view>
+        <view class="desc_time">
+          {{ item.time }}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

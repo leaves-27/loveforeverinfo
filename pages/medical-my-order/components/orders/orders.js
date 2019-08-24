@@ -26,8 +26,8 @@ Component({
         // 订单状态有:已下单1、已支付2、已确认3、开始配送4、配送中5、已签收6
         if(item.status === '6'){
           const ORDER = {
-            name: '客户姓名',
-            phone: '联系方式'
+            user_name: '客户姓名',
+            user_phone: '联系方式'
           };
           finishOrders.push({
             ...item,
@@ -35,11 +35,11 @@ Component({
           });
         } else {
           const ORDER = {
-            name: '客户姓名',
-            phone: '联系方式',
+            user_name: '客户姓名',
+            user_phone: '联系方式',
             createTime: '创建时间',
             orderCode : '订单编号',
-            address: '配送地址',
+            delivery_address: '配送地址',
           };
           unFinishOrders.push({
             ...item,
@@ -61,9 +61,9 @@ Component({
           })
         } else if(item === 'user' || item === 'delivery'){
           Object.keys(order[item]).forEach((subItem)=>{
-            if (ORDER[subItem]){
+            if (ORDER[`${item}_${subItem}`]){
               kvs.push({
-                key: ORDER[subItem],
+                key: ORDER[`${item}_${subItem}`],
                 value: order[item][subItem]
               })
             }
@@ -73,11 +73,9 @@ Component({
       return kvs;
     },
     goOrderDetail($event){
-      const { item } = $event.currentTarget.dataset;
-      const { orderCode } = item;
-
+      const { id } = $event.currentTarget.dataset;
       const query = {
-        id: orderCode
+        id
       };
       wx.navigateTo({
         url: `../medical-order-detail/order-detail?$${qs.stringify(query)}`
@@ -103,10 +101,25 @@ Component({
 
     },
     goScanDeliveyDetail($event){
+      const { id } = $event.currentTarget.dataset;
+      const query = {
+        id
+      };
       wx.navigateTo({
         url: `../order-detail/order-detail?$${qs.stringify(query)}`
       })
     },
-    goPay,
+    goConfirmOrder($event){
+
+    },
+    goOrderProgress($event){
+      const { id } = $event.currentTarget.dataset;
+      const query = {
+        id
+      };
+      wx.navigateTo({
+        url: `../medical-order-progress/order-progress?$${qs.stringify(query)}`
+      });
+    }
   }
 })

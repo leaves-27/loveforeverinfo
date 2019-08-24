@@ -41,7 +41,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -54,6 +54,13 @@
 					"id": -1,
 					"name": "pages/doctor-detail/doctor-detail",
 					"pathName": "pages/doctor-detail/doctor-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/medical-order-progress/order-progress",
+					"pathName": "pages/medical-order-progress/order-progress",
 					"query": "",
 					"scene": null
 				}

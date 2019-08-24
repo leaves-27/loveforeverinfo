@@ -13,7 +13,8 @@
     "pages/medical-home/home",
     "pages/medical-my-order/my-order",
     "pages/medical-my-qr/my-qr",
-    "pages/medical-order-detail/order-detail"
+    "pages/medical-order-detail/order-detail",
+    "pages/medical-order-progress/order-progress"
   ],
   "window": {
     "backgroundTextStyle": "light",
