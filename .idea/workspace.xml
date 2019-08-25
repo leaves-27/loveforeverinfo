@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/getOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/getOrders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-detail/order-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-detail/order-detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/order-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/order-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/order-detail.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/order-detail.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,11 +25,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="474">
               <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="37" column="10" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -139,9 +153,7 @@
         <option value="$PROJECT_DIR$/pages/my-order/my-order.wxml" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/my-order/my-order.js" />
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" />
-        <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" />
         <option value="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.wxml" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.js" />
@@ -149,12 +161,14 @@
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/utils/util.js" />
         <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml" />
+        <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" />
+        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="247" />
-    <option name="y" value="95" />
+    <option name="x" value="211" />
+    <option name="y" value="29" />
     <option name="width" value="1193" />
     <option name="height" value="805" />
   </component>
@@ -180,20 +194,20 @@
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-my-order" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-my-order" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="medical-my-order" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="orders" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -304,15 +318,15 @@
       <workItem from="1566526128633" duration="5000" />
       <workItem from="1566615083584" duration="9798000" />
       <workItem from="1566638437937" duration="652000" />
-      <workItem from="1566686203703" duration="6643000" />
+      <workItem from="1566686203703" duration="6986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160433000" />
+    <option name="totallyTimeSpent" value="160776000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="247" y="95" width="1193" height="805" extended-state="0" />
+    <frame x="211" y="29" width="1193" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242246" />
@@ -588,16 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -650,16 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mock/getOrders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -684,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/medical-my-order/my-order.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -700,8 +687,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="474">
           <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

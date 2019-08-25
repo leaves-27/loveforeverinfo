@@ -27,6 +27,7 @@ Component({
       const finishOrders = [];
       this.data.orders.forEach((item)=>{
         // 订单状态有:已下单1、已支付2、已确认3、开始配送4、配送中5、已签收6
+
         if(item.status === '6'){
           const ORDER = {
             user_name: '客户姓名',
