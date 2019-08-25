@@ -21,8 +21,6 @@ Component({
         pay_payTime: '付款时间',
         successTime: '成交时间',
       };
-      console.log('====order:', this.data.order);
-      console.log('====kvs:', getKvs(ORDER, this.data.order));
       return getKvs(ORDER, this.data.order);
     },
   }

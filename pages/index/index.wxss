@@ -1,33 +1,109 @@
-page{
-    height: 100%;
+.good_imgs{
+    position: relative;
+    left: 0;
+    top: 0;
 }
-.container{
+.swiper_page{
+    position: absolute;
+    right: 24rpx;
+    bottom: 26rpx;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    font-size: 20rpx;
+    width: 72rpx;
+    height: 38rpx;
+    border-radius: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.good_text{
+    padding-top: 43rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    padding-bottom: 51rpx;
+    background-color: #FFFFFF;
+    margin-bottom: 16rpx;
+}
+.good_detail{}
+.slide-image{
+    width: 100%;
+}
+.row:nth-child(1){
+    display: flex;
+    margin-bottom: 12rpx;
+}
+.column:nth-child(1){
+    flex: 1;
+}
+.column:nth-child(2){
+    /*flex:0rpx 0rpx 109rpx;*/
+    width: 209rpx;
+}
+.good_price{
+    font-size: 44rpx;
+    color: #FE0000;
+    height: 70rpx;
+    margin-bottom: 21rpx;
+}
+.good_name{
+    font-size: 32rpx;
+    color: #262626;
+}
+.good_desc{
+    font-size: 28rpx;
+    color: #616161;
+}
+.button{
+    width: 209rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+
+    border-radius: 4rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 36rpx;
+    text-align: center;
+    color: #FFFFFF;
+}
+.button--active{
+    background-image: linear-gradient(-140deg, #FE0000, #FF6060);
+    color: #FFFFFF;
+    border: none;
+}
+
+.tabs{
+    display: flex;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    background-color: #FFFFFF;
+    margin-bottom: 24rpx;
+    height: 88rpx;
+    align-items: center;
+}
+.tab{
+    flex: 1;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #919191;
+    letter-spacing: 2rpx;
+    text-align: center;
+    font-weight: normal;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-}
 
-.button{
-    display: inline-block;
-    width: 80%;
-    height: 100rpx;
-    line-height: 100rpx;
-
-    border-radius: 4rpx;
-    font-family: PingFangSC-Regular;
-    font-size: 32rpx;
-    text-align: center;
-    color: #FFFFFF;
 }
-.button--default{
-    background-image: none;
-    background-color: #FFFFFF;
-    border: 2rpx solid #DDDDDD;
-    color: #1E1E1E;
+.tab--selected{
+    color: #FE0000;
+    position: relative;
 }
-.button--active{
-    background-image: linear-gradient(-140deg, #FF6060 0%, #FE0000 100%);
-    color: #FFFFFF;
-    border: none;
+.line--selected{
+    width: 44rpx;
+    height: 4rpx;
+    background-color: #FE0000;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    margin-left: -22rpx;
 }

@@ -13,22 +13,19 @@ Component({
     }
   },
   computed: {
-    newOrders(){
-      // const orders = [];
-      // if (this.data.selectedTabId === '0'){
-      //   orders.push(...this.data.orders);
-      // } else {
-      //   this.data.orders.forEach((item)=>{
-      //     if(this.data.selectedTabId === item.status){
-      //       orders.push(item);
-      //     }
-      //   })
-      // }
+    newOrders() {
       // 1.按照同一天同一件商品的进行分类;
       //   计算同一天同一件商品的销量和销售总额
 
       // 2.按照同一天同一个人进行分类:
       //
+      //  [{
+      //      time: '',
+      //      name: '',
+      //      logoUrl: '',
+      //      count: '',
+      //      amount: ''
+      //  }]
 
       return this.data.orders;
     },

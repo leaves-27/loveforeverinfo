@@ -1,0 +1,33 @@
+<view class="modal mask">
+    <view class="modal_body">
+        <view class="goods">
+            <view
+                wx:for="{{ goods }}"
+                wx:key="{{ index }}"
+                class="good-item"
+                data-id="{{ item.id }}"
+                data-count="{{ item.count }}"
+                bind:tap="confirm">
+                <view class="main_main">
+                    <image class="menu-logo" src="{{ item.logoUrl }}" />
+                    <view class="menu-intro">
+                        <view class="menu-intro_name">
+                            {{ item.name }}
+                        </view>
+                        <view class="menu-intro_price">
+                            {{ item.count }}罐装
+                        </view>
+                    </view>
+                </view>
+                <view class="main_bar">
+                    <image class="arrow" src="{{ arrowRightUrl }}" />
+                </view>
+            </view>
+        </view>
+        <view
+            bind:tap="cancel"
+            class="button button--default">
+            取消
+        </view>
+    </view>
+</view>

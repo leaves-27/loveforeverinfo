@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "喜燕",
-  "usingComponents": {}
+  "usingComponents": {
+    "imgs": "./components/imgs/imgs",
+    "my-modal": "./components/modal/modal"
+  }
 }

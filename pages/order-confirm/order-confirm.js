@@ -39,14 +39,23 @@ Page({
     }
   },
   onLoad: function () {
-    const { id = '0' } = getQuery();
+    const { id = '0', count } = getQuery();
+    this.setData({
+      amount: count
+    });
     getOrderConfirm(id).then((result)=>{
       const { code, data = [], message } = result;
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }
       const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
-      this.setData({ address, deliveryWays, good, other});
+      console.log('count:', count);
+      this.setData({
+        address,
+        deliveryWays,
+        good,
+        other
+      });
     })
   },
   goAddress(){
@@ -74,7 +83,6 @@ Page({
       desc: this.data.other,
       payId: this.data.payId
     }).then((result)=>{
-      console.log('================');
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
       const { code, data = [], message } = result;
       if (code !== 1) {

@@ -16,18 +16,14 @@ const getQuery = ()=>{
   const { options = {} } = getCurrentRoute() || {};
   const query = {};
   Object.keys(options).map((item)=>{
-    query[`${item.slice(1)}`] = options[item];
+    if (/\$/.test(item)){
+      query[`${item.slice(1)}`] = options[item];
+    } else {
+      query[`${item}`] = options[item];
+    }
   });
   return query;
 };
-// const OrderStatus = {
-//   'wait_pay': '待支付',
-//   'payed': '已支付',
-//   'confirmOrdered': '确认订单',
-//   'startDelivery': '开始配送',
-//   'deliverying': '配送中',
-//   'reviced': '已签收'
-// };
 
 const OrderStatus = {
   'waitPay': '1',

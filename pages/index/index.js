@@ -1,25 +1,69 @@
 import qs from "qs";
+import getGood from "../../mock/getGood";
 
 Page({
   data: {
-    good: {
-      id: '11',
-      name: 'xxx',
-      price: 'xx'
-    }
+    good: {},
+    tabs: [{
+      id: '01',
+      name: '图文介绍'
+    }, {
+      id: '02',
+      name: '规格参数'
+    }],
+    selectedTabId: "",
+    index: 0,
+    isShowModal: false,
   },
-  goConfirmPay($event) {
-    const { item } = $event.currentTarget.dataset;
-    const { id } = item;
-
+  buy(){
+    this.setData({
+      isShowModal: true
+    });
+  },
+  change($event){
+    const { current } = $event.detail;
+    this.setData({
+      index: current
+    })
+  },
+  tabChange($event){
+    const { id } = $event.currentTarget.dataset;
+    this.setData({
+      selectedTabId: id
+    });
+  },
+  cancelModal($event){
+    this.setData({
+      isShowModal: false
+    });
+  },
+  confirmModal($event){
+    const { id, count } = $event.detail;
     const query = {
-      id
+      id,
+      count
     };
+    this.setData({
+      isShowModal: false
+    });
     wx.navigateTo({
       url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
     })
   },
   onLoad: function () {
+    this.setData({
+      selectedTabId: this.data.tabs[0].id
+    });
 
+    getGood().then((result)=>{
+      const { code, data, message } = result;
+      if (code !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      this.setData({
+        good: data,
+      })
+    })
   }
 })

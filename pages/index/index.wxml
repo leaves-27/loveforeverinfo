@@ -1,5 +1,62 @@
-<view class="container">
-    <view
-        class="button button--active"
-        bindtap="goConfirmPay" data-item="{{ good }}">我是商品,点我</view>
+<view class="good">
+    <view class="good_imgs" wx:if="{{ good }}">
+        <swiper bindchange="change">
+            <block wx:for="{{ good.imgs }}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="355" height="150"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="swiper_page">
+            {{ index + 1 }} / {{ good.imgs.length }}
+        </view>
+    </view>
+    <view class="good_text" wx:if="{{ good }}">
+        <view class="row">
+            <view class="column">
+                <view class="good_price">{{ good.price }}</view>
+                <view class="good_name">{{ good.name }}</view>
+            </view>
+            <view class="column">
+                <view
+                    bind:tap="buy"
+                    class="button button--active">立即购买</view>
+            </view>
+        </view>
+        <view class="row good_desc">
+            {{ good.desc }}
+        </view>
+    </view>
+    <view class="good_detail">
+        <view class="tabs">
+            <block
+                wx:for="{{ tabs }}"
+                wx:key="{{ index }}">
+                <view
+                    wx:if="{{ selectedTabId === item.id }}"
+                    class="tab tab--selected">
+                    {{ item.name }}
+                    <view class="line--selected"></view>
+                </view>
+                <view
+                    wx:else
+                    class="tab"
+                    bindtap="tabChange"
+                    data-id="{{ item.id }}">
+                    {{ item.name }}
+                </view>
+            </block>
+        </view>
+        <view class="tab_content">
+            <imgs
+                urls="{{ selectedTabId === tabs[0].id ? good.pictures : good.specials }}"
+            />
+        </view>
+    </view>
+    <my-modal
+        wx:if="{{ isShowModal }}"
+        good="{{ good }}"
+        bind:cancel="cancelModal"
+        bind:confirm="confirmModal"
+    />
 </view>
