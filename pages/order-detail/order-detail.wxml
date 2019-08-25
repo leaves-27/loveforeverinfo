@@ -2,13 +2,13 @@
 <view class="order-detail">
   <view class="order-detail_header">
     <view class="header_main">
-      <view class="order-status" wx:if="{{ order.status === '1' }}">
+      <view class="order-status" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
         待付款
       </view>
-      <view class="order-status" wx:elif="{{ order.status === '2' }}">
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['deliverying'] }}">
         配送中
       </view>
-      <view class="order-status" wx:elif="{{ order.status === '3' }}">
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['reviced'] }}">
         已签收
       </view>
       <view class="order-desc">
@@ -17,15 +17,15 @@
     </view>
     <view class="header_bar">
       <image
-        wx:if="{{ order.status === '1' }}"
+        wx:if="{{ order.status === OrderStatus['waitPay'] }}"
         class="icon--wait-pay"
         src="{{ waitPayIconUrl }}"  />
       <image
-        wx:elif="{{ order.status === '2' }}"
+        wx:elif="{{ order.status === OrderStatus['deliverying'] }}"
         class="icon--wait-pay"
         src="{{ deliveryingDetailIconUrl }}"  />
       <image
-        wx:elif="{{ order.status === '3' }}"
+        wx:elif="{{ order.status === OrderStatus['reviced'] }}"
         class="icon--wait-pay"
         src="{{ singedDetailIconUrl }}"  />
     </view>
@@ -33,19 +33,19 @@
   <order-body order="{{ order }}" />
   <view  class="order-detail_footer">
     <button
-      wx:if="{{ order.status === '1' }}"
+      wx:if="{{ order.status === OrderStatus['waitPay'] }}"
       class="button button--active"
-      data-id="{{ order.id }}"
+      data-id="{{ order.orderCode }}"
       bindtap="goPay">支付</button>
     <button
-      wx:elif="{{ order.status === '2' }}"
+      wx:elif="{{ order.status === OrderStatus['deliverying'] }}"
       class="button button--active"
-      data-id="{{ order.id }}"
+      data-id="{{ order.orderCode }}"
       bindtap="goDeliveryDetail">配送中</button>
     <button
-      wx:elif="{{ order.status === '3' }}"
+      wx:elif="{{ order.status === OrderStatus['reviced'] }}"
       class="button button--active"
-      data-id="{{ order.id }}"
+      data-id="{{ order.orderCode }}"
       bindtap="goBuy">再次购买</button>
   </view>
 </view>

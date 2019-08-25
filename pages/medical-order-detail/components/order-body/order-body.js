@@ -1,35 +1,7 @@
 import computedBehavior from 'miniprogram-computed';
 import { staticPrifix } from '../../../../config/index'
+import { getKvs } from '../../../../utils/util'
 
-const getKvs = (ORDER, order) => {
-  const kvs = [];
-
-  console.log('order:', JSON.stringify(order));
-  console.log('Object.keys(order):', Object.keys(order));
-  Object.keys(order).forEach((item) => {
-    console.log('item:', item);
-
-    if(typeof order[item] === 'object'){
-      Object.keys(order[item]).forEach((subItem)=>{
-        console.log('subItem:',subItem);
-        console.log('ORDER[`${item}_${subItem}`]:', ORDER[`${item}_${subItem}`]);
-        if (ORDER[`${item}_${subItem}`]){
-          kvs.push({
-            key: ORDER[`${item}_${subItem}`],
-            value: order[item][subItem]
-          });
-        }
-      });
-    } else if (ORDER[item]){
-      kvs.push({
-        key: ORDER[item],
-        value: order[item]
-      })
-    }
-  });
-  console.log('kvs:', kvs);
-  return kvs;
-};
 
 Component({
   behaviors: [computedBehavior],

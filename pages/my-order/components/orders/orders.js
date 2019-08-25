@@ -1,9 +1,12 @@
-import { getQuery, goPay } from '../../../../utils/util.js';
+import { goPay, OrderStatus } from '../../../../utils/util.js';
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
 
 Component({
   behaviors: [computedBehavior],
+  data: {
+    OrderStatus
+  },
   properties: {
     orders: {
       type: Array,
@@ -19,9 +22,9 @@ Component({
     }
   },
   computed: {
-    tabOrders(){
+    newOrders(){
       const orders = [];
-      if (this.data.selectedTabId === '0'){
+      if (this.data.selectedTabId === OrderStatus['all']){
         orders.push(...this.data.orders);
       } else {
         this.data.orders.forEach((item)=>{
@@ -35,9 +38,7 @@ Component({
   },
   methods: {
     goOrderDetail($event){
-      const { item } = $event.currentTarget.dataset;
-      const { id } = item;
-
+      const { id } = $event.currentTarget.dataset;
       const query = {
         id
       };

@@ -1,11 +1,12 @@
 import { staticPrifix } from '../../config/index'
-import { goPay, getQuery } from '../../utils/util';
+import { goPay, getQuery, OrderStatus } from '../../utils/util';
 
 // import getOrderDetail from '../../apis/getOrderDetail.js';
 import getOrderDetail from "../../mock/getOrderDetail";
 
 Page({
   data: {
+    OrderStatus: OrderStatus,
     order: {},
     waitPayIconUrl: `${staticPrifix}/waitpay_detail.png`,
     deliveryingDetailIconUrl: `${staticPrifix}/deliverying_detail.png`,
@@ -22,13 +23,8 @@ Page({
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }
-      const { user = {}, good = {}, order = {} } = data;
       this.setData({
-        order: {
-          ...order,
-          user,
-          good
-        },
+        order: data
       })
     })
   },

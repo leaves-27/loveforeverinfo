@@ -10,16 +10,16 @@
         {{ order.user.name }} {{ order.user.phone }}
       </view>
       <view class="address">
-        {{ order.user.address }}
+        {{ order.delivery.address }}
       </view>
     </view>
   </view>
   <good
-    id="{{ order.id }}"
+    id="{{ order.good.id }}"
     name="{{ order.good.name }}"
     price="{{ order.good.price }}"
-    logoUrl="{{ order.good.menuLogoUrl }}"
-    amount="{{ order.amount }}"
+    logoUrl="{{ order.good.logoUrl }}"
+    amount="{{ order.count }}"
   />
   <kvs items = "{{ kvs }}" />
 </view>

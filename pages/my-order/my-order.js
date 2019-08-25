@@ -1,27 +1,15 @@
-import { getQuery } from '../../utils/util.js';
+import { getQuery, getOrderStatus } from '../../utils/util.js';
 // import getOrders from '../../../../apis/getOrders.js';
 import getOrders from "../../mock/getOrders";
 
 Page({
   data: {
-    tabs: [{
-      id: "0",
-      name: "全部"
-    }, {
-      id: "1",
-      name: "待付款"
-    }, {
-      id: "2",
-      name: "配送中"
-    }, {
-      id: "3",
-      name: "已签收"
-    }],
+    tabs: getOrderStatus(),
     selectedTabId: "",
     orders: []
   },
   onLoad: function () {
-    const { id = '0' } = getQuery();
+    const { id = '' } = getQuery();
     this.setData({
       selectedTabId: id
     });
@@ -38,8 +26,7 @@ Page({
     })
   },
   tabChange($event){
-    const { item = {} } = $event.currentTarget.dataset;
-    const { id } = item;
+    const { id = {} } = $event.currentTarget.dataset;
     this.setData({
       selectedTabId: id
     })

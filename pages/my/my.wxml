@@ -9,13 +9,6 @@
           <view class="phone">{{ phone }}</view>
         </view>
       </view>
-<!--      <view class="main_bar">-->
-<!--        <image-->
-<!--          class="qr"-->
-<!--          src="{{ qrUrl }}"-->
-<!--          bindtap="goMyQr"-->
-<!--        />-->
-<!--      </view>-->
     </view>
     <view class="my-info_bar">
       <image class="score_logo-url" src="{{ scoreLogoUrl }}" />
@@ -30,7 +23,7 @@
       wx:key="{{ index }}"
       class="order-status_item"
       bindtap="goMyOrder"
-      data-item="{{ item }}">
+      data-id="{{ item.id }}">
       <image class="item_icon" src="{{ item.iconUrl }}" />
       <view class="item_text">{{ item.name }}</view>
     </view>

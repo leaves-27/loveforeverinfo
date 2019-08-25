@@ -1,9 +1,12 @@
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
-import { getQuery, goPay } from '../../../../utils/util.js';
+import { getKvs, OrderStatus } from '../../../../utils/util.js';
 
 Component({
   behaviors: [computedBehavior],
+  data: {
+    OrderStatus
+  },
   properties: {
     orders: {
       type: Array,
@@ -31,7 +34,7 @@ Component({
           };
           finishOrders.push({
             ...item,
-            kvs: this.getKvs(ORDER, item)
+            kvs: getKvs(ORDER, item)
           });
         } else {
           const ORDER = {
@@ -43,7 +46,7 @@ Component({
           };
           unFinishOrders.push({
             ...item,
-            kvs: this.getKvs(ORDER, item)
+            kvs: getKvs(ORDER, item)
           });
         }
       });
@@ -51,27 +54,6 @@ Component({
     },
   },
   methods: {
-    getKvs(ORDER, order){
-      const kvs = [];
-      Object.keys(order).forEach((item) => {
-        if (order[item] !== 'object' && ORDER[item]){
-          kvs.push({
-            key: ORDER[item],
-            value: order[item]
-          })
-        } else if(item === 'user' || item === 'delivery'){
-          Object.keys(order[item]).forEach((subItem)=>{
-            if (ORDER[`${item}_${subItem}`]){
-              kvs.push({
-                key: ORDER[`${item}_${subItem}`],
-                value: order[item][subItem]
-              })
-            }
-          });
-        }
-      });
-      return kvs;
-    },
     goOrderDetail($event){
       const { id } = $event.currentTarget.dataset;
       const query = {

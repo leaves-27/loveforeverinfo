@@ -1,5 +1,5 @@
 import qs from 'qs';
-import { getOrderStatus } from '../../utils/util';
+import { OrderStatus, getOrderStatus } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getUserInfo from '../../apis/getUserInfo';
@@ -31,9 +31,7 @@ Page({
     });
   },
   goMyOrder($event){
-    const { item } = $event.currentTarget.dataset;
-    const { id } = item;
-
+    const { id } = $event.currentTarget.dataset;
     const query = {
       id
     };
