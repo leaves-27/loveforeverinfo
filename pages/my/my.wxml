@@ -36,8 +36,8 @@
   </view>
   <view
     class="address"
-    bindtap="goLogin">
+    bindtap="bindPhone">
     <image class="address_icon" src="{{ addressIconUrl }}" />
-    <view class="address_desc">登录</view>
+    <view class="address_desc">绑定手机号</view>
   </view>
 </view>

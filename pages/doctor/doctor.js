@@ -18,6 +18,11 @@ Page({
     orders: [],
     selectedTabId: '01'
   },
+  bindPhone(){
+    wx.navigateTo({
+      url: `../bind-phone/bind-phone`
+    });
+  },
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
     const { id } = item;

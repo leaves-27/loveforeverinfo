@@ -1,6 +1,6 @@
 import computedBehavior from 'miniprogram-computed';
 import { placeholderUrl, UserType } from '../../utils/util.js';
-import login from '../../mock/login';
+import bindPhone from '../../mock/bindPhone';
 
 Page({
   behaviors: [computedBehavior],
@@ -8,7 +8,7 @@ Page({
     type: 1,
     phone: '',
     validationCode: '',
-    isLogining: false,
+    isBinding: false,
     logoUrl: placeholderUrl
   },
   computed: {
@@ -28,7 +28,24 @@ Page({
       phone: $event.detail.value
     });
   },
-  goLogin(){
+  goUserHome(userRole){
+    if (userRole * 1 === 1){ // 消费者
+      wx.navigateTo({
+        url: `../index/index`
+      });
+    } else if(userRole * 1 === 2){ // 医生
+      wx.navigateTo({
+        url: `../doctor/doctor`
+      })
+    } else if (userRole * 1 === 3){// 医药代表
+      wx.navigateTo({
+        url: `../medical-home/home`
+      });
+    } else if (userRole * 1 === 4){ // 派送员
+      // 暂无
+    }
+  },
+  bindPhone(){
     if (!this.data.phone || this.data.phone.length !== 11){
       wx.showToast({
         icon: 'none',
@@ -36,42 +53,31 @@ Page({
       });
       return ;
     }
-    console.log('phone:', this.data.phone);
     this.setData({
-      isLogining: true
+      isBinding: true
     });
-    login({
+    bindPhone({
       phone: this.data.phone,
       validationCode: this.data.validationCode
     }).then((result)=>{
       this.setData({
-        isLogining: false
+        isBinding: false
       });
       const { code, data } = result;
-
-      console.log('result:', result);
       if(code !== 1){
         wx.showToast({
           icon: 'none',
-          title: '登录失败，请稍后重试'
+          title: '绑定失败，请稍后重试'
         });
       } else {
         wx.showToast({
-          title: '登录成功'
+          title: '绑定成功'
         });
 
-        if (data.userType === 1){
-          wx.navigateTo({ // 医生
-            url: `../doctor/doctor`
-          })
-        }
-
-        if (data.userType === 2){
-          wx.navigateTo({ // 医药代表
-            url: `../medical-home/home`
-          })
-        }
-
+        setTimeout(()=>{
+          const userRole = wx.getStorageSync('userRole');
+          this.goUserHome(userRole);
+        }, 2000);
       }
     }).catch((error)=>{
       wx.showToast({

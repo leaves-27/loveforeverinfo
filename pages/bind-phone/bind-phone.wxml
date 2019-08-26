@@ -11,10 +11,10 @@
         bind:change="changePhone"
     />
     <view
-        wx:if="{{ isLogining }}"
-        class="button button--default">登录</view>
+        wx:if="{{ isBinding }}"
+        class="button button--default">确定</view>
     <view
         wx:else
-        bindtap="goLogin"
-        class="button button--active">登录</view>
+        bindtap="bindPhone"
+        class="button button--active">确定</view>
 </view>

@@ -5,10 +5,7 @@ export default ({ phone, validationCode })=> new Promise( (resolve, reject)=>{
 	setTimeout(()=>{
 		resolve({
 			code: 1, //
-			data: {
-				token: '',
-				userType
-			}
+			data: null
 		})
 	}, 1000);
 });

@@ -13,6 +13,11 @@ Page({
     doctors: [],
     qrUrl: `${staticPrifix}/qr.png`,
   },
+  bindPhone(){
+    wx.navigateTo({
+      url: `../bind-phone/bind-phone`
+    });
+  },
   goMyQr() {
     const query = {
       name: this.data.name,

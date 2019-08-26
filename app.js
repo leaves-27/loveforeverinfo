@@ -15,17 +15,67 @@ App({
       console.error(error);
     })
   },
-  goAuthorize(){},
+  goUserHome(userRole){
+    if (userRole * 1 === 1){ // 消费者
+      wx.navigateTo({
+        url: `../index/index`
+      });
+    } else if(userRole * 1 === 2){ // 医生
+      wx.navigateTo({
+        url: `../doctor/doctor`
+      })
+    } else if (userRole * 1 === 3){// 医药代表
+      wx.navigateTo({
+        url: `../medical-home/home`
+      });
+    } else if (userRole * 1 === 4){ // 派送员
+      // 暂无
+    }
+  },
   onLaunch: function () {
-    // 进入后，判断用户是否授权。若已授权，则获取用户信息。否则弹框获取用户授权。然后再获取用户信息。
-    // const isAuthedUserInfo = wx.getStorageSync('isAuthedUserInfo') || false;
-    // if (!isAuthedUserInfo) {
-    //   getAuthorize('userInfo').then((result)=>{
-    //     wx.setStorageSync('isAuthedUserInfo', true);
-    //     this.getUserInfo();
-    //   });
+    // 登录授权
+    // 1.进行登录: token、type(消费者、医生、医药代表)
+    // 2.获取授权: -------------------------
+    // 3.获取用户信息(主要指手机号): ---------
+    // 4.获取用户角色: getUserRole
+    // 5.绑定手机号: bindPhone
+    
+    // const userRole = wx.getStorageSync('userRole');
+    // if (userRole) {
+    //   this.goUserHome(userRole);
     // } else {
-    //   this.getUserInfo();
+    //   login().then((result)=>{
+    //     const { code, data} = result;
+    //     if(code !== 1){
+    //       wx.showToast({
+    //        icon: 'none',
+    //        content: '登录失败，请稍后重新登录'
+    //       });
+    //       return;
+    //     }
+    //     const { role, token} = data;
+    //     wx.setStorageSync('token', token);
+    //     wx.setStorageSync('userRole', role);
+    //
+    //   }).then(()=>{
+    //       //   getAuthorize('userInfo').then((result)=>{
+    //     //     wx.setStorageSync('isAuthedUserInfo', true);
+    //     //     this.getUserInfo();
+    //     //   });
+    //   }).then(()=>{
+    //    getUserRole(phone).then((result)=>{
+    //      const { code, data } = result;
+    //       if(code !== 1){
+    //         wx.showToast({
+    //           icon: 'none',
+    //           title: '绑定失败，请稍后重试'
+    //         });
+    //         return;
+    //       }
+    //      const { role } = data;
+    //      this.goUserHome(role);
+    //    })
+    //   })
     // }
   },
   globalData: {

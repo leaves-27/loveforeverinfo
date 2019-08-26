@@ -25,9 +25,9 @@ Page({
       url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
   },
-  goLogin(){
+  bindPhone(){
     wx.navigateTo({
-      url: `../login/login`
+      url: `../bind-phone/bind-phone`
     });
   },
   goMyOrder($event){
