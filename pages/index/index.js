@@ -1,5 +1,6 @@
 import qs from "qs";
-import getGood from "../../mock/getGood";
+import getGood from "../../mock/good/getGood";
+// import getGood from "../../mock/apis/getGood";
 
 Page({
   data: {

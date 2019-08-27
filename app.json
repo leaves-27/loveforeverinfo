@@ -6,7 +6,7 @@
     "pages/order-detail/order-detail",
     "pages/order-confirm/order-confirm",
     "pages/order-result/order-result",
-    "pages/bind-phone/bind-phone",
+    "pages/login/login",
     "pages/address/address",
     "pages/my-address/my-address",
     "pages/doctor/doctor",

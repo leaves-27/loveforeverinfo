@@ -45,7 +45,9 @@ export const request = (options = {}) => {
 		data,
 		header,
 		success = ()=>{},
-		fail = ()=>{}
+		fail = ()=>{},
+		isMock = false,
+		isSuccess = true
 	} = options;
 
 	const params = Object.assign({
@@ -63,14 +65,24 @@ export const request = (options = {}) => {
 		header
 	});
 
-	wx.request(Object.assign(params,{
-		success (res) {
-			console.log('request success：', res);
-			success(res.data);
-		},
-		fail(error){
-			console.log('request fail：', error);
-			fail(error.errMsg);
-		}
-	}));
+	if (isMock){
+		setTimeout(()=>{
+			if (isSuccess){
+				success({});
+			} else {
+				fail({});
+			}
+		}, 1000);
+	} else {
+		wx.request(Object.assign(params,{
+			success (res) {
+				console.log('request success：', res);
+				success(res.data);
+			},
+			fail(error){
+				console.log('request fail：', error);
+				fail(error.errMsg);
+			}
+		}));
+	}
 };

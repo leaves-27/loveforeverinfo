@@ -18,5 +18,5 @@
         bind:change="changeVerticaltionCode"
     />
     <view
-        class="button {{ isLogin ? 'button--default' : 'button--active' }}" bind:tap="login">绑定</view>
+        class="button {{ isLogin ? 'button--default' : 'button--active' }}" bind:tap="login">确定</view>
 </view>

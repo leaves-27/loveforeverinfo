@@ -1,5 +1,6 @@
 import { placeholderUrl } from '../../utils/util.js';
-import bindPhone from '../../mock/bindPhone';
+import login from '../../mock/login';
+// import login from '../../apis/login/login';
 
 Page({
   data: {
@@ -50,7 +51,7 @@ Page({
     this.setData({
       isLogin: true
     });
-    bindPhone({
+    login({
       phone: this.data.phone,
       validationCode: this.data.validationCode
     }).then((result)=>{
