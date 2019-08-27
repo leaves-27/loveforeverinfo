@@ -1,7 +1,8 @@
 import { apiPrifix } from '../../config/index';
+import { request } from '../utils/util'
 
 export default (phone)=> new Promise( (resolve, reject)=>{
-	wx.request({
+	request({
 		url: `${apiPrifix}/getUserRole`,
 		method: 'get',
 		data: {

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "bind-phone-button": "../../components/bind-phone-button"
+    "bind-phone-button": "../../components/bind-phone-button/bind-phone-button"
   },
   "navigationBarTitleText": "我的",
   "backgroundColor": "#F3F3F3"

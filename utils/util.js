@@ -1,30 +1,27 @@
+import qs from 'qs';
+import { staticPrifix} from '../config/index';
+import { getCurrentRoute, getQuery, request } from './wx';
+
+/**
+ * 占位图片
+ * */
 const placeholderUrl = 'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_x2_5869f49.png';
 
-import qs from 'qs';
-import { staticPrifix } from '../config/index';
 
-const getCurrentRoute = ()=>{
-  let pages = getCurrentPages();
-  let currPage = null;
-  if (pages.length) {
-    currPage = pages[pages.length - 1];
-  }
-  return currPage;
+/**
+ * 用户类型MAP
+ * */
+const UserType = {
+  'DOCTOR': 'DOCTOR',
+  'SALES_REPRESENTATIVE': 'SALES_REPRESENTATIVE',
+  'COURIER': 'COURIER',
+  'CUSTOMER': 'CUSTOMER'
 };
 
-const getQuery = ()=>{
-  const { options = {} } = getCurrentRoute() || {};
-  const query = {};
-  Object.keys(options).map((item)=>{
-    if (/\$/.test(item)){
-      query[`${item.slice(1)}`] = options[item];
-    } else {
-      query[`${item}`] = options[item];
-    }
-  });
-  return query;
-};
 
+/**
+* 订单状态MAP
+* */
 const OrderStatus = {
   'waitPay': '1',
   'payed': '2',
@@ -35,54 +32,9 @@ const OrderStatus = {
   'all': '0'
 };
 
-// status == number ====
-
-const getOrderStatus = ()=>{
-  // 1: 待支付
-  // 2: 已支付
-  // 3: 确认订单
-  // 4: 开始配送
-  // 5: 配送中
-  // 6: 已签收
-  return [{
-    id: OrderStatus['all'],
-    name: '全部',
-    iconUrl: `${staticPrifix}/all.png`
-  },{
-    id: OrderStatus['waitPay'],
-    name: '待付款',
-    iconUrl: `${staticPrifix}/waitpay.png`
-  }, {
-    id: OrderStatus['deliverying'],
-    name: '配送中',
-    iconUrl: `${staticPrifix}/deliverying.png`
-  }, {
-    id: OrderStatus['reviced'],
-    name: '已签收',
-    iconUrl: `${staticPrifix}/signed.png`
-  }]
-};
-
-const  goPay = function($event){
-  // const { id } = $event.currentTarget.dataset;
-  // const query = {
-  //   id
-  // };
-  const query = {
-    statusId: 0
-  };
-  wx.navigateTo({
-    url: `../order-result/order-result?$${qs.stringify(query)}`
-  });
-}
-
-const UserType = {
-  'DOCTOR': 'DOCTOR',
-  'SALES_REPRESENTATIVE': 'SALES_REPRESENTATIVE',
-  'COURIER': 'COURIER',
-  'CUSTOMER': 'CUSTOMER'
-};
-
+/**
+* 生成键值对渲染数据列表。类似:[{ key: '手机号', value: '13854152631' }]
+* */
 const getKvs = (ORDER, order) => {
   const kvs = [];
   Object.keys(order).forEach((item) => {
@@ -105,15 +57,60 @@ const getKvs = (ORDER, order) => {
   return kvs;
 };
 
+/**
+* 1: 待支付
+* 2: 已支付
+* 3: 确认订单
+* 4: 开始配送
+* 5: 配送中
+* 6: 已签收
+* */
+const getOrderStatus = ()=>{
+  return [{
+    id: OrderStatus['all'],
+    name: '全部',
+    iconUrl: `${staticPrifix}/all.png`
+  },{
+    id: OrderStatus['waitPay'],
+    name: '待付款',
+    iconUrl: `${staticPrifix}/waitpay.png`
+  }, {
+    id: OrderStatus['deliverying'],
+    name: '配送中',
+    iconUrl: `${staticPrifix}/deliverying.png`
+  }, {
+    id: OrderStatus['reviced'],
+    name: '已签收',
+    iconUrl: `${staticPrifix}/signed.png`
+  }]
+};
+
+/**
+ *
+ * */
+const  goPay = function($event){
+  // const { id } = $event.currentTarget.dataset;
+  // const query = {
+  //   id
+  // };
+  const query = {
+    statusId: 0
+  };
+  wx.navigateTo({
+    url: `../order-result/order-result?$${qs.stringify(query)}`
+  });
+};
+
 module.exports = {
-  OrderStatus,
   placeholderUrl,
+  UserType,
+  OrderStatus,
   getCurrentRoute,
   getQuery,
+  request,
+  getKvs,
   getOrderStatus,
   goPay,
-  UserType,
-  getKvs
 }
 
 

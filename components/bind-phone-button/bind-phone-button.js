@@ -1,4 +1,5 @@
 import decryption from '../../apis/decryption';
+
 Component({
   properties: {
     phone: {
@@ -9,7 +10,7 @@ Component({
   methods: {
     goBindPhone(phone = ''){
       wx.navigateTo({
-        url: `../bind-phone/bind-phone?phone=${ phone }`
+        url: `page/bind-phone/bind-phone?phone=${ phone }`
       });
     },
     getPhoneNumber($event){
