@@ -40,7 +40,6 @@ Page({
     })
   },
   onLoad(){
-
     getUserInfo().then((result)=>{
       const { code, data, message } = result;
       if (code !== 1) {

@@ -1,5 +1,5 @@
 import { apiPrifix } from '../../config/index';
-import { request } from '../utils/util'
+import { request } from '../utils/util';
 
 export default (phone)=> new Promise( (resolve, reject)=>{
 	request({
