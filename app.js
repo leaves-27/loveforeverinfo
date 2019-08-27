@@ -1,7 +1,10 @@
 //app.js
 import { patchPage, patchComponent } from 'miniprogram-computed';
-import getUserInfo from './apis/getOrders';
-import getAuthorize from './apis/getAuthorize';
+import getTempCredentials from './apis/loginAndAuthorize/getTempCredentials';
+import login from './apis/loginAndAuthorize/login';
+import getAuthorize from './apis/loginAndAuthorize/getAuthorize';
+import getUserInfo from './apis/loginAndAuthorize/getUserInfo';
+import getUserRole from './apis/loginAndAuthorize/getUserRole'
 
 App({
   deps: {
@@ -33,50 +36,60 @@ App({
     }
   },
   onLaunch: function () {
-    // 登录授权
-    // 1.进行登录: token、type(消费者、医生、医药代表)
-    // 2.获取授权: -------------------------
-    // 3.获取用户信息(主要指手机号): ---------
-    // 4.获取用户角色: getUserRole
-    // 5.绑定手机号: bindPhone
-    
-    // const userRole = wx.getStorageSync('userRole');
-    // if (userRole) {
-    //   this.goUserHome(userRole);
-    // } else {
-    //   login().then((result)=>{
-    //     const { code, data} = result;
-    //     if(code !== 1){
-    //       wx.showToast({
-    //        icon: 'none',
-    //        content: '登录失败，请稍后重新登录'
-    //       });
-    //       return;
-    //     }
-    //     const { role, token} = data;
-    //     wx.setStorageSync('token', token);
-    //     wx.setStorageSync('userRole', role);
-    //
-    //   }).then(()=>{
-    //       //   getAuthorize('userInfo').then((result)=>{
-    //     //     wx.setStorageSync('isAuthedUserInfo', true);
-    //     //     this.getUserInfo();
-    //     //   });
-    //   }).then(()=>{
-    //    getUserRole(phone).then((result)=>{
-    //      const { code, data } = result;
-    //       if(code !== 1){
-    //         wx.showToast({
-    //           icon: 'none',
-    //           title: '绑定失败，请稍后重试'
-    //         });
-    //         return;
-    //       }
-    //      const { role } = data;
-    //      this.goUserHome(role);
-    //    })
-    //   })
-    // }
+    const userRole = wx.getStorageSync('userRole');
+    if (userRole) {
+      this.goUserHome(userRole);
+    } else {
+      getTempCredentials().then((code)=>{
+        return code;
+      })
+      .then(login)
+      .then((result)=>{
+        const { code, data, message } = result;
+        if(code !== 1){
+          wx.showToast({
+           icon: 'none',
+           content: '登录失败，请稍后重新登录'
+          });
+          throw new Error(message || '登录失败');
+        }
+        const { role, token, phone } = data;
+        wx.setStorageSync('token', token);
+        if (role){
+          wx.setStorageSync('userRole', role);
+          this.goUserHome(role);
+          return;
+        }
+        if (phone){
+          wx.setStorageSync('phone', phone);
+        }
+      })
+      // 获取手机号，显示收好
+      // .then(getAuthorize)
+      // .then(getUserInfo).then((result)=>{
+      //   const { userInfo = {} } = result;
+      //   const { phone = '' } = userInfo;
+      //   console.log('userInfo:', userInfo);
+      //
+      //   return phone;
+      // })
+      // .then(getUserRole)
+      // .then((result)=>{
+      //   const { code, data, message } = result;
+      //   if(code !== 1){
+      //     wx.showToast({
+      //       icon: 'none',
+      //       content: '获取你的信息失败，请稍后进入'
+      //     });
+      //     throw new Error(message || '获取用户角色失败');
+      //   }
+      //   const { role } = data;
+      //   this.saveUserRoleAndJump(role);
+      // })
+      .catch((error)=>{
+        throw new Error(error || '获取临时凭证或登录或授权或用户角色失败');
+      });
+    }
   },
   globalData: {
     userInfo: null

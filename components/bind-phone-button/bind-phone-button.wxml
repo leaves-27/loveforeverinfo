@@ -1,0 +1,10 @@
+<view class="exception">
+  <view
+    wx:if="!!phone"
+    class="exception_text"
+    bind:tap="goBindPhone(phone)">绑定手机号</view>
+  <button
+    wx:else
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber"></button>
+</view>

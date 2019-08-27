@@ -14,7 +14,7 @@ Page({
     userLogoUrl: '',
     qrUrl: `${staticPrifix}/qr.png`,
     addressIconUrl: `${staticPrifix}/address.png`,
-    scoreLogoUrl: `${staticPrifix}//xiyan.png`
+    scoreLogoUrl: `${staticPrifix}//xiyan.png`,
   },
   goMyQr() {
     const query = {
@@ -24,11 +24,6 @@ Page({
     wx.navigateTo({
       url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
-  },
-  bindPhone(){
-    wx.navigateTo({
-      url: `../bind-phone/bind-phone`
-    });
   },
   goMyOrder($event){
     const { id } = $event.currentTarget.dataset;
