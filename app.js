@@ -1,23 +1,23 @@
 //app.js
 import { patchPage, patchComponent } from 'miniprogram-computed';
-import getTempCredentials from './apis/loginAndAuthorize/getTempCredentials';
-import login from './apis/loginAndAuthorize/login';
-import getAuthorize from './apis/loginAndAuthorize/getAuthorize';
-import getUserInfo from './apis/loginAndAuthorize/getUserInfo';
-import getUserRole from './apis/loginAndAuthorize/getUserRole'
+// import getTempCredentials from './apis/loginAndAuthorize/getTempCredentials';
+// import login from './apis/loginAndAuthorize/login';
+// import getAuthorize from './apis/loginAndAuthorize/getAuthorize';
+// import getUserInfo from './apis/loginAndAuthorize/getUserInfo';
+// import getUserRole from './apis/loginAndAuthorize/getUserRole'
 
 App({
   deps: {
     patchPage, patchComponent
   },
-  getUserInfo(){
-    getUserInfo().then((result)=>{
-      console.log('result:', result);
-      wx.setStorageSync('userInfo', result);
-    }).catch((error)=>{
-      console.error(error);
-    })
-  },
+  // getUserInfo(){
+  //   getUserInfo().then((result)=>{
+  //     console.log('result:', result);
+  //     wx.setStorageSync('userInfo', result);
+  //   }).catch((error)=>{
+  //     console.error(error);
+  //   })
+  // },
   goUserHome(userRole){
     if (userRole * 1 === 1){ // 消费者
       wx.navigateTo({
