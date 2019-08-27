@@ -1,8 +1,8 @@
 import { getQuery } from '../../utils/util.js';
 
 // import getAddresses from '../../apis/getAddresses.js';
-import getAddresses from "../../mock/getAddresses";
-import updateDefaultAddress from '../../mock/updateDefaultAddress';
+import getAddresses from "../../mock/address/getAddresses";
+import updateDefaultAddress from '../../mock/address/updateDefaultAddress';
 
 Page({
   data: {

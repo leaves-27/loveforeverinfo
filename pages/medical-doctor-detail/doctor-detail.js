@@ -1,5 +1,5 @@
 import qs from 'qs';
-import getDoctorDetail from "../../mock/getDoctorDetail";
+import getDoctorDetail from "../../mock/user/getDoctorDetail";
 import { getQuery } from "../../utils/util";
 
 Page({

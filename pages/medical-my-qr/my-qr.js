@@ -1,7 +1,7 @@
 import { getQuery } from "../../utils/util";
 import { staticPrifix } from '../../config/index'
 
-import getMyQr from "../../mock/getMyQr";
+import getInviteCode from "../../mock/user/getInviteCode";
 
 Page({
   data: {
@@ -18,14 +18,17 @@ Page({
       name,
       userLogoUrl
     });
-    getMyQr().then((result)=>{
+    getInviteCode().then((result)=>{
       const { code, data, message } = result;
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }
       const {
-        qrUrl,
+        inviteCode,
       } = data;
+
+      //根据inviteCode生成qrUrl;
+      const qrUrl = '';
 
       this.setData({
         qrUrl,

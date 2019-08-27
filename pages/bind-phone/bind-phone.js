@@ -1,5 +1,5 @@
 import { placeholderUrl } from '../../utils/util.js';
-import bindPhone from '../../mock/bindPhone';
+import bindPhone from '../../mock/user/bindPhone';
 
 Page({
   data: {

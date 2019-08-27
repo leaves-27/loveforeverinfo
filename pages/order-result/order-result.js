@@ -1,6 +1,6 @@
 import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../apis/getOrders.js';
-import getOrders from "../../mock/getOrders";
+// import getOrders from "../../mock/getOrders";
 import { placeholderUrl } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 

@@ -2,7 +2,7 @@ import { staticPrifix } from '../../config/index'
 import { goPay, getQuery, OrderStatus } from '../../utils/util';
 
 // import getOrderDetail from '../../apis/getOrderDetail.js';
-import getOrderDetail from "../../mock/getOrderDetail";
+import getOrderDetail from "../../mock/order/getOrderDetail";
 
 Page({
   data: {

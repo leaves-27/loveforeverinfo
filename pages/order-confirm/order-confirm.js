@@ -4,9 +4,9 @@ import { getQuery } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
-import getOrderConfirm from "../../mock/getOrderConfirm";
+import getOrderConfirm from "../../mock/order/getOrderConfirm";
 // import submitOrder from '../../apis/submitOrder';
-import submitOrder from "../../mock/submitOrder";
+import submitOrder from "../../mock/order/submitOrder";
 
 Page({
   behaviors: [computedBehavior],

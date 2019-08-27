@@ -2,9 +2,9 @@ import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../apis/getOrders.js';
 // import submitPoint from '../../apis/submitPoint';
 // import submitAddress from '../../apis/submitAddress';
-import getPoints from "../../mock/getTakeGoodPoints";
-import submitPoint from '../../mock/submitPoint';
-import submitAddress from '../../mock/submitAddress';
+import getPoints from "../../mock/address/getTakeGoodPoints";
+import submitPoint from '../../mock/address/submitPoint';
+import submitAddress from '../../mock/address/submitAddress';
 
 Page({
   data: {
