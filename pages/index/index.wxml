@@ -1,7 +1,7 @@
 <view class="good">
     <view class="good_imgs" wx:if="{{ good }}">
         <swiper bindchange="change">
-            <block wx:for="{{ good.imgs }}">
+            <block wx:for="{{ good.imgs }}" wx:key="{{ index }}">
                 <swiper-item>
                     <image src="{{item}}" class="slide-image" width="355" height="150"/>
                 </swiper-item>

@@ -1,4 +1,3 @@
-import { placeholderUrl } from '../utils/util';
 import {request} from "../../utils/util";
 
 export default ({

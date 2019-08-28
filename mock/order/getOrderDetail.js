@@ -1,4 +1,5 @@
 import getOrders from './getOrders';
+import {request} from "../../utils/util";
 
 export default (id)=> new Promise( (resolve, reject)=>{
 	getOrders().then((result)=>{
@@ -11,10 +12,24 @@ export default (id)=> new Promise( (resolve, reject)=>{
 			return item.orderCode === id;
 		}) || null;
 
-		resolve({
-			code: 1,
-			data: order
+		request({
+			isMock: true,
+			url: '',
+			data: {
+				id
+			},
+			success: (res)=>{
+				// resolve(res);
+				resolve({
+					code: 1,
+					data: order
+				});
+			},
+			fail: (error)=>{
+				reject(error);
+			}
 		});
+
 	}).catch((item)=>{
 
 	});

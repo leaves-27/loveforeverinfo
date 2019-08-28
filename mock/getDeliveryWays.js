@@ -1,8 +1,9 @@
 import { request } from '../utils/util';
+import {apiPrifix} from "../config/index";
 export default ()=> new Promise( (resolve, reject)=>{
 	request({
 		isMock: true,
-		url: '',
+		url: `${apiPrifix}/getDeliveryWays`,
 		method: 'get',
 		success: (res)=>{
 			// resolve(res);

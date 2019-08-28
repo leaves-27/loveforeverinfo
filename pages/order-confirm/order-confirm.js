@@ -4,16 +4,24 @@ import { getQuery } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
-import getOrderConfirm from "../../mock/order/getOrderConfirm";
+// import getOrderConfirm from "../../mock/order/getOrderConfirm";
 // import submitOrder from '../../apis/submitOrder';
+import getGood from '../../mock/good/getGood';
+import getUserDefaultAddress from '../../mock/address/getUserDefaultAddress';
+import getDeliveryWays from '../../mock/getDeliveryWays';
+import getPayWays from '../../mock/getPayWays';
 import submitOrder from "../../mock/order/submitOrder";
 
 Page({
   behaviors: [computedBehavior],
   data: {
-    address: {},
-    deliveryWays: [],
     good: {},
+    address: {
+      id: '',
+      name: '',
+      desc: ''
+    },
+    deliveryWays: [],
     payWays: [{
       id: '1',
       iconUrl: `${staticPrifix}/wxpay.png`,
@@ -23,9 +31,9 @@ Page({
       iconUrl: `${staticPrifix}/offlinepay.png`,
       name: '线下支付'
     }],
-    other: '', // 备注
     iconAddressUrl: `${staticPrifix}/address_selected.png`,
     arrowRightUrl: `${staticPrifix}/arrow_right.png`,
+    other: '', // 备注
     deliveryId: 1,
     amount: 1,
     payId: '',
@@ -37,26 +45,6 @@ Page({
       }) || {};
       return name;
     }
-  },
-  onLoad: function () {
-    const { id = '0', count } = getQuery();
-    this.setData({
-      amount: count
-    });
-    getOrderConfirm(id).then((result)=>{
-      const { code, data = [], message } = result;
-      if (code !== 1) {
-        throw new Error(message || '请求错误');
-      }
-      const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
-      console.log('count:', count);
-      this.setData({
-        address,
-        deliveryWays,
-        good,
-        other
-      });
-    })
   },
   goAddress(){
     const query = {
@@ -124,5 +112,43 @@ Page({
     this.setData({
       payId: id
     });
-  }
+  },
+  onLoad: function () {
+    const { id = '0', count } = getQuery();
+    this.setData({
+      amount: count
+    });
+
+    Promise.all([getGood(), getUserDefaultAddress(), getDeliveryWays(), getPayWays()]).then((result)=>{
+
+      // const { code, data, message } = result[0];
+      //
+      //
+      // const { code, data, message } = result[1];
+      //
+      //
+      // const { code, data, message } = result[2];
+      //
+      // this.setData({
+      //   address,
+      //   deliveryWays,
+      //   payWays,
+      // });
+    });
+
+    // getOrderConfirm(id).then((result)=>{
+    //   const { code, data = [], message } = result;
+    //   if (code !== 1) {
+    //     throw new Error(message || '请求错误');
+    //   }
+    //   const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
+    //   console.log('count:', count);
+    //   this.setData({
+    //     address,
+    //     deliveryWays,
+    //     good,
+    //     other
+    //   });
+    // })
+  },
 })

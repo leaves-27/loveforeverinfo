@@ -28,19 +28,13 @@ export const getQuery = ()=>{
 	return query;
 };
 
+const router = [];
 /**
  * 请求拦截器
  * */
 export const request = (options = {}) => {
-	const token = wx.getStorageSync('token');
-	if (!token){
-		wx.navigateTo({
-			url: `../login/login?$${qs.stringify(query)}`
-		});
-		return;
-	};
 	const {
-		url,
+		url = '',
 		method,
 		data,
 		header,
@@ -49,6 +43,22 @@ export const request = (options = {}) => {
 		isMock = false,
 		isSuccess = true
 	} = options;
+
+	// 请求路径，根据什么来匹配是否需要登录
+	const regExp = /api\/authorization/;
+
+	console.log('test:', regExp.test(url));
+	const token = wx.getStorageSync('token');
+	if (regExp.test(url) && !token){ // 对需要登录的接口调用进行token是否有效判断.
+		const phone = wx.getStorageSync('phone') || '';
+		const query = {
+			phone,
+		};
+		wx.navigateTo({
+			url: `../login/login?$${qs.stringify(query)}`
+		});
+		return;
+	}
 
 	const params = Object.assign({
 		url: '',

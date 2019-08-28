@@ -1,5 +1,5 @@
 import { placeholderUrl } from '../../utils/util.js';
-import login from '../../mock/login';
+import login from '../../mock/login/login';
 // import login from '../../apis/login/login';
 
 Page({

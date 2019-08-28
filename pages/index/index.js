@@ -58,6 +58,7 @@ Page({
 
     getGood().then((result)=>{
       const { code, data, message } = result;
+      console.log('data:', result);
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }

@@ -1,15 +1,20 @@
+import {placeholderUrl, request} from "../../utils/util";
+
 export default (status)=>{
 	return new Promise(async (resolve, reject)=>{
-		wx.request({
-			url: 'getOrders', //
-			data: {
-				status,
+		request({
+			isMock: true,
+			url: '',
+			data: { id },
+			success: (res)=>{
+				// resolve(res);
+				resolve({
+					code: 1,
+					data: {}
+				});
 			},
-			header: {
-				'content-type': 'application/json' // 默认值
-			},
-			success (res) {
-				resolve(res)
+			fail: (error)=>{
+				reject(error);
 			}
 		});
 	})

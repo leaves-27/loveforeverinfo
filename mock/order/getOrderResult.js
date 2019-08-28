@@ -1,4 +1,4 @@
-import { placeholderUrl } from '../utils/util';
+import { placeholderUrl } from '../../utils/util';
 import getOrders from './getOrders';
 
 export default (id)=> new Promise( (resolve, reject)=>{
