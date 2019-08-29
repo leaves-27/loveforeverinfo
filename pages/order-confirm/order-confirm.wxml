@@ -5,7 +5,7 @@
       <image class="address_icon" src="{{ iconAddressUrl }}" />
     </view>
     <view class="header_middle address_desc">
-      {{ address.desc }}
+      {{ address.address }}
     </view>
     <view class="header_right">
       <image class="arrow" src="{{ arrowRightUrl }}"></image>
@@ -14,7 +14,7 @@
   <view class="order-confirm_body">
     <view class="good content_main">
       <view class="main_main">
-        <image class="menu-logo" src="{{ good.menuLogoUrl }}" />
+        <image class="menu-logo" src="{{ good.logoUrl }}" />
         <view class="menu-intro">
           <view class="menu-intro_name">{{ good.name }}</view>
           <view class="menu-intro_price">{{ good.price }}</view>

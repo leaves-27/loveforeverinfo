@@ -1,15 +1,18 @@
 import {placeholderUrl, request} from '../../utils/util';
 import { apiPrifix } from '../../config/index';
 
-export default ()=> new Promise( (resolve, reject)=>{
+export default (id)=> new Promise( (resolve, reject)=>{
 	request({
 		isMock: true,
 		url: `${apiPrifix}/getGood`,
+		data: {
+			id,
+		},
 		success: (res)=>{
 			// resolve(res);
 			resolve({
 				code: 1,
-				data: [{
+				data: {
 					id: '11',
 					logoUrl: placeholderUrl,
 					name: '喜燕周年装',
@@ -31,7 +34,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 						'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
 					],
 					suites: [6, 6],
-				}]
+				}
 			})
 		},
 		fail: (error)=>{

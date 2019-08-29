@@ -6,7 +6,7 @@ import { staticPrifix } from '../../config/index'
 // import getOrderConfirm from '../../apis/getOrderConfirm';
 // import getOrderConfirm from "../../mock/order/getOrderConfirm";
 // import submitOrder from '../../apis/submitOrder';
-import getGood from '../../mock/good/getGood';
+import getGoodDetail from '../../mock/good/getGoodDetail';
 import getUserDefaultAddress from '../../mock/address/getUserDefaultAddress';
 import getDeliveryWays from '../../mock/getDeliveryWays';
 import getPayWays from '../../mock/getPayWays';
@@ -22,15 +22,7 @@ Page({
       desc: ''
     },
     deliveryWays: [],
-    payWays: [{
-      id: '1',
-      iconUrl: `${staticPrifix}/wxpay.png`,
-      name: '微信支付'
-    }, {
-      id: '2',
-      iconUrl: `${staticPrifix}/offlinepay.png`,
-      name: '线下支付'
-    }],
+    payWays: [],
     iconAddressUrl: `${staticPrifix}/address_selected.png`,
     arrowRightUrl: `${staticPrifix}/arrow_right.png`,
     other: '', // 备注
@@ -113,42 +105,53 @@ Page({
       payId: id
     });
   },
+  setGood(result = {}){
+    const { code, data, message } = result;
+    if (code !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      good: data
+    });
+  },
+  setAddresses(result = {}){
+    const { code, data, message } = result;
+    if (code !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      address: data
+    });
+  },
+  setDeliveryWay(result = {}){
+    const { code, data, message } = result;
+    if (code !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      deliveryWays: data
+    });
+  },
+  setPayWay(result = {}){
+    const { code, data, message } = result;
+    if (code !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      payWays: data
+    });
+  },
   onLoad: function () {
     const { id = '0', count } = getQuery();
     this.setData({
       amount: count
     });
 
-    Promise.all([getGood(), getUserDefaultAddress(), getDeliveryWays(), getPayWays()]).then((result)=>{
-
-      // const { code, data, message } = result[0];
-      //
-      //
-      // const { code, data, message } = result[1];
-      //
-      //
-      // const { code, data, message } = result[2];
-      //
-      // this.setData({
-      //   address,
-      //   deliveryWays,
-      //   payWays,
-      // });
+    Promise.all([getGoodDetail(), getUserDefaultAddress(), getDeliveryWays(), getPayWays()]).then((result = [])=>{
+      this.setGood(result[0]);
+      this.setAddresses(result[1]);
+      this.setDeliveryWay(result[2]);
+      this.setPayWay(result[3]);
     });
-
-    // getOrderConfirm(id).then((result)=>{
-    //   const { code, data = [], message } = result;
-    //   if (code !== 1) {
-    //     throw new Error(message || '请求错误');
-    //   }
-    //   const { address = {}, deliveryWays = [], good = {}, payWays = [], other = ''} = data;
-    //   console.log('count:', count);
-    //   this.setData({
-    //     address,
-    //     deliveryWays,
-    //     good,
-    //     other
-    //   });
-    // })
   },
 })

@@ -50,12 +50,14 @@ export const request = (options = {}) => {
 	console.log('test:', regExp.test(url));
 	const token = wx.getStorageSync('token');
 	if (regExp.test(url) && !token){ // 对需要登录的接口调用进行token是否有效判断.
-		const phone = wx.getStorageSync('phone') || '';
+
+		const { route = '' } = getCurrentRoute();
+		console.log('router:', `===${route}==`);
 		const query = {
-			phone,
+			url: `/${route}`
 		};
 		wx.navigateTo({
-			url: `../login/login?$${qs.stringify(query)}`
+			url: `../login/login?$${qs.stringify(query, {encode: false })}`
 		});
 		return;
 	}

@@ -171,7 +171,7 @@
   padding-right: 24rpx;
 }
 .pay-item--active{
-  background-color: #FE0000;
+  background-color: #cccccc;
 }
 .pay-item--active .order-item_key{
   color: #FFFFFF;

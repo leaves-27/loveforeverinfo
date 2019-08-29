@@ -1,4 +1,4 @@
-import { placeholderUrl } from '../../utils/util.js';
+import { placeholderUrl, getQuery } from '../../utils/util.js';
 import login from '../../mock/login/login';
 // import login from '../../apis/login/login';
 
@@ -62,17 +62,21 @@ Page({
       if(code !== 1){
         wx.showToast({
           icon: 'none',
-          title: '绑定失败，请稍后重试'
+          title: '登录失败，请稍后重试'
+        });
+      }
+      const { token, type, phone } = data;
+      wx.setStorageSync('userRole', type);
+      wx.setStorageSync('token', token);
+      wx.setStorageSync('phone', phone);
+
+      const { url = '' } = getQuery();
+      if (!!url){
+        wx.navigateTo({
+          url,
         });
       } else {
-        wx.showToast({
-          title: '绑定成功'
-        });
-
-        setTimeout(()=>{
-          const userRole = wx.getStorageSync('userRole');
-          this.goUserHome(userRole);
-        }, 2000);
+        this.goUserHome(type);
       }
     }).catch((error)=>{
       wx.showToast({
