@@ -28,15 +28,17 @@ Page({
     }).then((result)=>{
       const { code, data = [], message } = result;
       if (code !== 1) {
+        wx.showToast({
+          icon: 'none',
+          title: '添加新地址失败'
+        });
         throw new Error(message || '请求错误');
       }
-      const { addressId = '' } = data;
-
-      const { reference = '' } = getQuery;
-
-      wx.navigateTo({
-        url: `/${ reference }?addressId=${ addressId }`
-      })
+      // const { addressId = '' } = data;
+      wx.showToast({
+        icon: 'none',
+        title: '添加新地址成功'
+      });
     }).catch((error)=>{
 
     })
