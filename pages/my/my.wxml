@@ -39,5 +39,6 @@
     bindtap="bindPhone">
     <image class="address_icon" src="{{ addressIconUrl }}" />
 <!--    <bind-phone-button phone="{{ phone }}" />-->
+    <view class="address_desc">绑定手机号</view>
   </view>
 </view>

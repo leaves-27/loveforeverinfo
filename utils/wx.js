@@ -28,6 +28,16 @@ export const getQuery = ()=>{
 	return query;
 };
 
+/**
+ * 无刷新返回上个页面
+ * */
+export const navigateBack = (delta, keyValue)=>{
+	const pages = getCurrentPages();
+	const prevPage = pages[ pages.length - 1 - delta ];
+	prevPage.setData(keyValue);
+	wx.navigateBack({ delta });
+};
+
 const router = [];
 /**
  * 请求拦截器
@@ -52,7 +62,6 @@ export const request = (options = {}) => {
 	if (regExp.test(url) && !token){ // 对需要登录的接口调用进行token是否有效判断.
 
 		const { route = '' } = getCurrentRoute();
-		console.log('router:', `===${route}==`);
 		const query = {
 			url: `/${route}`
 		};

@@ -11,11 +11,12 @@
       </view>
     </view>
     <view class="boundary"></view>
-    <view class="item_bar">
-      <view
-        bindtap="addressChange"
-        data-id="{{ item.id }}"
-        class="radio {{ item.id === selectedAddressId ? 'radio--active' : '' }}"></view>设为收货地址
+    <view
+      class="item_bar"
+      bindtap="addressChange"
+      data-id="{{ item.id }}">
+      <view class="radio {{ item.id === selectedAddressId ? 'radio--active' : '' }}"></view>
+      设为收货地址
     </view>
   </view>
 </view>

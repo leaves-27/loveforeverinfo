@@ -1,6 +1,6 @@
 import qs from 'qs';
 import { staticPrifix} from '../config/index';
-import { getCurrentRoute, getQuery, request } from './wx';
+import { getCurrentRoute, getQuery, navigateBack, request } from './wx';
 
 /**
  * 占位图片
@@ -111,6 +111,7 @@ module.exports = {
   getKvs,
   getOrderStatus,
   goPay,
+  navigateBack
 }
 
 

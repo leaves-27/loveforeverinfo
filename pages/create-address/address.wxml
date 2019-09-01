@@ -1,0 +1,56 @@
+<!--logs.wxml-->
+<view class="address">
+  <view class="form">
+    <view class="form-item">
+      <view class="form-item_key">
+        收货人
+      </view>
+      <view class="form-item_value">
+        <input
+          value="{{ name }}"
+          placeholder="请输入收货人姓名"
+          placeholder-style="font-size: 28rpx;color: #BFBFBF;"
+        />
+      </view>
+    </view>
+    <view class="boundary"></view>
+    <view class="form-item">
+      <view class="form-item_key">
+        手机号
+      </view>
+      <view class="form-item_value">
+        <input
+          value="{{ phone }}"
+          placeholder="请填写收货人手机号"
+          placeholder-style="font-size: 28rpx;color: #BFBFBF;"
+        />
+      </view>
+    </view>
+    <view class="boundary"></view>
+    <view class="form-item">
+      <view class="form-item_key">
+        所在地区
+      </view>
+      <view class="form-item_value">
+        <picker mode="region" bindchange="bindRegionChange" value="{{ address.region }}">
+          <view class="picker">
+            {{ address.region[0] }}，{{ address.region[1] }}，{{ address.region[2] }}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="boundary"></view>
+    <view class="form-item">
+        <textarea
+            class="address-detail"
+            value="{{ address.detail }}"
+            placeholder="详细地址(例：街道/小区/门牌号)"
+            placeholder-style="font-size: 28rpx;color: #BFBFBF;"
+        />
+    </view>
+  </view>
+  <view
+    class="button button--disabled"
+    bindtap="save"
+  >保存地址</view>
+</view>

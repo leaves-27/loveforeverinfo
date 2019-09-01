@@ -1,5 +1,8 @@
 <view class="imgs">
-    <block wx:for="{{ urls }}">
+    <block
+        wx:for="{{ urls }}"
+        wx:key="{{ index }}"
+    >
         <image class="img-item" src="{{ item }}" />
     </block>
 

@@ -8,10 +8,9 @@ export default ({
 			isMock: true,
 			url: '',
 			data: {
-				pointId
+				addressId
 			},
 			success: (res)=>{
-				// resolve(res);
 				resolve({
 					code: 1,
 					data: true

@@ -1,8 +1,8 @@
 import { getQuery } from '../../utils/util.js';
-
 // import getAddresses from '../../apis/getAddresses.js';
 import getAddresses from "../../mock/address/getAddresses";
 import updateDefaultAddress from '../../mock/address/updateDefaultAddress';
+import getUserDefaultAddress from "../../mock/address/getUserDefaultAddress";
 
 Page({
   data: {
@@ -11,37 +11,44 @@ Page({
   },
   goCreateAddress(){
     wx.navigateTo({
-      url: `../address/address`
+      url: `../create-address/address`
     })
   },
-  addressChange(data){
-    const { id } = data.detail || {};
+  addressChange($event){
+    const { id } = $event.detail || {};
     this.setData({
       selectedAddressId: id
     });
     updateDefaultAddress({ addressId: id }).then((result)=>{
       const { code, data = {}, message } = result;
       if (code !== 1) {
+        wx.showToast({
+          icon: 'none',
+          title: '设置默认地址失败，请稍后重试或联系客服'
+        });
         throw new Error(message || '请求错误');
       }
-      const { addresses, addressId } = data;
-      this.setData({
-        addresses,
-        selectedAddressId: addressId
-      })
+      wx.showToast({
+        icon: 'none',
+        title: '设置默认地址成功'
+      });
     })
   },
   onLoad: function () {
     const { statusId = '0' } = getQuery();
-    getAddresses().then((result)=>{
-      const { code, data = {}, message } = result;
+    Promise.all([getAddresses(), getUserDefaultAddress()]).then((result)=>{
+      const { code, data = {}, message } = result[0];
       if (code !== 1) {
         throw new Error(message || '请求错误');
       }
-      const { addresses, addressId } = data;
+      const { code: defaultAddressesCode, data:defaultAddressesData = {}, message: defaultAddressesMessage = '' } = result[1];
+      if (defaultAddressesCode !== 1) {
+        throw new Error(defaultAddressesMessage || '请求错误');
+      }
+      const { id } = defaultAddressesData;
       this.setData({
-        addresses,
-        selectedAddressId: addressId
+        addresses: data,
+        selectedAddressId: id
       })
     })
   },

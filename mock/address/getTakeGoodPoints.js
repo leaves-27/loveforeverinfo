@@ -15,8 +15,8 @@ export default ()=> new Promise( (resolve, reject)=>{
 					address: '浙江省杭州市古荡街道110号',
 				}, {
 					id: '02',
-					name: '赵四 188****2773',
-					address: '浙江省杭州市古荡街道110号',
+					name: '提货点2',
+					address: '浙江省杭州市古荡街道120号',
 				}]
 			})
 		},

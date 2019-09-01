@@ -1,0 +1,50 @@
+.points{
+  margin-top: 16rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: #FFFFFF;
+}
+.point-item{
+  display: flex;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}
+.point-item_main{
+  flex: 1;
+}
+.point_title{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #616161;
+}
+.point_content{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1E1E1E;
+}
+
+.point-item_bar{
+  width: 38rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boundary{
+  border-bottom: 1px solid #EEEEEE;
+  width:100%;
+  height: 0rpx;
+}
+
+.radio{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 38rpx;
+  border: 1rpx solid #DEDEDE;
+}
+.radio--active{
+  background-color: #FE0000;
+  border: 1rpx solid #FE0000;
+}
+.address-detail{
+  height: 205rpx;
+}

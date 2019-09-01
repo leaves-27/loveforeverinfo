@@ -14,7 +14,9 @@ export default ({
 				// resolve(res);
 				resolve({
 					code: 1,
-					data: true
+					data: {
+						addressId: '000001'
+					}
 				});
 			},
 			fail: (error)=>{

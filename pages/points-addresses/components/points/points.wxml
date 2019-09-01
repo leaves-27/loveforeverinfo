@@ -1,0 +1,22 @@
+<view class="points">
+  <block
+    wx:for="{{ newAddresses }}"
+    wx:key="{{ index }}">
+    <view class="point-item"
+      data-id="{{ item.id }}"
+      bind:tap="addressChange">
+      <view class="point-item_main">
+        <view class="point_title">
+          {{ item.name }} {{ item.phone ? item.phone : '' }}
+        </view>
+        <view class="point_content">
+          {{ item.address }}
+        </view>
+      </view>
+      <view class="point-item_bar">
+        <view class="radio {{ item.id === selectedAddressId ? 'radio--active' : '' }}"/>
+      </view>
+    </view>
+    <view class="boundary"></view>
+  </block>
+</view>

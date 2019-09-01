@@ -1,6 +1,6 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
-import { getQuery } from '../../utils/util';
+import { getQuery, getCurrentRoute } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
@@ -43,7 +43,7 @@ Page({
       adressId: ''
     };
     wx.navigateTo({
-      url: `../address/address?$${qs.stringify(query)}`
+      url: `../points-addresses/address?$${qs.stringify(query)}`
     })
   },
   submitOrder(){
@@ -53,6 +53,7 @@ Page({
         icon: 'none',
         duration: 2000
       });
+      return;
     }
     // 提交订单成功后
     submitOrder({
