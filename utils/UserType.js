@@ -1,0 +1,9 @@
+/**
+ * 用户类型MAP
+ * */
+export default {
+	'DOCTOR': 'DOCTOR',
+	'SALES_REPRESENTATIVE': 'SALES_REPRESENTATIVE',
+	'COURIER': 'COURIER',
+	'CUSTOMER': 'CUSTOMER'
+};

@@ -49,11 +49,11 @@ Page({
         duration: 2000
       });
     }).catch(()=>{
-      wx.showToast({
-        title: '保存二维码到相册失败',
-        icon: 'none',
-        duration: 2000
-      });
+      // wx.showToast({
+      //   title: '保存二维码到相册失败',
+      //   icon: 'none',
+      //   duration: 2000
+      // });
     });
   },
   onLoad(){

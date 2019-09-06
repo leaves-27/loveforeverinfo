@@ -1,4 +1,5 @@
 import qs from "qs";
+import {goUserHome} from "./util";
 
 /**
  * 获取当前页面路由
@@ -36,74 +37,6 @@ export const navigateBack = (delta, keyValue)=>{
 	const prevPage = pages[ pages.length - 1 - delta ];
 	prevPage.setData(keyValue);
 	wx.navigateBack({ delta });
-};
-
-const router = [];
-/**
- * 请求拦截器
- * */
-export const request = (options = {}) => {
-	const {
-		url = '',
-		method,
-		data,
-		header,
-		success = ()=>{},
-		fail = ()=>{},
-		isMock = false,
-		isSuccess = true
-	} = options;
-
-	// 请求路径，根据什么来匹配是否需要登录
-	// 页面权限路由
-	const regExp = /api\/authorization/;
-	const token = wx.getStorageSync('token');
-	if (regExp.test(url) && !token){ // 对需要登录的接口调用进行token是否有效判断.
-		const { route = '' } = getCurrentRoute();
-		const query = {
-			url: `/${route}`
-		};
-		wx.navigateTo({
-			url: `../login/login?$${qs.stringify(query, {encode: false })}`
-		});
-		return;
-	}
-
-	const params = Object.assign({
-		url: '',
-		method: 'get',
-		data: {},
-		header: {
-			'content-type': 'application/json', // 默认值
-			'token': token
-		}
-	}, {
-		url,
-		method,
-		data,
-		header
-	});
-
-	if (isMock){
-		setTimeout(()=>{
-			if (isSuccess){
-				success({});
-			} else {
-				fail({});
-			}
-		}, 1000);
-	} else {
-		wx.request(Object.assign(params,{
-			success (res) {
-				console.log('request success：', res);
-				success(res.data);
-			},
-			fail(error){
-				console.log('request fail：', error);
-				fail(error.errMsg);
-			}
-		}));
-	}
 };
 
 export const saveImageToPhotosAlbum = (url)=>{
