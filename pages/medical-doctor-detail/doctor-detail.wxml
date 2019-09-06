@@ -40,5 +40,25 @@
       <view class="column_label">医生职别</view>
       <view class="column_value">{{ level }}</view>
     </view>
+
+    <view class="column">
+      <view class="column_label">医生的二维码</view>
+      <view class="column_value" bind:tap="showQrModal">
+        <view class="qr">
+          <image class="qr_icon" src="{{ qrIconUrl }}" />
+        </view>
+      </view>
+    </view>
+    <view class="modal" wx:if="{{ qrUrl }}">
+      <view class="modal-mask" bind:tap="hideQrModal"></view>
+      <view class="modal-main">
+        <view class="modal-main_header"></view>
+        <view class="modal-main_body">
+          <image class="qr_big_pic" src="{{ qrUrl }}" bind:tap="downLoad" />
+        </view>
+        <view class="modal-main_footer"></view>
+      </view>
+    </view>
+    <canvas style="width: 200px; height: 200px;position: fixed;z-index: -1;left:0;top:0;" canvas-id="myQrcode"></canvas>
   </view>
 </view>

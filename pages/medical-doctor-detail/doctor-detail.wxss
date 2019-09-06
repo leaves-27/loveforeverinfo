@@ -98,3 +98,37 @@
   color: #262626;
   text-align: left;
 }
+.qr{
+  margin: 10rpx;
+  padding: 10rpx;
+  background-image: -webkit-linear-gradient(left, #FFB548, #F38C00);
+}
+.qr_icon{
+  width: 52rpx;
+  height: 52rpx;
+}
+.qr_big_pic{
+  width: 500rpx;
+  height: 500rpx;
+}
+.modal{
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+.modal-mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-main{
+  background-color: #FFFFFF;
+  min-width: 100rpx;
+  min-height: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

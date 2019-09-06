@@ -39,6 +39,11 @@ Page({
       url: `../my-address/my-address`
     })
   },
+  bindPhone(){
+    wx.navigateTo({
+      url: `../bind-phone/bind-phone`
+    })
+  },
   onLoad(){
     getUserInfo().then((result)=>{
       const { code, data, message } = result;

@@ -51,10 +51,7 @@ Page({
     this.setData({
       isLogin: true
     });
-    login({
-      phone: this.data.phone,
-      validationCode: this.data.validationCode
-    }).then((result)=>{
+    login(this.data.phone,this.data.validationCode).then((result)=>{
       this.setData({
         isLogin: false
       });
@@ -71,7 +68,9 @@ Page({
       wx.setStorageSync('phone', phone);
 
       const { url = '' } = getQuery();
-      if (!!url){
+      console.log('=====role:', type);
+
+      if (!!url && type === 1){
         wx.navigateTo({
           url,
         });

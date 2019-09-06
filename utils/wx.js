@@ -55,12 +55,10 @@ export const request = (options = {}) => {
 	} = options;
 
 	// 请求路径，根据什么来匹配是否需要登录
+	// 页面权限路由
 	const regExp = /api\/authorization/;
-
-	console.log('test:', regExp.test(url));
 	const token = wx.getStorageSync('token');
 	if (regExp.test(url) && !token){ // 对需要登录的接口调用进行token是否有效判断.
-
 		const { route = '' } = getCurrentRoute();
 		const query = {
 			url: `/${route}`

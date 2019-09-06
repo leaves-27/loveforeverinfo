@@ -1,0 +1,3 @@
+<view class="exception">
+  <view class="exception_text">{{ text }}</view>
+</view>

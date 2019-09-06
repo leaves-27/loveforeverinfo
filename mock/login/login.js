@@ -14,7 +14,16 @@ export const loginByWxTempCode = (code, validationCode)=> new Promise( (resolve,
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			resolve(res.data)
+			// resolve(res.data)
+			// const type = phone === "18857152332" ? 1 : 2;
+			resolve({
+				code: 1,
+				data: {
+					token: `xxxxxxxxxxxxxx`,
+					type:'',
+					phone:''
+				}
+			})
 		},
 		fail(){
 			reject(res.errMsg);
@@ -36,7 +45,18 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 		},
 		success (res) {
 			// resolve(res.data)
-			const type = phone === "18857152332" ? 1 : 2;
+
+			console.log('phone:', phone);
+			console.log('phoneType:', typeof phone);
+			let type;
+			if (phone === "18857152332"){ //医药代表
+					type = 3
+			} else if(phone === "18857152331"){ // 医生
+					type = 2;
+			} else{
+				  type = 1;
+			}
+
 			resolve({
 				code: 1,
 				data: {

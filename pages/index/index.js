@@ -1,7 +1,7 @@
 import qs from "qs";
 import getGood from "../../mock/good/getGood";
 // import getGood from "../../mock/apis/getGood";
-
+import { goUserHome } from '../../utils/util';
 Page({
   data: {
     good: {},
@@ -55,16 +55,20 @@ Page({
     this.setData({
       selectedTabId: this.data.tabs[0].id
     });
+    const role = wx.getStorageSync('userRole');
+    if (role * 1 === 1){
+      getGood().then((result)=>{
+        const { code, data, message } = result;
+        if (code !== 1) {
+          throw new Error(message || '请求错误');
+        }
 
-    getGood().then((result)=>{
-      const { code, data, message } = result;
-      if (code !== 1) {
-        throw new Error(message || '请求错误');
-      }
-
-      this.setData({
-        good: data[0],
+        this.setData({
+          good: data[0],
+        })
       })
-    })
+    } else {
+      goUserHome(role);
+    }
   }
 })

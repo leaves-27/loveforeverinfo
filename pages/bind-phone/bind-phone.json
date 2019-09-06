@@ -1,7 +1,5 @@
 {
+  "usingComponents": {},
   "navigationBarTitleText": "重新绑定手机号",
-  "backgroundColor": "#FFFFFF",
-  "usingComponents": {
-
-  }
+  "backgroundColor": "#FFFFFF"
 }
