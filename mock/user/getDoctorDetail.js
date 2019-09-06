@@ -19,7 +19,8 @@ export default (id)=> new Promise( (resolve, reject)=>{
 					department: '妇产科',
 					userCount: 100,
 					level: '主任医师',
-					score: 80
+					score: 80,
+					inviteCode: '111111'
 				}
 			})
 		},

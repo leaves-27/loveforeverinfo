@@ -4,6 +4,8 @@ import { getQuery } from "../../utils/util";
 import { createQrCode } from '../../utils/qrcode';
 import {staticPrifix} from "../../config/index";
 
+import { saveImageToPhotosAlbum } from '../../utils/wx';
+
 Page({
   data: {
     name: '',
@@ -14,11 +16,19 @@ Page({
     score: 0,
     userCount: 0,
     level: '',
-    qrUrl: '',
     qrIconUrl: `${staticPrifix}/qr.png`,
+    isShowMoadl: false,
+    qrUrl: '',
+    canvas: {
+      width: 700,
+      height: 700
+    }
   },
-  showQrModal(){
-    createQrCode(this.data.inviteCode, 'myQrcode', 200, 200).then((qrUrl)=>{
+  showModal(){
+    this.setData({
+      isShowMoadl: true
+    });
+    createQrCode(this.data.inviteCode, 'myQrcode', this.data.canvas.width / 2, this.data.canvas.height / 2).then((qrUrl)=>{
       this.setData({
         qrUrl
       });
@@ -26,30 +36,25 @@ Page({
       console.log(error);
     });
   },
-  hideQrModal(){
+  hideModal(){
     this.setData({
-      qrUrl: ''
+      isShowMoadl: false
     });
   },
-  downLoad(){
-    const url = this.data.qrUrl;
-    return new Promise((resolve, reject)=>{
-      wx.downloadFile({
-        url: url, //仅为示例，并非真实的资源
-        success (res) {
-          // 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
-          if (res.statusCode === 200) {
-            wx.playVoice({
-              filePath: res.tempFilePath
-            })
-          }
-          resolve(res);
-        },
-        fail(res){
-          reject(res);
-        }
-      })
-    })
+  saveImageToPhotosAlbum(){
+    saveImageToPhotosAlbum(this.data.qrUrl).then(()=>{
+      wx.showToast({
+        title: '保存二维码到相册成功',
+        icon: 'none',
+        duration: 2000
+      });
+    }).catch(()=>{
+      wx.showToast({
+        title: '保存二维码到相册失败',
+        icon: 'none',
+        duration: 2000
+      });
+    });
   },
   onLoad(){
     const { id = '' } = getQuery();
@@ -67,7 +72,7 @@ Page({
         department = '',
         userCount = 0,
         level = '',
-        inviteCode='xxxx'
+        inviteCode=''
       } = data;
 
       this.setData({

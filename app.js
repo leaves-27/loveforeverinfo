@@ -1,5 +1,6 @@
 //app.js
 import { patchPage, patchComponent } from 'miniprogram-computed';
+import { goUserHome } from "./utils/util";
 // import getTempCredentials from './apis/loginAndAuthorize/getTempCredentials';
 // import login from './apis/loginAndAuthorize/login';
 // import getAuthorize from './apis/loginAndAuthorize/getAuthorize';
@@ -69,6 +70,11 @@ App({
     //     throw new Error(error || '获取临时凭证或登录或授权或用户角色失败');
     //   });
     // }
+
+    const role = wx.getStorageSync('userRole');
+    if (role * 1 !== 1){
+      goUserHome(role);
+    }
   },
   globalData: {
     userInfo: null

@@ -3,9 +3,14 @@
 
 Component({
   properties: {
-    text: {
-      type: String,
-      value: ''
+    isShow: {
+      type: Boolean,
+      value: false
+    }
+  },
+  methods: {
+    hide(){
+      this.triggerEvent('hide');
     }
   }
 })

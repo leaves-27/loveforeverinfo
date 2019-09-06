@@ -105,3 +105,17 @@ export const request = (options = {}) => {
 		}));
 	}
 };
+
+export const saveImageToPhotosAlbum = (url)=>{
+	return new Promise((resolve, reject)=>{
+		wx.saveImageToPhotosAlbum({
+			filePath: url,
+			success: function (data) {
+				resolve(data)
+			},
+			fail(res){
+				reject(res);
+			}
+		});
+	});
+}

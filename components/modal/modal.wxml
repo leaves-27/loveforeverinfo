@@ -1,3 +1,10 @@
-<view class="exception">
-  <view class="exception_text">{{ text }}</view>
+<view class="modal" wx:if="{{ isShow }}">
+  <view class="modal-mask" bind:tap="hide"></view>
+  <view class="modal-main">
+    <view class="modal-main_header"></view>
+    <view class="modal-main_body">
+      <slot></slot>
+    </view>
+    <view class="modal-main_footer"></view>
+  </view>
 </view>

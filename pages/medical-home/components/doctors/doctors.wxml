@@ -3,6 +3,7 @@
   <view class="doctors_body">
     <view
       wx:for="{{ doctors }}"
+      wx:key="{{ index }}"
       bind:tap="goDoctorDetail"
       data-item="{{ item }}"
       class="doctor">
