@@ -28,7 +28,7 @@ request.beforeRequest = function({
 };
 
 request.afterRequest  = function ({ code = 0, data = {} }, next){
-	if(code === 'token_expire'){ // 是token过期的话，跳转到登录页面
+	if(code === 'session_out'){ // 是token过期的话，跳转到登录页面
 		const { route = '' } = getCurrentRoute();
 		const query = {
 			url: `/${route}`
@@ -36,7 +36,7 @@ request.afterRequest  = function ({ code = 0, data = {} }, next){
 		router.navigateTo({
 			url: `pages/login/login?$${qs.stringify(query, {encode: false })}`
 		});
-	} else if (code * 1 === 1) {
+	} else {
 		next();
 	}
 };

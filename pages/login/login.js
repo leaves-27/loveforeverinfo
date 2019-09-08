@@ -4,7 +4,7 @@ import login from '../../mock/login/login';
 
 Page({
   data: {
-    phone: '',
+    phone: '18857152332',
     validationCode: '',
     isLogin: false,
     logoUrl: placeholderUrl
