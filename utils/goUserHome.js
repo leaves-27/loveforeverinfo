@@ -15,5 +15,9 @@ export default function(userRole){
 		});
 	} else if (userRole * 1 === 4){ // 派送员
 		// 暂无
+	} else {
+		router.navigateTo({
+			url: `pages/login/login`
+		});
 	}
 };

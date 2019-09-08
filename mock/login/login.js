@@ -1,9 +1,9 @@
 import { apiPrifix } from '../../config/index';
-import { request } from '../../utils/util'
+import { request } from '../../utils/util';
 
 // 通过微信的临时code来登录我们的服务器
 export const loginByWxTempCode = (code, validationCode)=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		url: `${apiPrifix}/login`,
 		method: 'get',
 		data: {
@@ -28,24 +28,30 @@ export const loginByWxTempCode = (code, validationCode)=> new Promise( (resolve,
 		fail(){
 			reject(res.errMsg);
 		},
+		isMock: true
 	})
 });
 
 // 通过微信的临时code来登录我们的服务器
 export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, reject)=>{
-	request({
-		url: `${apiPrifix}/login`,
+	request.request({
+		isMock: false,
+		isSuccess: true,
+		// url: `${apiPrifix}/login`,
+		url: 'https://fapi.oneshell.cn/loveforever/applet/account/getUserRole',
 		method: 'get',
+		// data: {
+		// 	phone,
+		// 	validationCode
+		// },
 		data: {
-			phone,
-			validationCode
-		},
+			"uid":"1", "token":"xxtoken", "phone":"15558011663"
+		} ,
 		header: {
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
 			// resolve(res.data)
-
 			console.log('phone:', phone);
 			console.log('phoneType:', typeof phone);
 			let type;
@@ -66,8 +72,9 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 				}
 			})
 		},
-		fail(){
-			reject(res.errMsg);
+		fail(res){
+			console.log('=======failure:');
+			reject(res);
 		},
 	})
 });

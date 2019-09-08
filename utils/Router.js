@@ -1,8 +1,8 @@
 import Router from '../lib/Router';
-import route from "./route";
+import route from "./route/index";
 
 const router = new Router(route);
-router.beforeCreate = (url, next)=>{
+router.beforeCreate = function(url, next){
 	const { redirect = '', routes = []} = this.route;
 	const currentUserRole = wx.getStorageSync('userRole');
 	const regExp = new RegExp(url.replace('/','\/'));

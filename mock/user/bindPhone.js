@@ -1,8 +1,9 @@
 import { placeholderUrl, request } from '../../utils/util';
 
 export default ({ phone, validationCode })=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
+		isSuccess: true,
 		url: '',
 		data: {
 			phone,

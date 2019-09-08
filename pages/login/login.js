@@ -1,4 +1,4 @@
-import { placeholderUrl, getQuery } from '../../utils/util.js';
+import { placeholderUrl, getQuery, router, goUserHome } from '../../utils/util.js';
 import login from '../../mock/login/login';
 // import login from '../../apis/login/login';
 
@@ -18,23 +18,6 @@ Page({
     this.setData({
       validationCode: $event.detail.value
     });
-  },
-  goUserHome(userRole){
-    if (userRole * 1 === 1){ // 消费者
-      wx.navigateTo({
-        url: `../index/index`
-      });
-    } else if(userRole * 1 === 2){ // 医生
-      wx.navigateTo({
-        url: `../doctor/doctor`
-      })
-    } else if (userRole * 1 === 3){// 医药代表
-      wx.navigateTo({
-        url: `../medical-home/home`
-      });
-    } else if (userRole * 1 === 4){ // 派送员
-      // 暂无
-    }
   },
   login(){
     if (this.data.isLogin){
@@ -68,16 +51,19 @@ Page({
       wx.setStorageSync('phone', phone);
 
       const { url = '' } = getQuery();
-      console.log('=====role:', type);
 
       if (!!url && type === 1){
-        wx.navigateTo({
+        router.navigateTo({
           url,
         });
       } else {
-        this.goUserHome(type);
+        goUserHome(type);
       }
     }).catch((error)=>{
+      console.log('test');
+      this.setData({
+        isLogin: false
+      });
       wx.showToast({
         icon: 'none',
         title: '登录失败，请稍后重试'

@@ -6,8 +6,9 @@ export default ({
   deliveryWayId = '',
 	payWayId = ''
 })=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
+		isSuccess: true,
 		url: '',
 		data: {
 			goodId,

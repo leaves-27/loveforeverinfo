@@ -2,8 +2,9 @@ import {placeholderUrl, request} from "../../utils/util";
 
 export default (status)=>{
 	return new Promise(async (resolve, reject)=>{
-		request({
+		request.request({
 			isMock: true,
+			isSuccess: true,
 			url: '',
 			data: { id },
 			success: (res)=>{

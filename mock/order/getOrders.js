@@ -10,8 +10,9 @@ export default ()=> new Promise( (resolve, reject)=>{
 	// 5: 配送中
 	// 6: 已签收
 
-	request({
+	request.request({
 		isMock: true,
+		isSuccess: true,
 		url: '',
 		data: {},
 		success: (res)=>{

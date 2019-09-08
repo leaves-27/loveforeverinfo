@@ -2,7 +2,7 @@ import {request} from "../../utils/util";
 import { apiPrifix } from '../../config/index';
 
 export default ()=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
 		url: `${apiPrifix}/authorization/getUserDefaultAddress`,
 		data: {},

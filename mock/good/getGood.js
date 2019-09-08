@@ -2,8 +2,9 @@ import {placeholderUrl, request} from '../../utils/util';
 import { apiPrifix } from '../../config/index';
 
 export default ()=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
+		isSuccess: true,
 		url: `${apiPrifix}/getGood`,
 		success: (res)=>{
 			// resolve(res);

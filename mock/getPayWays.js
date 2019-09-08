@@ -2,8 +2,9 @@ import {request} from "../utils/util";
 import {apiPrifix, staticPrifix} from "../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
+		isSuccess: true,
 		url: `${apiPrifix}/getPayWays`,
 		method: 'get',
 		success: (res)=>{

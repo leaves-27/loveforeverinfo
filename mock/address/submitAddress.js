@@ -6,7 +6,7 @@ export default ({
     desc = 1
   })=>{
 	return new Promise( (resolve, reject)=>{
-		request({
+		request.request({
 			isMock: true,
 			url: '',
 			data: {},

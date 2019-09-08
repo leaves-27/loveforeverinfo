@@ -2,8 +2,9 @@ import {request} from "../../utils/util";
 
 export default (id)=>{
 	return new Promise(async (resolve, reject)=>{
-		request({
+		request.request({
 			isMock: true,
+			isSuccess: true,
 			url: '',
 			data: {
 				id

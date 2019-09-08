@@ -1,7 +1,7 @@
 import {request} from "../../utils/util";
 
 export default (address)=> new Promise( (resolve, reject)=>{
-	request({
+	request.request({
 		isMock: true,
 		url: '',
 		data: {

@@ -1,4 +1,5 @@
 import qs from "qs";
+import { router } from '../../utils/util'
 import getGood from "../../mock/good/getGood";
 // import getGood from "../../mock/apis/getGood";
 Page({
@@ -46,8 +47,8 @@ Page({
     this.setData({
       isShowModal: false
     });
-    wx.navigateTo({
-      url: `../order-confirm/order-confirm?$${qs.stringify(query)}`
+    router.navigateTo({
+      url: `pages/order-confirm/order-confirm?$${qs.stringify(query)}`
     })
   },
   onLoad: function () {

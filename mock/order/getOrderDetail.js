@@ -12,8 +12,9 @@ export default (id)=> new Promise( (resolve, reject)=>{
 			return item.orderCode === id;
 		}) || null;
 
-		request({
+		request.request({
 			isMock: true,
+			isSuccess: true,
 			url: '',
 			data: {
 				id
