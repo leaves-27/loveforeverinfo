@@ -13,7 +13,7 @@ export const loginByWxTempCode = (code)=> new Promise( (resolve, reject)=>{
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			resolve(res.data)
+			resolve(res.data);
 		},
 		fail(){
 			reject(res.errMsg);

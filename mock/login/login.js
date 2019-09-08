@@ -44,9 +44,7 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 		// 	phone,
 		// 	validationCode
 		// },
-		data: {
-			"uid":"1", "token":"xxtoken", "phone":"15558011663"
-		} ,
+		data: {} ,
 		header: {
 			'content-type': 'application/json' // 默认值
 		},
