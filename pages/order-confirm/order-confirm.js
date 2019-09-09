@@ -66,7 +66,7 @@ Page({
     }).then((result)=>{
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
       const { code, data = [], message } = result;
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
 
@@ -108,7 +108,7 @@ Page({
   },
   setGood(result = {}){
     const { code, data, message } = result;
-    if (code !== 1) {
+    if (code * 1  !== 1) {
       throw new Error(message || '请求错误');
     }
     this.setData({
@@ -117,16 +117,21 @@ Page({
   },
   setAddresses(result = {}){
     const { code, data, message } = result;
-    if (code !== 1) {
+    if (code * 1  !== 1) {
       throw new Error(message || '请求错误');
     }
+    const { id = '', name = '', desc = ''} = data;
     this.setData({
-      address: data
+      address: {
+        id,
+        name,
+        desc
+      }
     });
   },
   setDeliveryWay(result = {}){
     const { code, data, message } = result;
-    if (code !== 1) {
+    if (code * 1 !== 1) {
       throw new Error(message || '请求错误');
     }
     this.setData({
@@ -135,7 +140,7 @@ Page({
   },
   setPayWay(result = {}){
     const { code, data, message } = result;
-    if (code !== 1) {
+    if (code  * 1 !== 1) {
       throw new Error(message || '请求错误');
     }
     this.setData({
@@ -148,11 +153,21 @@ Page({
       amount: count
     });
 
-    Promise.all([getGoodDetail(), getUserDefaultAddress(), getDeliveryWays(), getPayWays()]).then((result = [])=>{
-      this.setGood(result[0]);
-      this.setAddresses(result[1]);
-      this.setDeliveryWay(result[2]);
-      this.setPayWay(result[3]);
+    Promise.all([
+      // getGoodDetail(),
+      getUserDefaultAddress(),
+      getDeliveryWays(),
+      getPayWays()
+    ]).then((result = [])=>{
+      // this.setGood(result[0]);
+      // this.setAddresses(result[1]);
+      // this.setDeliveryWay(result[2]);
+      // this.setPayWay(result[3]);
+
+
+      this.setAddresses(result[0]);
+      this.setDeliveryWay(result[1]);
+      this.setPayWay(result[2]);
     });
   },
 })

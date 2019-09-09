@@ -17,6 +17,8 @@ Component({
       const index = this.data.deliveryWays.findIndex((item)=>{
         return item.id === this.data.deliveryId;
       });
+
+      console.log('this.data.deliveryWays:', this.data.deliveryWays);
       return index !== -1 ? index : 0;
     },
   },

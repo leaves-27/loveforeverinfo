@@ -4,30 +4,48 @@ import { getQuery } from '../../utils/util.js';
 // import submitAddress from '../../apis/submitAddress';
 // import getPoints from "../../mock/address/getTakeGoodPoints";
 // import submitPoint from '../../mock/address/submitPoint';
-import submitAddress from '../../mock/address/submitAddress';
+import createNewAddress from '../../mock/address/createNewAddress';
 
 Page({
   data: {
     name: '',
     phone: '',
-    address: {
-      region: ['浙江省', '杭州市', '西湖区'],
-      detail: ''
-    }
+    region: ['浙江省', '杭州市', '西湖区'],
+    desc: ''
   },
-  bindRegionChange: function (e) {
+  bindRegionChange(e) {
     this.setData({
       region: e.detail.value
     })
   },
+  nameChange(e){
+    this.setData({
+      name: e.detail.value
+    })
+  },
+  phoneChange(e){
+    this.setData({
+      phone: e.detail.value
+    })
+  },
+  detailChange(e){
+    this.setData({
+      desc: e.detail.value
+    })
+  },
   save(){
-    submitAddress({
+    createNewAddress({
       name: this.data.name,
       phone: this.data.phone,
-      address: `${this.data.address.region.join('')}${this.data.address.detail}`
+      address: {
+        province: this.data.region[0],
+        city: this.data.region[1],
+        area: this.data.region[2],
+        desc: this.data.desc
+      }
     }).then((result)=>{
       const { code, data = [], message } = result;
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         wx.showToast({
           icon: 'none',
           title: '添加新地址失败'

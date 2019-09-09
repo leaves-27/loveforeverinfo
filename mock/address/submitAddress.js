@@ -1,4 +1,4 @@
-import {request} from "../../utils/util";
+import { request } from "../../utils/util";
 
 export default ({
     name = '',
@@ -7,7 +7,7 @@ export default ({
   })=>{
 	return new Promise( (resolve, reject)=>{
 		request.request({
-			isMock: true,
+			isMock: false,
 			url: '',
 			data: {},
 			success: (res)=>{

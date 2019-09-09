@@ -1,11 +1,17 @@
-import {placeholderUrl, request} from '../../utils/util';
+import { placeholderUrl, request} from '../../utils/util';
 import { apiPrifix } from '../../config/index';
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: true,
-		isSuccess: true,
-		url: `${apiPrifix}/getGood`,
+		isMock: false,
+		isSuccess: false,
+		url: `${apiPrifix}/commodity/getGoods`,
+		method: 'get',
+		data: {},
+		// data: query,
+		// header: {
+		// 	'content-type': 'application/json' // 默认值
+		// },
 		success: (res)=>{
 			// resolve(res);
 			resolve({

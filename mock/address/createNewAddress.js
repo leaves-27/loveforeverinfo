@@ -1,20 +1,33 @@
 import {request} from "../../utils/util";
+import {apiPrifix} from "../../config/index";
 
-export default (address)=> new Promise( (resolve, reject)=>{
+export default ({
+  name = '',
+  phone = '',
+	address = {
+		province: '',
+		city: '',
+		area: '',
+		desc: ''
+	}
+})=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: true,
-		url: '',
+		isMock: false,
+		url: `${apiPrifix}//delivery/setaddress`,
+		method: 'post',
 		data: {
-			address,
+			name,
+			phone,
+			address
 		},
 		success: (res)=>{
 			// resolve(res);
-			resolve({
-				code: 1,
-				data: {
-					id: ''
-				}
-			})
+			// resolve({
+			// 	code: 1,
+			// 	data: {
+			// 		id: ''
+			// 	}
+			// })
 		},
 		fail: (error)=>{
 			reject(error);

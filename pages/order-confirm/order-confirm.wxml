@@ -4,8 +4,11 @@
     <view class="header_left address">
       <image class="address_icon" src="{{ iconAddressUrl }}" />
     </view>
-    <view class="header_middle address_desc">
+    <view class="header_middle address_desc" wx:if="{{ !!address.address }}">
       {{ address.address }}
+    </view>
+    <view class="header_middle address_desc" wx:else>
+      请填写收货人信息
     </view>
     <view class="header_right">
       <image class="arrow" src="{{ arrowRightUrl }}"></image>

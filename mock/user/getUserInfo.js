@@ -1,10 +1,12 @@
 import { placeholderUrl, request } from '../../utils/util';
+import { apiPrifix } from "../../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: true,
-		isSuccess: true,
-		url: '',
+		isMock: false,
+		isSuccess: false,
+		url: `${apiPrifix}/account/getUserRole`,
+		method: 'post',
 		success: (res)=>{
 			// resolve(res);
 			resolve({
