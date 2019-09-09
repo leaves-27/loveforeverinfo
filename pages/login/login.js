@@ -1,22 +1,51 @@
 import { placeholderUrl, getQuery, router, goUserHome } from '../../utils/util.js';
 import login from '../../mock/login/login';
 // import login from '../../apis/login/login';
+import sendValidationCode from '../../mock/login/sendValidationCode';
 
 Page({
   data: {
     phone: '18857152332',
     validationCode: '',
     isLogin: false,
-    logoUrl: placeholderUrl
+    logoUrl: placeholderUrl,
+    time: 0,
   },
   changePhone($event){
     this.setData({
       phone: $event.detail.value
     });
   },
-  changeVerticaltionCode($event){
+  changeValidationCodeCode($event){
     this.setData({
       validationCode: $event.detail.value
+    });
+  },
+  countDown(time){
+    this.setData({
+      time,
+    });
+    if (time !== 0){
+      setTimeout(()=>{
+        this.countDown( this.data.time - 1);
+      }, 1000);
+    }
+  },
+  sendValidationCode(){
+    if (this.data.time !== 0){
+      return;
+    }
+    this.countDown(60);
+    sendValidationCode(this.data.phone).then((result)=>{
+      wx.showToast({
+        icon: 'none',
+        title: '验证码发送成功，请在短信中查看'
+      });
+    }).catch(()=>{
+      wx.showToast({
+        icon: 'none',
+        title: '验证码发送失败，请在稍后重试'
+      });
     });
   },
   login(){
@@ -39,7 +68,7 @@ Page({
         isLogin: false
       });
       const { code, data } = result;
-      if(code !== 1){
+      if(code * 1 !== 1){
         wx.showToast({
           icon: 'none',
           title: '登录失败，请稍后重试'
@@ -52,7 +81,7 @@ Page({
 
       const { url = '' } = getQuery();
 
-      if (!!url && type === 1){
+      if (!!url){
         router.navigateTo({
           url,
         });
@@ -60,7 +89,6 @@ Page({
         goUserHome(type);
       }
     }).catch((error)=>{
-      console.log('test');
       this.setData({
         isLogin: false
       });

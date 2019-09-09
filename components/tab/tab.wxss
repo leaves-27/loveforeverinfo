@@ -1,0 +1,22 @@
+.tabs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tab_text{
+  font-size: 12rpx;
+  color: #7F8389;
+}
+.tab_text--selected{
+  color: #FE0000;
+}
+.tab_icon{
+  width: 160rpx;
+  height: 160rpx;
+}

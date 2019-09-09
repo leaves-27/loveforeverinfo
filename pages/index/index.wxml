@@ -59,4 +59,5 @@
         bind:cancel="cancelModal"
         bind:confirm="confirmModal"
     />
+    <tabs tabs="{{ tabs }}" />
 </view>

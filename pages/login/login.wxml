@@ -3,20 +3,31 @@
     <view class="main">
         <image class="login-logo" src="{{ logoUrl }}" />
     </view>
-    <input
-        class="input"
-        value="{{ phone }}"
-        placeholder="请输入11位手机号码"
-        maxlength="11"
-        bind:change="changePhone"
-    />
-    <input
-        class="input"
-        value="{{ validationCode }}"
-        placeholder="请输入11验证码"
-        maxlength="6"
-        bind:change="changeVerticaltionCode"
-    />
+    <view class="input-control">
+        <input
+            class="input"
+            value="{{ phone }}"
+            placeholder="请输入11位手机号码"
+            maxlength="11"
+            bind:change="changePhone"
+        />
+    </view>
+    <view class="input-control">
+        <input
+            class="input"
+            value="{{ validationCode }}"
+            placeholder="请输入11验证码"
+            maxlength="6"
+            bind:change="changeValidationCodeCode"
+        />
+        <view
+            wx:if="{{ time === 0 }}"
+            bind:tap="sendValidationCode"
+            class="button--validation">发送验证码</view>
+        <view
+            wx:else
+            class="button--validation button--disabled">发送验证码({{ time }})</view>
+    </view>
     <view
         class="button {{ isLogin ? 'button--default' : 'button--active' }}" bind:tap="login">确定</view>
 </view>

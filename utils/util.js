@@ -1,6 +1,7 @@
 import UserType from './UserType';
 import OrderStatus from './OrderStatus';
 import placeholderUrl from './placeholderUrl';
+import tabs from './tabs';
 
 import getOrderStatus from './getOrderStatus';
 import getKvs from './getKvs';
@@ -23,7 +24,8 @@ module.exports = {
   goPay,
   navigateBack,
   goUserHome,
-  router
+  router,
+  tabs
 }
 
 

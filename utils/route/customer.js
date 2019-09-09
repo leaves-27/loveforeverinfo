@@ -1,26 +1,26 @@
 import UserRole from '../userRole';
 export default [{
-	path: "pages/index/index",
+	path: "/pages/index/index",
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/order-confirm/order-confirm',
+	path: '/pages/order-confirm/order-confirm',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/order-result/order-result',
+	path: '/pages/order-result/order-result',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/my/my',
+	path: '/pages/my/my',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/my-order/my-order',
+	path: '/pages/my-order/my-order',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/order-detail/order-detail',
+	path: '/pages/order-detail/order-detail',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/create-address/address',
+	path: '/pages/create-address/address',
 	role: [UserRole['customer']]
 }, {
-	path: 'pages/my-address/my-address',
+	path: '/pages/my-address/my-address',
 	role: [UserRole['customer']]
 }]

@@ -1,5 +1,5 @@
 import qs from "qs";
-import { router } from '../../utils/util'
+import { router, tabs } from '../../utils/util'
 import getGood from "../../mock/good/getGood";
 // import getGood from "../../mock/apis/getGood";
 Page({
@@ -15,6 +15,7 @@ Page({
     selectedTabId: "",
     index: 0,
     isShowModal: false,
+    selectedTabIndex: 0,
   },
   buy(){
     this.setData({
@@ -48,10 +49,11 @@ Page({
       isShowModal: false
     });
     router.navigateTo({
-      url: `pages/order-confirm/order-confirm?$${qs.stringify(query)}`
+      url: `/pages/order-confirm/order-confirm?$${qs.stringify(query)}`
     })
   },
-  onLoad: function () {
+  onShow(){},
+  onLoad() {
     this.setData({
       selectedTabId: this.data.tabs[0].id
     });

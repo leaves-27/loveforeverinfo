@@ -8,7 +8,7 @@ App({
   onLaunch: function () {
     const role = wx.getStorageSync('userRole');
 
-    console.log('role:', role);
+    console.log('================app role:', role);
     if (role * 1 !== 1){
       goUserHome(role);
     }

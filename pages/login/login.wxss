@@ -21,6 +21,19 @@ page{
     border: 1rpx solid #DEDEDE;
     border-radius: 31.2rpx;
 }
+.input-control{
+    display: flex;
+}
+.button--validation{
+    width: 360rpx;
+    height: 76rpx;
+    line-height: 76rpx;
+    text-align: right;
+}
+.button--disabled{
+    color: #666666;
+    background-color: transparent;
+}
 .input{
     width: 100%;
     height: 76rpx;

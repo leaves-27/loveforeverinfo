@@ -44,17 +44,14 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 		method: 'post',
 		data: {
 			phone,
-			validationCode
+			code: validationCode
 		},
 		// data: query,
 		header: {
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			console.log('=========res:', res);
-			resolve(res.data)
-			// console.log('phone:', phone);
-			// console.log('phoneType:', typeof phone);
+			resolve(res);
 			// let type;
 			// if (phone === "18857152332"){ //医药代表
 			// 		type = 3

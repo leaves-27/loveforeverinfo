@@ -1,0 +1,27 @@
+<view class="tabs">
+  <view
+    wx:for="{{ tabs }}"
+    data-index="{{ index }}"
+    bind:tap="select"
+    class="tab">
+    <image
+        wx:if="{{ index === selectedTabIndex }}"
+        class="tab_icon tab_icon--selected"
+        src="{{ item.selectedIconPath }}" />
+
+    <image
+        wx:else
+        class="tab_icon"
+        src="{{ item.iconPath }}" />
+    <view
+      wx:if="{{ index === selectedTabIndex }}"
+      class="tab_text tab_text--selected">
+      {{ item.text }}
+    </view>
+    <view
+      wx:else
+      class="tab_text">
+      {{ item.text }}
+    </view>
+  </view>
+</view>
