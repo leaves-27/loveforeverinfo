@@ -19,7 +19,8 @@ Component({
       const { index } = $event.currentTarget.dataset;
       getApp().globalData.selectedTabIndex = index;
       const { pagePath = '' } = this.data.tabs[index];
-      router.navigateTo({
+
+      router.redirectTo({
         url: pagePath
       });
     }
