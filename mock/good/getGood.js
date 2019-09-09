@@ -3,8 +3,8 @@ import { apiPrifix } from '../../config/index';
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: false,
-		isSuccess: false,
+		isMock: true,
+		isSuccess: true,
 		url: `${apiPrifix}/commodity/getGoods`,
 		method: 'get',
 		data: {},
