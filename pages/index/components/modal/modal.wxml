@@ -1,4 +1,6 @@
-<view class="modal mask">
+<view
+    bind:tap="cancel"
+    class="modal mask">
     <view class="modal_body">
         <view class="goods">
             <view

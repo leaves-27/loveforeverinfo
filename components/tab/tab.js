@@ -9,19 +9,24 @@ Component({
       value: []
     }
   },
-  computed(){
-    return {
-      selectedTabIndex:  getApp().globalData.selectedTabIndex
+  computed: {
+    selectedTabIndex(){
+      return getApp().globalData.selectedTabIndex || 0;
     }
   },
   methods: {
     select($event){
       const { index } = $event.currentTarget.dataset;
-      app.globalData.selectedTabIndex = index;
+      getApp().globalData.selectedTabIndex = index;
       const { pagePath = '' } = this.data.tabs[index];
       router.navigateTo({
-        url
+        url: pagePath
       });
     }
-  }
+  },
+  lifetimes: {
+    attached: function() {
+      //console.log('===tabs:', this.data.tabs);
+    },
+  },
 })

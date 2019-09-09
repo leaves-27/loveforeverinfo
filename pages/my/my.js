@@ -1,5 +1,5 @@
 import qs from 'qs';
-import { OrderStatus, getOrderStatus } from '../../utils/util';
+import {OrderStatus, getOrderStatus, tabs} from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getUserInfo from '../../apis/getUserInfo';
@@ -15,6 +15,7 @@ Page({
     qrUrl: `${staticPrifix}/qr.png`,
     addressIconUrl: `${staticPrifix}/address.png`,
     scoreLogoUrl: `${staticPrifix}//xiyan.png`,
+    appTabs: tabs
   },
   goMyQr() {
     const query = {

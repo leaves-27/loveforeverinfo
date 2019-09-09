@@ -12,7 +12,7 @@
     width: 100%;
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 101rpx;
     background-color: #F6F6F6;
 }
 .goods{
@@ -20,7 +20,7 @@
 }
 .good-item{
     display: flex;
-    border-bottom: 1px solid #F6F6F6;
+    border-bottom: 1rpx solid #F6F6F6;
     background-color: #FFFFFF;
     padding: 24rpx;
 }
@@ -68,6 +68,7 @@
     font-family: PingFangSC-Regular;
     font-size: 28rpx;
     text-align: center;
+    border-bottom: 1rpx solid #F6F6F6;
 }
 .button--default{
     background-image: none;

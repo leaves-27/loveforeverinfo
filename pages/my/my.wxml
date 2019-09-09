@@ -41,4 +41,5 @@
 <!--    <bind-phone-button phone="{{ phone }}" />-->
     <view class="address_desc">绑定手机号</view>
   </view>
+  <tabs tabs="{{ appTabs }}" />
 </view>

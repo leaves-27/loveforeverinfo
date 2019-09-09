@@ -1,4 +1,4 @@
-// 通过微信的临时code来登录我们的服务器
+//
 import {request} from "../../utils/util";
 import {apiPrifix} from "../../config/index";
 
@@ -17,7 +17,6 @@ export default (phone)=> new Promise( (resolve, reject)=>{
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			console.log('=========res:', res);
 			resolve(res.data)
 			// resolve({
 			// 	code: 1,
@@ -25,7 +24,6 @@ export default (phone)=> new Promise( (resolve, reject)=>{
 			// })
 		},
 		fail(res){
-			console.log('=======failure:');
 			reject(res);
 		},
 	})

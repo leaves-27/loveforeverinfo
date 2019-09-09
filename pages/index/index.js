@@ -16,30 +16,31 @@ Page({
     index: 0,
     isShowModal: false,
     selectedTabIndex: 0,
+    appTabs: tabs
   },
-  buy(){
+  buy() {
     this.setData({
       isShowModal: true
     });
   },
-  change($event){
+  change($event) {
     const { current } = $event.detail;
     this.setData({
       index: current
     })
   },
-  tabChange($event){
+  tabChange($event) {
     const { id } = $event.currentTarget.dataset;
     this.setData({
       selectedTabId: id
     });
   },
-  cancelModal($event){
+  cancelModal($event) {
     this.setData({
       isShowModal: false
     });
   },
-  confirmModal($event){
+  confirmModal($event) {
     const { id, count } = $event.detail;
     const query = {
       id,
@@ -52,7 +53,6 @@ Page({
       url: `/pages/order-confirm/order-confirm?$${qs.stringify(query)}`
     })
   },
-  onShow(){},
   onLoad() {
     this.setData({
       selectedTabId: this.data.tabs[0].id
