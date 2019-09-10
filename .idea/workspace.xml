@@ -2,26 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/address/createNewAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/address/createNewAddress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/address/getAddresses.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/address/getAddresses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/address/submitAddress.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/address/submitPoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/good/getGood.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/good/getGood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/good/getGoodDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/good/getGoodDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/order/cancelOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/order/cancelOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/order/getOrderDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/order/getOrderDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/order/getOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/order/getOrders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/order/paying.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/order/paying.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/order/submitOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/order/submitOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/user/bindPhone.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/user/bindPhone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/user/getDoctorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/user/getDoctorDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/user/getInviteCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/user/getInviteCode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/user/getMyDoctors.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/user/getMyDoctors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/user/getUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mock/user/getUserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/decryption.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/address/createNewAddress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/address/getAddresses.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/address/getTakeGoodPoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/address/getUserDefaultAddress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/address/updateDefaultAddress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/getDeliveryWays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/getPayWays.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/good/getGood.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/good/getGoodDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/login/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/login/sendValidationCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/order/cancelOrder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/order/getOrderDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/order/getOrders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/order/paying.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/order/submitOrder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/user/bindPhone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/user/getDoctorDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/user/getInviteCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/user/getMyDoctors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/user/getUserInfo.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/bind-phone/bind-phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bind-phone/bind-phone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create-address/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-address/address.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" afterDir="false" />
@@ -48,13 +56,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mock/order/getOrders.js">
+        <entry file="file://$PROJECT_DIR$/apis/login/getTempCredentials.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -63,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectedPoint</find>
       <find>loginByPhone</find>
       <find>qr</find>
       <find>config</find>
@@ -93,10 +97,12 @@
       <find>save</find>
       <find>getGoodDetail</find>
       <find>code !== 1</find>
+      <find>mock</find>
     </findStrings>
     <replaceStrings>
       <replace>request.request</replace>
       <replace>code * 1 !== 1</replace>
+      <replace>apis</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages/index</dir>
@@ -169,7 +175,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="236" />
+    <option name="x" value="235" />
     <option name="y" value="33" />
     <option name="width" value="1193" />
     <option name="height" value="805" />
@@ -190,13 +196,7 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,15 +317,15 @@
       <workItem from="1567926307322" duration="10680000" />
       <workItem from="1567984266865" duration="3947000" />
       <workItem from="1568032213060" duration="10758000" />
-      <workItem from="1568069517653" duration="3333000" />
+      <workItem from="1568069517653" duration="3739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246112000" />
+    <option name="totallyTimeSpent" value="246518000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="236" y="33" width="1193" height="805" extended-state="0" />
+    <frame x="235" y="33" width="1193" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242246" />
@@ -386,16 +386,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -437,16 +427,6 @@
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="51" column="6" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -812,6 +792,23 @@
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/login/getTempCredentials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>

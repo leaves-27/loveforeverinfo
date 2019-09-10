@@ -1,6 +1,6 @@
 import { getQuery } from '../../utils/util.js';
 // import getOrders from '../../../../apis/getOrders.js';
-import getOrders from "../../mock/order/getOrders";
+import getOrders from "../../apis/order/getOrders";
 
 Page({
   data: {

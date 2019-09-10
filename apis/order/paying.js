@@ -1,16 +1,22 @@
-import { apiPrifix } from '../config/index';
+import {placeholderUrl, request} from "../../utils/util";
+import { apiPrifix } from "../../config/index";
+
 export default (status)=>{
 	return new Promise(async (resolve, reject)=>{
-		wx.request({
-			url: 'getOrders', //
-			data: {
-				status,
+		request.request({
+			isMock: true,
+			isSuccess: true,
+			url: '',
+			data: { id },
+			success: (res)=>{
+				// resolve(res);
+				resolve({
+					code: 1,
+					data: {}
+				});
 			},
-			header: {
-				'content-type': 'application/json' // 默认值
-			},
-			success (res) {
-				resolve(res)
+			fail: (error)=>{
+				reject(error);
 			}
 		});
 	})

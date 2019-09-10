@@ -1,7 +1,7 @@
 import { getQuery } from "../../utils/util";
 import { staticPrifix } from '../../config/index'
 
-import getInviteCode from "../../mock/user/getInviteCode";
+import getInviteCode from "../../apis/user/getInviteCode";
 
 Page({
   data: {

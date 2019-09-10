@@ -1,5 +1,5 @@
 import qs from 'qs';
-import getDoctorDetail from "../../mock/user/getDoctorDetail";
+import getDoctorDetail from "../../apis/user/getDoctorDetail";
 import { getQuery } from "../../utils/util";
 import { createQrCode } from '../../utils/qrcode';
 import {staticPrifix} from "../../config/index";

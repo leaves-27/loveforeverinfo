@@ -3,7 +3,7 @@ import {OrderStatus, getOrderStatus, tabs} from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getUserInfo from '../../apis/getUserInfo';
-import getUserInfo from '../../mock/user/getUserInfo';
+import getUserInfo from '../../apis/user/getUserInfo';
 
 Page({
   data: {

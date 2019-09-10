@@ -1,5 +1,5 @@
 import { getQuery } from '../../utils/util';
-import getOrderDetail from "../../mock/order/getOrderDetail";
+import getOrderDetail from "../../apis/order/getOrderDetail";
 
 Page({
   data: {

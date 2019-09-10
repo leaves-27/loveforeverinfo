@@ -1,7 +1,7 @@
 import qs from 'qs';
 import { staticPrifix } from "../../config/index";
-import getUserInfo from '../../mock/user/getUserInfo';
-import getMyDoctors from "../../mock/user/getMyDoctors";
+import getUserInfo from '../../apis/user/getUserInfo';
+import getMyDoctors from "../../apis/user/getMyDoctors";
 
 Page({
   data: {

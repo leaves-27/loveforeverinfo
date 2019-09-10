@@ -1,7 +1,7 @@
 import { placeholderUrl, getQuery, router, goUserHome } from '../../utils/util.js';
-import login from '../../mock/login/login';
+import login from '../../apis/login/login';
 // import login from '../../apis/login/login';
-import sendValidationCode from '../../mock/login/sendValidationCode';
+import sendValidationCode from '../../apis/login/sendValidationCode';
 
 Page({
   data: {

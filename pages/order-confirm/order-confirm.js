@@ -4,13 +4,13 @@ import { getQuery, getCurrentRoute } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
-// import getOrderConfirm from "../../mock/order/getOrderConfirm";
+// import getOrderConfirm from "../../apis/order/getOrderConfirm";
 // import submitOrder from '../../apis/submitOrder';
-import getGoodDetail from '../../mock/good/getGoodDetail';
-import getUserDefaultAddress from '../../mock/address/getUserDefaultAddress';
-import getDeliveryWays from '../../mock/getDeliveryWays';
-import getPayWays from '../../mock/getPayWays';
-import submitOrder from "../../mock/order/submitOrder";
+import getGoodDetail from '../../apis/good/getGoodDetail';
+import getUserDefaultAddress from '../../apis/address/getUserDefaultAddress';
+import getDeliveryWays from '../../apis/getDeliveryWays';
+import getPayWays from '../../apis/getPayWays';
+import submitOrder from "../../apis/order/submitOrder";
 
 Page({
   behaviors: [computedBehavior],

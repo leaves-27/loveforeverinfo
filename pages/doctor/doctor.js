@@ -1,7 +1,7 @@
 // import getUserInfo from '../../apis/getUserInfo';
 // import getOrders from '../../apis/getOrders';
-import getUserInfo from '../../mock/user/getUserInfo';
-import getOrders from "../../mock/order/getOrders";
+import getUserInfo from '../../apis/user/getUserInfo';
+import getOrders from "../../apis/order/getOrders";
 
 Page({
   data: {

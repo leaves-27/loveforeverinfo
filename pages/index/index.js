@@ -1,7 +1,7 @@
 import qs from "qs";
 import { router, tabs } from '../../utils/util'
-import getGood from "../../mock/good/getGood";
-// import getGood from "../../mock/apis/getGood";
+import getGood from "../../apis/good/getGood";
+// import getGood from "../../apis/apis/getGood";
 Page({
   data: {
     good: {},
