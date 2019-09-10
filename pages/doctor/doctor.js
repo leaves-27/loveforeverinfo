@@ -33,7 +33,7 @@ Page({
   onLoad(){
     Promise.all([getUserInfo(), getOrders()]).then((result)=>{
       const { code, data, message } = result[0] || {};
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
       const {
@@ -45,7 +45,7 @@ Page({
 
       const { code: orderCode, data: orderData, message: orderMessage } = result[1] || {};
       console.log('result:', result);
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
 

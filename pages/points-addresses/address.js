@@ -57,12 +57,13 @@ Page({
     const { addressId } = getQuery();
 
     Promise.all([ getPoints(), getAddresses()]).then((result)=>{
+      console.log('result===:', result);
       const { code, data = [], message } = result[0];
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
       const { code: addressCode, data: addressData = [], message:addressMessage = '' } = result[1];
-      if (addressCode !== 1) {
+      if (addressCode * 1 !== 1) {
         throw new Error(addressMessage || '请求错误');
       }
 

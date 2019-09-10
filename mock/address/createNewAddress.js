@@ -12,8 +12,8 @@ export default ({
 	}
 })=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: false,
-		url: `${apiPrifix}//delivery/setaddress`,
+		// isMock: false,
+		url: `${apiPrifix}/delivery/setaddress`,
 		method: 'post',
 		data: {
 			name,
@@ -21,7 +21,7 @@ export default ({
 			address
 		},
 		success: (res)=>{
-			// resolve(res);
+			resolve(res);
 			// resolve({
 			// 	code: 1,
 			// 	data: {

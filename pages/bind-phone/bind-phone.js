@@ -58,7 +58,7 @@ Page({
         isLogin: false
       });
       const { code, data } = result;
-      if(code !== 1){
+      if(code * 1 !== 1){
         wx.showToast({
           icon: 'none',
           title: '绑定失败，请稍后重试'

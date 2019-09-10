@@ -1,4 +1,5 @@
 import {placeholderUrl, request} from '../../utils/util';
+import { apiPrifix } from "../../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
 
@@ -9,11 +10,11 @@ export default ()=> new Promise( (resolve, reject)=>{
 	// 4: 开始配送
 	// 5: 配送中
 	// 6: 已签收
-
 	request.request({
-		isMock: false,
-		isSuccess: false,
-		url: '',
+		// isMock: false,
+		// isSuccess: false,
+		url: `${apiPrifix}/applet/order/getOrders`,
+		method: 'post',
 		data: {},
 		success: (res)=>{
 			resolve(res);

@@ -59,7 +59,7 @@ Page({
     });
     getGood().then((result)=>{
       const { code, data, message } = result;
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
 

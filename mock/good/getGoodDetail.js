@@ -3,9 +3,10 @@ import { apiPrifix } from '../../config/index';
 
 export default (id)=> new Promise( (resolve, reject)=>{
 	request.request({
-		isMock: true,
-		isSuccess: true,
+		// isMock: true,
+		// isSuccess: true,
 		url: `${apiPrifix}/commodity/getGoodDetail`,
+		method: 'get',
 		data: {
 			id,
 		},

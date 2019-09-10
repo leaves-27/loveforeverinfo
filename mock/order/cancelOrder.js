@@ -1,26 +1,21 @@
 import {request} from "../../utils/util";
+import { apiPrifix } from "../../config/index";
 
 export default (id)=>{
 	return new Promise(async (resolve, reject)=>{
 		request.request({
-			isMock: true,
-			isSuccess: true,
-			url: '',
+			// isMock: true,
+			// isSuccess: true,
+			url: `${apiPrifix}/order/cancelOrder`,
 			data: {
 				id
 			},
 			success: (res)=>{
-				// resolve(res);
-				resolve({
-					code: 1,
-					data: [{
-						id: '01',
-						name: "快递配送",
-					}, {
-						id: '02',
-						name: "自提",
-					}]
-				})
+				resolve(res);
+				// resolve({
+				// 	code: 1,
+				// 	data: {}
+				// });
 			},
 			fail: (error)=>{
 				reject(error);

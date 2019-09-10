@@ -21,7 +21,7 @@ Page({
     });
     updateDefaultAddress({ addressId: id }).then((result)=>{
       const { code, data = {}, message } = result;
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         wx.showToast({
           icon: 'none',
           title: '设置默认地址失败，请稍后重试或联系客服'
@@ -38,7 +38,7 @@ Page({
     const { statusId = '0' } = getQuery();
     Promise.all([getAddresses(), getUserDefaultAddress()]).then((result)=>{
       const { code, data = {}, message } = result[0];
-      if (code !== 1) {
+      if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
       const { code: defaultAddressesCode, data:defaultAddressesData = {}, message: defaultAddressesMessage = '' } = result[1];
