@@ -13,8 +13,8 @@ export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: false,
 		// isSuccess: false,
-		url: `${apiPrifix}/applet/order/getOrders`,
-		method: 'post',
+		url: `${apiPrifix}/order/getOrders`,
+		method: 'get',
 		data: {},
 		success: (res)=>{
 			resolve(res);

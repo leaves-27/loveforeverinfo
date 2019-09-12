@@ -1,4 +1,4 @@
-import decryption from '../../apis/decryption';
+// import decryption from '../../apis/decryption';
 
 Component({
   properties: {
@@ -14,12 +14,12 @@ Component({
       });
     },
     getPhoneNumber($event){
-      const { iv, encryptedData } = e.detail;
-      decryption(iv, encryptedData).then((result)=>{
-        const { code, data } = result;
-        const { phoneNumber } = data;
-        this.goBindPhone(phoneNumber);
-      })
+      // const { iv, encryptedData } = e.detail;
+      // decryption(iv, encryptedData).then((result)=>{
+      //   const { code, data } = result;
+      //   const { phoneNumber } = data;
+      //   this.goBindPhone(phoneNumber);
+      // })
     }
   }
 })

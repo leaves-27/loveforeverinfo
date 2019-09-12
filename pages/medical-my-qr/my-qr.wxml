@@ -4,7 +4,11 @@
   </view>
   <view class="content_main">
     <view class="name">{{ name }}</view>
-    <image class="qr" src="{{ userLogoUrl }}" />
+    <canvas
+        class="qr"
+        style="width:{{ canvas.width }}rpx;height:{{ canvas.height }}rpx;"
+        canvas-id="myQrcode"
+        bind:tap="saveImageToPhotosAlbum"></canvas>
     <image class="userLogo" src="{{ userLogoUrl }}" />
   </view>
   <image class="content_boundary" src="{{ qrBoundary }}" />

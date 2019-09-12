@@ -1,6 +1,7 @@
 import { placeholderUrl, getQuery, router, goUserHome } from '../../utils/util.js';
 import login from '../../apis/login/login';
 // import login from '../../apis/login/login';
+import getTempCredentials from '../../apis/login/getTempCredentials';
 import sendValidationCode from '../../apis/login/sendValidationCode';
 
 Page({
@@ -63,7 +64,11 @@ Page({
     this.setData({
       isLogin: true
     });
-    login(this.data.phone,this.data.validationCode).then((result)=>{
+
+    getTempCredentials().then((code)=>{
+      return login(this.data.phone,this.data.validationCode, code);
+    })
+    .then((result)=>{
       this.setData({
         isLogin: false
       });

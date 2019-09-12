@@ -1,10 +1,7 @@
 import qs from 'qs';
 import getDoctorDetail from "../../apis/user/getDoctorDetail";
-import { getQuery } from "../../utils/util";
-import { createQrCode } from '../../utils/qrcode';
+import { getQuery, createQrCode, saveImageToPhotosAlbum } from "../../utils/util";
 import {staticPrifix} from "../../config/index";
-
-import { saveImageToPhotosAlbum } from '../../utils/wx';
 
 Page({
   data: {

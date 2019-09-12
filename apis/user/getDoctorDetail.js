@@ -9,7 +9,7 @@ export default (id)=> new Promise( (resolve, reject)=>{
 		data: {
 			id
 		},
-		method: 'get',
+		method: 'post',
 		success: (res)=>{
 			resolve(res);
 			// resolve({

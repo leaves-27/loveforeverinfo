@@ -1,13 +1,17 @@
 export default ()=>{
-	return new Promise(async (resolve, reject)=>{
+	return new Promise((resolve, reject)=>{
 		wx.login({
+			timeout: 1000 * 60,
 			success (res) {
-				console.log('res:', res);
-				if (res.code) {
-					resolve(res.code);
+				const { code, errMsg } = res;
+				if (code) {
+					resolve(code);
 				} else {
-					reject(res.errMsg);
+					reject(errMsg);
 				}
+			},
+			fail(error){
+				reject(errMsg);
 			}
 		})
 	})

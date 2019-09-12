@@ -5,8 +5,8 @@ export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/getUserRole`,
-		method: 'get',
+		url: `${apiPrifix}/account/getUserInfo`,
+		method: 'post',
 		success: (res)=>{
 			resolve(res);
 			// resolve({

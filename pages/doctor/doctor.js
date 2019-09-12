@@ -1,7 +1,8 @@
 // import getUserInfo from '../../apis/getUserInfo';
 // import getOrders from '../../apis/getOrders';
 import getUserInfo from '../../apis/user/getUserInfo';
-import getOrders from "../../apis/order/getOrders";
+import getConsumerOrderFlow from "../../apis/user/getConsumerOrderFlow";
+import getConsumers from "../../apis/user/getConsumers";
 
 Page({
   data: {
@@ -15,7 +16,8 @@ Page({
       id: '02',
       name: '消费者信息'
     }],
-    orders: [],
+    consumerOrderFlow: [],
+    consumers: [],
     selectedTabId: '01'
   },
   bindPhone(){
@@ -30,36 +32,47 @@ Page({
       selectedTabId: id
     })
   },
+  setConsumerOrderFlow(){
+    const { code = 0, data = [], message = '' } = result[1] || {};
+
+    if (code * 1 !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      ConsumerOrderFlow: data
+    });
+  },
+  setConsumers({ code = 0, data = [], message = '' } = {}){
+    if (code * 1 !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    this.setData({
+      consumers: data
+    });
+  },
+  setUserInfo({ code, data, message }){
+    if (code * 1 !== 1) {
+      throw new Error(message || '请求错误');
+    }
+    const {
+      name,
+      phone,
+      score,
+      logoUrl,
+    } = data;
+
+    this.setData({
+      name,
+      phone,
+      score,
+      userLogoUrl: logoUrl
+    });
+  },
   onLoad(){
-    Promise.all([getUserInfo(), getOrders()]).then((result)=>{
-      const { code, data, message } = result[0] || {};
-      if (code * 1 !== 1) {
-        throw new Error(message || '请求错误');
-      }
-      const {
-        name,
-        phone,
-        score,
-        userLogoUrl,
-      } = data;
-
-      const { code: orderCode, data: orderData, message: orderMessage } = result[1] || {};
-      console.log('result:', result);
-      if (code * 1 !== 1) {
-        throw new Error(message || '请求错误');
-      }
-
-      if (orderCode !== 1) {
-        throw new Error(orderMessage || '请求错误');
-      }
-
-      this.setData({
-        name,
-        phone,
-        score,
-        userLogoUrl,
-        orders: orderData
-      })
+    Promise.all([getUserInfo(), getConsumerOrderFlow(1), getConsumers()]).then((result)=>{
+      this.setUserInfo(result[0]);
+      this.setConsumerOrderFlow(result[1]);
+      this.setConsumers(result[2]);
     })
   },
 })

@@ -7,10 +7,12 @@ import getOrderStatus from './getOrderStatus';
 import getKvs from './getKvs';
 import goPay from './goPay';
 import goUserHome from './goUserHome';
-import { getCurrentRoute, getQuery, navigateBack } from './wx';
+import { getCurrentRoute, getQuery, navigateBack, saveImageToPhotosAlbum } from './wx';
 
 import router from './router';
 import request from './request';
+
+import { createQrCode } from './qrcode';
 
 module.exports = {
   placeholderUrl,
@@ -25,7 +27,9 @@ module.exports = {
   navigateBack,
   goUserHome,
   router,
-  tabs
+  tabs,
+  createQrCode,
+  saveImageToPhotosAlbum
 }
 
 

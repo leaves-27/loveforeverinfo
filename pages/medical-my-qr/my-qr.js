@@ -1,4 +1,4 @@
-import { getQuery } from "../../utils/util";
+import { getQuery, createQrCode, saveImageToPhotosAlbum } from "../../utils/util";
 import { staticPrifix } from '../../config/index'
 
 import getInviteCode from "../../apis/user/getInviteCode";
@@ -7,13 +7,32 @@ Page({
   data: {
     name: '',
     userLogoUrl: '',
-    qrUrl: '',
     qrBorderTop: `${staticPrifix}/qr_border-top.png`,
-    qrBoundary: `${staticPrifix}/qr_border-middle.png`
+    qrBoundary: `${staticPrifix}/qr_border-middle.png`,
+    isShowMoadl: false,
+    qrUrl: '',
+    canvas: {
+      width: 380,
+      height: 380
+    }
+  },
+  saveImageToPhotosAlbum(){
+    saveImageToPhotosAlbum(this.data.qrUrl).then(()=>{
+      wx.showToast({
+        title: '保存二维码到相册成功',
+        icon: 'none',
+        duration: 2000
+      });
+    }).catch(()=>{
+      // wx.showToast({
+      //   title: '保存二维码到相册失败',
+      //   icon: 'none',
+      //   duration: 2000
+      // });
+    });
   },
   onLoad: function () {
     const { name = '', userLogoUrl = '' } = getQuery();
-    console.log('userLogoUrl', getQuery());
     this.setData({
       name,
       userLogoUrl
@@ -27,12 +46,13 @@ Page({
         inviteCode,
       } = data;
 
-      //根据inviteCode生成qrUrl;
-      const qrUrl = '';
-
-      this.setData({
-        qrUrl,
-      })
+      createQrCode(inviteCode, 'myQrcode', this.data.canvas.width / 2, this.data.canvas.height / 2).then((qrUrl)=>{
+        this.setData({
+          qrUrl
+        });
+      }).catch((error)=>{
+        console.log(error);
+      });
     })
   }
 })

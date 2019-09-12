@@ -55,14 +55,14 @@ Page({
         name,
         phone,
         score,
-        userLogoUrl,
+        logoUrl,
       } = data;
 
       this.setData({
         name,
         phone,
         score,
-        userLogoUrl,
+        userLogoUrl: logoUrl,
       })
     })
   },

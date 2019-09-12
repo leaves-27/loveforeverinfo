@@ -20,11 +20,11 @@
   </view>
   <view class="columns">
     <view class="column">
-      <view class="column_value">2300</view>
+      <view class="column_value">{{ score }}</view>
       <view class="column_label">我的积分</view>
     </view>
     <view class="column" bind:tap="goMyOrder">
-      <view class="column_value">2300</view>
+      <view class="column_value">{{ orderCount }}</view>
       <view class="column_label">订单管理</view>
     </view>
   </view>
