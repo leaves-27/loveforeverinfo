@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/order/confirmOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/login/getTempCredentials.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/getTempCredentials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/login/sendValidationCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/sendValidationCode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/order/getOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order/getOrders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/user/getDoctorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/getDoctorDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/user/getMyDoctors.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/getMyDoctors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/user/getUserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/getUserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/bind-phone-button/bind-phone-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/bind-phone-button/bind-phone-button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/userRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/userRole.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -61,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="63" column="10" lean-forward="true" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+            <state relative-caret-position="539">
+              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -83,7 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>request</find>
       <find>afterRequest</find>
       <find>regExp</find>
       <find>sendValidationCode</find>
@@ -113,6 +91,7 @@
       <find>createQrCode</find>
       <find>saveImageToPhotosAlbum</find>
       <find>qr</find>
+      <find>content_main</find>
     </findStrings>
     <replaceStrings>
       <replace>request.request</replace>
@@ -183,8 +162,8 @@
         <option value="$PROJECT_DIR$/apis/user/getDoctorDetail.js" />
         <option value="$PROJECT_DIR$/utils/util.js" />
         <option value="$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.js" />
-        <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxml" />
+        <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxss" />
       </list>
     </option>
@@ -352,12 +331,12 @@
       <workItem from="1568069517653" duration="4005000" />
       <workItem from="1568074375385" duration="1226000" />
       <workItem from="1568157954907" duration="3214000" />
-      <workItem from="1568243991056" duration="3395000" />
+      <workItem from="1568243991056" duration="3913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254619000" />
+    <option name="totallyTimeSpent" value="255137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="247" y="61" width="1193" height="805" extended-state="0" />
@@ -797,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -814,10 +786,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="63" column="10" lean-forward="true" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+        <state relative-caret-position="539">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
         </state>
       </provider>
     </entry>

@@ -12,8 +12,8 @@ Page({
     isShowMoadl: false,
     qrUrl: '',
     canvas: {
-      width: 380,
-      height: 380
+      width: 502,
+      height: 502
     }
   },
   saveImageToPhotosAlbum(){

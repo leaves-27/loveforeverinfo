@@ -5,6 +5,9 @@ page {
   margin-top: 100rpx;
   margin-left: 50rpx;
   margin-right: 50rpx;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 .content_header{
   height: 16rpx;
@@ -18,11 +21,8 @@ page {
   display: block;
 }
 .content_main{
-  padding-top: 60rpx;
+  padding-top: 105rpx;
   background-color: #FFFFFF;
-  position: relative;
-  left: 0;
-  top: 0;
   padding-bottom: 50rpx;
 }
 .content_boundary{
@@ -43,7 +43,6 @@ page {
 }
 
 .name{
-  margin-bottom: 40rpx;
   text-align: center;
 }
 .qr{
@@ -63,5 +62,5 @@ page {
   left: 50%;
   top: 0%;
   z-index: 100;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
