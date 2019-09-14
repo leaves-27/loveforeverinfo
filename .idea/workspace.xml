@@ -5,46 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/medical-my-order/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/order/cancelOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order/cancelOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/order/confirmOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order/confirmOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/order/getOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order/getOrders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/order/paying.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/order/paying.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/user/bindPhone.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/user/bindPhone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bind-phone/bind-phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bind-phone/bind-phone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bind-phone/bind-phone.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bind-phone/bind-phone.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/my-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-order/my-order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-order/my-order.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-detail/components/order-body/order-body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-progress/components/order-progress/order-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-progress/components/order-progress/order-progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-progress/components/order-progress/order-progress.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-progress/components/order-progress/order-progress.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-order-progress/order-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-order-progress/order-progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/my-address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/my-address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/OrderStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/OrderStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/getKvs.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getKvs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/getOrderStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getOrderStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/goUserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/goUserHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/route/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/route/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/route/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/route/medical.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/route/medical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="304">
+              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
               <folding>
                 <element signature="e#122#173#0" expanded="true" />
               </folding>
@@ -194,8 +155,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="215" />
-    <option name="y" value="186" />
+    <option name="x" value="175" />
+    <option name="y" value="95" />
     <option name="width" value="1193" />
     <option name="height" value="805" />
   </component>
@@ -204,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,26 +184,10 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="my-order" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my-order" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my-order" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="orders" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,15 +314,16 @@
       <workItem from="1568243991056" duration="4018000" />
       <workItem from="1568252577463" duration="680000" />
       <workItem from="1568363061567" duration="4968000" />
-      <workItem from="1568420480982" duration="17328000" />
+      <workItem from="1568420480982" duration="17408000" />
+      <workItem from="1568445013349" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278218000" />
+    <option name="totallyTimeSpent" value="278325000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="215" y="186" width="1193" height="805" extended-state="0" />
+    <frame x="175" y="95" width="1193" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242246" />
@@ -565,13 +512,7 @@
     <entry file="file://$PROJECT_DIR$/lib/Router.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/autoLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/autoLogin.js" />
     <entry file="file://$PROJECT_DIR$/apis/good/getGood.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -841,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="304">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding>
             <element signature="e#122#173#0" expanded="true" />
           </folding>
