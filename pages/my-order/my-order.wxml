@@ -24,6 +24,6 @@
     selectedTabId="{{ selectedTabId }}"
     tabs="{{ tabs }}"
     orders="{{ orders }}"
-    bind:cancelorder="cancelOrder"
+    bind:cancelOrder="cancelOrder"
   />
 </view>

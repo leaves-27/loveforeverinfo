@@ -16,8 +16,6 @@ Page({
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
-
-      console.log('test:', data);
       this.setData({
         order: data,
       })

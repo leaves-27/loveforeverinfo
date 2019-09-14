@@ -2,11 +2,11 @@ import {request} from "../../utils/util";
 import { apiPrifix } from "../../config/index";
 
 export default (id)=>{
-	return new Promise(async (resolve, reject)=>{
+	return new Promise((resolve, reject)=>{
 		request.request({
 			// isMock: true,
 			// isSuccess: true,
-			url: `${apiPrifix}/applet/order/confirmOrder`,
+			url: `${apiPrifix}/order/confirmOrder`,
 			data: {
 				id
 			},

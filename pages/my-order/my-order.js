@@ -1,6 +1,7 @@
 import { getQuery, getOrderStatus } from '../../utils/util.js';
 // import getOrders from '../../../../apis/getOrders.js';
 import getOrders from "../../apis/order/getOrders";
+import cancelOrder from '../../apis/order/cancelOrder';
 
 Page({
   data: {
@@ -33,9 +34,26 @@ Page({
     })
   },
   cancelOrder($event){
-    const { orders } = $event.detail;
-    this.setData({
-      orders,
-    });
-  }
+    const { id } = $event.detail;
+    cancelOrder(id).then((result)=>{
+      const { code, data, message } = result;
+      if (code * 1 === 1){
+        // 将订单从当前页面删除，并刷新结果列表
+        const orders = this.data.orders;
+        const index = orders.findIndex((item)=>{
+          return item.id === id;
+        });
+        if (index > -1){
+          orders.splice(index ,1);
+        }
+      } else{
+        wx.showToast({
+          icon: 'none',
+          title: '订单取消失败,请稍后重试或联系客服'
+        });
+      }
+    }).catch((error)=>{
+
+    })
+  },
 })

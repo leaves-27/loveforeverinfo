@@ -1,21 +1,21 @@
 import UserRole from '../userRole';
 
 export default [{
-	path: "pages/medical-home/home",
+	path: "/pages/medical-home/home",
 	role: [UserRole['medical']]
 }, {
-	path: 'pages/medical-doctor-detail/doctor-detail',
+	path: '/pages/medical-doctor-detail/doctor-detail',
 	role: [UserRole['medical']]
 }, {
-	path: 'pages/medical-my-order/my-order',
+	path: '/pages/medical-my-order/my-order',
 	role: [UserRole['medical']]
 }, {
-	path: 'pages/medical-my-qr/my-qr',
+	path: '/pages/medical-my-qr/my-qr',
 	role: [UserRole['medical']]
 }, {
-	path: 'pages/medical-order-detail/order-detail',
+	path: '/pages/medical-order-detail/order-detail',
 	role: [UserRole['medical']]
 }, {
-	path: 'pages/medical-order-progress/order-progress',
+	path: '/pages/medical-order-progress/order-progress',
 	role: [UserRole['medical']]
 }]

@@ -25,20 +25,10 @@
         <view
           wx:if="{{ item.status === OrderStatus['confirmedOrder'] }}"
           class="header_bar">
-          已确认
-        </view>
-        <view
-          wx:if="{{ item.status === OrderStatus['startDelivery'] }}"
-          class="header_bar">
           开始配送
         </view>
         <view
-          wx:if="{{ item.status === OrderStatus['deliverying'] }}"
-          class="header_bar">
-          配送中
-        </view>
-        <view
-          wx:if="{{ item.status === OrderStatus['reviced'] }}"
+          wx:if="{{ item.status === OrderStatus['received'] }}"
           class="header_bar">
           已签收
         </view>
@@ -77,7 +67,7 @@
                 data-id="{{ item.orderCode }}"
                 catchtap="goPay">支付</button>
         <button
-                wx:elif="{{ item.status === OrderStatus['reviced'] }}"
+                wx:elif="{{ item.status === OrderStatus['received'] }}"
                 class="button button--red button-interval--small"
                 data-id="{{ item.orderCode }}"
                 catchtap="goBuy">再次购买</button>

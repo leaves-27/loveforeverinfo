@@ -1,6 +1,9 @@
-import { getQuery } from '../../utils/util.js';
-// import getOrders from '../../../../apis/getOrders.js';
+import { OrderStatus } from '../../utils/util.js';
+import { getOrderCategoryByIsFinish } from "./utils";
+
 import getOrders from "../../apis/order/getOrders";
+import confirmOrder from '../../apis/order/confirmOrder';
+import cancelOrder from '../../apis/order/cancelOrder';
 
 Page({
   data: {
@@ -12,10 +15,10 @@ Page({
       name: "已完成"
     }],
     selectedTabId: "",
-    orders: []
+    unFinishOrders: [],
+    finishOrders: []
   },
   onLoad: function () {
-    // const { id = '0' } = getQuery();
     this.setData({
       selectedTabId: '1'
     });
@@ -26,8 +29,10 @@ Page({
         throw new Error(message || '请求错误');
       }
 
+      const { unFinishOrders , finishOrders } = getOrderCategoryByIsFinish(data);
       this.setData({
-        orders: data
+        unFinishOrders,
+        finishOrders
       })
     })
   },
@@ -39,9 +44,54 @@ Page({
     })
   },
   cancelOrder($event){
-    const { orders } = $event.detail;
-    this.setData({
-      orders,
-    });
+    const { id } = $event.detail;
+    cancelOrder(id).then((result)=>{
+      const { code, data, message } = result;
+      if (code * 1 === 1){
+        // 将订单从当前页面删除，并刷新结果列表
+        const orders = this.data.unFinishOrders;
+        const index = orders.findIndex((item)=>{
+          return item.id === id;
+        });
+        if (index > -1){
+          orders.splice(index ,1);
+        }
+      } else{
+        wx.showToast({
+          icon: 'none',
+          title: '订单取消失败,请稍后重试或联系客服'
+        });
+      }
+    }).catch((error)=>{
+
+    })
+  },
+  confirmOrder($event){
+    const { id } = $event.detail;
+    console.log('confirmOrder-id:', id);
+    confirmOrder(id).then((result)=>{
+      console.log('confirmOrder-result:', result);
+      const { code, data, message } = result;
+      if (code * 1 === 1){
+        // 将订单从当前页面删除，并刷新结果列表
+        const orders = this.data.unFinishOrders;
+        const index = orders.findIndex((item)=>{
+          return item.id === id;
+        });
+        if (index > -1){
+          orders.splice(index, 1, {
+            ...orders[index],
+            status: OrderStatus['confirmedOrder']
+          });
+        }
+      } else{
+        wx.showToast({
+          icon: 'none',
+          title: '订单确认失败,请稍后重试或联系客服'
+        });
+      }
+    }).catch((error)=>{
+
+    })
   }
 })

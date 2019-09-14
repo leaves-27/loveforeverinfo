@@ -21,7 +21,11 @@ Component({
         pay_payTime: '付款时间',
         successTime: '成交时间',
       };
-      return getKvs(ORDER, this.data.order);
+
+      if (Object.keys(this.data.order).length > 0) {
+        return getKvs(ORDER, this.data.order);
+      }
+      return [];
     },
   }
 })

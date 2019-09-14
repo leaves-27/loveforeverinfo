@@ -8,7 +8,7 @@
       <view class="order-status" wx:elif="{{ order.status === OrderStatus['deliverying'] }}">
         配送中
       </view>
-      <view class="order-status" wx:elif="{{ order.status === OrderStatus['reviced'] }}">
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['received'] }}">
         已签收
       </view>
       <view class="order-desc">
@@ -25,7 +25,7 @@
         class="icon--wait-pay"
         src="{{ deliveryingDetailIconUrl }}"  />
       <image
-        wx:elif="{{ order.status === OrderStatus['reviced'] }}"
+        wx:elif="{{ order.status === OrderStatus['received'] }}"
         class="icon--wait-pay"
         src="{{ singedDetailIconUrl }}"  />
     </view>
@@ -43,7 +43,7 @@
       data-id="{{ order.orderCode }}"
       bindtap="goDeliveryDetail">配送中</button>
     <button
-      wx:elif="{{ order.status === OrderStatus['reviced'] }}"
+      wx:elif="{{ order.status === OrderStatus['received'] }}"
       class="button button--active"
       data-id="{{ order.orderCode }}"
       bindtap="goBuy">再次购买</button>

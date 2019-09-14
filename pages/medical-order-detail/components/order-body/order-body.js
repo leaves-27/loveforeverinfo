@@ -26,7 +26,10 @@ Component({
         receiveTime: '完成时间',
         orderCode : '订单编号',
       };
-      return getKvs(ORDER, this.data.order);
+      if (Object.keys(this.data.order).length > 0) {
+        return getKvs(ORDER, this.data.order);
+      }
+      return [];
     },
   },
 });

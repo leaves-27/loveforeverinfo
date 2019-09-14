@@ -8,16 +8,16 @@ const routes = [
 	...doctor,
 	...medical,
 	{
-		path: "pages/bind-phone/bind-phone",
+		path: "/pages/bind-phone/bind-phone",
 		role: [UserRole['customer'], UserRole['doctor'], UserRole['medical']],
 	},
 	{
-		path: "pages/login/login",
+		path: "/pages/login/login",
 		role: [UserRole['customer'], UserRole['doctor'], UserRole['medical']],
 	}
 ];
 
 export default {
-	redirect: '/pages/login/login',
+	redirect: '/pages/bind-phone/bind-phone',
 	routes
 };

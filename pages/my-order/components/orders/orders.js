@@ -25,15 +25,14 @@ Component({
     newOrders(){
       const orders = [];
       this.data.orders.forEach((item)=>{
-        if (item.status === OrderStatus['waitPay'] || item.status === OrderStatus['deliverying'] || item.status === OrderStatus['reviced']){
+        if (item.status === OrderStatus['waitPay'] || item.status === OrderStatus['deliverying'] || item.status === OrderStatus['received']){
           if (this.data.selectedTabId === OrderStatus['all']){
             orders.push(item);
           } else if(this.data.selectedTabId === item.status){
             orders.push(item);
           }
         }
-      })
-
+      });
 
       return orders;
     },
@@ -50,19 +49,9 @@ Component({
     },
     cancelOrder($event){
       const { id } = $event.currentTarget.dataset;
-      const orders = JSON.parse(JSON.stringify(this.data.orders));
-
-      // 将订单从当前页面删除，并刷新结果列表
-      const index = orders.findIndex((item)=>{
-        return item.id === id;
+      this.triggerEvent('cancelOrder', {
+        id
       });
-      if (index > -1){
-        orders.splice(index ,1);
-      }
-
-      this.triggerEvent('cancelorder', {
-        orders
-      })
     },
     goBuy($event){
 

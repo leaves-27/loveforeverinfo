@@ -1,6 +1,6 @@
 <view class="progresses">
-  <view class="progress" wx:for="{{ progress }}">
-    <view class="progress_icon icon" wx:if="{{ item.id <= order.status * 1 }}">
+  <view class="progress" wx:for="{{ kvs }}">
+    <view class="progress_icon icon" wx:if="{{ colors[item.key] }}">
       <view class="{{ index === 0 ? 'icon_top' : 'icon_top icon--active' }}"></view>
       <view class="icon_middle circle--big">
         <view class="circle--small icon--active"></view>
@@ -16,10 +16,10 @@
     </view>
     <view class="progress_desc">
       <view class="desc_title">
-        {{ item.name }}
+        {{ item.key }}
       </view>
       <view class="desc_time">
-        {{ item.time }}
+        {{ item.value }}
       </view>
     </view>
   </view>

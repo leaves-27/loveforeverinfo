@@ -1,15 +1,8 @@
-import {placeholderUrl, request} from '../../utils/util';
+import { placeholderUrl, request} from '../../utils/util';
 import { apiPrifix } from "../../config/index";
 
+// 这里根据传给服务端的用户token返回对应的的订单列表。可选的有消费者订单列表、医药代表订单列表
 export default ()=> new Promise( (resolve, reject)=>{
-
-	// status:
-	// 1: 待支付
-	// 2: 已支付
-	// 3: 确认订单
-	// 4: 开始配送
-	// 5: 配送中
-	// 6: 已签收
 	request.request({
 		// isMock: false,
 		// isSuccess: false,

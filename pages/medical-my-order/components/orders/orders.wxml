@@ -1,6 +1,6 @@
 <view class="items">
   <view
-    wx:for="{{ newOrders }}"
+    wx:for="{{ orders }}"
     wx:key="{{ item.id }}"
     bindtap="goOrderDetail"
     data-id="{{ item.orderCode }}"
@@ -13,10 +13,10 @@
             <view class="menu-intro_name">
               {{ item.good.name }}
               <view
-                  wx:if="{{ selectedTabId === '1' && item.payWayId === '1' }}"
+                  wx:if="{{ item.status !== OrderStatus['reviced'] && item.payWayId === '1' }}"
                   class="pay-way pay-way--offline">线下支付</view>
               <view
-                  wx:if="{{ selectedTabId === '1' && item.payWayId === '2' }}"
+                  wx:if="{{ item.status !== OrderStatus['reviced'] && item.payWayId === '2' }}"
                   class="pay-way pay-way--wx">微信支付</view>
             </view>
             <view class="menu-intro_price">{{ item.good.price }}</view>
@@ -30,7 +30,7 @@
 
     </view>
     <view
-      wx:if="{{ selectedTabId === tabs[0].id }}"
+      wx:if="{{ item.status !== OrderStatus['reviced'] }}"
       class="item_footer item_footer--align-right">
       <button
         wx:if="{{ item.status === OrderStatus['payed'] }}"
@@ -41,17 +41,18 @@
         wx:if="{{ item.status === OrderStatus['payed'] }}"
         class="button button--red button-interval--small"
         data-id="{{ item.orderCode }}"
-        catchtap="goConfirmOrder">确认订单</button>
-      <span
-        wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
-        class="status-button status-button--red status-button-interval--small"
-        data-id="{{ item.orderCode }}"
-        catchtap="goOrderProgress">已确认订单 > </span>
+        catchtap="confirmOrder">确认订单</button>
+<!--      <span-->
+<!--        wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"-->
+<!--        class="status-button status-button&#45;&#45;red status-button-interval&#45;&#45;small"-->
+<!--        data-id="{{ item.orderCode }}"-->
+<!--        catchtap="goOrderProgress">已确认订单 > </span>-->
       <span
         wx:elif="{{ item.status === OrderStatus['startDelivery'] }}"
         class="status-button status-button--yellow status-button-interval--small"
         data-id="{{ item.orderCode }}"
         catchtap="goOrderProgress">开始配送 > </span>
+
       <span
         wx:elif="{{ item.status === OrderStatus['deliverying'] }}"
         class="status-button status-button--red status-button-interval--small"

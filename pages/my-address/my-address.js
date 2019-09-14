@@ -42,7 +42,7 @@ Page({
         throw new Error(message || '请求错误');
       }
       const { code: defaultAddressesCode, data:defaultAddressesData = {}, message: defaultAddressesMessage = '' } = result[1];
-      if (defaultAddressesCode !== 1) {
+      if (defaultAddressesCode * 1 !== 1) {
         throw new Error(defaultAddressesMessage || '请求错误');
       }
       const { id } = defaultAddressesData;

@@ -34,12 +34,5 @@
     <image class="address_icon" src="{{ addressIconUrl }}" />
     <view class="address_desc">我的地址</view>
   </view>
-  <view
-    class="address"
-    bindtap="bindPhone">
-    <image class="address_icon" src="{{ addressIconUrl }}" />
-<!--    <bind-phone-button phone="{{ phone }}" />-->
-    <view class="address_desc">绑定手机号</view>
-  </view>
   <tabs tabs="{{ appTabs }}" />
 </view>

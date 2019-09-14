@@ -19,13 +19,11 @@
       </view>
     </block>
   </view>
-
   <orders
-    wx:if="{{ orders.length > 0 }}"
-    selectedTabId="{{ selectedTabId }}"
-    tabs="{{ tabs }}"
-    orders="{{ orders }}"
-    bind:cancelorder="cancelOrder"
+    wx:if = "{{ selectedTabId === tabs[0].id ? unFinishOrders.length > 0 : finishOrders.length > 0 }}"
+    orders = "{{ selectedTabId === tabs[0].id ? unFinishOrders : finishOrders }}"
+    bind:cancelOrder="cancelOrder"
+    bind:confirmOrder="confirmOrder"
   />
   <exception
     wx:else

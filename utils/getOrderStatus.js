@@ -23,7 +23,7 @@ export default ()=>{
 		name: '配送中',
 		iconUrl: `${staticPrifix}/deliverying.png`
 	}, {
-		id: OrderStatus['reviced'],
+		id: OrderStatus['received'],
 		name: '已签收',
 		iconUrl: `${staticPrifix}/signed.png`
 	}]

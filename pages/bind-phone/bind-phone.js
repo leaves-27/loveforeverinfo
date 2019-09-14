@@ -1,4 +1,4 @@
-import { placeholderUrl } from '../../utils/util.js';
+import { placeholderUrl, goUserHome } from '../../utils/util.js';
 import bindPhone from '../../apis/user/bindPhone';
 
 Page({
@@ -17,23 +17,6 @@ Page({
     this.setData({
       validationCode: $event.detail.value
     });
-  },
-  goUserHome(userRole){
-    if (userRole * 1 === 1){ // 消费者
-      wx.navigateTo({
-        url: `../index/index`
-      });
-    } else if(userRole * 1 === 2){ // 医生
-      wx.navigateTo({
-        url: `../doctor/doctor`
-      })
-    } else if (userRole * 1 === 3){// 医药代表
-      wx.navigateTo({
-        url: `../medical-home/home`
-      });
-    } else if (userRole * 1 === 4){ // 派送员
-      // 暂无
-    }
   },
   login(){
     if (this.data.isLogin){
@@ -64,14 +47,21 @@ Page({
           title: '绑定失败，请稍后重试'
         });
       } else {
-        wx.showToast({
-          title: '绑定成功'
-        });
-
-        setTimeout(()=>{
-          const userRole = wx.getStorageSync('userRole');
-          this.goUserHome(userRole);
-        }, 2000);
+        const { type = '', token } = data;
+        if (type){
+          wx.showToast({
+            title: '绑定成功'
+          });
+          wx.setStorageSync('userRole', type);
+          wx.setStorageSync('token', token);
+          setTimeout(()=>{
+            goUserHome(type);
+          }, 1000);
+        } else {
+          wx.showToast({
+            title: '绑定失败'
+          });
+        }
       }
     }).catch((error)=>{
       wx.showToast({

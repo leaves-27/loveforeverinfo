@@ -13,6 +13,7 @@ import router from './router';
 import request from './request';
 
 import { createQrCode } from './qrcode';
+import route from './route/index';
 
 module.exports = {
   placeholderUrl,
@@ -27,6 +28,7 @@ module.exports = {
   navigateBack,
   goUserHome,
   router,
+  route,
   tabs,
   createQrCode,
   saveImageToPhotosAlbum

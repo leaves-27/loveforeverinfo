@@ -16,9 +16,9 @@ export default function(userRole){
 		});
 	} else if (`${userRole}` === UserRole['courier']){ // 派送员
 		// 暂无
-	} else {
-		router.navigateTo({
-			url: `/pages/login/login`
-		});
+	} else { // 没权限，则去自动登录获取权限
+		// router.navigateTo({
+		// 	url: `/pages/bind-phone/bind-phone`
+		// });
 	}
 };
