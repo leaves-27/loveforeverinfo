@@ -1,4 +1,4 @@
-<view>
+<view class="authorize">
     <button
         class="button button--active"
         wx:if="{{ isShowButton }}"
