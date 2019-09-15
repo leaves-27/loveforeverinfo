@@ -4,7 +4,7 @@ import { staticPrifix } from '../../../../config/index'
 Component({
   behaviors: [computedBehavior],
   properties: {
-    statusId: {
+    status: {
       type: String,
       value: ''
     }
@@ -15,14 +15,14 @@ Component({
           title,
           desc;
 
-      switch(this.data.statusId){
-        case '1':
+      switch(this.data.status){
+        case 'success':
           iconUrl = `${staticPrifix}/status_success.png`;
           title = '下单成功';
           desc = '请耐心等待销售代表确认';
           break;
 
-        case '2':
+        case 'paying':
           iconUrl = `${staticPrifix}/status_wait.png`;
           title = '处理中';
           desc = '请耐心等待销售代表确认';

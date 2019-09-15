@@ -2,11 +2,11 @@
 <view class="order-detail">
   <view  class="order-detail_body">
     <order-status
-      statusId="{{ statusId }}"
+      status="{{ status }}"
     />
     <view class="good content_main">
       <view class="main_main">
-        <image class="menu-logo" src="{{ good.menuLogoUrl }}" />
+        <image class="menu-logo" src="{{ good.logoUrl }}" />
         <view class="menu-intro">
           <view class="menu-intro_name">{{ good.name }}</view>
           <view class="menu-intro_price">{{ good.price }}</view>
@@ -19,7 +19,7 @@
           购买数量
         </view>
         <view class="order-item_value">
-          {{ order.count }}
+          {{ count }}
         </view>
       </view>
       <view class="order-item">
@@ -27,7 +27,7 @@
           订单金额
         </view>
         <view class="order-item_value">
-          {{ order.amount }}
+          {{ count * good.price + fee }}元
         </view>
       </view>
       <view class="order-item">
@@ -35,7 +35,7 @@
           配送方式
         </view>
         <view class="order-item_value">
-          {{ order.deliveryId === '1' ? '快递' : '自提' }}
+          {{ delivery.id === '1' ? '快递' : '自提' }}
         </view>
       </view>
       <view class="order-item">
@@ -43,7 +43,7 @@
           邮费
         </view>
         <view class="order-item_value">
-          {{ order.deliveryFee }}
+          {{ delivery.fee }}
         </view>
       </view>
       <view class="order-item">
@@ -51,7 +51,7 @@
           备注
         </view>
         <view class="order-item_value">
-          {{ order.desc }}
+          {{ memo }}
         </view>
       </view>
     </view>
