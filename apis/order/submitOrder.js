@@ -10,7 +10,7 @@ export default ({
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/applet/order/submitOrder`,
+		url: `${apiPrifix}/order/submitOrder`,
 		data: {
 			goodId,
 			count,

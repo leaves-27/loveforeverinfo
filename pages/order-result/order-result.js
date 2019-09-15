@@ -1,7 +1,5 @@
-import { getQuery } from '../../utils/util.js';
-// import getOrders from '../../apis/getOrders.js';
-// import getOrders from "../../apis/getOrders";
-import { placeholderUrl } from '../../utils/util';
+import { getQuery, placeholderUrl } from '../../utils/util.js';
+import getOrderDetail from "../../apis/order/getOrderDetail";
 import { staticPrifix } from '../../config/index'
 
 Page({
@@ -28,20 +26,20 @@ Page({
     },
   },
   onLoad: function () {
-    const { statusId = '0' } = getQuery();
+    const { orderId = '0' } = getQuery();
     this.setData({
-      statusId
+      status:
     });
 
-    // getOrders().then((result)=>{
-    //   const { code, data = [], message } = result;
-    //   if (code * 1 !== 1) {
-    //     throw new Error(message || '请求错误');
-    //   }
-    //
-    //   this.setData({
-    //     orders: data
-    //   })
-    // })
+    getOrderDetail(orderId).then((result)=>{
+      const { code, data = [], message } = result;
+      if (code * 1 !== 1) {
+        throw new Error(message || '请求错误');
+      }
+
+      this.setData({
+        good: data
+      })
+    })
   },
 })

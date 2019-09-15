@@ -45,9 +45,9 @@ Page({
     })
   },
   onLoad: function () {
-    const role = wx.getStorageSync("role");
+    const role = wx.getStorageSync("userRole");
     if (!!role) { // 如果授权已存在，则跳转到对应主页.
-      goUserHome(type);
+      goUserHome(role);
     } else {
       this.setData({
         isShowButton: true

@@ -11,6 +11,7 @@ import getUserDefaultAddress from '../../apis/address/getUserDefaultAddress';
 import getDeliveryWays from '../../apis/getDeliveryWays';
 import getPayWays from '../../apis/getPayWays';
 import submitOrder from "../../apis/order/submitOrder";
+import pay from "../../apis/order/pay";
 
 Page({
   behaviors: [computedBehavior],
@@ -57,28 +58,63 @@ Page({
     }
     // 提交订单成功后
     submitOrder({
-      adressId: this.data.address.id,
       goodId: this.data.good.id,
-      amount: this.data.amount,
-      deliveryId: this.deliveryId,
-      desc: this.data.other,
-      payId: this.data.payId
+      deliveryWayId: this.deliveryId,
+      payWayId: this.data.payId,
+      receiveAddressId: this.data.address.id,
+      count: this.data.amount,
+      memo: this.data.other
     }).then((result)=>{
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
-      const { code, data = [], message } = result;
+      const { code, data = {}, message } = result;
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
+      const {
+        orderId,
+        goodId,
+        deliveryWayId,
+        payWayId,
+        receiveAddressId,
+        count,
+        memo
+      } =  data;
 
-      const { id = '0' } = getQuery();
-      const query = {
-        statusId: ''
-      };
-      wx.navigateTo({
-        url: `../order-result/order-result?$${qs.stringify(query)}`
-      })
-    }).catch(()=>{
-
+      return pay({
+        orderId,
+        goodId,
+        deliveryWayId,
+        payWayId,
+        receiveAddressId,
+        count,
+        memo
+      });
+    })
+    .then((res)=>{
+      const { code, data, message } = res;
+      if (code * 1 === 1){
+        const { orderId } = data;
+        const query = {
+          orderId
+        };
+        router.navigateTo({
+          url: `/pages/order-result/order-result?$${qs.stringify(query)}`
+        })
+      } else {
+        wx.showToast({
+          title : '支付失败, 请检查网络重新支付或联系客服',
+          icon: 'none',
+          duration: 2000
+        });
+      }
+      // const { id = '0' } = getQuery();
+    })
+    .catch(()=>{
+      wx.showToast({
+        title: '下单或支付失败, 请检查网络重新下单或支付；或者联系客服',
+        icon: 'none',
+        duration: 2000
+      });
     });
   },
   countAdd(){
