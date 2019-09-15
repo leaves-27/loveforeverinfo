@@ -5,7 +5,7 @@ Page({
   data: {
     phone: '',
     validationCode: '',
-    isLogin: false,
+    isBindPhone: false,
     logoUrl: placeholderUrl
   },
   changePhone($event){
@@ -18,7 +18,7 @@ Page({
       validationCode: $event.detail.value
     });
   },
-  login(){
+  bindPhone(){
     if (this.data.isLogin){
       return;
     }
@@ -31,14 +31,14 @@ Page({
     }
 
     this.setData({
-      isLogin: true
+      isBindPhone: true
     });
     bindPhone({
       phone: this.data.phone,
       validationCode: this.data.validationCode
     }).then((result)=>{
       this.setData({
-        isLogin: false
+        isBindPhone: false
       });
       const { code, data } = result;
       if(code * 1 !== 1){
@@ -47,15 +47,15 @@ Page({
           title: '绑定失败，请稍后重试'
         });
       } else {
-        const { type = '', token } = data;
-        if (type){
+        const { role = '', token } = data;
+        if (role){
           wx.showToast({
             title: '绑定成功'
           });
-          wx.setStorageSync('userRole', type);
+          wx.setStorageSync('userRole', role);
           wx.setStorageSync('token', token);
           setTimeout(()=>{
-            goUserHome(type);
+            goUserHome(role);
           }, 1000);
         } else {
           wx.showToast({
@@ -64,6 +64,9 @@ Page({
         }
       }
     }).catch((error)=>{
+      this.setData({
+        isBindPhone: false
+      });
       wx.showToast({
         icon: 'none',
         title: '登录失败，请稍后重试'

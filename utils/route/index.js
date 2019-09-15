@@ -8,12 +8,10 @@ const routes = [
 	...doctor,
 	...medical,
 	{
-		path: "/pages/bind-phone/bind-phone",
-		role: [UserRole['customer'], UserRole['doctor'], UserRole['medical']],
+		path: "/pages/bind-phone/bind-phone"
 	},
 	{
-		path: "/pages/login/login",
-		role: [UserRole['customer'], UserRole['doctor'], UserRole['medical']],
+		path: "/pages/login/login"
 	}
 ];
 

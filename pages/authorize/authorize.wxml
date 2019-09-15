@@ -1,0 +1,7 @@
+<view>
+    <button
+        class="button button--active"
+        wx:if="{{ isShowButton }}"
+        open-type="getUserInfo"
+        bindgetuserinfo="getAuthorize">授权登录</button>
+</view>

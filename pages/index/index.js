@@ -1,6 +1,8 @@
 import qs from "qs";
 import { router, tabs } from '../../utils/util'
 import getGood from "../../apis/good/getGood";
+import getAuthorize from '../../apis/login/getAuthorize';
+
 // import getGood from "../../apis/apis/getGood";
 Page({
   data: {

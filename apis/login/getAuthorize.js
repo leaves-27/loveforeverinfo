@@ -1,5 +1,5 @@
 export default (scope)=>{ // scope的值有：userInfo、userLocation、werun、writePhotosAlbum
-	return new Promise(async (resolve, reject)=>{
+	return new Promise((resolve, reject)=>{
 		wx.authorize({
 			scope: `scope.${scope}`,
 			success (res) {

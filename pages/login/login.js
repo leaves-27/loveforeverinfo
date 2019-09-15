@@ -82,7 +82,6 @@ Page({
       wx.setStorageSync('phone', phone);
 
       const { url = '' } = getQuery();
-
       if (!!url){
         router.navigateTo({
           url,
