@@ -12,18 +12,17 @@ Page({
     getTempCredentials().then((code)=>{
       return loginByWxTempCode(code, userInfo);
     }).then((result)=>{
-      console.log('result:', result);
       const { code, data } = result;
       if(code * 1 !== 1){
         wx.showToast({
           icon: 'none',
-          title: '登录失败，请稍后重试'
+          title: '授权失败，请稍后重试'
         });
+        return;
       }
       const { token = '', role = ''} = data;
-      wx.setStorageSync('userRole', role);
       wx.setStorageSync('token', token);
-
+      wx.setStorageSync('userRole', role);
       const { url = '' } = getQuery();
       if (!!url){
         router.navigateTo({
@@ -36,7 +35,8 @@ Page({
           url: '/pages/bind-phone/bind-phone'
         });
       }
-    }).catch(()=>{
+    }).catch((err)=>{
+      console.log('err:', err);
       wx.showToast({
         title: '授权失败，请检查网络或重新进入登录授权',
         icon: 'none',

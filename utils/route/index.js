@@ -9,13 +9,10 @@ const routes = [
 	...medical,
 	{
 		path: "/pages/bind-phone/bind-phone"
-	},
-	{
-		path: "/pages/login/login"
 	}
 ];
 
 export default {
-	redirect: '/pages/bind-phone/bind-phone',
+	redirect: '/pages/authorize/authorize',
 	routes
 };

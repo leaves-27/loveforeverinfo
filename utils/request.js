@@ -1,5 +1,6 @@
 import Request from '../lib/Request';
-// import { autoLogin } from "./util";
+import { redirect } from "./route/index";
+import router from './router';
 
 const request = new Request();
 const count = 0; // 自动登录尝试请求的次数
@@ -31,14 +32,11 @@ request.beforeRequest = function({
 request.afterRequest  = function (result, next){
 	const { request, response } = result;
 	const { code } = response;
-	if(code === 'session_out'){ // 是token过期的话，自动登录重新获取授权
-		// autoLogin().then(({ token })=>{
-		// 	wx.setStorageSync('token', token);
-		// 	if (count < MAX_COUNT){
-		// 		this.request(request);
-		// 	}
-		// });
-	} else if(code === '1'){
+	if(code === 'session_out'){ // 是token过期的话，跳转到授权登录页重新授权登录
+		router.navigateTo({
+			url: redirect
+		})
+	} else {
 		next();
 	}
 };

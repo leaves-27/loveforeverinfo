@@ -65,6 +65,7 @@ export const loginByWxTempCode = (code, userInfo)=> new Promise( (resolve, rejec
 			// resolve(getMock(phone));
 		},
 		fail(error){
+			console.log('test:', error);
 			reject(error);
 		}
 	});

@@ -47,13 +47,12 @@ Page({
           title: '绑定失败，请稍后重试'
         });
       } else {
-        const { role = '', token } = data;
+        const { role = '' } = data;
         if (role){
           wx.showToast({
             title: '绑定成功'
           });
           wx.setStorageSync('userRole', role);
-          wx.setStorageSync('token', token);
           setTimeout(()=>{
             goUserHome(role);
           }, 1000);

@@ -13,7 +13,7 @@ router.beforeCreate = function(url, next){
 	const currentUserRole = wx.getStorageSync('userRole');
 	const { role = [] } = route;
 	const index = role.indexOf(`${currentUserRole}`);
-	if (index > -1){
+	if (role.length === 0 || index > -1){
 		next();
 	} else {
 		wx.redirectTo({
