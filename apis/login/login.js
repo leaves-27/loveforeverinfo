@@ -60,9 +60,9 @@ export const loginByWxTempCode = (code, userInfo)=> new Promise( (resolve, rejec
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			// resolve(res);
+			resolve(res);
 			// 拿不到角色，说明没有绑定手机号。去绑定手机号
-			resolve(getMock("18857152338"));
+			// resolve(getMock("18857152338"));
 		},
 		fail(error){
 			console.log('test:', error);
