@@ -29,7 +29,7 @@ Page({
           url,
         });
       } else if (!!role){
-        goUserHome(type);
+        goUserHome(role);
       } else {
         router.redirectTo({
           url: '/pages/bind-phone/bind-phone'

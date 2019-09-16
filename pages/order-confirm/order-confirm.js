@@ -68,7 +68,7 @@ Page({
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
       const { code, data = {}, message } = result;
       if (code * 1 !== 1) {
-        throw new Error(message || '请求错误');
+        throw new Error('下单失败, 请稍后重新下单或联系客服');
       }
       const {
         orderId,
@@ -92,26 +92,23 @@ Page({
     })
     .then((res)=>{
       const { code, data, message } = res;
-      if (code * 1 === 1){
-        const { orderId } = data;
-        const query = {
-          orderId
-        };
-        router.navigateTo({
-          url: `/pages/order-result/order-result?$${qs.stringify(query)}`
-        })
-      } else {
-        wx.showToast({
-          title : '支付失败, 请检查网络重新支付或联系客服',
-          icon: 'none',
-          duration: 2000
-        });
+      if (code * 1 !== 1){
+        throw new Error('支付失败, 请稍后重新支付或联系客服');
       }
-      // const { id = '0' } = getQuery();
+      const { orderId } = data;
+      const query = {
+        orderId
+      };
+      router.navigateTo({
+        url: `/pages/order-result/order-result?$${qs.stringify(query)}`
+      })
     })
-    .catch(()=>{
+    .catch((error)=>{
+      console.log('===error:', error);
+      const { message = '下单或支付失败, 请检查网络重新下单或支付；或者联系客服' } = error;
+
       wx.showToast({
-        title: '下单或支付失败, 请检查网络重新下单或支付；或者联系客服',
+        title: message,
         icon: 'none',
         duration: 2000
       });

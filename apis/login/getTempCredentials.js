@@ -5,7 +5,6 @@ export default ()=>{
 			success (res) {
 				const { code, errMsg } = res;
 				if (code) {
-					console.log('code:', code);
 					resolve(code);
 				} else {
 					reject(errMsg);

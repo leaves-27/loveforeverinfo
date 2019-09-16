@@ -6,25 +6,25 @@ const getMock = (phone)=>{
 		"token": "ae111",
 		"uid": "1006",
 		"phone":"15800001111",
-		"type": "consumer"
+		"role": "consumer"
 	},
 	{
 		"token": "ae222",
 		"uid": "1007",
 		"phone":"15857106968",
-		"type": "specialist"
+		"role": "specialist"
 	},
 	{
 		"token": "ae333",
 		"uid": "1008",
 		"phone":"15800001113",
-		"type": "comissioner"
+		"role": "comissioner"
 	},
 	{
 		"token": "ae444",
 		"uid": "1009",
 		"phone":"15800001114",
-		"type": "deliverer"
+		"role": "deliverer"
 	}];
 	const code = 1;
 
@@ -60,9 +60,9 @@ export const loginByWxTempCode = (code, userInfo)=> new Promise( (resolve, rejec
 			'content-type': 'application/json' // 默认值
 		},
 		success (res) {
-			resolve(res);
+			// resolve(res);
 			// 拿不到角色，说明没有绑定手机号。去绑定手机号
-			// resolve(getMock(phone));
+			resolve(getMock("18857152338"));
 		},
 		fail(error){
 			console.log('test:', error);
