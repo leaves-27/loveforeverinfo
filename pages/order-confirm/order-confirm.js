@@ -59,7 +59,7 @@ Page({
     // 提交订单成功后
     submitOrder({
       goodId: this.data.good.id,
-      deliveryWayId: this.deliveryId,
+      deliveryWayId: this.data.deliveryId,
       payWayId: this.data.payId,
       receiveAddressId: this.data.address.id,
       count: this.data.amount,
@@ -128,6 +128,7 @@ Page({
     });
   },
   deliveryWayChange($event){
+    console.log('$event:', $event);
     const { deliveryId } = $event.detail;
     this.setData({
       deliveryId

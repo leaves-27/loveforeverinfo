@@ -1,60 +1,59 @@
 import { apiPrifix } from '../../config/index';
 import { request } from '../../utils/util';
 
-const getMock = (phone)=>{
-	const arr = [{
-		"token": "ae111",
-		"uid": "1006",
-		"phone":"15800001111",
-		"role": "consumer"
-	},
-	{
-		"token": "ae222",
-		"uid": "1007",
-		"phone":"15857106968",
-		"role": "specialist"
-	},
-	{
-		"token": "ae333",
-		"uid": "1008",
-		"phone":"15800001113",
-		"role": "comissioner"
-	},
-	{
-		"token": "ae444",
-		"uid": "1009",
-		"phone":"15800001114",
-		"role": "deliverer"
-	}];
-	const code = 1;
-
-	if (phone === "18857152332"){ //医药代表
-		return {
-			code,
-			data: arr[2]
-		};
-	} else if(phone === "18857152331"){ // 医生
-		return {
-			code,
-			data: arr[1]
-		};
-	} else {
-		return {
-			code,
-			data: arr[0]
-		};
-	}
-};
+// const getMock = (phone)=>{
+// 	const arr = [{
+// 		"token": "ae111",
+// 		"uid": "1006",
+// 		"phone":"15800001111",
+// 		"role": "consumer"
+// 	},
+// 	{
+// 		"token": "ae222",
+// 		"uid": "1007",
+// 		"phone":"15857106968",
+// 		"role": "specialist"
+// 	},
+// 	{
+// 		"token": "ae333",
+// 		"uid": "1008",
+// 		"phone":"15800001113",
+// 		"role": "comissioner"
+// 	},
+// 	{
+// 		"token": "ae444",
+// 		"uid": "1009",
+// 		"phone":"15800001114",
+// 		"role": "deliverer"
+// 	}];
+// 	const code = 1;
+//
+// 	if (phone === "18857152332"){ //医药代表
+// 		return {
+// 			code,
+// 			data: arr[2]
+// 		};
+// 	} else if(phone === "18857152331"){ // 医生
+// 		return {
+// 			code,
+// 			data: arr[1]
+// 		};
+// 	} else {
+// 		return {
+// 			code,
+// 			data: arr[0]
+// 		};
+// 	}
+// };
 // 通过微信的临时code来登录我们的服务器
 export const loginByWxTempCode = (code, userInfo)=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
 		url: `${apiPrifix}/account/isLogin`,
-		method: 'get',
+		method: 'post',
 		data: {
-			jsCode: code,
-			...userInfo
+			jsCode: code
 		},
 		header: {
 			'content-type': 'application/json' // 默认值

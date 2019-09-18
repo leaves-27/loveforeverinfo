@@ -1,12 +1,13 @@
 <view class="authorize">
-    <view class="content">
+    <view
+        wx:if="{{ isShowButton }}"
+        class="content">
         <view class="text">
             <view class="text_header">申请获取以下权限</view>
             <view class="text_body">获得你的公开信息(昵称、头像等)</view>
         </view>
         <button
             class="button button--active"
-            wx:if="{{ isShowButton }}"
             open-type="getUserInfo"
             bindgetuserinfo="getAuthorize">授权登录</button>
     </view>
