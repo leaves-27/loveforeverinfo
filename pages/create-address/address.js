@@ -5,6 +5,7 @@ import { getQuery } from '../../utils/util.js';
 // import getPoints from "../../apis/address/getTakeGoodPoints";
 // import submitPoint from '../../apis/address/submitPoint';
 import createNewAddress from '../../apis/address/createNewAddress';
+import {navigateBack} from "../../utils/util";
 
 Page({
   data: {
@@ -57,6 +58,12 @@ Page({
         icon: 'none',
         title: '添加新地址成功'
       });
+
+      setTimeout(()=>{
+        navigateBack(1, {
+          newAddress: data
+        });
+      }, 1000);
     }).catch((error)=>{
 
     })

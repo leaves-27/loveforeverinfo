@@ -19,6 +19,7 @@ Page({
     points: [],
     selectedTabId: '',
     selectedAddressId: '',
+    newAddress: null
   },
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
@@ -52,6 +53,31 @@ Page({
     wx.navigateTo({
       url: `../create-address/address`
     })
+  },
+  onShow(){
+    const newAddress = this.data.newAddress;
+    if(newAddress){
+      const { accountAddress } = newAddress;
+      const { id, receiver, phone, province, city, district, addressDetail } = accountAddress;
+
+      const currentAddresses = this.data.addresses;
+
+      const index = currentAddresses.findIndex((item)=>{
+        return item.id === id;
+      });
+
+      if (index === -1){
+        const addresses = currentAddresses.concat([{
+          id,
+          name: receiver,
+          phone,
+          address: `${province}${city}${district}${addressDetail}`
+        }]);
+        this.setData({
+          addresses,
+        })
+      }
+    }
   },
   onLoad: function () {
     const { addressId } = getQuery();

@@ -197,11 +197,6 @@ Page({
       this.setAddresses(result[1]);
       this.setDeliveryWay(result[2]);
       this.setPayWay(result[3]);
-
-
-      // this.setAddresses(result[0]);
-      // this.setDeliveryWay(result[1]);
-      // this.setPayWay(result[2]);
     });
   },
 })
