@@ -74,9 +74,9 @@ Page({
       });
     }
   },
-  onShow(){
-    this.getUserRoleToRelativePage();
-  },
+  // onShow(){
+  //   this.getUserRoleToRelativePage();
+  // },
   onLoad: function () {
     this.getUserRoleToRelativePage();
   }
