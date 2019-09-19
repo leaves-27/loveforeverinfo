@@ -44,7 +44,7 @@ Page({
       });
     }
   },
-  onLoad: function () {
+  getUserRoleToRelativePage(){
     const role = wx.getStorageSync("userRole");
     if (!!role) { // 如果授权已存在，则跳转到对应主页.
       goUserHome(role);
@@ -73,5 +73,11 @@ Page({
         }
       });
     }
+  },
+  onShow(){
+    this.getUserRoleToRelativePage();
+  },
+  onLoad: function () {
+    this.getUserRoleToRelativePage();
   }
 })
