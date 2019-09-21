@@ -5,7 +5,10 @@ export default ({
 	goodId,
 	count = '',
   deliveryWayId = '',
-	payWayId = ''
+	payWayId = '',
+  receiveAddressId = '',
+  memo = '',
+	inviteCode = ''
 })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
@@ -15,7 +18,10 @@ export default ({
 			goodId,
 			count,
 			deliveryWayId,
-			payWayId
+			payWayId,
+			receiveAddressId,
+			memo,
+			mgCode: inviteCode
 		},
 		success: (res)=>{
 			resolve(res);

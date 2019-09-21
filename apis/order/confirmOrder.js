@@ -7,7 +7,7 @@ export default ({
 	payWayId,
 	receiveAddressId,
 	count,
-	memo
+	memo,
 })=>{
 	return new Promise((resolve, reject)=>{
 		request.request({
@@ -20,7 +20,7 @@ export default ({
 				payWayId,
 				receiveAddressId,
 				count,
-				memo
+				memo,
 			},
 			success: (res)=>{
 				resolve(res);

@@ -19,7 +19,6 @@
       </view>
     </block>
   </view>
-
   <orders
     selectedTabId="{{ selectedTabId }}"
     tabs="{{ tabs }}"

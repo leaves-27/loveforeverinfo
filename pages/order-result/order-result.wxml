@@ -2,8 +2,7 @@
 <view class="order-detail">
   <view  class="order-detail_body">
     <order-status
-      status="{{ status }}"
-    />
+      status="{{ status }}"/>
     <view class="good content_main">
       <view class="main_main">
         <image class="menu-logo" src="{{ good.logoUrl }}" />
@@ -27,7 +26,7 @@
           订单金额
         </view>
         <view class="order-item_value">
-          {{ count * good.price + fee }}元
+          {{ count * 1 * good.price * 1 + delivery.fee * 1 }}元
         </view>
       </view>
       <view class="order-item">
@@ -56,9 +55,4 @@
       </view>
     </view>
   </view>
-<!--  <view  class="order-detail_footer">-->
-<!--    <button-->
-<!--      class="button button&#45;&#45;active"-->
-<!--      bindtap="cancelOrder">取消订单</button>-->
-<!--  </view>-->
 </view>

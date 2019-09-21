@@ -5,6 +5,7 @@ import { getQuery, navigateBack } from '../../utils/util.js';
 // import submitAddress from '../../apis/address/submitAddress';
 import getPoints from "../../apis/address/getTakeGoodPoints";
 import getAddresses from '../../apis/address/getAddresses';
+import AddressType from '../../utils/AddressType'
 
 Page({
   data: {
@@ -41,7 +42,7 @@ Page({
     });
 
     navigateBack(1, {
-      address: currentAddress
+      newAddress: currentAddress
     });
   },
   bindRegionChange: function (e) {
@@ -80,10 +81,9 @@ Page({
     }
   },
   onLoad: function () {
-    const { addressId } = getQuery();
+    const { addressId, type } = getQuery();
 
     Promise.all([ getPoints(), getAddresses()]).then((result)=>{
-      console.log('result===:', result);
       const { code, data = [], message } = result[0];
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
@@ -93,7 +93,7 @@ Page({
         throw new Error(addressMessage || '请求错误');
       }
 
-      const selectedTabId = addressId ? this.data.tabs[0].id : this.data.tabs[1].id;
+      const selectedTabId = type === AddressType['keeper'] ? this.data.tabs[0].id : this.data.tabs[1].id;
 
       this.setData({
         points: data,

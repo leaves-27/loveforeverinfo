@@ -8,6 +8,6 @@ Component({
   },
   methods: {},
   onLoad(){
-    console.log('l:', this.data.urls);
+    console.log('ll:', this.data.urls);
   }
 });

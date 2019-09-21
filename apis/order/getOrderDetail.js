@@ -40,7 +40,7 @@ export default (id)=> new Promise( (resolve, reject)=>{
 		// isSuccess: true,
 		url: `${apiPrifix}/order/getOrderDetail`,
 		data: {
-			id
+			orderId: id
 		},
 		success: (res)=>{
 			resolve(res);

@@ -1,6 +1,6 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
-import { getQuery, getCurrentRoute } from '../../utils/util';
+import { getQuery, getCurrentRoute, router, OrderStatus  } from '../../utils/util';
 import { staticPrifix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
@@ -13,6 +13,7 @@ import getPayWays from '../../apis/getPayWays';
 import submitOrder from "../../apis/order/submitOrder";
 import pay from "../../apis/order/pay";
 
+
 Page({
   behaviors: [computedBehavior],
   data: {
@@ -20,7 +21,7 @@ Page({
     address: {
       id: '',
       name: '',
-      desc: ''
+      address: ''
     },
     deliveryWays: [],
     payWays: [],
@@ -30,6 +31,7 @@ Page({
     deliveryId: 1,
     amount: 1,
     payId: '',
+    selectedAddress: null,
   },
   computed: {
     deliveryWayName() {
@@ -40,12 +42,22 @@ Page({
     }
   },
   goAddress(){
+    const { id, type } = this.data.address;
     const query = {
-      adressId: ''
+      adressId: id,
+      type
     };
     wx.navigateTo({
       url: `../points-addresses/address?$${qs.stringify(query)}`
     })
+  },
+  onShow(){
+    const newAddress  = this.data.newAddress;
+    if (newAddress){
+      this.setData({
+        address: newAddress,
+      });
+    }
   },
   submitOrder(){
     if (!this.data.payId){
@@ -56,12 +68,14 @@ Page({
       });
       return;
     }
+
+    const { id } = this.data.address;
     // 提交订单成功后
     submitOrder({
       goodId: this.data.good.id,
       deliveryWayId: this.data.deliveryId,
       payWayId: this.data.payId,
-      receiveAddressId: this.data.address.id,
+      receiveAddressId: id,
       count: this.data.amount,
       memo: this.data.other
     }).then((result)=>{
@@ -72,22 +86,20 @@ Page({
       }
       const {
         orderId,
-        goodId,
-        deliveryWayId,
-        payWayId,
-        receiveAddressId,
-        count,
-        memo
+        timeStamp,
+        nonceStr,
+        packageStr,
+        paySign,
+        signType
       } =  data;
 
       return pay({
         orderId,
-        goodId,
-        deliveryWayId,
-        payWayId,
-        receiveAddressId,
-        count,
-        memo
+        timeStamp,
+        nonceStr,
+        packageStr,
+        paySign,
+        signType,
       });
     })
     .then((res)=>{
@@ -97,11 +109,12 @@ Page({
       }
       const { orderId } = data;
       const query = {
-        orderId
+        orderId,
+        success: OrderStatus['payed']
       };
-      router.navigateTo({
+      router.redirectTo({
         url: `/pages/order-result/order-result?$${qs.stringify(query)}`
-      })
+      });
     })
     .catch((error)=>{
       console.log('===error:', error);
@@ -154,12 +167,19 @@ Page({
     if (code * 1  !== 1) {
       throw new Error(message || '请求错误');
     }
-    const { id = '', name = '', desc = ''} = data;
+    const {
+      id = '',
+      name = '',
+      address = '',
+      type = ''
+    } = data;
+
     this.setData({
       address: {
         id,
         name,
-        desc
+        address,
+        type
       }
     });
   },

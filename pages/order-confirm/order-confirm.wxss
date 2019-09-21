@@ -186,6 +186,7 @@ input[type="text"],input[type="password"],textarea,button{
   margin: 0;
   outline: none;
 }
+
 button::after {
   border: none;
 }

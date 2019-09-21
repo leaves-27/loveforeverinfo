@@ -1,5 +1,15 @@
 <view class="status">
-  <image class="status_icon" src="{{ status.iconUrl }}"></image>
-  <view class="status_title">{{ status.title }}</view>
-  <view class="status_desc">{{ status.desc }}</view>
+  <image class="status_icon" src="{{ result.iconUrl }}" />
+  <view class="status_title">{{ result.title }}</view>
+  <view class="status_desc">{{ result.desc }}</view>
+  <view wx:if="{{ status !== OrderStatus['payed'] }}">
+    <button
+      class="button button--active"
+      bindtap="repay">重新支付</button>
+  </view>
+  <view wx:else>
+    <button
+        class="button button--active"
+        bindtap="rebuy">逛一逛</button>
+  </view>
 </view>

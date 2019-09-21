@@ -1,6 +1,6 @@
-import { goPay, OrderStatus } from '../../../../utils/util.js';
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
+import { goPay, OrderStatus } from '../../../../utils/util.js';
 
 Component({
   behaviors: [computedBehavior],

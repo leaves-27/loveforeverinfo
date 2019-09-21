@@ -58,23 +58,23 @@
       </view>
       <view class="item_footer">
         <button
-                data-id="{{ item.orderCode }}"
+                data-id="{{ item.orderId }}"
                 class="button button--default"
                 catchtap="cancelOrder">取消订单</button>
         <button
                 wx:if="{{ item.status === OrderStatus['waitPay'] }}"
                 class="button button--red button-interval--small"
-                data-id="{{ item.orderCode }}"
+                data-id="{{ item.orderId }}"
                 catchtap="goPay">支付</button>
         <button
                 wx:elif="{{ item.status === OrderStatus['received'] }}"
                 class="button button--red button-interval--small"
-                data-id="{{ item.orderCode }}"
+                data-id="{{ item.orderId }}"
                 catchtap="goBuy">再次购买</button>
         <button
                 wx:elif="{{ item.status === OrderStatus['deliverying'] }}"
                 class="button button--red button-interval--small"
-                data-id="{{ item.orderCode }}"
+                data-id="{{ item.orderId }}"
                 catchtap="goScanDeliveyDetail">配送中</button>
       </view>
     </view>

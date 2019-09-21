@@ -1,9 +1,9 @@
 
 .status{
-  height: 356rpx;
   background-color: #FFFFFF;
   padding-top: 96rpx;
   box-sizing: border-box;
+  padding-bottom: 40rpx;
 }
 .status_icon{
   width: 96rpx;
@@ -25,4 +25,47 @@
   color: #919191;
   text-align: center;
   margin-top: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+input[type="text"],input[type="password"],textarea,button{
+  outline-style: none;
+  -webkit-appearance: none;
+  padding: 0;
+  padding: 0;
+  margin: 0;
+  margin: 0;
+  outline: none;
+}
+
+button::after {
+  border: none;
+}
+
+.button{
+  display: block;
+  width: 60%;
+  height: 100rpx;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 100rpx;
+
+  border-radius: 8rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: transparent;
+  border: 1rpx solid #e1e1e1;
+  /*color: #FFFFFF;*/
+}
+.button--default{
+  /*background-image: none;*/
+  /*background-color: #FFFFFF;*/
+  /*border: 2rpx solid #DDDDDD;*/
+  /*color: #1E1E1E;*/
+}
+.button--active{
+  /*background-image: linear-gradient(-140deg, #FF6060 0%, #FE0000 100%);*/
+  /*color: #FFFFFF;*/
+  /*border: none;*/
 }

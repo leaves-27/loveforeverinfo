@@ -1,6 +1,6 @@
 <view class="good">
     <view class="good_imgs" wx:if="{{ good }}">
-        <swiper bindchange="change">
+        <swiper bindchange="change" class="swiper">
             <block wx:for="{{ good.imgs }}" wx:key="{{ index }}">
                 <swiper-item>
                     <image src="{{item}}" class="slide-image" width="355" height="150"/>
@@ -14,7 +14,7 @@
     <view class="good_text" wx:if="{{ good }}">
         <view class="row">
             <view class="column">
-                <view class="good_price">{{ good.price }}</view>
+                <view class="good_price">{{ good.price }}元</view>
                 <view class="good_name">{{ good.name }}</view>
             </view>
             <view class="column">
