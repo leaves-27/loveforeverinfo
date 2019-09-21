@@ -54,7 +54,7 @@
             <image class="menu-logo" src="{{ item.good.logoUrl }}" />
             <view class="menu-intro">
               <view class="menu-intro_name">{{ item.good.name }}</view>
-              <view class="menu-intro_price">{{ item.good.price }}</view>
+              <view class="menu-intro_price">{{ item.good.price }}元</view>
             </view>
           </view>
           <view class="main_bar">

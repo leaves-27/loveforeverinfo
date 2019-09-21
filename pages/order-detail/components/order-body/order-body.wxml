@@ -15,7 +15,7 @@
   <good
     id="{{ order.good.id }}"
     name="{{ order.good.name }}"
-    price="{{ order.good.price }}"
+    price="{{ order.good.price }}元"
     logoUrl="{{ order.good.logoUrl }}"
     amount="{{ order.count }}"
   />

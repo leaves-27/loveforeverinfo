@@ -24,7 +24,7 @@
         支付失败
       </view>
 
-      <view class="order-status" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
+      <view class="order-desc" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
         {{ order.createTime }}
       </view>
       <view class="order-desc" wx:elif="{{ order.status === OrderStatus['payed'] }}">
@@ -66,7 +66,7 @@
       bindtap="goSign">签收</button>
     <button
       wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}"
-      class="button button--active"
+      class="button button--disabled"
       data-id="{{ order.orderCode }}">商家已接单</button>
     <button
       wx:elif="{{ order.status === OrderStatus['received'] }}"
