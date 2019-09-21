@@ -98,6 +98,11 @@ button::after {
   color: #FFFFFF;
   border: none;
 }
+.button--disabled{
+  background-image: #CCCCCC;
+  color: #999999;
+  border: none;
+}
 
 .button-interval--small{
   margin-left: 16rpx;

@@ -83,7 +83,7 @@
             catchtap="goPay">支付</button>
         <button
             wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
-            class="button button--default button-interval--small "
+            class="button button--disabled button-interval--small "
             data-id="{{ item.orderId }}">商家已接单</button>
         <button
             wx:else

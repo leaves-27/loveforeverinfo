@@ -7,7 +7,6 @@
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-detail/order-detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-detail/order-detail.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
-              <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+              <caret line="85" column="42" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="16" />
+            <state relative-caret-position="640">
+              <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -145,8 +144,8 @@
         <option value="$PROJECT_DIR$/components/tab/tab.wxss" />
         <option value="$PROJECT_DIR$/pages/index/components/modal/modal.wxss" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.js" />
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss" />
       </list>
     </option>
   </component>
@@ -355,12 +354,12 @@
       <workItem from="1568850133748" duration="3412000" />
       <workItem from="1569046237406" duration="3714000" />
       <workItem from="1569051881346" duration="7970000" />
-      <workItem from="1569070998770" duration="6266000" />
+      <workItem from="1569070998770" duration="6406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319720000" />
+    <option name="totallyTimeSpent" value="319860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="196" y="23" width="1193" height="877" extended-state="0" />
@@ -793,17 +792,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
         </state>
       </provider>
     </entry>
