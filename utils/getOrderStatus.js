@@ -19,7 +19,7 @@ export default ()=>{
 		name: '待付款',
 		iconUrl: `${staticPrifix}/waitpay.png`
 	}, {
-		id: OrderStatus['deliverying'],
+		id: OrderStatus['confirmedOrder'],
 		name: '配送中',
 		iconUrl: `${staticPrifix}/deliverying.png`
 	}, {

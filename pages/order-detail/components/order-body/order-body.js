@@ -19,7 +19,8 @@ Component({
         orderCode : '订单编号',
         createTime: '创建时间',
         pay_payTime: '付款时间',
-        successTime: '成交时间',
+        confirmTime: '商家接单时间',
+        receiveTime: '签收时间'
       };
 
       if (Object.keys(this.data.order).length > 0) {

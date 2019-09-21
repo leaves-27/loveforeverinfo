@@ -29,6 +29,13 @@ Page({
     })
   },
   goPay,
-  goBuy(){},
-  goDeliveryDetail(){}
+  goBuy(){
+
+  },
+  goDeliveryDetail(){
+
+  },
+  goSign(){
+
+  }
 })

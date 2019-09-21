@@ -2,13 +2,15 @@ import { placeholderUrl, request} from '../../utils/util';
 import { apiPrifix } from "../../config/index";
 
 // 这里根据传给服务端的用户token返回对应的的订单列表。可选的有消费者订单列表、医药代表订单列表
-export default ()=> new Promise( (resolve, reject)=>{
+export default (status = '' )=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: false,
 		// isSuccess: false,
 		url: `${apiPrifix}/order/getOrders`,
 		method: 'get',
-		data: {},
+		data: {
+			status
+		},
 		success: (res)=>{
 			resolve(res);
 			// resolve({

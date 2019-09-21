@@ -16,7 +16,6 @@ Page({
     });
 
     getOrders().then((result)=>{
-      console.log('result:', result);
       const { code, data = [], message } = result;
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');

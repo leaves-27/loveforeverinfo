@@ -25,7 +25,7 @@ Component({
     newOrders(){
       const orders = [];
       this.data.orders.forEach((item)=>{
-        if (item.status === OrderStatus['waitPay'] || item.status === OrderStatus['deliverying'] || item.status === OrderStatus['received']){
+        if (item.status === OrderStatus['waitPay'] || item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['received']){
           if (this.data.selectedTabId === OrderStatus['all']){
             orders.push(item);
           } else if(this.data.selectedTabId === item.status){

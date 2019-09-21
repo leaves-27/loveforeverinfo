@@ -5,7 +5,7 @@
     <view
       wx:for="{{ newOrders }}"
       wx:key="{{ item.id }}"
-      data-id="{{ item.orderCode }}"
+      data-id="{{ item.orderId }}"
       bindtap="goOrderDetail"
       class="item">
       <view class="item_header">
@@ -31,6 +31,21 @@
           wx:if="{{ item.status === OrderStatus['received'] }}"
           class="header_bar">
           已签收
+        </view>
+        <view
+          wx:if="{{ item.status === OrderStatus['userCancle'] }}"
+          class="header_bar">
+          已取消
+        </view>
+        <view
+          wx:if="{{ item.status === OrderStatus['disable'] }}"
+          class="header_bar">
+          已取消
+        </view>
+        <view
+          wx:if="{{ item.status === OrderStatus['payFailure'] }}"
+          class="header_bar">
+          支付失败
         </view>
       </view>
       <view class="item_content">
@@ -58,24 +73,24 @@
       </view>
       <view class="item_footer">
         <button
-                data-id="{{ item.orderId }}"
-                class="button button--default"
-                catchtap="cancelOrder">取消订单</button>
+            data-id="{{ item.orderId }}"
+            class="button button--default"
+            catchtap="cancelOrder">取消订单</button>
         <button
-                wx:if="{{ item.status === OrderStatus['waitPay'] }}"
-                class="button button--red button-interval--small"
-                data-id="{{ item.orderId }}"
-                catchtap="goPay">支付</button>
+            wx:if="{{ item.status === OrderStatus['waitPay'] }}"
+            class="button button--red button-interval--small"
+            data-id="{{ item.orderId }}"
+            catchtap="goPay">支付</button>
         <button
-                wx:elif="{{ item.status === OrderStatus['received'] }}"
-                class="button button--red button-interval--small"
-                data-id="{{ item.orderId }}"
-                catchtap="goBuy">再次购买</button>
+            wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
+            class="button button--red button-interval--small"
+            data-id="{{ item.orderId }}"
+            catchtap="goScanDeliveyDetail">配送中</button>
         <button
-                wx:elif="{{ item.status === OrderStatus['deliverying'] }}"
-                class="button button--red button-interval--small"
-                data-id="{{ item.orderId }}"
-                catchtap="goScanDeliveyDetail">配送中</button>
+            wx:else
+            class="button button--red button-interval--small"
+            data-id="{{ item.orderId }}"
+            catchtap="goBuy">{{ item.status === OrderStatus['received'] ? '再次购买' : '重新下单' }}</button>
       </view>
     </view>
   </view>

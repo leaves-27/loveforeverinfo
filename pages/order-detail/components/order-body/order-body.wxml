@@ -1,9 +1,7 @@
 <view  class="order-detail_body">
   <view class="user">
     <view class="user_bar">
-      <view class="icon--address">
-        <image src="{{ addressIconUrl }}" />
-      </view>
+      <image class="icon--address" src="{{ addressIconUrl }}" />
     </view>
     <view class="user_main">
       <view class="name-phone">

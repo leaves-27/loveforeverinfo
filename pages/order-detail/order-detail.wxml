@@ -5,14 +5,36 @@
       <view class="order-status" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
         待付款
       </view>
-      <view class="order-status" wx:elif="{{ order.status === OrderStatus['deliverying'] }}">
-        配送中
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['payed'] }}">
+        待商家确认
+      </view>
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}">
+        商家已接单
       </view>
       <view class="order-status" wx:elif="{{ order.status === OrderStatus['received'] }}">
         已签收
       </view>
-      <view class="order-desc">
-        {{ order.desc }}
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['userCancle'] }}">
+        已取消
+      </view>
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['disable'] }}">
+        商家已取消
+      </view>
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['payFailure'] }}">
+        支付失败
+      </view>
+
+      <view class="order-status" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
+        {{ order.createTime }}
+      </view>
+      <view class="order-desc" wx:elif="{{ order.status === OrderStatus['payed'] }}">
+        {{ order.pay.payTime }}
+      </view>
+      <view class="order-desc" wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}">
+        {{ order.confirmTime }}
+      </view>
+      <view class="order-desc" wx:elif="{{ order.status === OrderStatus['received'] }}">
+        {{ order.receiveTime }}
       </view>
     </view>
     <view class="header_bar">
@@ -21,7 +43,7 @@
         class="icon--wait-pay"
         src="{{ waitPayIconUrl }}"  />
       <image
-        wx:elif="{{ order.status === OrderStatus['deliverying'] }}"
+        wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}"
         class="icon--wait-pay"
         src="{{ deliveryingDetailIconUrl }}"  />
       <image
@@ -38,14 +60,23 @@
       data-id="{{ order.orderCode }}"
       bindtap="goPay">支付</button>
     <button
-      wx:elif="{{ order.status === OrderStatus['deliverying'] }}"
+      wx:elif="{{ order.status === OrderStatus['payed'] }}"
       class="button button--active"
       data-id="{{ order.orderCode }}"
-      bindtap="goDeliveryDetail">配送中</button>
+      bindtap="goSign">签收</button>
+    <button
+      wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}"
+      class="button button--active"
+      data-id="{{ order.orderCode }}">商家已接单</button>
     <button
       wx:elif="{{ order.status === OrderStatus['received'] }}"
       class="button button--active"
       data-id="{{ order.orderCode }}"
       bindtap="goBuy">再次购买</button>
+    <button
+      wx:else
+      class="button button--active"
+      data-id="{{ order.orderCode }}"
+      bindtap="goBuy">重新下单</button>
   </view>
 </view>

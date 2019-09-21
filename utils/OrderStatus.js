@@ -5,8 +5,10 @@
 export default { //
 	'waitPay': 'waitPay',
 	'payed': 'payed',
-	'confirmedOrder': 'confirmedOrder',
-	'deliverying': 'startDelivery',
-	'received': 'received',
+	'confirmedOrder': 'confirm',
+	'received': 'reviced',
+	'userCancle': 'userCancle',
+	'disable': 'disable',
+	'payFailure': 'payFailure',
 	'all': 'all'
 };

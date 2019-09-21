@@ -4,18 +4,20 @@
 export default (ORDER = {}, order = {}) => {
 	const kvs = [];
 	Object.keys(ORDER).forEach((item)=>{
+		let value = '';
 		if(item.indexOf('_') > -1){
 			const keys = item.split('_');
-			kvs.push({
-				key: ORDER[item],
-				value: order[keys[0]][keys[1]]
-			});
+			value = order[keys[0]][keys[1]];
 		} else {
+			value = order[item];
+		};
+
+		if(!!value){
 			kvs.push({
 				key: ORDER[item],
 				value: order[item]
-			})
-		};
+			});
+		}
 	});
 	return kvs;
 };
