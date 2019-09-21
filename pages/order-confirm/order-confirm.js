@@ -32,6 +32,8 @@ Page({
     amount: 1,
     payId: '',
     selectedAddress: null,
+    isOrdering: false,
+    isOrdered: false
   },
   computed: {
     deliveryWayName() {
@@ -70,6 +72,24 @@ Page({
     }
 
     const { id } = this.data.address;
+
+    if (this.data.isOrdering){
+      return;
+    }
+
+    if (this.data.isOrdered){
+      wx.showToast({
+        title: '你已经下单, 请勿重新下单',
+        icon: 'none',
+        duration: 2000
+      });
+      return;
+    }
+
+    this.setData({
+      isOrdering: true
+    });
+
     // 提交订单成功后
     submitOrder({
       goodId: this.data.good.id,
@@ -84,6 +104,10 @@ Page({
       if (code * 1 !== 1) {
         throw new Error('下单失败, 请稍后重新下单或联系客服');
       }
+      this.setData({
+        isOrdered: true,
+        isOrdering: false
+      });
       const {
         orderId,
         timeStamp,
@@ -93,48 +117,56 @@ Page({
         signType
       } =  data;
 
-      return pay({
-        orderId,
-        timeStamp,
-        nonceStr,
-        packageStr,
-        paySign,
-        signType,
-      });
-    })
-    .then((res)=>{
-      const { code, data, message } = res;
-      if (code * 1 !== 1){
-        throw new Error('支付失败, 请稍后重新支付或联系客服');
-      }
-      const { orderId } = data;
-      const query = {
-        orderId
-      };
-      router.redirectTo({
-        url: `/pages/order-result/order-result?$${qs.stringify(query)}`
-      });
-    })
-    .catch((error)=>{
-      const { errMsg = '', orderId } = error;
-      console.log('====error:', error);
-      const regExp = new RegExp('requestPayment:fail');
-      if(regExp.test(errMsg)){ // 若为支付错误
-        if (errMsg !== "requestPayment:fail cancel") { // 不是支付取消
+      if(this.data.payId === '1'){
+      	wx.showToast({
+		      title: '下单已成功，客服会尽快和你联系',
+		      icon: 'none',
+		      duration: 2000
+	      });
+      } else {
+        pay({
+          orderId,
+          timeStamp,
+          nonceStr,
+          packageStr,
+          paySign,
+          signType,
+        }).then((res)=>{
+          const { code, data, message } = res;
+          if (code * 1 !== 1){
+            throw new Error('支付失败, 请稍后重新支付或联系客服');
+          }
+          const { orderId } = data;
           const query = {
             orderId
           };
           router.redirectTo({
             url: `/pages/order-result/order-result?$${qs.stringify(query)}`
           });
-        }
-      } else {
-        this.showToast({
-          title: '下单或支付失败',
-          icon: 'none',
-          duration: 2000
-        })
+        }).catch((error)=>{
+          this.setData({
+            isOrdering: false
+          });
+          if(errMsg !== "requestPayment:fail cancel") { // 不是支付取消
+            const query = {
+              orderId
+            };
+            router.redirectTo({
+              url: `/pages/order-result/order-result?$${qs.stringify(query)}`
+            });
+          }
+        });
       }
+    })
+    .catch((error)=>{
+      this.setData({
+        isOrdering: false
+      });
+      wx.showToast({
+        title: '下单或支付失败',
+        icon: 'none',
+        duration: 2000
+      })
     });
   },
   countAdd(){
@@ -151,7 +183,6 @@ Page({
     });
   },
   deliveryWayChange($event){
-    console.log('$event:', $event);
     const { deliveryId } = $event.detail;
     this.setData({
       deliveryId
@@ -229,4 +260,9 @@ Page({
       this.setPayWay(result[3]);
     });
   },
+  onUnload(){
+    this.setData({
+      isOrdered: false
+    });
+  }
 })
