@@ -109,22 +109,32 @@ Page({
       }
       const { orderId } = data;
       const query = {
-        orderId,
-        success: OrderStatus['payed']
+        orderId
       };
       router.redirectTo({
         url: `/pages/order-result/order-result?$${qs.stringify(query)}`
       });
     })
     .catch((error)=>{
-      console.log('===error:', error);
-      const { message = '下单或支付失败, 请检查网络重新下单或支付；或者联系客服' } = error;
-
-      wx.showToast({
-        title: message,
-        icon: 'none',
-        duration: 2000
-      });
+      const { errMsg = '', orderId } = error;
+      console.log('====error:', error);
+      const regExp = new RegExp('requestPayment:fail');
+      if(regExp.test(errMsg)){ // 若为支付错误
+        if (errMsg !== "requestPayment:fail cancel") { // 不是支付取消
+          const query = {
+            orderId
+          };
+          router.redirectTo({
+            url: `/pages/order-result/order-result?$${qs.stringify(query)}`
+          });
+        }
+      } else {
+        this.showToast({
+          title: '下单或支付失败',
+          icon: 'none',
+          duration: 2000
+        })
+      }
     });
   },
   countAdd(){

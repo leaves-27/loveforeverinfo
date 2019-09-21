@@ -9,7 +9,7 @@ export default (id)=>{
 			// isSuccess: true,
 			url: `${apiPrifix}/order/cancelOrder`,
 			data: {
-				id
+				orderId: id
 			},
 			success: (res)=>{
 				resolve(res);

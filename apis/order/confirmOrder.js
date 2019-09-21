@@ -2,12 +2,7 @@ import {request} from "../../utils/util";
 import { apiPrifix } from "../../config/index";
 
 export default ({
-	goodId,
-	deliveryWayId,
-	payWayId,
-	receiveAddressId,
-	count,
-	memo,
+	id
 })=>{
 	return new Promise((resolve, reject)=>{
 		request.request({
@@ -15,12 +10,7 @@ export default ({
 			// isSuccess: true,
 			url: `${apiPrifix}/order/confirmOrder`,
 			data: {
-				goodId,
-				deliveryWayId,
-				payWayId,
-				receiveAddressId,
-				count,
-				memo,
+				orderId: id
 			},
 			success: (res)=>{
 				resolve(res);
