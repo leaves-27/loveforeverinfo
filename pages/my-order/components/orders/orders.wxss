@@ -77,7 +77,8 @@ button::after {
 }
 .button{
   display: inline-block;
-  width: 128rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
   height: 56rpx;
   line-height: 56rpx;
 

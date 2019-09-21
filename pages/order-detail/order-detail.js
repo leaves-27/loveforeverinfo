@@ -32,9 +32,6 @@ Page({
   goBuy(){
 
   },
-  goDeliveryDetail(){
-
-  },
   goSign(){
 
   }

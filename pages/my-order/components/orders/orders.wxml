@@ -25,7 +25,7 @@
         <view
           wx:if="{{ item.status === OrderStatus['confirmedOrder'] }}"
           class="header_bar">
-          开始配送
+          商家已接单
         </view>
         <view
           wx:if="{{ item.status === OrderStatus['received'] }}"
@@ -83,9 +83,8 @@
             catchtap="goPay">支付</button>
         <button
             wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
-            class="button button--red button-interval--small"
-            data-id="{{ item.orderId }}"
-            catchtap="goScanDeliveyDetail">配送中</button>
+            class="button button--default button-interval--small "
+            data-id="{{ item.orderId }}">商家已接单</button>
         <button
             wx:else
             class="button button--red button-interval--small"
