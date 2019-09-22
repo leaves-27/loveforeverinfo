@@ -31,4 +31,8 @@
   <doctors
     doctors="{{ doctors }}"
   />
+  <exception
+      wx:if="{{ doctors.length === 0 }}"
+      text="暂无合作专家"
+  />
 </view>

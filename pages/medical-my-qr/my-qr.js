@@ -42,9 +42,10 @@ Page({
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
-      const {
-        inviteCode,
-      } = data;
+      // const {
+      //   inviteCode,
+      // } = data;
+      const inviteCode = 'https://fm.oneshell.cn/?cc=ivt11889';
 
       createQrCode(inviteCode, 'myQrcode', this.data.canvas.width / 2, this.data.canvas.height / 2).then((qrUrl)=>{
         this.setData({

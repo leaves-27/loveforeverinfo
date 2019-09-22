@@ -45,20 +45,22 @@ import { request } from '../../utils/util';
 // 		};
 // 	}
 // };
+
 // 通过微信的临时code来登录我们的服务器
-export const loginByWxTempCode = (code, userInfo)=> new Promise( (resolve, reject)=>{
+export const loginByWxTempCode = (code, inviteCode)=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
 		url: `${apiPrifix}/account/isLogin`,
 		method: 'post',
 		data: {
-			jsCode: code
+			jsCode: code,
+			inviteCode,
 		},
 		header: {
 			'content-type': 'application/json' // 默认值
 		},
-		success (res) {
+		success (res) { //
 			resolve(res);
 			// 拿不到角色，说明没有绑定手机号。去绑定手机号
 			// resolve(getMock("18857152338"));

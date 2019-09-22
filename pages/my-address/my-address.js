@@ -1,5 +1,4 @@
 import { getQuery } from '../../utils/util.js';
-// import getAddresses from '../../apis/getAddresses.js';
 import getAddresses from "../../apis/address/getAddresses";
 import updateDefaultAddress from '../../apis/address/updateDefaultAddress';
 import getUserDefaultAddress from "../../apis/address/getUserDefaultAddress";

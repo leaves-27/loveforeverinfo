@@ -1,0 +1,11 @@
+<view class="authorize">
+    <view class="content">
+        <view class="text">
+            <view class="text_header">申请获取您的手机号</view>
+        </view>
+        <button
+            class="button button--active"
+            open-type="getPhoneNumber"
+            bindgetphonenumber="getPhoneNumber">同意</button>
+    </view>
+</view>

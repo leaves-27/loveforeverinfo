@@ -34,4 +34,8 @@
     orders="{{ selectedTabId === '01' ? consumerOrderFlow : consumers }}"
     selectedTabId="{{ selectedTabId }}"
   />
+  <exception
+    wx:if="{{ selectedTabId === '01' ? consumerOrderFlow.length === 0 : consumers.length === 0 }}"
+    text="暂无订单"
+  />
 </view>

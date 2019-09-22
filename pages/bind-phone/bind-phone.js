@@ -8,6 +8,9 @@ Page({
     isBindPhone: false,
     logoUrl: placeholderUrl
   },
+  getPhoneNumber(){
+
+  },
   changePhone($event){
     this.setData({
       phone: $event.detail.value
@@ -29,7 +32,6 @@ Page({
       });
       return ;
     }
-
     this.setData({
       isBindPhone: true
     });

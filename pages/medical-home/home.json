@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "doctors": "./components/doctors/doctors"
+    "doctors": "./components/doctors/doctors",
+    "exception": "../../components/exception/exception"
   },
   "navigationBarTitleText": "医药代表",
   "backgroundColor": "#F3F3F3"

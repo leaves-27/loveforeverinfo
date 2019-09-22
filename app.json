@@ -16,7 +16,8 @@
     "pages/medical-my-qr/my-qr",
     "pages/medical-order-detail/order-detail",
     "pages/medical-order-progress/order-progress",
-    "pages/bind-phone/bind-phone"
+    "pages/bind-phone/bind-phone",
+    "pages/authorize-phone/authorize-phone"
   ],
   "window": {
     "backgroundTextStyle": "light",

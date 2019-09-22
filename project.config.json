@@ -49,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -91,6 +91,12 @@
 					"name": "pages/my-order/my-order",
 					"pathName": "pages/my-order/my-order",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/authorize-phone/authorize-phone",
+					"pathName": "pages/authorize-phone/authorize-phone",
 					"scene": null
 				}
 			]

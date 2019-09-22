@@ -32,8 +32,7 @@ Page({
       selectedTabId: id
     })
   },
-  setConsumerOrderFlow(){
-    const { code = 0, data = [], message = '' } = result[1] || {};
+  setConsumerOrderFlow({ code = 0, data = [], message = '' } = {}){
 
     if (code * 1 !== 1) {
       throw new Error(message || '请求错误');
