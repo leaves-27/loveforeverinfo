@@ -3,7 +3,7 @@ import doctor from './doctor';
 import medical from './medical';
 import UserRole from "../userRole";
 
-const routes = [
+const items = [
 	...customer,
 	...doctor,
 	...medical,
@@ -14,5 +14,5 @@ const routes = [
 
 export default {
 	redirect: '/pages/authorize/authorize',
-	routes
+	items
 };

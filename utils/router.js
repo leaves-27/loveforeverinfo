@@ -1,10 +1,10 @@
-import Router from '../lib/Router';
-import route from "./route/index";
+import Router from '@leaves-27/mingrogram-router';
+import routes from "./routes/index";
 
-const router = new Router(route);
+const router = new Router(routes);
 router.beforeCreate = function(url, next){
-	const { routes = [], redirect } = this.route;
-	const route = routes.find((item)=>{
+	const { items = [], redirect } = this.routes;
+	const route = items.find((item)=>{
 		const { path = '' } = item;
 		const regExp = new RegExp(path);
 		return regExp.test(url);

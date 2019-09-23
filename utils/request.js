@@ -1,4 +1,4 @@
-import Request from '../lib/Request';
+import Request from '@leaves-27/mingrogram-request';
 import { redirect } from "./route/index";
 import router from './router';
 
@@ -13,11 +13,21 @@ request.beforeRequest = function({
 	method,
 	data,
 	header,
-	success,
-	fail,
 	isMock,
 	isSuccess,
 }, next){
+	const token = wx.getStorageSync('token');
+	const params = {
+		url,
+		method,
+		data,
+		header: {
+			'content-type': 'application/json',
+			'token': token,
+			...header
+		},
+	};
+
 	if (isMock){
 		if (isSuccess){
 			success({});
@@ -26,7 +36,7 @@ request.beforeRequest = function({
 		}
 		return;
 	}
-	next();
+	next(params);
 };
 
 request.afterRequest  = function (result, next){
