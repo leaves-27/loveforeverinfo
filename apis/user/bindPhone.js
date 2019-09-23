@@ -1,5 +1,6 @@
-import { placeholderUrl, request } from '../../utils/util';
+import { placeholderUrl } from '../../utils/util';
 import { apiPrefix } from "../../config/index";
+import request from "../../request";
 
 // import UserRole from "../../utils/userRole";
 //

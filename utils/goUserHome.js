@@ -1,5 +1,5 @@
-import router from './router';
-import UserRole from './userRole';
+import router from '../router';
+import UserRole from '../role';
 
 export default function(userRole){
 	if (`${userRole}` === UserRole['customer']){ // 消费者

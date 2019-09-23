@@ -1,4 +1,4 @@
-import {request} from "../utils/util";
+import request from "../request";
 import {apiPrefix, staticPrefix} from "../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{

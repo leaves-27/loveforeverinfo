@@ -1,4 +1,4 @@
-import {request} from "../../utils/util";
+import request from "../../request";
 
 export default ({
   addressId = ''

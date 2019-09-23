@@ -1,5 +1,6 @@
 import qs from "qs";
-import {getUrlQuery, router, tabs} from '../../utils/util'
+import {getUrlQuery, tabs} from '../../utils/util'
+import router from "../../router";
 import getGood from "../../apis/good/getGood";
 import getAuthorize from '../../apis/login/getAuthorize';
 

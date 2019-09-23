@@ -1,6 +1,7 @@
 import computedBehavior from 'miniprogram-computed';
 import { staticPrefix } from '../../../../config/index'
-import {OrderStatus, router} from "../../../../utils/util";
+import { OrderStatus } from "../../../../utils/util";
+import router from "../../../../router";
 
 Component({
   behaviors: [computedBehavior],

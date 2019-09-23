@@ -1,4 +1,4 @@
-import UserRole from '../userRole';
+import UserRole from '../role';
 
 export default [{
 	path: "/pages/medical-home/home",

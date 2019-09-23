@@ -1,5 +1,5 @@
 import { apiPrefix } from '../../config/index';
-import { request } from '../../utils/util';
+import request from "../../request";
 
 // const getMock = (phone)=>{
 // 	const arr = [{

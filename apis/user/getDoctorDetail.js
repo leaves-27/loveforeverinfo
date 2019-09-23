@@ -1,4 +1,5 @@
-import { placeholderUrl, request } from '../../utils/util';
+import { placeholderUrl } from '../../utils/util';
+import request from "../../request";
 import { apiPrefix } from "../../config/index";
 
 export default (id)=> new Promise( (resolve, reject)=>{

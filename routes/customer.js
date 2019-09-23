@@ -1,4 +1,6 @@
-import UserRole from '../userRole';
+import UserRole from '../role';
+
+console.log('UserRole:', UserRole);
 export default [{
 	path: "/pages/index/index",
 	role: [UserRole['customer']]

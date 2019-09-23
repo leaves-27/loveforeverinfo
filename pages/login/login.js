@@ -1,4 +1,5 @@
-import { placeholderUrl, getQuery, router, goUserHome } from '../../utils/util.js';
+import { placeholderUrl, getQuery, goUserHome } from '../../utils/util.js';
+import router from "../../router";
 import login from '../../apis/login/login';
 // import login from '../../apis/login/login';
 // import getTempCredentials from '../../apis/login/getTempCredentials';

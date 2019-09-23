@@ -1,5 +1,5 @@
 import Request from '@leaves-27/mingrogram-request';
-import { redirect } from "./route/index";
+import { redirect } from "./routes/index";
 import router from './router';
 
 const request = new Request();

@@ -1,6 +1,7 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
-import { getQuery, getCurrentRoute, router, OrderStatus  } from '../../utils/util';
+import { getQuery, getCurrentRoute, OrderStatus  } from '../../utils/util';
+import router from "../../router";
 import { staticPrefix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
