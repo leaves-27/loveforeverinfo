@@ -17,6 +17,9 @@
     "@leaves-27/kvs": "^1.0.1",
     "@leaves-27/mingrogram-request": "^1.0.2",
     "@leaves-27/mingrogram-router": "^1.0.0",
+    "@leaves-27/miniprogram": "^1.0.0",
+    "@leaves-27/miniprogram-qr-code": "^1.0.0",
+    "@leaves-27/utils": "^1.0.0",
     "axios": "^0.19.0",
     "miniprogram-computed": "^1.0.0",
     "qs": "^6.7.0"
