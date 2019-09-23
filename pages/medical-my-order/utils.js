@@ -12,9 +12,12 @@ export const getOrderCategoryByIsFinish = (orders)=>{
 				user_name: '客户姓名',
 				user_phone: '联系方式'
 			};
+
 			finishOrders.push({
 				...item,
-				kvs: getKvs(ORDER, item)
+				kvs: getKvs(ORDER, item).map((item)=>{
+
+				})
 			});
 		} else if(item.status === OrderStatus['payed'] || item.status === OrderStatus['confirmedOrder']){
 			const ORDER = {
@@ -26,7 +29,18 @@ export const getOrderCategoryByIsFinish = (orders)=>{
 			};
 			unFinishOrders.push({
 				...item,
-				kvs: getKvs(ORDER, item)
+				kvs: getKvs(ORDER, item).map((item)=>{
+					let value;
+					if(item.key === ORDER['delivery_address']){
+						value = item.value.replace(/\s/g, '');
+					} else {
+						value = item.value;
+					}
+					return {
+						key: item.key,
+						value
+					}
+				})
 			});
 		}
 	});

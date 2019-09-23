@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { staticPrifix } from '../../../../config/index'
+import { staticPrefix } from '../../../../config/index'
 import {OrderStatus, router} from "../../../../utils/util";
 
 Component({
@@ -21,13 +21,13 @@ Component({
 
       switch(this.data.status){
         case OrderStatus['payed']:
-          iconUrl = `${staticPrifix}/status_success.png`;
+          iconUrl = `${staticPrefix}/status_success.png`;
           title = '下单成功';
           desc = '请耐心等待销售代表确认';
           break;
 
         default:
-          iconUrl = `${staticPrifix}/status_failure.png`;
+          iconUrl = `${staticPrefix}/status_failure.png`;
           title = '支付失败';
           desc = '请耐心等待销售代表确认';
       }

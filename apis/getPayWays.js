@@ -1,11 +1,11 @@
 import {request} from "../utils/util";
-import {apiPrifix, staticPrifix} from "../config/index";
+import {apiPrefix, staticPrefix} from "../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		isMock: false,
 		isSuccess: false,
-		url: `${apiPrifix}/order/getPayWays`,
+		url: `${apiPrefix}/order/getPayWays`,
 		method: 'get',
 		success: (res)=>{
 			resolve(res);
@@ -13,11 +13,11 @@ export default ()=> new Promise( (resolve, reject)=>{
 			// 	code: 1,
 			// 	data: [{
 			// 		id: '01',
-			// 		iconUrl: `${staticPrifix}/wxpay.png`,
+			// 		iconUrl: `${staticPrefix}/wxpay.png`,
 			// 		name: '微信支付'
 			// 	}, {
 			// 		id: '02',
-			// 		iconUrl: `${staticPrifix}/offlinepay.png`,
+			// 		iconUrl: `${staticPrefix}/offlinepay.png`,
 			// 		name: '线下支付'
 			// 	}]
 			// })

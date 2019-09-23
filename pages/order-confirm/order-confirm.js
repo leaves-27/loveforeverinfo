@@ -1,7 +1,7 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
 import { getQuery, getCurrentRoute, router, OrderStatus  } from '../../utils/util';
-import { staticPrifix } from '../../config/index'
+import { staticPrefix } from '../../config/index'
 
 // import getOrderConfirm from '../../apis/getOrderConfirm';
 // import getOrderConfirm from "../../apis/order/getOrderConfirm";
@@ -25,8 +25,8 @@ Page({
     },
     deliveryWays: [],
     payWays: [],
-    iconAddressUrl: `${staticPrifix}/address_selected.png`,
-    arrowRightUrl: `${staticPrifix}/arrow_right.png`,
+    iconAddressUrl: `${staticPrefix}/address_selected.png`,
+    arrowRightUrl: `${staticPrefix}/arrow_right.png`,
     other: '', // 备注
     deliveryId: 1,
     amount: 1,

@@ -1,11 +1,11 @@
 import {placeholderUrl, request} from '../../utils/util';
-import { apiPrifix } from '../../config/index';
+import { apiPrefix } from '../../config/index';
 
 export default (id)=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/commodity/getGoodDetail`,
+		url: `${apiPrefix}/commodity/getGoodDetail`,
 		method: 'get',
 		data: {
 			id,

@@ -2,8 +2,6 @@
 
 }
 .item{
-  padding-left: 24rpx;
-  padding-right: 24rpx;
   background-color: #FFFFFF;
   margin-bottom: 16rpx;
   padding-top: 23rpx;
@@ -36,6 +34,8 @@
 .content_main{
   display: flex;
   padding-bottom: 58rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
 }
 .content_bar{
   display: flex;

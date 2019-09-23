@@ -1,4 +1,4 @@
-import { staticPrifix } from '../../config/index'
+import { staticPrefix } from '../../config/index'
 import { goPay, getQuery } from '../../utils/util';
 
 // import getOrderDetail from '../../apis/getOrderDetail.js';
@@ -7,9 +7,9 @@ import getOrderDetail from "../../apis/order/getOrderDetail";
 Page({
   data: {
     order: {},
-    waitPayIconUrl: `${staticPrifix}/waitpay_detail.png`,
-    deliveryingDetailIconUrl: `${staticPrifix}/deliverying_detail.png`,
-    singedDetailIconUrl: `${staticPrifix}/singed_detail.png`
+    waitPayIconUrl: `${staticPrefix}/waitpay_detail.png`,
+    deliveryingDetailIconUrl: `${staticPrefix}/deliverying_detail.png`,
+    singedDetailIconUrl: `${staticPrefix}/singed_detail.png`
   },
   onLoad: function () {
     const { id = '' } = getQuery();
@@ -19,7 +19,7 @@ Page({
 
     getOrderDetail(id).then((result)=>{
       const { code, data = null, message } = result;
-      if (code * 1 !== 1) {
+      if (code * 1 !== 1) { //
         throw new Error(message || '请求错误');
       }
       this.setData({

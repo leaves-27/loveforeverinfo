@@ -1,11 +1,11 @@
 import {request} from "../../utils/util";
-import {apiPrifix} from "../../config/index";
+import {apiPrefix} from "../../config/index";
 
 export const postUserInfo = (userInfo)=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/authuserinfo`,
+		url: `${apiPrefix}/account/authuserinfo`,
 		method: 'post',
 		data: {
 			...userInfo

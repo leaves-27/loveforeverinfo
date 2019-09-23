@@ -1,5 +1,5 @@
 import { getQuery, createQrCode, saveImageToPhotosAlbum } from "../../utils/util";
-import { staticPrifix } from '../../config/index'
+import { baseUrlPrefix, staticPrefix } from '../../config/index'
 
 import getInviteCode from "../../apis/user/getInviteCode";
 
@@ -7,8 +7,8 @@ Page({
   data: {
     name: '',
     userLogoUrl: '',
-    qrBorderTop: `${staticPrifix}/qr_border-top.png`,
-    qrBoundary: `${staticPrifix}/qr_border-middle.png`,
+    qrBorderTop: `${staticPrefix}/qr_border-top.png`,
+    qrBoundary: `${staticPrefix}/qr_border-middle.png`,
     isShowMoadl: false,
     qrUrl: '',
     canvas: {
@@ -46,8 +46,13 @@ Page({
         inviteCode,
       } = data;
       // const inviteCode = 'ivt11889';
-      
-      createQrCode(`https://fm.oneshell.cn/?cc=${inviteCode}`, 'myQrcode', this.data.canvas.width / 2, this.data.canvas.height / 2).then((qrUrl)=>{
+
+      const url = `${ baseUrlPrefix }/?cc=${inviteCode}`;
+      const canvasId = 'myQrcode';
+      const canvasWidth = this.data.canvas.width / 2;
+      const canvasHeight = this.data.canvas.height / 2;
+
+      createQrCode(url, canvasId, canvasWidth, canvasHeight).then((qrUrl)=>{
         this.setData({
           qrUrl
         });

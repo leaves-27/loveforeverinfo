@@ -1,12 +1,12 @@
 import {request} from "../../utils/util";
-import { apiPrifix } from "../../config/index";
+import { apiPrefix } from "../../config/index";
 
 export default (type)=>{
 	return new Promise((resolve, reject)=>{
 		request.request({
 			// isMock: true,
 			// isSuccess: true,
-			url: `${apiPrifix}/account/getConsumerOrderFlow`,
+			url: `${apiPrefix}/account/getConsumerOrderFlow`,
 			data: {
 				type
 			},

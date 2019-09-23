@@ -1,5 +1,5 @@
 import computedBehavior from "miniprogram-computed";
-import {staticPrifix} from "../../../../config/index";
+import {staticPrefix} from "../../../../config/index";
 
 Component({
   behaviors: [computedBehavior],
@@ -10,7 +10,7 @@ Component({
     },
   },
   data: {
-    arrowRightUrl: `${staticPrifix}/arrow_right.png`,
+    arrowRightUrl: `${staticPrefix}/arrow_right.png`,
   },
   computed: {
     goods(){

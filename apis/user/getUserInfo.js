@@ -1,11 +1,11 @@
 import { placeholderUrl, request } from '../../utils/util';
-import { apiPrifix } from "../../config/index";
+import { apiPrefix } from "../../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/getUserInfo`,
+		url: `${apiPrefix}/account/getUserInfo`,
 		method: 'post',
 		success: (res)=>{
 			resolve(res);

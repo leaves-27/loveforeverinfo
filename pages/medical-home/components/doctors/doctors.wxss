@@ -29,6 +29,7 @@
 .doctor_logo{
   width: 100rpx;
   height: 100rpx;
+  /*border-radius: 50rpx;*/
 }
 
 .doctor_intro{

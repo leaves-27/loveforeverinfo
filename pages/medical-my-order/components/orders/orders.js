@@ -33,7 +33,7 @@ Component({
         id
       };
       wx.navigateTo({
-        url: `../medical-order-detail/order-detail?$${qs.stringify(query)}`
+        url: `/pages/medical-order-detail/order-detail?$${qs.stringify(query)}`
       })
     },
     goOrderProgress($event){

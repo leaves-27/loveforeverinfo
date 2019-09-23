@@ -1,5 +1,5 @@
 import {request} from "../../utils/util";
-import {apiPrifix} from "../../config/index";
+import {apiPrefix} from "../../config/index";
 
 export default ({
   name = '',
@@ -13,7 +13,7 @@ export default ({
 })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: false,
-		url: `${apiPrifix}/delivery/setaddress`,
+		url: `${apiPrefix}/delivery/setaddress`,
 		method: 'post',
 		data: {
 			name,

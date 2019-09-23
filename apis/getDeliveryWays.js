@@ -1,10 +1,10 @@
 import { request } from '../utils/util';
-import {apiPrifix} from "../config/index";
+import {apiPrefix} from "../config/index";
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		isMock: false,
 		isSuccess: false,
-		url: `${apiPrifix}/order/getDeliveryWays`,
+		url: `${apiPrefix}/order/getDeliveryWays`,
 		method: 'get',
 		success: (res)=>{
 			resolve(res);

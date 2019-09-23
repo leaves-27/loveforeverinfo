@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { staticPrifix } from '../../../../config/index'
+import { staticPrefix } from '../../../../config/index'
 import { getKvs } from '../../../../utils/util'
 
 
@@ -12,7 +12,7 @@ Component({
     }
   },
   data: {
-    addressIconUrl: `${staticPrifix}/address_selected.png`
+    addressIconUrl: `${staticPrefix}/address_selected.png`
   },
   computed: {
     kvs(){
@@ -26,8 +26,32 @@ Component({
         receiveTime: '完成时间',
         orderCode : '订单编号',
       };
+      const DeliveryWay = {
+        '1': '快递配送',
+        '2': '自提'
+      };
+      const PayWay = {
+        '0': '微信支付',
+        '1': '线下支付'
+      };
       if (Object.keys(this.data.order).length > 0) {
-        return getKvs(ORDER, this.data.order);
+        return getKvs(ORDER, this.data.order).map((item)=>{
+          const key = item.key;
+          let value;
+          if (item.key === ORDER['delivery_wayId']) {
+             value = DeliveryWay[item.value];
+          } else if (item.key === ORDER['pay_wayId']){
+             value = PayWay[item.value];
+          } else if(item.key === ORDER['delivery_address']){
+            value = item.value.replace(/\s/g, '');
+          } else {
+            value = item.value;
+          }
+          return {
+            key,
+            value
+          }
+        });
       }
       return [];
     },

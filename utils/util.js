@@ -14,6 +14,7 @@ import request from './request';
 
 import { createQrCode } from './qrcode';
 import route from './route/index';
+import getUrlQuery from './getUrlQuery';
 
 module.exports = {
   placeholderUrl,
@@ -31,7 +32,8 @@ module.exports = {
   route,
   tabs,
   createQrCode,
-  saveImageToPhotosAlbum
+  saveImageToPhotosAlbum,
+  getUrlQuery
 }
 
 

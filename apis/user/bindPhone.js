@@ -1,5 +1,5 @@
 import { placeholderUrl, request } from '../../utils/util';
-import { apiPrifix } from "../../config/index";
+import { apiPrefix } from "../../config/index";
 
 // import UserRole from "../../utils/userRole";
 //
@@ -52,7 +52,7 @@ export const bindPhoneByWxBindPhone = ({ detail })=> new Promise( (resolve, reje
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/bindphone`,
+		url: `${apiPrefix}/account/bindphone`,
 		data: {
 			detail
 		},
@@ -71,7 +71,7 @@ export default ({ phone, validationCode })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/bindphone`,
+		url: `${apiPrefix}/account/bindphone`,
 		data: {
 			phone,
 			validationCode

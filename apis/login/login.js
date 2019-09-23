@@ -1,4 +1,4 @@
-import { apiPrifix } from '../../config/index';
+import { apiPrefix } from '../../config/index';
 import { request } from '../../utils/util';
 
 // const getMock = (phone)=>{
@@ -51,7 +51,7 @@ export const loginByWxTempCode = (code, inviteCode)=> new Promise( (resolve, rej
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/isLogin`,
+		url: `${apiPrefix}/account/isLogin`,
 		method: 'post',
 		data: {
 			jsCode: code,
@@ -78,7 +78,7 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/account/phonelogin`,
+		url: `${apiPrefix}/account/phonelogin`,
 		method: 'post',
 		data: {
 			phone,

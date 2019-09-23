@@ -1,19 +1,19 @@
 import qs from 'qs';
 import getDoctorDetail from "../../apis/user/getDoctorDetail";
 import { getQuery, createQrCode, saveImageToPhotosAlbum } from "../../utils/util";
-import {staticPrifix} from "../../config/index";
+import { baseUrlPrefix, staticPrefix} from "../../config/index";
 
 Page({
   data: {
     name: '',
     phone: '',
     logoUrl: '',
-    hospital: '',
+    agency: '',
     department: '',
     score: 0,
     userCount: 0,
     level: '',
-    qrIconUrl: `${staticPrifix}/qr.png`,
+    qrIconUrl: `${staticPrefix}/qr.png`,
     isShowMoadl: false,
     qrUrl: '',
     canvas: {
@@ -25,7 +25,13 @@ Page({
     this.setData({
       isShowMoadl: true
     });
-    createQrCode(this.data.inviteCode, 'myQrcode', this.data.canvas.width / 2, this.data.canvas.height / 2).then((qrUrl)=>{
+
+    const url = `${ baseUrlPrefix }/?cc=${this.data.inviteCode}`;
+    const canvasId = 'myQrcode';
+    const canvasWidth = this.data.canvas.width / 2;
+    const canvasHeight = this.data.canvas.height / 2;
+
+    createQrCode(url, canvasId, canvasWidth, canvasHeight).then((qrUrl)=>{
       this.setData({
         qrUrl
       });
@@ -45,7 +51,7 @@ Page({
         icon: 'none',
         duration: 2000
       });
-    }).catch(()=>{
+    }).catch(() => {
       // wx.showToast({
       //   title: '保存二维码到相册失败',
       //   icon: 'none',
@@ -65,7 +71,7 @@ Page({
         phone = '',
         score = 0,
         logoUrl = '',
-        hospital = '',
+        agency = '',
         department = '',
         userCount = 0,
         level = '',
@@ -77,7 +83,7 @@ Page({
         phone,
         score,
         logoUrl,
-        hospital,
+        agency,
         department,
         userCount,
         level,

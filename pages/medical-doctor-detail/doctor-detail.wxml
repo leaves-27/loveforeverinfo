@@ -28,7 +28,7 @@
 
     <view class="column">
       <view class="column_label">所属医院</view>
-      <view class="column_value">{{ hospital }}</view>
+      <view class="column_value">{{ agency }}</view>
     </view>
 
     <view class="column">

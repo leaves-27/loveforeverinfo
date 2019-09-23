@@ -1,4 +1,4 @@
-import { staticPrifix } from '../../config/index'
+import { staticPrefix } from '../../config/index'
 import { goPay, getQuery, OrderStatus } from '../../utils/util';
 
 // import getOrderDetail from '../../apis/getOrderDetail.js';
@@ -8,9 +8,9 @@ Page({
   data: {
     OrderStatus: OrderStatus,
     order: {},
-    waitPayIconUrl: `${staticPrifix}/waitpay_detail.png`,
-    deliveryingDetailIconUrl: `${staticPrifix}/deliverying_detail.png`,
-    singedDetailIconUrl: `${staticPrifix}/singed_detail.png`
+    waitPayIconUrl: `${staticPrefix}/waitpay_detail.png`,
+    deliveryingDetailIconUrl: `${staticPrefix}/deliverying_detail.png`,
+    singedDetailIconUrl: `${staticPrefix}/singed_detail.png`
   },
   onLoad: function () {
     const { id = '0' } = getQuery();

@@ -1,6 +1,6 @@
 import qs from 'qs';
 import {OrderStatus, getOrderStatus, tabs} from '../../utils/util';
-import { staticPrifix } from '../../config/index'
+import { staticPrefix } from '../../config/index'
 
 // import getUserInfo from '../../apis/getUserInfo';
 import getUserInfo from '../../apis/user/getUserInfo';
@@ -12,9 +12,9 @@ Page({
     phone: '',
     score: 0,
     userLogoUrl: '',
-    qrUrl: `${staticPrifix}/qr.png`,
-    addressIconUrl: `${staticPrifix}/address.png`,
-    scoreLogoUrl: `${staticPrifix}//xiyan.png`,
+    qrUrl: `${staticPrefix}/qr.png`,
+    addressIconUrl: `${staticPrefix}/address.png`,
+    scoreLogoUrl: `${staticPrefix}//xiyan.png`,
     appTabs: tabs
   },
   goMyQr() {

@@ -1,5 +1,5 @@
 import qs from 'qs';
-import { staticPrifix } from "../../config/index";
+import { staticPrefix } from "../../config/index";
 import getUserInfo from '../../apis/user/getUserInfo';
 import getMyDoctors from "../../apis/user/getMyDoctors";
 
@@ -11,7 +11,7 @@ Page({
     score: 0,
     orderCount: 0,
     doctors: [],
-    qrUrl: `${staticPrifix}/qr.png`,
+    qrUrl: `${staticPrefix}/qr.png`,
   },
   bindPhone(){
     wx.navigateTo({

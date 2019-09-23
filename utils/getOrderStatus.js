@@ -1,4 +1,4 @@
-import { staticPrifix} from '../config/index';
+import { staticPrefix} from '../config/index';
 import OrderStatus from './OrderStatus';
 
 /**
@@ -13,18 +13,18 @@ export default ()=>{
 	return [{
 		id: OrderStatus['all'],
 		name: '全部',
-		iconUrl: `${staticPrifix}/all.png`
+		iconUrl: `${staticPrefix}/all.png`
 	},{
 		id: OrderStatus['waitPay'],
 		name: '待付款',
-		iconUrl: `${staticPrifix}/waitpay.png`
+		iconUrl: `${staticPrefix}/waitpay.png`
 	}, {
 		id: OrderStatus['confirmedOrder'],
 		name: '配送中',
-		iconUrl: `${staticPrifix}/deliverying.png`
+		iconUrl: `${staticPrefix}/deliverying.png`
 	}, {
 		id: OrderStatus['received'],
 		name: '已签收',
-		iconUrl: `${staticPrifix}/signed.png`
+		iconUrl: `${staticPrefix}/signed.png`
 	}]
 };

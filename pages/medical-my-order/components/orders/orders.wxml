@@ -1,9 +1,9 @@
 <view class="items">
   <view
     wx:for="{{ orders }}"
-    wx:key="{{ item.id }}"
+    wx:key="{{ item.orderId }}"
     bindtap="goOrderDetail"
-    data-id="{{ item.orderCode }}"
+    data-id="{{ item.orderId }}"
     class="item">
     <view class="item_content">
       <view class="content_main">
@@ -34,13 +34,13 @@
       class="item_footer item_footer--align-right">
       <button
         wx:if="{{ item.status === OrderStatus['payed'] }}"
-        data-id="{{ item.orderCode }}"
+        data-id="{{ item.orderId }}"
         class="button button--default"
         catchtap="cancelOrder">取消订单</button>
       <button
         wx:if="{{ item.status === OrderStatus['payed'] }}"
         class="button button--red button-interval--small"
-        data-id="{{ item.orderCode }}"
+        data-id="{{ item.orderId }}"
         catchtap="confirmOrder">确认订单</button>
 <!--      <span-->
 <!--        wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"-->
@@ -50,13 +50,13 @@
       <span
         wx:elif="{{ item.status === OrderStatus['startDelivery'] }}"
         class="status-button status-button--yellow status-button-interval--small"
-        data-id="{{ item.orderCode }}"
+        data-id="{{ item.orderId }}"
         catchtap="goOrderProgress">开始配送 > </span>
 
       <span
         wx:elif="{{ item.status === OrderStatus['deliverying'] }}"
         class="status-button status-button--red status-button-interval--small"
-        data-id="{{ item.orderCode }}"
+        data-id="{{ item.orderId }}"
         catchtap="goOrderProgress">配送中</span>
     </view>
     <view
@@ -64,7 +64,7 @@
       class="item_footer item_footer--align-center">
       <view
         class="button_more-detail"
-        data-id="{{ item.orderCode }}"
+        data-id="{{ item.orderId }}"
         bind:tap="goOrderDetail"
       >更多详情</view>
     </view>

@@ -2,7 +2,7 @@ import qs from 'qs';
 import getTempCredentials from '../../apis/login/getTempCredentials';
 import { loginByWxTempCode } from '../../apis/login/login';
 import { postUserInfo } from '../../apis/login/postUserInfo';
-import { getQuery, goUserHome, router } from "../../utils/util";
+import { getQuery, goUserHome, router, getUrlQuery } from "../../utils/util";
 
 Page({
   data: {
@@ -31,7 +31,7 @@ Page({
       });
     })
   },
-  jump(role){
+  jump(role, inviteCode){
     const { url = '' } = getQuery();
     if (!!url){
       router.navigateTo({
@@ -41,7 +41,7 @@ Page({
       goUserHome(role);
     } else {
       router.redirectTo({
-        url: '/pages/bind-phone/bind-phone'
+        url: `/pages/bind-phone/bind-phone?inviteCode=${inviteCode}`
       });
     }
   },
@@ -61,12 +61,12 @@ Page({
           });
           return;
         }
-        const { token = '', role = '', authuserinfo = false} = data;
+        const { token = '', role = '', authuserinfo = false } = data;
         wx.setStorageSync('token', token);
         wx.setStorageSync('userRole', role);
 
         if (authuserinfo) {
-          this.jump(role);
+          this.jump(role, inviteCode);
         } else{
           this.setData({
             isShowButton: true
@@ -75,17 +75,10 @@ Page({
       });
     }
   },
-  getUrlQuery(url){
-    if (url.indexOf('?') > -1) {
-      const urls = url.split('?');
-      return qs.parse(urls[1]);
-    }
-    return {};
-  },
-  onLoad: function (options) {
+  onLoad: function (options) { //
     const { q = '' } = options;
-    if (options.q !== undefined) {
-      const { cc = '' } = this.getUrlQuery(decodeURIComponent(q));
+    if (!!options.q) {
+      const { cc = '' } = getUrlQuery(decodeURIComponent(q));
       this.getUserRoleToRelativePage(cc);
     } else {
       this.getUserRoleToRelativePage();

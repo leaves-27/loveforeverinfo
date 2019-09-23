@@ -49,12 +49,16 @@ Page({
       const { code, data, message } = result;
       if (code * 1 === 1){
         // 将订单从当前页面删除，并刷新结果列表
-        const orders = this.data.unFinishOrders;
+        const orders = JSON.parse(JSON.stringify(this.data.unFinishOrders));
         const index = orders.findIndex((item)=>{
-          return item.id === id;
+          return item.orderId === id;
         });
+        console.log();
         if (index > -1){
           orders.splice(index ,1);
+          this.setData({
+            unFinishOrders: orders
+          })
         }
       } else{
         wx.showToast({
@@ -69,12 +73,13 @@ Page({
   confirmOrder($event){
     const { id } = $event.detail;
     console.log('confirmOrder-id:', id);
+    // 确认以后,将其从当前列表中删除
     confirmOrder(id).then((result)=>{
       console.log('confirmOrder-result:', result);
       const { code, data, message } = result;
       if (code * 1 === 1){
         // 将订单从当前页面删除，并刷新结果列表
-        const orders = this.data.unFinishOrders;
+        const orders = JSON.parse(JSON.stringify(this.data.unFinishOrders));
         const index = orders.findIndex((item)=>{
           return item.id === id;
         });
@@ -83,6 +88,9 @@ Page({
             ...orders[index],
             status: OrderStatus['confirmedOrder']
           });
+          this.setData({
+            unFinishOrders: orders
+          })
         }
       } else{
         wx.showToast({

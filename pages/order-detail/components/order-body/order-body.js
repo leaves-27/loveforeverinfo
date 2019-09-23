@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { staticPrifix } from '../../../../config/index';
+import { staticPrefix } from '../../../../config/index';
 import { getKvs } from '../../../../utils/util';
 
 Component({
@@ -11,7 +11,7 @@ Component({
     }
   },
   data: {
-    addressIconUrl: `${staticPrifix}/address_selected.png`
+    addressIconUrl: `${staticPrefix}/address_selected.png`
   },
   computed: {
     kvs(){

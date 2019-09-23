@@ -1,13 +1,13 @@
-import { staticPrifix } from '../config/index';
+import { staticPrefix } from '../config/index';
 
 export default [{
-	"iconPath": `${staticPrifix}/home.png`,
-	"selectedIconPath": `${staticPrifix}/home_selected.png`,
+	"iconPath": `${staticPrefix}/home.png`,
+	"selectedIconPath": `${staticPrefix}/home_selected.png`,
 	"text": "喜燕",
 	"pagePath": "/pages/index/index",
 }, {
-	"iconPath": `${staticPrifix}/user.png`,
-	"selectedIconPath": `${staticPrifix}/user_selected.png`,
+	"iconPath": `${staticPrefix}/user.png`,
+	"selectedIconPath": `${staticPrefix}/user_selected.png`,
 	"pagePath": "/pages/my/my",
 	"text": "我的",
 }]

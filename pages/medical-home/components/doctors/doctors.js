@@ -1,5 +1,5 @@
 import qs from "qs";
-import {staticPrifix} from "../../../../config/index";
+import {staticPrefix} from "../../../../config/index";
 
 Component({
   properties: {
@@ -9,7 +9,7 @@ Component({
     },
   },
   data: {
-    arrowRightUrl: `${staticPrifix}/arrow_right.png`,
+    arrowRightUrl: `${staticPrefix}/arrow_right.png`,
   },
   methods: {
     goDoctorDetail($event){

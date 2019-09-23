@@ -1,5 +1,5 @@
 import {placeholderUrl, request} from "../../utils/util";
-import { apiPrifix } from "../../config/index";
+import { apiPrefix } from "../../config/index";
 
 export default ({
 	goodId,
@@ -13,7 +13,7 @@ export default ({
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrifix}/order/submitOrder`,
+		url: `${apiPrefix}/order/submitOrder`,
 		data: {
 			goodId,
 			count,

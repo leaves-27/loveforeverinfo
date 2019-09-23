@@ -1,5 +1,5 @@
 import qs from "qs";
-import { router, tabs } from '../../utils/util'
+import {getUrlQuery, router, tabs} from '../../utils/util'
 import getGood from "../../apis/good/getGood";
 import getAuthorize from '../../apis/login/getAuthorize';
 
@@ -53,9 +53,14 @@ Page({
     });
     router.navigateTo({
       url: `/pages/order-confirm/order-confirm?$${qs.stringify(query)}`
-    })
+    });
   },
   onLoad() {
+    // const { q = '' } = options;
+    // if (options.q !== undefined) {
+    //   const { ic = '' } = getUrlQuery(decodeURIComponent(q));
+    // }
+
     this.setData({
       selectedTabId: this.data.tabs[0].id
     });

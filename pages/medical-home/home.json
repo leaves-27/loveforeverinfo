@@ -3,6 +3,6 @@
     "doctors": "./components/doctors/doctors",
     "exception": "../../components/exception/exception"
   },
-  "navigationBarTitleText": "医药代表",
+  "navigationBarTitleText": "专员",
   "backgroundColor": "#F3F3F3"
 }

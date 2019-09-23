@@ -12,12 +12,13 @@ export default (ORDER = {}, order = {}) => {
 			value = order[item];
 		};
 
-		if(!!value){
+		if(value !== undefined){
 			kvs.push({
 				key: ORDER[item],
-				value: order[item]
+				value
 			});
 		}
 	});
+
 	return kvs;
 };

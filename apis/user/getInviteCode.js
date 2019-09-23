@@ -1,12 +1,12 @@
 import { placeholderUrl, request } from '../../utils/util';
-import { apiPrifix } from "../../config/index";
+import { apiPrefix } from "../../config/index";
 
 export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
 		// url: '',/applet/
-	  url: `${apiPrifix}/account/getInviteCode`,
+	  url: `${apiPrefix}/account/getInviteCode`,
 		method: 'get',
 		success: (res)=>{
 			resolve(res);
