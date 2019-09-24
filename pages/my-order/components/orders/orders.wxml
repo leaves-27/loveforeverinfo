@@ -58,6 +58,7 @@
       </view>
       <view class="item_footer">
         <button
+            wx:if="{{ item.status === OrderStatus['waitPay'] }}"
             data-id="{{ item.orderId }}"
             class="button button--default"
             catchtap="cancelOrder">取消订单</button>
@@ -69,7 +70,8 @@
         <button
             wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
             class="button button--disabled button-interval--small "
-            data-id="{{ item.orderId }}">配送中</button>
+            data-id="{{ item.orderId }}"
+            catchtap="goDelivery">配送中</button>
         <button
             wx:else
             class="button button--red button-interval--small"

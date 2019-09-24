@@ -38,6 +38,9 @@ Component({
     },
   },
   methods: {
+    goDelivery(){
+      return false;
+    },
     goOrderDetail($event){
       const { id } = $event.currentTarget.dataset;
       const query = {

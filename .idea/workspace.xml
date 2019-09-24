@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/apis/address/getAddresses.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/address/getAddresses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/address/getUserDefaultAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/address/getUserDefaultAddress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/address/updateDefaultAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/address/updateDefaultAddress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tab/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab/tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-request/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram-qr-code/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram-qr-code/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/miniprogram_npm/qs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/miniprogram_npm/qs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/axios/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/axios/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/debug/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/debug/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/follow-redirects/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/follow-redirects/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/is-buffer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/is-buffer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/ms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/ms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/qs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/qs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/create-address/address.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-address/address.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/points-addresses/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/points-addresses/address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/points-addresses/address.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/points-addresses/address.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/OrderStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/OrderStatus.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,11 +28,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/points-addresses/address.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="e#122#173#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="73" column="32" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,8 +193,6 @@
         <option value="$PROJECT_DIR$/pages/medical-home/home.js" />
         <option value="$PROJECT_DIR$/components/tab/tab.js" />
         <option value="$PROJECT_DIR$/utils/OrderStatus.js" />
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxss" />
         <option value="$PROJECT_DIR$/pages/create-address/address.wxml" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" />
@@ -203,6 +208,8 @@
         <option value="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxml" />
         <option value="$PROJECT_DIR$/pages/points-addresses/components/points/points.js" />
         <option value="$PROJECT_DIR$/pages/points-addresses/address.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
       </list>
     </option>
   </component>
@@ -234,22 +241,22 @@
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="points-addresses" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="points-addresses" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="points-addresses" type="462c0819:PsiDirectoryNode" />
+              <item name="my-order" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="points" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,12 +406,12 @@
       <workItem from="1569113674435" duration="21821000" />
       <workItem from="1569245754303" duration="1962000" />
       <workItem from="1569248863695" duration="7293000" />
-      <workItem from="1569329529750" duration="3754000" />
+      <workItem from="1569329529750" duration="3951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354740000" />
+    <option name="totallyTimeSpent" value="354937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="194" y="123" width="1193" height="877" extended-state="0" />
@@ -581,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#122#173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/OrderStatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -610,27 +607,10 @@
     <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -801,6 +781,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#122#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
