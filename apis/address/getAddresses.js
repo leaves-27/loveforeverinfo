@@ -6,6 +6,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 		// isMock: true,
 		// isSuccess: true,
 		url: `${apiPrefix}/delivery/getAddresses`,
+		method: 'post',
 		data: {},
 		success: (res)=>{
 			resolve(res);

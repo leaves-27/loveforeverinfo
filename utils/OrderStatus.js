@@ -6,7 +6,7 @@ export default { //
 	'waitPay': 'waitPay',
 	'payed': 'payed',
 	'confirmedOrder': 'confirm',
-	'received': 'reviced',
+	'received': 'received',
 	'userCancle': 'userCancle',
 	'disable': 'disable',
 	'payFailure': 'payFailure',

@@ -1,5 +1,5 @@
 import computedBehavior from 'miniprogram-computed';
-import { router } from '../../utils/util';
+import router from '../../router';
 
 Component({
   behaviors: [computedBehavior],

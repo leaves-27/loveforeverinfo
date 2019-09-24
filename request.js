@@ -15,6 +15,8 @@ request.beforeRequest = function({
 	header,
 	isMock,
 	isSuccess,
+  success,
+  fail
 }, next){
 	const token = wx.getStorageSync('token');
 	const params = {

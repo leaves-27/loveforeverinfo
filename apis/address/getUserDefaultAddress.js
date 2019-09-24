@@ -5,6 +5,7 @@ export default ()=> new Promise( (resolve, reject)=>{
 	request.request({
 		isMock: false,
 		url: `${apiPrefix}/delivery/getUserDefaultAddress`,
+		method: 'post',
 		data: {},
 		success: (res)=>{
 			resolve(res);

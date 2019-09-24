@@ -57,6 +57,8 @@ Page({
   },
   onShow(){
     const newAddress = this.data.newAddress;
+
+    console.log('newAddress:', newAddress);
     if(newAddress){
       const { accountAddress } = newAddress;
       const { id, receiver, phone, province, city, district, addressDetail } = accountAddress;
@@ -83,6 +85,8 @@ Page({
   onLoad: function () {
     const { addressId, type } = getQuery();
 
+    console.log('addressId:', addressId);
+
     Promise.all([ getPoints(), getAddresses()]).then((result)=>{
       const { code, data = [], message } = result[0];
       if (code * 1 !== 1) {
@@ -94,6 +98,7 @@ Page({
       }
 
       const selectedTabId = type === AddressType['keeper'] ? this.data.tabs[0].id : this.data.tabs[1].id;
+
 
       this.setData({
         points: data,

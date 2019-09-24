@@ -39,4 +39,8 @@
 .radio--active{
   background-color: #FE0000;
   border: 1rpx solid #FE0000;
+  background-image: url('https://fm.oneshell.cn/static/icon_selected.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 38rpx 38rpx;
 }

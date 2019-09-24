@@ -20,7 +20,7 @@
     </block>
   </view>
   <points
-    selectedTabId="{{ selectedTabId }}"
+    selectedAddressId="{{ selectedAddressId }}"
     addresses="{{ selectedTabId === tabs[0].id ? points : addresses  }}"
     bind:addressChange="selectedPoint"
   />

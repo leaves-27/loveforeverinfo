@@ -1,6 +1,6 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
-import { getQuery, getCurrentRoute, OrderStatus  } from '../../utils/util';
+import { getQuery  } from '../../utils/util';
 import router from "../../router";
 import { staticPrefix } from '../../config/index'
 
@@ -31,8 +31,7 @@ Page({
     other: '', // 备注
     deliveryId: 1,
     amount: 1,
-    payId: '',
-    selectedAddress: null,
+    payId: '0',
     isOrdering: false,
     isOrdered: false
   },
@@ -47,11 +46,11 @@ Page({
   goAddress(){
     const { id, type } = this.data.address;
     const query = {
-      adressId: id,
+      addressId: id,
       type
     };
     wx.navigateTo({
-      url: `../points-addresses/address?$${qs.stringify(query)}`
+      url: `/pages/points-addresses/address?${qs.stringify(query)}`
     })
   },
   onShow(){
@@ -172,7 +171,7 @@ Page({
   },
   countAdd(){
     this.setData({
-      amount: this.data.amount + 1
+      amount: this.data.amount * 1 + 1
     });
   },
   countDelete(){
@@ -180,7 +179,7 @@ Page({
       return;
     }
     this.setData({
-      amount: this.data.amount - 1
+      amount: this.data.amount * 1 - 1
     });
   },
   deliveryWayChange($event){
@@ -245,10 +244,10 @@ Page({
   },
   onLoad: function () {
     const { id = '0', count } = getQuery();
+
     this.setData({
       amount: count
     });
-
     Promise.all([
       getGoodDetail(id),
       getUserDefaultAddress(),

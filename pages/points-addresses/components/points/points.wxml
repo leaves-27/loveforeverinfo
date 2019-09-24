@@ -14,7 +14,7 @@
         </view>
       </view>
       <view class="point-item_bar">
-        <view class="radio {{ item.id === selectedAddressId ? 'radio--active' : '' }}"/>
+        <view class="radio {{ item.id * 1 === selectedAddressId * 1 ? 'radio--active' : '' }}"/>
       </view>
     </view>
     <view class="boundary"></view>

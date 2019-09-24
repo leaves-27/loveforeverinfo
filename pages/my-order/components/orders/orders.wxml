@@ -18,34 +18,19 @@
           待支付
         </view>
         <view
-          wx:if="{{ item.status === OrderStatus['payed'] }}"
+          wx:elif="{{ item.status === OrderStatus['payed'] }}"
           class="header_bar">
           待确认
         </view>
         <view
-          wx:if="{{ item.status === OrderStatus['confirmedOrder'] }}"
+          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
           class="header_bar">
-          商家已接单
+          配送中
         </view>
         <view
-          wx:if="{{ item.status === OrderStatus['received'] }}"
+          wx:elif="{{ item.status === OrderStatus['received'] }}"
           class="header_bar">
           已签收
-        </view>
-        <view
-          wx:if="{{ item.status === OrderStatus['userCancle'] }}"
-          class="header_bar">
-          已取消
-        </view>
-        <view
-          wx:if="{{ item.status === OrderStatus['disable'] }}"
-          class="header_bar">
-          已取消
-        </view>
-        <view
-          wx:if="{{ item.status === OrderStatus['payFailure'] }}"
-          class="header_bar">
-          支付失败
         </view>
       </view>
       <view class="item_content">
@@ -84,7 +69,7 @@
         <button
             wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
             class="button button--disabled button-interval--small "
-            data-id="{{ item.orderId }}">商家已接单</button>
+            data-id="{{ item.orderId }}">配送中</button>
         <button
             wx:else
             class="button button--red button-interval--small"
