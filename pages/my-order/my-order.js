@@ -1,5 +1,4 @@
 import { getQuery, getOrderStatus } from '../../utils/util.js';
-// import getOrders from '../../../../apis/getOrders.js';
 import getOrders from "../../apis/order/getOrders";
 import cancelOrder from '../../apis/order/cancelOrder';
 import confirmSign from "../../apis/order/confirmSign";

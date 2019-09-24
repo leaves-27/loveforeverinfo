@@ -60,11 +60,13 @@ Component({
       });
     },
     goBuy($event){
-
+      wx.redirectTo({
+        url: `/pages/index/index`
+      });
     },
     goScanDeliveyDetail($event){
       wx.navigateTo({
-        url: `../order-detail/order-detail?$${qs.stringify(query)}`
+        url: `/pages/order-detail/order-detail?$${qs.stringify(query)}`
       })
     },
     goPay,

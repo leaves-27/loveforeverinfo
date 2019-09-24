@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/order/confirmSign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,25 +19,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="564">
+              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-              <folding>
-                <element signature="e#122#173#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,14 +141,14 @@
         <option value="$PROJECT_DIR$/pages/points-addresses/address.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/my-order.wxml" />
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/apis/order/confirmSign.js" />
         <option value="$PROJECT_DIR$/pages/my-order/my-order.js" />
+        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="194" />
+    <option name="x" value="193" />
     <option name="y" value="123" />
     <option name="width" value="1193" />
     <option name="height" value="877" />
@@ -181,11 +165,6 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="apis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
@@ -361,15 +340,15 @@
       <workItem from="1569113674435" duration="21821000" />
       <workItem from="1569245754303" duration="1962000" />
       <workItem from="1569248863695" duration="7293000" />
-      <workItem from="1569329529750" duration="5218000" />
+      <workItem from="1569329529750" duration="5473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356204000" />
+    <option name="totallyTimeSpent" value="356459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="194" y="123" width="1193" height="877" extended-state="0" />
+    <frame x="193" y="123" width="1193" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242246" />
@@ -770,22 +749,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
+    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1011">
+          <caret column="63" selection-start-column="63" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="564">
+          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
           <folding>
-            <element signature="e#122#173#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
