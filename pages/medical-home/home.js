@@ -28,9 +28,9 @@ Page({
     })
   },
   goMyOrder() {
-    wx.navigateTo({
-      url: `../medical-my-order/my-order`
-    })
+    // wx.navigateTo({
+    //   url: `../medical-my-order/my-order`
+    // })
   },
   setUserInfo({ code, data, message }){
     if (code * 1 !== 1) {
