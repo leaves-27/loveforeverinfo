@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apis/order/confirmSign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-order/my-order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-order/my-order.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,49 +24,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/points-addresses/address.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="e#122#173#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="194">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -70,29 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/points-addresses/components/points/points.wxml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/points-addresses/components/points/points.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/points-addresses/address.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="208">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <folding>
+                <element signature="e#122#173#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,9 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/Router.js" />
-        <option value="$PROJECT_DIR$/utils/router.js" />
-        <option value="$PROJECT_DIR$/utils/request.js" />
         <option value="$PROJECT_DIR$/apis/address/createNewAddress.js" />
         <option value="$PROJECT_DIR$/pages/authorize/authorize.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
@@ -209,7 +156,10 @@
         <option value="$PROJECT_DIR$/pages/points-addresses/components/points/points.js" />
         <option value="$PROJECT_DIR$/pages/points-addresses/address.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-order/my-order.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
+        <option value="$PROJECT_DIR$/apis/order/confirmSign.js" />
+        <option value="$PROJECT_DIR$/pages/my-order/my-order.js" />
       </list>
     </option>
   </component>
@@ -231,6 +181,11 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="apis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
@@ -406,12 +361,12 @@
       <workItem from="1569113674435" duration="21821000" />
       <workItem from="1569245754303" duration="1962000" />
       <workItem from="1569248863695" duration="7293000" />
-      <workItem from="1569329529750" duration="3951000" />
+      <workItem from="1569329529750" duration="5218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354937000" />
+    <option name="totallyTimeSpent" value="356204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="194" y="123" width="1193" height="877" extended-state="0" />
@@ -474,9 +429,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/wx.js" />
-    <entry file="file://$PROJECT_DIR$/lib/qrcode.js" />
-    <entry file="file://$PROJECT_DIR$/utils/qrcode.js" />
     <entry file="file://$PROJECT_DIR$/utils/getUrlQuery.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,13 +558,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.wxml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -784,29 +729,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
+    <entry file="file://$PROJECT_DIR$/apis/order/submitOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="630">
+          <caret line="42" column="5" lean-forward="true" selection-end-line="44" />
           <folding>
-            <element signature="e#122#173#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="32" />
+        <state relative-caret-position="346">
+          <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apis/order/confirmSign.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-order/components/orders/orders.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="194">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-order/my-order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="e#122#173#0" expanded="true" />
           </folding>
         </state>
       </provider>

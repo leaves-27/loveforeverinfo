@@ -38,8 +38,11 @@ Component({
     },
   },
   methods: {
-    goDelivery(){
-      return false;
+    confirmSign($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('confirmSign', {
+        id
+      });
     },
     goOrderDetail($event){
       const { id } = $event.currentTarget.dataset;
