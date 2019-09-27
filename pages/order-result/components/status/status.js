@@ -27,7 +27,7 @@ Component({
           desc = '请耐心等待销售代表确认';
           break;
 
-        case OrderStatus['unknow']:
+        case OrderStatus['paying']:
           iconUrl = `${staticPrifix}/status_wait.png`;
           title = '处理中';
           desc = '请耐心等待销售代表确认';

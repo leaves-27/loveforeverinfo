@@ -18,22 +18,24 @@
           待支付
         </view>
         <view
-          wx:elif="{{ item.status === OrderStatus['payed'] && item.pay.wayId === PayWay['wxPay'] }}"
+          wx:if="{{ item.status === OrderStatus['waitPay'] && item.pay.wayId === PayWay['offlinePay'] }}"
+          class="header_bar">
+          线下支付
+        </view>
+        <view
+          wx:elif="{{ item.status === OrderStatus['payed'] }}"
           class="header_bar">
           待确认
         </view>
         <view
-          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] && item.pay.wayId === PayWay['wxPay'] }}"
+          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
           class="header_bar">
           配送中
         </view>
         <view
-          wx:elif="{{ item.status === OrderStatus['received'] && item.pay.wayId === PayWay['wxPay'] }}"
+          wx:elif="{{ item.status === OrderStatus['received'] }}"
           class="header_bar">
           已签收
-        </view>
-        <view wx:else class="header_bar">
-          线下支付
         </view>
       </view>
       <view class="item_content">
@@ -49,24 +51,30 @@
             x{{ item.count }}
           </view>
         </view>
-        <view class="content_bar"  wx:if="{{ item.pay.wayId === PayWay['wxPay'] }}">
-          <view class="fee fee--default">实付款：</view>
-          <view class="fee fee--strong">￥ {{
-            item.good.price * item.count + item.delivery.fee * 1
+        <view class="content_bar">
+          <view
+            wx:if="{{ item.status === OrderStatus['waitPay'] }}"
+            class="fee fee--default">应付款：</view>
+          <view
+            wx:else
+            class="fee fee--default">实付款：</view>
+
+          <view class="fee fee--strong">￥{{
+             item.good.price * item.count + item.delivery.fee * 1
             }}(含运费 ￥{{
               item.delivery.fee
             }})
           </view>
         </view>
       </view>
-      <view class="item_footer" wx:if="{{ item.pay.wayId === PayWay['wxPay'] }}">
+      <view class="item_footer">
         <button
             wx:if="{{ item.status === OrderStatus['waitPay'] }}"
             data-id="{{ item.orderId }}"
             class="button button--default"
             catchtap="cancelOrder">取消订单</button>
         <button
-            wx:if="{{ item.status === OrderStatus['waitPay'] }}"
+            wx:if="{{ item.status === OrderStatus['waitPay'] && item.pay.wayId === PayWay['wxPay'] }}"
             class="button button--red button-interval--small"
             data-id="{{ item.orderId }}"
             catchtap="goPay">支付</button>
