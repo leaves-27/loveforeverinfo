@@ -44,10 +44,10 @@ Page({
     });
   },
   confirmModal($event) {
-    const { id, count } = $event.detail;
+    const { id } = $event.detail;
     const query = {
-      id,
-      count
+      id: this.data.good.id,
+      featureId: id
     };
     this.setData({
       isShowModal: false
@@ -57,11 +57,6 @@ Page({
     });
   },
   onLoad() {
-    // const { q = '' } = options;
-    // if (options.q !== undefined) {
-    //   const { ic = '' } = getUrlQuery(decodeURIComponent(q));
-    // }
-
     this.setData({
       selectedTabId: this.data.tabs[0].id
     });

@@ -7,6 +7,7 @@ import OrderStatus from './OrderStatus';
 import placeholderUrl from './placeholderUrl';
 import tabs from './tabs';
 import getOrderStatus from './getOrderStatus';
+import PayWay from './PayWay';
 
 import goPay from './goPay';
 import goUserHome from './goUserHome';
@@ -27,6 +28,7 @@ module.exports = {
   getOrderStatus,
   goUserHome,
   goPay,
+  PayWay,
 }
 
 

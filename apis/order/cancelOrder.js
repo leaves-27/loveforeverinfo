@@ -1,7 +1,7 @@
 import request from "../../request";
 import { apiPrefix } from "../../config/index";
 
-// 取消订单又分为医药代表取消订单和消费者取消订单
+// 取消订单又分为专员取消订单和消费者取消订单
 export default (id)=>{
 	return new Promise((resolve, reject)=>{
 		request.request({

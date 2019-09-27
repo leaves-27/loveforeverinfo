@@ -6,11 +6,11 @@ export default function(userRole){
 		router.redirectTo({
 			url: `/pages/index/index`
 		});
-	} else if(`${userRole}` === UserRole['doctor']){ // 医生
+	} else if(`${userRole}` === UserRole['doctor']){ // 专家
 		router.redirectTo({
 			url: `/pages/doctor/doctor`
 		})
-	} else if (`${userRole}` === UserRole['medical']){// 医药代表
+	} else if (`${userRole}` === UserRole['medical']){// 专员
 		router.redirectTo({
 			url: `/pages/medical-home/home`
 		});

@@ -4,20 +4,19 @@
     <view class="modal_body">
         <view class="goods">
             <view
-                wx:for="{{ goods }}"
+                wx:for="{{ good.suites }}"
                 wx:key="{{ index }}"
                 class="good-item"
-                data-id="{{ item.id }}"
-                data-count="{{ item.count }}"
+                data-id="{{ item.featureId }}"
                 bind:tap="confirm">
                 <view class="main_main">
-                    <image class="menu-logo" src="{{ item.logoUrl }}" />
+                    <image class="menu-logo" src="{{ item.logo }}" />
                     <view class="menu-intro">
                         <view class="menu-intro_name">
                             {{ item.name }}
                         </view>
                         <view class="menu-intro_price">
-                            {{ item.count }}罐装
+                            {{ item.desc }}
                         </view>
                     </view>
                 </view>

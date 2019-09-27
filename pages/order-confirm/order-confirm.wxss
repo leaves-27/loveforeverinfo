@@ -108,6 +108,7 @@
   color: #919191;
   letter-spacing: 0;
   line-height: 40rpx;
+  flex: 1;
 }
 .order-item_value{
   font-family: PingFangSC-Regular;
@@ -217,6 +218,21 @@ button::after {
 
 .button-interval--small{
   margin-left: 16rpx;
+}
+
+.radio{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 38rpx;
+  border: 1rpx solid #DEDEDE;
+}
+.radio--active{
+  background-color: #FE0000;
+  border: 1rpx solid #FE0000;
+  background-image: url('https://fm.oneshell.cn/static/icon_selected.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 38rpx 38rpx;
 }
 
 

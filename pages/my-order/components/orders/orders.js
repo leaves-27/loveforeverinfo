@@ -1,11 +1,12 @@
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
-import { goPay, OrderStatus } from '../../../../utils/util.js';
+import { goPay, OrderStatus, PayWay } from '../../../../utils/util.js';
 
 Component({
   behaviors: [computedBehavior],
   data: {
-    OrderStatus
+    OrderStatus,
+    PayWay
   },
   properties: {
     orders: {

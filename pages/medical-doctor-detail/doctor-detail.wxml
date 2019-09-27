@@ -37,12 +37,12 @@
     </view>
 
     <view class="column">
-      <view class="column_label">医生职别</view>
+      <view class="column_label">专家职别</view>
       <view class="column_value">{{ level }}</view>
     </view>
 
     <view class="column">
-      <view class="column_label">医生的二维码</view>
+      <view class="column_label">专家的二维码</view>
       <view class="column_value" bind:tap="showModal">
         <view class="qr">
           <image class="qr_icon" src="{{ qrIconUrl }}" />

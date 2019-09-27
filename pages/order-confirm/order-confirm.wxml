@@ -17,7 +17,7 @@
   <view class="order-confirm_body">
     <view class="good content_main">
       <view class="main_main">
-        <image class="menu-logo" src="{{ good.logoUrl }}" />
+        <image class="menu-logo" src="{{ good.logo }}" />
         <view class="menu-intro">
           <view class="menu-intro_name">{{ good.name }}</view>
           <view class="menu-intro_price">{{ good.price }}元</view>
@@ -44,6 +44,7 @@
         <view class="order-item_key">备注</view>
         <view class="order-item_value">
           {{ other }}
+          <input type="string" value="" bindblur="inputChange"/>
         </view>
       </view>
     </view>
@@ -55,7 +56,7 @@
         <view
           wx:for="{{ payWays }}"
           wx:key="{{ payId }}"
-          class="order-item pay-item {{ item.id === payId ? 'pay-item--active' : ''}}"
+          class="order-item pay-item"
           data-id="{{ item.id }}"
           bindtap="payWayChange">
           <image class="order-item_icon" src="{{ item.iconUrl }}" />
@@ -64,15 +65,16 @@
             class="order-item_key">
             {{ item.name }}
             <view class="order-item_key--strong">
-              请与医药代表确认
+              请与专员确认
             </view>
           </view>
           <view
             wx:else
             class="order-item_key">{{ item.name }}</view>
+          <view class="radio {{ item.id === payId ? 'radio--active' : '' }}"></view>
         </view>
       </view>
-      <view class="pay_footer">请与医药代表确认后再使用线下支付，否则无法正常下单</view>
+      <view class="pay_footer">请与专员确认后再使用线下支付，否则无法正常下单</view>
     </view>
   </view>
   <view class="order-confirm_footer">

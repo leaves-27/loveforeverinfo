@@ -14,7 +14,6 @@ import getPayWays from '../../apis/getPayWays';
 import submitOrder from "../../apis/order/submitOrder";
 import pay from "../../apis/order/pay";
 
-
 Page({
   behaviors: [computedBehavior],
   data: {
@@ -28,7 +27,7 @@ Page({
     payWays: [],
     iconAddressUrl: `${staticPrefix}/address_selected.png`,
     arrowRightUrl: `${staticPrefix}/arrow_right.png`,
-    other: '', // 备注
+    memo: '', // 备注
     deliveryId: 1,
     amount: 1,
     payId: '0',
@@ -61,6 +60,12 @@ Page({
       });
     }
   },
+  inputChange(event){
+    const { value } = event.detail;
+    this.setData({
+      memo: value
+    })
+  },
   submitOrder(){
     if (!this.data.payId){
       wx.showToast({
@@ -89,15 +94,17 @@ Page({
     this.setData({
       isOrdering: true
     });
+    const { featureId = '', id: goodId } = getQuery();
 
     // 提交订单成功后
     submitOrder({
-      goodId: this.data.good.id,
+      goodId,
       deliveryWayId: this.data.deliveryId,
       payWayId: this.data.payId,
       receiveAddressId: id,
+      featureId,
       count: this.data.amount,
-      memo: this.data.other
+      memo: this.data.memo,
     }).then((result)=>{
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
       const { code, data = {}, message } = result;
@@ -199,8 +206,15 @@ Page({
     if (code * 1  !== 1) {
       throw new Error(message || '请求错误');
     }
+    const { suites = [] } = data;
+    const { featureId = '' } = getQuery();
+
+    const suite = suites.find((item)=>{
+      return item.featureId === featureId;
+    });
+
     this.setData({
-      good: data
+      good: suite
     });
   },
   setAddresses(result = {}){
@@ -243,11 +257,8 @@ Page({
     });
   },
   onLoad: function () {
-    const { id = '0', count } = getQuery();
+    const { id = '0' } = getQuery();
 
-    this.setData({
-      amount: count
-    });
     Promise.all([
       getGoodDetail(id),
       getUserDefaultAddress(),

@@ -9,7 +9,8 @@ export default ({
 	payWayId = '',
   receiveAddressId = '',
   memo = '',
-	inviteCode = ''
+	inviteCode = '',
+  featureId = ''
 })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
@@ -22,7 +23,8 @@ export default ({
 			payWayId,
 			receiveAddressId,
 			memo,
-			mgCode: inviteCode
+			mgCode: inviteCode,
+			featureId
 		},
 		success: (res)=>{
 			resolve(res);

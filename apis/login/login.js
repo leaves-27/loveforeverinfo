@@ -28,12 +28,12 @@ import request from "../../request";
 // 	}];
 // 	const code = 1;
 //
-// 	if (phone === "18857152332"){ //医药代表
+// 	if (phone === "18857152332"){ //专员
 // 		return {
 // 			code,
 // 			data: arr[2]
 // 		};
-// 	} else if(phone === "18857152331"){ // 医生
+// 	} else if(phone === "18857152331"){ // 专家
 // 		return {
 // 			code,
 // 			data: arr[1]

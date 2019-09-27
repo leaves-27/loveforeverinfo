@@ -16,7 +16,7 @@ export default (id)=> new Promise( (resolve, reject)=>{
 			// resolve({
 			// 	code: 1,
 			// 	data: {
-			// 		name: '张医生',
+			// 		name: '张专家',
 			// 		phone: '1873327891',
 			// 		logoUrl: placeholderUrl,
 			// 		hospital: '市妇女儿童医院',
