@@ -49,11 +49,11 @@ import request from "../../request";
 // 	}
 // };
 
-export const bindPhoneByWxBindPhone = ({ detail })=> new Promise( (resolve, reject)=>{
+export const bindPhoneByWx = ({ detail })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrefix}/account/bindphone`,
+		url: `${apiPrefix}/account/bindPhoneByWx`,
 		data: {
 			detail
 		},
