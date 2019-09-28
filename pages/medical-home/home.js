@@ -2,6 +2,7 @@ import qs from 'qs';
 import { staticPrefix } from "../../config/index";
 import getUserInfo from '../../apis/user/getUserInfo';
 import getMyDoctors from "../../apis/user/getMyDoctors";
+import { bindPhone } from "../../utils/util";
 
 Page({
   data: {
@@ -13,11 +14,7 @@ Page({
     doctors: [],
     qrUrl: `${staticPrefix}/qr.png`,
   },
-  bindPhone(){
-    wx.navigateTo({
-      url: `../bind-phone/bind-phone`
-    });
-  },
+  bindPhone,
   goMyQr() {
     const query = {
       name: this.data.name,

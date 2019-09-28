@@ -15,6 +15,7 @@ import goPay from './goPay';
 import goBuy from './goBuy';
 import goUserHome from './goUserHome';
 import confirmSign from './confirmSign';
+import bindPhone from './bindPhone';
 /**跟业务强相关的一些状态 end ***/
 
 module.exports = {
@@ -38,6 +39,7 @@ module.exports = {
   goUserHome,
   goPay,
   confirmSign,
+  bindPhone
 };
 
 

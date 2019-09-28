@@ -3,6 +3,7 @@
 import getUserInfo from '../../apis/user/getUserInfo';
 import getConsumerOrderFlow from "../../apis/user/getConsumerOrderFlow";
 import getConsumers from "../../apis/user/getConsumers";
+import { bindPhone } from "../../utils/util";
 
 Page({
   data: {
@@ -20,11 +21,7 @@ Page({
     consumers: [],
     selectedTabId: '01'
   },
-  bindPhone(){
-    wx.navigateTo({
-      url: `../bind-phone/bind-phone`
-    });
-  },
+  bindPhone,
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
     const { id } = item;
