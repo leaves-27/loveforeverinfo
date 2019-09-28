@@ -24,7 +24,7 @@ Page({
 				});
 			} else {
 				const { role = '' } = data;
-				if (role){
+				if (!!role){
 					wx.showToast({
 						title: '绑定成功'
 					});

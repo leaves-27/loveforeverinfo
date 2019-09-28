@@ -1,6 +1,7 @@
 import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
 import { getKvs, OrderStatus } from '../../../../utils/util.js';
+import router from '../../../../router';
 
 Component({
   behaviors: [computedBehavior],
@@ -32,7 +33,7 @@ Component({
       const query = {
         id
       };
-      wx.navigateTo({
+      router.navigateTo({
         url: `/pages/medical-order-detail/order-detail?$${qs.stringify(query)}`
       })
     },
@@ -41,8 +42,8 @@ Component({
       const query = {
         id
       };
-      wx.navigateTo({
-        url: `../medical-order-progress/order-progress?$${qs.stringify(query)}`
+      router.navigateTo({
+        url: `/pages/medical-order-progress/order-progress?$${qs.stringify(query)}`
       });
     }
   }

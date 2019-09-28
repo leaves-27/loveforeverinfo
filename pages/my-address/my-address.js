@@ -2,6 +2,7 @@ import { getQuery } from '../../utils/util.js';
 import getAddresses from "../../apis/address/getAddresses";
 import updateDefaultAddress from '../../apis/address/updateDefaultAddress';
 import getUserDefaultAddress from "../../apis/address/getUserDefaultAddress";
+import router from '../../router';
 
 Page({
   data: {
@@ -9,7 +10,7 @@ Page({
     selectedAddressId: ''
   },
   goCreateAddress(){
-    wx.navigateTo({
+    router.navigateTo({
       url: `../create-address/address`
     })
   },

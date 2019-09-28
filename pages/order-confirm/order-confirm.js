@@ -44,7 +44,7 @@ Page({
       addressId: id,
       type
     };
-    wx.navigateTo({
+    router.navigateTo({
       url: `/pages/points-addresses/address?${qs.stringify(query)}`
     })
   },
@@ -162,7 +162,7 @@ Page({
             const query = {
               id: OrderStatus['all']
             };
-            router.redirectTo({
+            router.navigateTo({
               url: `/pages/my-order/my-order?$${qs.stringify(query)}`
             });
           }

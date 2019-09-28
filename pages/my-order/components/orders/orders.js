@@ -27,8 +27,6 @@ Component({
       this.data.orders.forEach((item)=>{
         if (this.data.selectedTabId === OrderStatus['all']){
           orders.push(item);
-        } else if ((this.data.selectedTabId === OrderStatus['confirmedOrder']) && (item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['payed'])){
-          orders.push(item);
         } else if(this.data.selectedTabId === item.status){
           orders.push(item);
         }

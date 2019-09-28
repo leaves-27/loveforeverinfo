@@ -23,7 +23,12 @@
           </view>
         </view>
         <view
-          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['payed'] }}"
+          wx:elif="{{ item.status === OrderStatus['payed'] }}"
+          class="header_bar">
+          待商家确认订单
+        </view>
+        <view
+          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
           class="header_bar">
           配送中
         </view>
@@ -91,7 +96,7 @@
             支付
         </button>
         <button
-            wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
+            wx:elif="{{ item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['payed'] }}"
             class="button button--red button-interval--small "
             data-id="{{ item.orderId }}"
             catchtap="confirmSign">签收</button>

@@ -1,9 +1,9 @@
 import qs from 'qs';
-import {OrderStatus, getOrderStatus, tabs, goBindPhone } from '../../utils/util';
+import { getOrderStatus, tabs } from '../../utils/util';
 import { staticPrefix } from '../../config/index'
 
-// import getUserInfo from '../../apis/getUserInfo';
 import getUserInfo from '../../apis/user/getUserInfo';
+import router from '../../router';
 
 Page({
   data: {
@@ -22,8 +22,8 @@ Page({
       name: this.data.name,
       userLogoUrl: this.data.userLogoUrl
     };
-    wx.navigateTo({
-      url: `../my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
+    router.navigateTo({
+      url: `/pages/my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
   },
   goMyOrder($event){
@@ -31,13 +31,13 @@ Page({
     const query = {
       id
     };
-    wx.navigateTo({
-      url: `../my-order/my-order?$${qs.stringify(query)}`
+    router.navigateTo({
+      url: `/pages/my-order/my-order?$${qs.stringify(query)}`
     })
   },
   goMyAdress(){
-    wx.navigateTo({
-      url: `../my-address/my-address`
+    router.navigateTo({
+      url: `/pages/my-address/my-address`
     })
   },
   onLoad(){

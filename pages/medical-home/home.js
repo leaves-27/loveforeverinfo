@@ -2,7 +2,8 @@ import qs from 'qs';
 import { staticPrefix } from "../../config/index";
 import getUserInfo from '../../apis/user/getUserInfo';
 import getMyDoctors from "../../apis/user/getMyDoctors";
-import { goBindPhone } from "../../utils/util";
+import router from '../../router';
+
 
 Page({
   data: {
@@ -19,15 +20,11 @@ Page({
       name: this.data.name,
       userLogoUrl: this.data.logoUrl
     };
-    wx.navigateTo({
-      url: `../medical-my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
+    router.navigateTo({
+      url: `/pages/medical-my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
     })
   },
-  goMyOrder() {
-    // wx.navigateTo({
-    //   url: `../medical-my-order/my-order`
-    // })
-  },
+  goMyOrder() {},
   setUserInfo({ code, data, message }){
     if (code * 1 !== 1) {
       throw new Error(message || '请求错误');

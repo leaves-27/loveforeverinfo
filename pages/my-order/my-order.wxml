@@ -28,5 +28,6 @@
     bind:confirmSign="confirmSign"
     bind:payOrder="goPay"
     bind:reBuy="goBuy"
+    bind:reOrder="goBuy"
   />
 </view>

@@ -51,14 +51,13 @@ Page({
     })
   },
   goCreateAddress(){
-    wx.navigateTo({
+    router.navigateTo({
       url: `../create-address/address`
     })
   },
   onShow(){
     const newAddress = this.data.newAddress;
 
-    console.log('newAddress:', newAddress);
     if(newAddress){
       const { accountAddress } = newAddress;
       const { id, receiver, phone, province, city, district, addressDetail } = accountAddress;

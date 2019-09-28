@@ -1,7 +1,6 @@
 import qs from "qs";
 import {
   getQuery,
-  getNewArrAfterSpliceSpecialItem,
   getOrderStatus,
   confirmSign,
   goBuy,
@@ -9,6 +8,7 @@ import {
 } from '../../utils/util.js';
 import getOrders from "../../apis/order/getOrders";
 import cancelOrder from '../../apis/order/cancelOrder';
+import router from '../../router';
 
 Page({
   data: {
@@ -54,9 +54,7 @@ Page({
           cancelOrder(id).then((result)=>{
             const { code } = result;
             if (code * 1 === 1) {
-              _self.setData({
-                orders: getNewArrAfterSpliceSpecialItem(_self.data.orders, id)
-              });
+              _self.fetchOrders();
             } else{
               wx.showToast({
                 icon: 'none',
@@ -77,10 +75,7 @@ Page({
   confirmSign($event){
     const { id } = $event.detail;
     confirmSign(id, ()=>{
-      // 将订单从当前页面删除，并刷新结果列表
-      this.setData({
-        orders: getNewArrAfterSpliceSpecialItem(this.data.orders, id)
-      });
+      this.fetchOrders();
     });
   },
   goOrderDetail($event){
@@ -88,7 +83,7 @@ Page({
     const query = {
       id
     };
-    wx.navigateTo({
+    router.navigateTo({
       url: `../order-detail/order-detail?$${qs.stringify(query)}`
     })
   },

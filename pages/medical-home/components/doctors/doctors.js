@@ -1,5 +1,6 @@
 import qs from "qs";
 import {staticPrefix} from "../../../../config/index";
+import router from '../../../../router';
 
 Component({
   properties: {
@@ -18,8 +19,8 @@ Component({
       const query = {
         id,
       };
-      wx.navigateTo({
-        url: `../medical-doctor-detail/doctor-detail?$${qs.stringify(query,  { encode: false })}`
+      router.navigateTo({
+        url: `/pages/medical-doctor-detail/doctor-detail?$${qs.stringify(query,  { encode: false })}`
       })
     }
   }
