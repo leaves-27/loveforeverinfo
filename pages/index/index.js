@@ -68,6 +68,7 @@ Page({
 
       this.setData({
         good: data[0],
+        selectedTabIndex: 0
       })
     });
   }
