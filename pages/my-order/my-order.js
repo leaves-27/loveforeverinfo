@@ -50,7 +50,7 @@ Page({
       const { code } = result;
       if (code * 1 === 1) {
         this.setData({
-          orders: getNewArrAfterSpliceSpecialItem(this.data.orders)
+          orders: getNewArrAfterSpliceSpecialItem(this.data.orders, id)
         });
       } else{
         wx.showToast({
@@ -67,10 +67,11 @@ Page({
     })
   },
   confirmSign($event){
-    confirmSign($event, ()=>{
+    const { id } = $event.detail;
+    confirmSign(id, ()=>{
       // 将订单从当前页面删除，并刷新结果列表
       this.setData({
-        orders: getNewArrAfterSpliceSpecialItem(this.data.orders)
+        orders: getNewArrAfterSpliceSpecialItem(this.data.orders, id)
       });
     });
   },

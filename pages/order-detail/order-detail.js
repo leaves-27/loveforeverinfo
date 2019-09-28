@@ -29,7 +29,8 @@ Page({
   goPay,
   goBuy,
   confirmSign($event){
-    confirmSign($event, ()=>{
+    const { id } = $event.detail;
+    confirmSign(id, ()=>{
       this.setData({
         order: Object.assign({}, this.data.order, {
           status: OrderStatus['received']

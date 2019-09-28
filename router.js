@@ -14,8 +14,14 @@ router.beforeCreate = function(url, next){
 	if (route){
 		const currentUserRole = wx.getStorageSync('userRole');
 		const { role = [] } = route;
-		const index = role.indexOf(`${currentUserRole}`);
-		if (role.length === 0 || index > -1){
+
+		if(role.length === 0){ // 所有人均可访问的页面
+			next();
+			return;
+		}
+
+		// 获取到相应授权且授权
+		if (!!currentUserRole && role.indexOf(`${currentUserRole}`) > -1){
 			next();
 			return;
 		}

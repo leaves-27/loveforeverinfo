@@ -34,6 +34,8 @@ Page({
   },
   jump(role, inviteCode){
     const { url = '' } = getQuery();
+    console.log('============role:', role);
+    console.log('============!!role:', !!role);
     if (!!url){
       router.navigateTo({
         url,

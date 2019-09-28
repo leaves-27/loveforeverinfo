@@ -1,7 +1,6 @@
 import confirmSign from "../apis/order/confirmSign";
 
-export default function ($event, callback){
-	const { id } = $event.detail;
+export default function (id, callback){
 	wx.showModal({
 		content: '你确认签收吗?',
 		success(){
