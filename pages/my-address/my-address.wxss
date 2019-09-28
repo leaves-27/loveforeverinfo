@@ -1,6 +1,9 @@
 page{
   background-color: #F3F3F3;
 }
+.my-address{
+  padding-bottom: 40rpx;
+}
 
 .button{
   display: block;

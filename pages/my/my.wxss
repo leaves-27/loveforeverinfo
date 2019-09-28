@@ -1,3 +1,6 @@
+.container{
+    padding-bottom: 20rpx;
+}
 .my-info{
     height: 335rpx;
     background-image: -webkit-linear-gradient(left, #D02128, #FE0000);
