@@ -23,12 +23,7 @@
           </view>
         </view>
         <view
-          wx:elif="{{ item.status === OrderStatus['payed'] }}"
-          class="header_bar">
-          待确认
-        </view>
-        <view
-          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] }}"
+          wx:elif="{{ item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['payed'] }}"
           class="header_bar">
           配送中
         </view>
@@ -36,6 +31,21 @@
           wx:elif="{{ item.status === OrderStatus['received'] }}"
           class="header_bar">
           已签收
+        </view>
+        <view
+          wx:elif="{{ item.status === OrderStatus['userCancle'] }}"
+          class="header_bar">
+          已取消
+        </view>
+        <view
+          wx:elif="{{ item.status === OrderStatus['disable'] }}"
+          class="header_bar">
+          商家已取消
+        </view>
+        <view
+          wx:elif="{{ item.status === OrderStatus['payFailure'] }}"
+          class="header_bar">
+          支付失败
         </view>
       </view>
       <view class="item_content">
@@ -85,11 +95,18 @@
             class="button button--red button-interval--small "
             data-id="{{ item.orderId }}"
             catchtap="confirmSign">签收</button>
+
         <button
-            wx:else
+            wx:elif="{{ item.status === OrderStatus['received'] }}"
             class="button button--red button-interval--small"
             data-id="{{ item.orderId }}"
-            catchtap="reBuy">{{ item.status === OrderStatus['received'] ? '再次购买' : '重新下单' }}</button>
+            catchtap="reBuy">再次购买</button>
+
+        <button
+           wx:elif="{{ item.status === OrderStatus['userCancle'] || item.status === OrderStatus['disable'] || item.status === OrderStatus['payFailure'] }}"
+            class="button button--red button-interval--small"
+            data-id="{{ item.orderId }}"
+            catchtap="reOrder">重新下单</button>
       </view>
     </view>
   </view>

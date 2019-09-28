@@ -10,5 +10,6 @@ export default { //
 	'userCancle': 'userCancle',
 	'disable': 'disable',
 	'payFailure': 'payFailure',
+	'paying': 'paying',
 	'all': 'all'
 };

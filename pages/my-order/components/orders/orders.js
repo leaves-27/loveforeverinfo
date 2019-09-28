@@ -25,12 +25,12 @@ Component({
     newOrders(){
       const orders = [];
       this.data.orders.forEach((item)=>{
-        if (item.status === OrderStatus['waitPay'] || item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['received']){
-          if (this.data.selectedTabId === OrderStatus['all']){
-            orders.push(item);
-          } else if(this.data.selectedTabId === item.status){
-            orders.push(item);
-          }
+        if (this.data.selectedTabId === OrderStatus['all']){
+          orders.push(item);
+        } else if ((this.data.selectedTabId === OrderStatus['confirmedOrder']) && (item.status === OrderStatus['confirmedOrder'] || item.status === OrderStatus['payed'])){
+          orders.push(item);
+        } else if(this.data.selectedTabId === item.status){
+          orders.push(item);
         }
       });
 
