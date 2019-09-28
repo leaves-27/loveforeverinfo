@@ -6,6 +6,10 @@ Component({
     text: {
       type: String,
       value: ''
+    },
+    className: {
+      type: String,
+      value: ''
     }
   }
 })

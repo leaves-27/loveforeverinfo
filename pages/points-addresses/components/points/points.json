@@ -1,3 +1,6 @@
 {
+  "usingComponents": {
+    "exception": "../../../../components/exception/exception"
+  },
   "component": true
 }

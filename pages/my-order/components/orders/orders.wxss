@@ -119,4 +119,7 @@ button::after {
 .fee--strong{
   color: #262626;
 }
+.empty{
+  background-color: #FFFFFF;
+}
 
