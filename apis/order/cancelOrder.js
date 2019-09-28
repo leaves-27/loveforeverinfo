@@ -8,15 +8,12 @@ export default (id)=>{
 			// isMock: true,
 			// isSuccess: true,
 			url: `${apiPrefix}/order/cancelOrder`,
+			method: 'post',
 			data: {
 				orderId: id
 			},
 			success: (res)=>{
 				resolve(res);
-				// resolve({
-				// 	code: 1,
-				// 	data: {}
-				// });
 			},
 			fail: (error)=>{
 				reject(error);

@@ -1,4 +1,3 @@
-import {placeholderUrl } from "../../utils/util";
 import { apiPrefix } from "../../config/index";
 import request from "../../request";
 
@@ -16,6 +15,7 @@ export default ({
 		// isMock: true,
 		// isSuccess: true,
 		url: `${apiPrefix}/order/submitOrder`,
+		method: 'post',
 		data: {
 			goodId,
 			count,
@@ -28,16 +28,6 @@ export default ({
 		},
 		success: (res)=>{
 			resolve(res);
-			// resolve({
-			// 	code: 1,
-			// 	data: {
-			// 		payId: '',
-			// 		signedWay: '',
-			// 		signed: '',
-			// 		r: '',
-			// 		timestamp: '',
-			// 	}
-			// })
 		},
 		fail: (error)=>{
 			reject(error);

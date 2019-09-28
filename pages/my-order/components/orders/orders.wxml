@@ -6,7 +6,7 @@
       wx:for="{{ newOrders }}"
       wx:key="{{ item.id }}"
       data-id="{{ item.orderId }}"
-      bindtap="goOrderDetail"
+      bindtap="clickOrderItem"
       class="item">
       <view class="item_header">
         <view class="header_main">
@@ -77,7 +77,7 @@
             wx:if="{{ item.status === OrderStatus['waitPay'] && item.pay.wayId === PayWay['wxPay'] }}"
             class="button button--red button-interval--small"
             data-id="{{ item.orderId }}"
-            catchtap="goOrderDetail">
+            catchtap="payOrder">
             支付
         </button>
         <button
@@ -89,7 +89,7 @@
             wx:else
             class="button button--red button-interval--small"
             data-id="{{ item.orderId }}"
-            catchtap="goBuy">{{ item.status === OrderStatus['received'] ? '再次购买' : '重新下单' }}</button>
+            catchtap="reBuy">{{ item.status === OrderStatus['received'] ? '再次购买' : '重新下单' }}</button>
       </view>
     </view>
   </view>

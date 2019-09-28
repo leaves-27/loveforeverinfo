@@ -6,6 +6,7 @@ export default (id, toQueryWxOrder = false)=> new Promise( (resolve, reject)=>{
 		// isMock: true,
 		// isSuccess: true,
 		url: `${apiPrefix}/order/getOrderDetail`,
+		method: 'post',
 		data: {
 			orderId: id,
 			toQueryWxOrder

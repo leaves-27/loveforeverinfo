@@ -1,6 +1,5 @@
-import qs from "qs";
 import computedBehavior from 'miniprogram-computed';
-import { goPay, OrderStatus, PayWay } from '../../../../utils/util.js';
+import { OrderStatus, PayWay } from '../../../../utils/util.js';
 
 Component({
   behaviors: [computedBehavior],
@@ -45,30 +44,35 @@ Component({
         id
       });
     },
-    goOrderDetail($event){
-      const { id } = $event.currentTarget.dataset;
-      const query = {
-        id
-      };
-      wx.navigateTo({
-        url: `../order-detail/order-detail?$${qs.stringify(query)}`
-      })
-    },
     cancelOrder($event){
       const { id } = $event.currentTarget.dataset;
       this.triggerEvent('cancelOrder', {
         id
       });
     },
-    goBuy($event){
-      wx.redirectTo({
-        url: `/pages/index/index`
+    payOrder($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('payOrder', {
+        id
       });
     },
-    goScanDeliveyDetail($event){
-      wx.navigateTo({
-        url: `/pages/order-detail/order-detail?$${qs.stringify(query)}`
-      })
-    }
+    reBuy($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('reBuy', {
+        id
+      });
+    },
+    reOrder($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('reOrder', {
+        id
+      });
+    },
+    orderDetail($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('clickOrderItem', {
+        id
+      });
+    },
   }
 })

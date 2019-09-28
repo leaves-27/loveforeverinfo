@@ -1,13 +1,14 @@
 import request from "../../request";
 import { apiPrefix } from "../../config/index";
 
-export default (id)=> new Promise( (resolve, reject)=>{
+export default ({ orderId = '' })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
-		url: `${apiPrefix}/order/fetchPayInfo`,
+		url: `${apiPrefix}/pay/prepare`,
+		method: 'post',
 		data: {
-			orderId: id
+			orderId
 		},
 		success: (res)=>{
 			resolve(res);

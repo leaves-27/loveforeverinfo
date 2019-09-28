@@ -23,7 +23,10 @@
     selectedTabId="{{ selectedTabId }}"
     tabs="{{ tabs }}"
     orders="{{ orders }}"
+    bind:clickOrderItem="goOrderDetail"
     bind:cancelOrder="cancelOrder"
     bind:confirmSign="confirmSign"
+    bind:payOrder="goPay"
+    bind:reBuy="goBuy"
   />
 </view>

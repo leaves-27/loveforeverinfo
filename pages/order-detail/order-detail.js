@@ -1,7 +1,5 @@
 import { staticPrefix } from '../../config/index'
-import { goPay, getQuery, OrderStatus } from '../../utils/util';
-
-// import getOrderDetail from '../../apis/getOrderDetail.js';
+import { getQuery, OrderStatus, goPay, goBuy, confirmSign } from '../../utils/util';
 import getOrderDetail from "../../apis/order/getOrderDetail";
 
 Page({
@@ -29,10 +27,14 @@ Page({
     })
   },
   goPay,
-  goBuy(){
-
-  },
-  goSign(){
-
+  goBuy,
+  confirmSign($event){
+    confirmSign($event, ()=>{
+      this.setData({
+        order: Object.assign({}, this.data.order, {
+          status: OrderStatus['received']
+        })
+      });
+    });
   }
 })
