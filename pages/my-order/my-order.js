@@ -84,7 +84,7 @@ Page({
       id
     };
     router.navigateTo({
-      url: `../order-detail/order-detail?$${qs.stringify(query)}`
+      url: `/pages/order-detail/order-detail?$${qs.stringify(query)}`
     })
   },
   goBuy,

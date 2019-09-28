@@ -1,11 +1,8 @@
-import { getQuery, navigateBack } from '../../utils/util.js';
-// import getOrders from '../../apis/getOrders.js';
-// import submitPoint from '../../apis/submitPoint';
-// import submitAddress from '../../apis/submitAddress';
-// import submitAddress from '../../apis/address/submitAddress';
+import { getQuery, navigateBack, clone } from '../../utils/util.js';
 import getPoints from "../../apis/address/getTakeGoodPoints";
 import getAddresses from '../../apis/address/getAddresses';
 import AddressType from '../../utils/AddressType'
+import router from '../../router';
 
 Page({
   data: {
@@ -52,7 +49,7 @@ Page({
   },
   goCreateAddress(){
     router.navigateTo({
-      url: `../create-address/address`
+      url: `/pages/create-address/address`
     })
   },
   onShow(){
@@ -62,29 +59,27 @@ Page({
       const { accountAddress } = newAddress;
       const { id, receiver, phone, province, city, district, addressDetail } = accountAddress;
 
-      const currentAddresses = this.data.addresses;
+      const currentAddresses = clone(this.data.addresses);
 
       const index = currentAddresses.findIndex((item)=>{
         return item.id === id;
       });
 
       if (index === -1){
-        const addresses = currentAddresses.concat([{
+        currentAddresses.unshift({
           id,
           name: receiver,
           phone,
           address: `${province}${city}${district}${addressDetail}`
-        }]);
+        });
         this.setData({
-          addresses,
+          addresses: currentAddresses
         })
       }
     }
   },
   onLoad: function () {
     const { addressId, type } = getQuery();
-
-    console.log('addressId:', addressId);
 
     Promise.all([ getPoints(), getAddresses()]).then((result)=>{
       const { code, data = [], message } = result[0];

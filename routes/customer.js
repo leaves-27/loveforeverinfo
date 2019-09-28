@@ -24,4 +24,7 @@ export default [{
 }, {
 	path: '/pages/my-address/my-address',
 	role: [UserRole['customer']]
+}, {
+	path: '/pages/points-addresses/address',
+	role: [UserRole['customer']]
 }]

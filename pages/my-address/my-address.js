@@ -11,7 +11,7 @@ Page({
   },
   goCreateAddress(){
     router.navigateTo({
-      url: `../create-address/address`
+      url: `/pages/create-address/address`
     })
   },
   addressChange($event){
