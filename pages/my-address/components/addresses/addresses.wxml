@@ -3,6 +3,7 @@
     wx:if="{{ newAddresses.length > 0 }}">
     <view
       wx:for="{{ newAddresses }}"
+      wx:key="{{ index }}"
       class="addresses-item">
       <view class="item_main">
         <view class="name-phone">

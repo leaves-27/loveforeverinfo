@@ -19,6 +19,7 @@ Page({
     this.setData({
       selectedAddressId: id
     });
+    console.log('====test:', id);
     updateDefaultAddress({ addressId: id }).then((result)=>{
       const { code, data = {}, message } = result;
       if (code * 1 !== 1) {
@@ -48,7 +49,7 @@ Page({
 
       if (index === -1){
         const addresses = currentAddresses.concat([{
-          id,
+          id: `${id}`,
           name: receiver,
           phone,
           address: `${province}${city}${district}${addressDetail}`
