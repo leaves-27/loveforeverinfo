@@ -2,7 +2,7 @@ import qs from 'qs';
 import { staticPrefix } from "../../config/index";
 import getUserInfo from '../../apis/user/getUserInfo';
 import getMyDoctors from "../../apis/user/getMyDoctors";
-import { bindPhone } from "../../utils/util";
+import { goBindPhone } from "../../utils/util";
 
 Page({
   data: {
@@ -14,7 +14,6 @@ Page({
     doctors: [],
     qrUrl: `${staticPrefix}/qr.png`,
   },
-  bindPhone,
   goMyQr() {
     const query = {
       name: this.data.name,

@@ -4,7 +4,8 @@ import { bindPhoneByWxBindPhone } from '../../apis/user/bindPhone';
 Page({
 	bindPhone($event){
 		const { detail, errMsg = '' } = $event;
-		if (errMsg){
+		console.log('$event:', $event);
+		if (!!errMsg){
 			wx.showToast({
 				icon:'none',
 				title: errMsg

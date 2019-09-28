@@ -6,7 +6,7 @@
         <image class="logo" src="{{ logoUrl }}" />
         <view class="private-text">
           <view class="name">{{ name }} | 高级代表</view>
-          <view class="phone" bind:tap="bindPhone">{{ phone }}</view>
+          <view class="phone">{{ phone }}</view>
         </view>
       </view>
       <view class="main_bar">

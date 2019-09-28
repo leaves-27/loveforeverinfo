@@ -6,7 +6,7 @@
         <image class="logo" src="{{ userLogoUrl }}" />
         <view class="private-text">
           <view class="name">{{ name }}</view>
-          <view class="phone" bind:tap="bindPhone">{{ phone }}</view>
+          <view class="phone">{{ phone }}</view>
         </view>
       </view>
     </view>

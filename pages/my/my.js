@@ -1,5 +1,5 @@
 import qs from 'qs';
-import {OrderStatus, getOrderStatus, tabs, bindPhone } from '../../utils/util';
+import {OrderStatus, getOrderStatus, tabs, goBindPhone } from '../../utils/util';
 import { staticPrefix } from '../../config/index'
 
 // import getUserInfo from '../../apis/getUserInfo';
@@ -40,7 +40,6 @@ Page({
       url: `../my-address/my-address`
     })
   },
-  bindPhone,
   onLoad(){
     getUserInfo().then((result)=>{
       const { code, data, message } = result;

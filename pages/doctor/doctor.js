@@ -3,7 +3,7 @@
 import getUserInfo from '../../apis/user/getUserInfo';
 import getConsumerOrderFlow from "../../apis/user/getConsumerOrderFlow";
 import getConsumers from "../../apis/user/getConsumers";
-import { bindPhone } from "../../utils/util";
+import { goBindPhone } from "../../utils/util";
 
 Page({
   data: {
@@ -21,7 +21,6 @@ Page({
     consumers: [],
     selectedTabId: '01'
   },
-  bindPhone,
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
     const { id } = item;

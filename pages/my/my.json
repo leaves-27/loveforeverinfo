@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "bind-phone-button": "../../components/bind-phone-button/bind-phone-button",
     "tabs": "../../components/tab/tab"
   },
   "navigationBarTitleText": "我的",

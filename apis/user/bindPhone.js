@@ -49,7 +49,7 @@ import request from "../../request";
 // 	}
 // };
 
-export const bindPhoneByWx = ({ detail })=> new Promise( (resolve, reject)=>{
+export const bindPhoneByWxBindPhone = ({ detail })=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,

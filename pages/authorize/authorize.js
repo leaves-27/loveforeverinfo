@@ -2,7 +2,7 @@ import qs from 'qs';
 import getTempCredentials from '../../apis/login/getTempCredentials';
 import { loginByWxTempCode } from '../../apis/login/login';
 import { postUserInfo } from '../../apis/login/postUserInfo';
-import { getQuery, goUserHome, getUrlQuery, bindPhone } from "../../utils/util";
+import { getQuery, goUserHome, getUrlQuery, goBindPhone } from "../../utils/util";
 import router from "../../router";
 
 Page({
@@ -41,10 +41,7 @@ Page({
     } else if (!!role){
       goUserHome(role);
     } else {
-      bindPhone(inviteCode);
-      // router.redirectTo({
-      //   url: `/pages/bind-phone/bind-phone?inviteCode=${inviteCode}`
-      // });
+      goBindPhone(inviteCode);
     }
   },
   getUserRoleToRelativePage(inviteCode = ''){

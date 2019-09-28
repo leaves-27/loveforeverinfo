@@ -6,6 +6,6 @@
         <button
             class="button button--active"
             open-type="getPhoneNumber"
-            bindgetphonenumber="getPhoneNumber">同意</button>
+            bindgetphonenumber="bindPhone">同意</button>
     </view>
 </view>
