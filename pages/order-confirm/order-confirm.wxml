@@ -19,8 +19,13 @@
       <view class="main_main">
         <image class="menu-logo" src="{{ good.logo }}" />
         <view class="menu-intro">
-          <view class="menu-intro_name">{{ good.name }}</view>
-          <view class="menu-intro_price">{{ good.price }}元</view>
+          <view class="menu-intro_name">
+            {{ good.name }}
+            <view class="menu-intro_name--strong">({{ good.desc }})</view>
+          </view>
+          <view class="menu-intro_price">
+            {{ good.price }}元
+          </view>
         </view>
       </view>
       <view class="order-item">

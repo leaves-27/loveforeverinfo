@@ -69,7 +69,6 @@ Component({
       wx.navigateTo({
         url: `/pages/order-detail/order-detail?$${qs.stringify(query)}`
       })
-    },
-    goPay,
+    }
   }
 })

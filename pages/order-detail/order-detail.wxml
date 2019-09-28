@@ -5,11 +5,8 @@
       <view class="order-status" wx:if="{{ order.status === OrderStatus['waitPay'] }}">
         待付款
       </view>
-      <view class="order-status" wx:elif="{{ order.status === OrderStatus['payed'] }}">
-        待商家确认
-      </view>
-      <view class="order-status" wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}">
-        商家已接单
+      <view class="order-status" wx:elif="{{ order.status === OrderStatus['payed'] || order.status === OrderStatus['confirmedOrder'] }}">
+        配送中
       </view>
       <view class="order-status" wx:elif="{{ order.status === OrderStatus['received'] }}">
         已签收

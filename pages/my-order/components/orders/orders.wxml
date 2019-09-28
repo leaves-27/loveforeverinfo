@@ -77,7 +77,7 @@
             wx:if="{{ item.status === OrderStatus['waitPay'] && item.pay.wayId === PayWay['wxPay'] }}"
             class="button button--red button-interval--small"
             data-id="{{ item.orderId }}"
-            catchtap="goPay">
+            catchtap="goOrderDetail">
             支付
         </button>
         <button

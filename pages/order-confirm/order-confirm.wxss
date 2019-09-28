@@ -84,6 +84,10 @@
   justify-content: space-between;
   padding-left: 20rpx;
 }
+.menu-intro_name--strong{
+  color: #FE0000;
+  display: inline-block;
+}
 .menu-intro_price{
   font-family: PingFangSC-Regular;
   font-size: 28rpx;
