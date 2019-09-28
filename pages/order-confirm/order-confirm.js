@@ -1,12 +1,8 @@
 import computedBehavior from 'miniprogram-computed';
 import qs from "qs";
-import { getQuery  } from '../../utils/util';
+import { getQuery, OrderStatus  } from '../../utils/util';
 import router from "../../router";
 import { staticPrefix } from '../../config/index'
-
-// import getOrderConfirm from '../../apis/getOrderConfirm';
-// import getOrderConfirm from "../../apis/order/getOrderConfirm";
-// import submitOrder from '../../apis/submitOrder';
 import getGoodDetail from '../../apis/good/getGoodDetail';
 import getUserDefaultAddress from '../../apis/address/getUserDefaultAddress';
 import getDeliveryWays from '../../apis/getDeliveryWays';
@@ -150,16 +146,24 @@ Page({
           router.redirectTo({
             url: `/pages/order-result/order-result?$${qs.stringify(query)}`
           });
-        }).catch((error)=>{
+        }).catch(({ errMsg = '' })=>{
           this.setData({
             isOrdering: false
           });
+
           if(errMsg !== "requestPayment:fail cancel") { // 不是支付取消
             const query = {
               orderId
             };
             router.redirectTo({
               url: `/pages/order-result/order-result?$${qs.stringify(query)}`
+            });
+          } else {
+            const query = {
+              id: OrderStatus['all']
+            };
+            router.redirectTo({
+              url: `/pages/my-order/my-order?$${qs.stringify(query)}`
             });
           }
         });

@@ -46,25 +46,33 @@ Page({
   },
   cancelOrder($event){
     const { id } = $event.detail;
-    cancelOrder(id).then((result)=>{
-      const { code } = result;
-      if (code * 1 === 1) {
-        this.setData({
-          orders: getNewArrAfterSpliceSpecialItem(this.data.orders, id)
-        });
-      } else{
-        wx.showToast({
-          icon: 'none',
-          title: '订单取消失败,请稍后重试或联系客服'
-        });
+    const _self = this;
+    wx.showModal({
+      content: '你确认要取消当前订单吗?',
+      success(res){
+        if (res.confirm){
+          cancelOrder(id).then((result)=>{
+            const { code } = result;
+            if (code * 1 === 1) {
+              _self.setData({
+                orders: getNewArrAfterSpliceSpecialItem(_self.data.orders, id)
+              });
+            } else{
+              wx.showToast({
+                icon: 'none',
+                title: '订单取消失败,请稍后重试或联系客服'
+              });
+            }
+          }).catch((error)=>{
+            console.error(error);
+            wx.showToast({
+              icon: 'none',
+              title: '订单取消失败,请稍后重试或联系客服'
+            });
+          })
+        }
       }
-    }).catch((error)=>{
-      console.error(error);
-      wx.showToast({
-        icon: 'none',
-        title: '订单取消失败,请稍后重试或联系客服'
-      });
-    })
+    });
   },
   confirmSign($event){
     const { id } = $event.detail;
