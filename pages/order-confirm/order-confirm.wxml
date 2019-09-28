@@ -49,7 +49,7 @@
         <view class="order-item_key">备注</view>
         <view class="order-item_value">
           {{ other }}
-          <input type="string" value="" bindblur="inputChange"/>
+          <input type="string" value="" bindblur="inputChange" placeholder="请填写备注(可选)" />
         </view>
       </view>
     </view>
