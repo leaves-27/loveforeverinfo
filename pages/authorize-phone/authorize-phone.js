@@ -1,7 +1,20 @@
 import { goUserHome } from '../../utils/util.js';
 import { bindPhoneByWxBindPhone } from '../../apis/user/bindPhone';
+import {getQuery, goBindPhone} from "../../utils/util";
+import router from "../../router";
 
 Page({
+	jump(role){
+		const { url = '' } = getQuery();
+
+		if (!!url){
+			router.navigateTo({
+				url,
+			});
+		} else if (!!role){
+			goUserHome(role);
+		}
+	},
 	bindPhone($event){
 		const { detail, errMsg = '' } = $event;
 		console.log('$event:', $event);
@@ -30,7 +43,7 @@ Page({
 					});
 					wx.setStorageSync('userRole', role);
 					setTimeout(()=>{
-						goUserHome(role);
+						this.jump(role);
 					}, 1000);
 				} else {
 					wx.showToast({

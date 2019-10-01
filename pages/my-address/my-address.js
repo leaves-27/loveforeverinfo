@@ -19,7 +19,6 @@ Page({
     this.setData({
       selectedAddressId: id
     });
-    console.log('====test:', id);
     updateDefaultAddress({ addressId: id }).then((result)=>{
       const { code, data = {}, message } = result;
       if (code * 1 !== 1) {

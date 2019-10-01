@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-address/my-address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/my-address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/request.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,37 +22,25 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/router.js">
+        <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="320">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="31" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>menu-intro_name</find>
-      <find>menu-intro_p</find>
       <find>goScanDeliveyDetail</find>
       <find>isOrdering</find>
       <find>goOrderDetail</find>
@@ -87,7 +76,9 @@
       <find>addressChange</find>
       <find>selectedAddressId</find>
       <find>router</find>
+      <find>getCurrentRoute</find>
       <find>redirect</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>request.request</replace>
@@ -105,11 +96,11 @@
       <dir>$PROJECT_DIR$/pages/my-address</dir>
       <dir>$PROJECT_DIR$/mock/order</dir>
       <dir>$PROJECT_DIR$/mock/user</dir>
-      <dir>$PROJECT_DIR$/utils</dir>
       <dir>$PROJECT_DIR$/pages/index</dir>
       <dir>$PROJECT_DIR$/apis</dir>
       <dir>$PROJECT_DIR$/components/bind-phone-button</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/utils</dir>
       <dir>$PROJECT_DIR$/pages</dir>
     </dirStrings>
   </component>
@@ -137,7 +128,6 @@
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.js" />
         <option value="$PROJECT_DIR$/utils/confirmSign.js" />
         <option value="$PROJECT_DIR$/utils/OrderStatus.js" />
-        <option value="$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js" />
         <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/pages/medical-my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/medical-home/home.js" />
@@ -145,7 +135,6 @@
         <option value="$PROJECT_DIR$/pages/my-order/my-order.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
         <option value="$PROJECT_DIR$/pages/my-order/my-order.js" />
-        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
         <option value="$PROJECT_DIR$/pages/points-addresses/address.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxss" />
         <option value="$PROJECT_DIR$/pages/my-address/my-address.wxss" />
@@ -159,17 +148,19 @@
         <option value="$PROJECT_DIR$/pages/points-addresses/components/points/points.wxml" />
         <option value="$PROJECT_DIR$/mock/address/createNewAddress.js" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxml" />
-        <option value="$PROJECT_DIR$/pages/my-address/my-address.js" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" />
         <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" />
         <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/routes/customer.js" />
         <option value="$PROJECT_DIR$/app.json" />
-        <option value="$PROJECT_DIR$/request.js" />
-        <option value="$PROJECT_DIR$/pages/authorize/authorize.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/router.js" />
+        <option value="$PROJECT_DIR$/request.js" />
+        <option value="$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js" />
+        <option value="$PROJECT_DIR$/pages/authorize/authorize.js" />
+        <option value="$PROJECT_DIR$/pages/my-address/my-address.js" />
+        <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.js" />
       </list>
     </option>
   </component>
@@ -191,6 +182,17 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="order-confirm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,12 +363,12 @@
       <workItem from="1569807368105" duration="379000" />
       <workItem from="1569822302556" duration="174000" />
       <workItem from="1569829517956" duration="128000" />
-      <workItem from="1569891458587" duration="3285000" />
+      <workItem from="1569891458587" duration="4957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394528000" />
+    <option name="totallyTimeSpent" value="396200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="313" y="23" width="1193" height="877" extended-state="0" />
@@ -429,19 +431,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/medical-home/components/doctors/doctors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -649,30 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="22" lean-forward="true" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,33 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/authorize/authorize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-          <folding>
-            <element signature="e#1#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -807,6 +749,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -817,23 +769,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/request.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+        <state relative-caret-position="570">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/authorize/authorize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

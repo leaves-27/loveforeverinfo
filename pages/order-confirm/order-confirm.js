@@ -63,6 +63,8 @@ Page({
     })
   },
   submitOrder(){
+
+
     if (!this.data.payId){
       wx.showToast({
         title: '请先选择支付方式',
@@ -73,6 +75,15 @@ Page({
     }
 
     const { id } = this.data.address;
+
+    if (!id){
+      wx.showToast({
+        title: '请先选择收货地址',
+        icon: 'none',
+        duration: 2000
+      });
+      return;
+    }
 
     if (this.data.isOrdering){
       return;

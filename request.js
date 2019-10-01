@@ -1,5 +1,5 @@
 import Request from '@leaves-27/mingrogram-request';
-import { redirect } from "./routes/index";
+import Routes from "./routes/index";
 import router from './router';
 import { getCurrentRoute } from './utils/util';
 
@@ -67,9 +67,11 @@ request.afterRequest  = function (result, next){
 			wx.setStorageSync('token', '');
 			wx.setStorageSync('userRole', '');
 			wx.setStorageSync('tokenCount', count + 1);
-			const url = getCurrentRoute();
+			const { redirect } = Routes;
+			// const { route = '' } = getCurrentRoute();
+			// const url = `${redirect}?url=/${route}`;
 			router.navigateTo({
-				url: `${redirect}?url=${url}`
+				url: redirect
 			});
 			return;
 		}
