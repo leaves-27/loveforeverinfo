@@ -72,7 +72,6 @@ request.afterRequest  = function (result, next){
 			// const { route = '' } = getCurrentRoute();
 			// const query = getQuery();
 			// const url = `/${route}?${qs.stringify(query, { encode: true })}`;
-			// console.log('=================route:', getCurrentRoute());
 			// router.navigateTo({
 			// 	url: `${redirect}?url=${url}`
 			// });
