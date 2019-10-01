@@ -2,6 +2,7 @@ import Request from '@leaves-27/mingrogram-request';
 import Routes from "./routes/index";
 import router from './router';
 import { getCurrentRoute } from './utils/util';
+import {getQuery} from "@leaves-27/miniprogram";
 
 const request = new Request();
 // const count = 0; // 自动登录尝试请求的次数
@@ -69,9 +70,15 @@ request.afterRequest  = function (result, next){
 			wx.setStorageSync('tokenCount', count + 1);
 			const { redirect } = Routes;
 			// const { route = '' } = getCurrentRoute();
-			// const url = `${redirect}?url=/${route}`;
+			// const query = getQuery();
+			// const url = `/${route}?${qs.stringify(query, { encode: true })}`;
+			// console.log('=================route:', getCurrentRoute());
+			// router.navigateTo({
+			// 	url: `${redirect}?url=${url}`
+			// });
+
 			router.navigateTo({
-				url: redirect
+				url: `${redirect}`
 			});
 			return;
 		}

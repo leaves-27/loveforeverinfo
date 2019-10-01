@@ -35,6 +35,33 @@ Page({
     })
   },
   save(){
+    if (!this.data.name){
+      wx.showToast({
+        title: '姓名不能为空',
+        icon: 'none',
+        duration: 2000
+      });
+      return;
+    }
+
+    if (!this.data.phone){
+      wx.showToast({
+        title: '手机号不能为空',
+        icon: 'none',
+        duration: 2000
+      });
+      return;
+    }
+
+    if (!this.data.desc){
+      wx.showToast({
+        title: '详情地址不能为空',
+        icon: 'none',
+        duration: 2000
+      });
+      return;
+    }
+
     createNewAddress({
       name: this.data.name,
       phone: this.data.phone,
