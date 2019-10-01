@@ -1,4 +1,3 @@
-import qs from 'qs';
 import getTempCredentials from '../../apis/login/getTempCredentials';
 import { loginByWxTempCode } from '../../apis/login/login';
 import { postUserInfo } from '../../apis/login/postUserInfo';

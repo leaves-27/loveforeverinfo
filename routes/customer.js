@@ -1,11 +1,9 @@
 import UserRole from '../role';
 
 export default [{
-	path: "/pages/index/index",
-	role: [UserRole['customer']]
+	path: "/pages/index/index"
 }, {
-	path: '/pages/order-confirm/order-confirm',
-	role: [UserRole['customer']]
+	path: '/pages/order-confirm/order-confirm'
 }, {
 	path: '/pages/order-result/order-result',
 	role: [UserRole['customer']]
