@@ -28,7 +28,7 @@ router.beforeCreate = function(url, next){
 		}
 	}
 
-	wx.redirectTo({
+	wx.navigateTo({
 		url: redirect
 	});
 };
