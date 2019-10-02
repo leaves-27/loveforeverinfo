@@ -34,5 +34,21 @@
     <image class="address_icon" src="{{ addressIconUrl }}" />
     <view class="address_desc">我的地址</view>
   </view>
+  <view
+    class="address">
+    <image class="address_icon" src="{{ addressIconUrl }}" />
+<!--    <view class="address_desc">切换身份</view>-->
+    <picker
+      mode="selector"
+      bindchange="pickerChange"
+      value="{{ selectedRoleIndex }}"
+      range="{{ roles }}"
+      range-key="name"
+      class="address_desc">
+      <view class="picker">
+        切换身份：{{ roles[selectedRoleIndex].name }}
+      </view>
+    </picker>
+  </view>
   <tabs tabs="{{ appTabs }}" />
 </view>

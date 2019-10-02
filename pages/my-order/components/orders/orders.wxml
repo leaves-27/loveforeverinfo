@@ -6,7 +6,7 @@
       wx:for="{{ newOrders }}"
       wx:key="{{ item.id }}"
       data-id="{{ item.orderId }}"
-      bindtap="clickOrderItem"
+      bindtap="orderDetail"
       class="item">
       <view class="item_header">
         <view class="header_main">

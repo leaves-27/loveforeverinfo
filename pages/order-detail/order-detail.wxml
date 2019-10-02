@@ -54,26 +54,26 @@
     <button
       wx:if="{{ order.status === OrderStatus['waitPay'] }}"
       class="button button--active"
-      data-id="{{ order.orderCode }}"
+      data-id="{{ order.orderId }}"
       bindtap="goPay">支付</button>
     <button
       wx:elif="{{ order.status === OrderStatus['payed'] }}"
       class="button button--active"
-      data-id="{{ order.orderCode }}"
-      bindtap="goSign">签收</button>
+      data-id="{{ order.orderId }}"
+      bindtap="confirmSign">签收</button>
     <button
       wx:elif="{{ order.status === OrderStatus['confirmedOrder'] }}"
       class="button button--disabled"
-      data-id="{{ order.orderCode }}">商家已接单</button>
+      data-id="{{ order.orderId }}">商家已接单</button>
     <button
       wx:elif="{{ order.status === OrderStatus['received'] }}"
       class="button button--active"
-      data-id="{{ order.orderCode }}"
+      data-id="{{ order.orderId }}"
       bindtap="goBuy">再次购买</button>
     <button
       wx:else
       class="button button--active"
-      data-id="{{ order.orderCode }}"
+      data-id="{{ order.orderId }}"
       bindtap="goBuy">重新下单</button>
   </view>
 </view>

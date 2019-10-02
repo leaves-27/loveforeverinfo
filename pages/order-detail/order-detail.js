@@ -29,7 +29,7 @@ Page({
   goPay,
   goBuy,
   confirmSign($event){
-    const { id } = $event.detail;
+    const { id = '' }  = $event.currentTarget.dataset;
     confirmSign(id, ()=>{
       this.setData({
         order: Object.assign({}, this.data.order, {
