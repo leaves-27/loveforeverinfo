@@ -1,10 +1,9 @@
 import qs from "qs";
-import {getUrlQuery, tabs} from '../../utils/util'
+import {getUrlQuery, goUserHome, tabs} from '../../utils/util'
 import router from "../../router";
 import getGood from "../../apis/good/getGood";
-import getAuthorize from '../../apis/login/getAuthorize';
+import Role from '../../role';
 
-// import getGood from "../../apis/apis/getGood";
 Page({
   data: {
     good: {},
@@ -15,7 +14,7 @@ Page({
       id: '02',
       name: '规格参数'
     }],
-    selectedTabId: "",
+    selectedTabId: "01",
     index: 0,
     isShowModal: false,
     selectedTabIndex: 0,
@@ -56,20 +55,26 @@ Page({
       url: `/pages/order-confirm/order-confirm?$${qs.stringify(query)}`
     });
   },
+  onShow(){
+    getApp().globalData.selectedTabIndex = 0;
+  },
   onLoad() {
-    this.setData({
-      selectedTabId: this.data.tabs[0].id
-    });
-    getGood().then((result)=>{
-      const { code, data, message } = result;
-      if (code * 1 !== 1) {
-        throw new Error(message || '请求错误');
-      }
+    const role = wx.getStorageSync('userRole');
+    if (!!role && role !== Role['customer']){
+      goUserHome(role);
+    } else {
+      getApp().globalData.selectedTabIndex = 0;
+      getGood().then((result)=>{
+        const { code, data, message } = result;
+        if (code * 1 !== 1) {
+          throw new Error(message || '请求错误');
+        }
 
-      this.setData({
-        good: data[0],
-        selectedTabIndex: 0
-      })
-    });
+        this.setData({
+          good: data[0],
+          selectedTabIndex: 0
+        })
+      });
+    }
   }
 })

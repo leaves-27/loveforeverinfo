@@ -88,3 +88,41 @@
   bottom:0;
   margin-left: -22rpx;
 }
+
+.columns{
+  display: flex;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: #FFFFFF;
+  margin-bottom: 24rpx;
+  height: 156rpx;
+  align-items: center;
+}
+.column{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.column:nth-child(1){
+  border-right: 1rpx solid #DEDEDE;
+}
+.column:nth-child(2){
+  border-right: 1rpx solid #DEDEDE;
+}
+.column_label{
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #616161;
+  letter-spacing: 0;
+  text-align: center;
+}
+.column_value{
+  font-family: PingFangSC-Medium;
+  font-size: 40rpx;
+  color: #262626;
+  letter-spacing: 0;
+  text-align: center;
+}
+

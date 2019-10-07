@@ -2,7 +2,7 @@
     <block
         wx:for="{{ urls }}"
         wx:key="{{ index }}">
-        <image class="img-item" src="{{ item }}" />
+        <image class="img-item" src="{{ item }}" mode="widthFix" />
     </block>
 
 </view>

@@ -47,7 +47,7 @@ import request from "../../request";
 // };
 
 // 通过微信的临时code来登录我们的服务器
-export const loginByWxTempCode = (code, inviteCode)=> new Promise( (resolve, reject)=>{
+export const loginByWxTempCode = (code, inviteCode, role)=> new Promise( (resolve, reject)=>{
 	request.request({
 		// isMock: true,
 		// isSuccess: true,
@@ -56,6 +56,7 @@ export const loginByWxTempCode = (code, inviteCode)=> new Promise( (resolve, rej
 		data: {
 			jsCode: code,
 			inviteCode,
+			asRole: role,
 		},
 		header: {
 			'content-type': 'application/json' // 默认值
@@ -73,7 +74,7 @@ export const loginByWxTempCode = (code, inviteCode)=> new Promise( (resolve, rej
 });
 
 // 通过微信的临时code来登录我们的服务器
-export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, reject)=>{
+export const loginByPhone = (phone, validationCode, role)=> new Promise( (resolve, reject)=>{
 	const query = {"uid":"1", "token":"xxtoken", "phone":"15558011663"};
 	request.request({
 		// isMock: true,
@@ -82,7 +83,8 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 		method: 'post',
 		data: {
 			phone,
-			code: validationCode
+			role,
+			code: validationCode,
 		},
 		// data: query,
 		header: {
@@ -93,7 +95,6 @@ export const loginByPhone = (phone, validationCode)=> new Promise( (resolve, rej
 			resolve(getMock(phone));
 		},
 		fail(error){
-			console.log('=======failure:');
 			reject(error);
 		},
 	})

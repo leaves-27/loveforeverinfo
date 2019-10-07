@@ -11,6 +11,29 @@
       </view>
     </view>
   </view>
+  <view class="columns">
+    <view class="column">
+      <view class="column_value">{{ score }}</view>
+      <view class="column_label">我的积分</view>
+    </view>
+    <view class="column">
+      <view class="column_value">{{ orderCount }}</view>
+      <view class="column_label">订单管理</view>
+    </view>
+    <view class="column">
+      <picker
+        mode="selector"
+        bindchange="pickerChange"
+        value="{{ selectedRoleIndex }}"
+        range="{{ roles }}"
+        range-key="name"
+        class="address_desc">
+        <view class="picker">
+          切换设置
+        </view>
+      </picker>
+    </view>
+  </view>
   <view class="tabs">
     <block
       wx:for="{{ tabs }}"

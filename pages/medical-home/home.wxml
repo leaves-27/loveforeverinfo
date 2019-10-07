@@ -10,6 +10,17 @@
         </view>
       </view>
       <view class="main_bar">
+        <picker
+          value="{{ selectedRoleIndex }}"
+          range="{{ roles }}"
+          mode="selector"
+          bindchange="pickerChange"
+          range-key="name"
+          class="address_desc">
+          <view class="picker">
+            切换：{{ roles[selectedRoleIndex].name }}
+          </view>
+        </picker>
         <image
           class="qr"
           src="{{ qrUrl }}"

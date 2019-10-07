@@ -3,15 +3,15 @@ import UserRole from '../role';
 
 export default function(userRole){
 	if (`${userRole}` === UserRole['customer']){ // 消费者
-		router.redirectTo({
+		router.reLaunch({
 			url: `/pages/index/index`
 		});
 	} else if(`${userRole}` === UserRole['doctor']){ // 专家
-		router.redirectTo({
+		router.reLaunch({
 			url: `/pages/doctor/doctor`
 		})
 	} else if (`${userRole}` === UserRole['medical']){// 专员
-		router.redirectTo({
+		router.reLaunch({
 			url: `/pages/medical-home/home`
 		});
 	} else if (`${userRole}` === UserRole['courier']){ // 派送员

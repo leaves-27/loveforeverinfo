@@ -9,6 +9,7 @@
   left: 0;
   bottom: 0;
   z-index: 10;
+  box-shadow: 0rpx -5rpx 10rpx 5rpx rgba(0, 0, 0, 0.2);
 }
 .tab{
   flex: 1;

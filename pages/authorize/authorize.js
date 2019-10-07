@@ -49,7 +49,8 @@ Page({
       goUserHome(role);
     } else { //
       getTempCredentials().then((code)=>{
-        return loginByWxTempCode(code, inviteCode); //
+        const { role = '' } = getQuery();
+        return loginByWxTempCode(code, inviteCode, role); //
       }).then((result)=>{
         const { code, data } = result;
         if(code * 1 !== 1){

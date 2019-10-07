@@ -14,6 +14,8 @@ Page({
     orderCount: 0,
     doctors: [],
     qrUrl: `${staticPrefix}/qr.png`,
+    roles: [],
+    selectedRoleIndex: 0,
   },
   goMyQr() {
     const query = {
@@ -34,7 +36,8 @@ Page({
       phone,
       score,
       logoUrl,
-      orderCount
+      orderCount,
+      roles = []
     } = data;
 
     this.setData({
@@ -43,6 +46,7 @@ Page({
       score,
       logoUrl,
       orderCount,
+      roles
     });
   },
   setDoctors({ code, data, message }){

@@ -25,9 +25,9 @@ Component({
       });
     }
   },
-  lifetimes: {
-    attached: function() {
-      //console.log('===tabs:', this.data.tabs);
-    },
-  },
+  pageLifetimes: {
+    show: function () {
+      console.log('===getApp().globalData.selectedTabIndex:', getApp().globalData.selectedTabIndex);
+    }
+  }
 })

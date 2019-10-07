@@ -8,17 +8,8 @@ import router from '../../router';
 Page({
   data: {
     orderStatus: getOrderStatus(),
-    roles: [{
-      name: '专家',
-      value: 'specialist',
-    }, {
-      name: '专员',
-      value: 'comissioner',
-    }, {
-      name: '消费者',
-      value: 'consumer',
-    }],
-    selectedRoleIndex: 2,
+    roles: [],
+    selectedRoleIndex: 0,
     name: '',
     phone: '',
     score: 0,
@@ -54,10 +45,12 @@ Page({
   pickerChange(e){
     const selectedIndex = e.detail.value;
     if (this.data.selectedRoleIndex !== selectedIndex) {
-
-      // this.setData({
-      //   selectedRoleIndex: e.detail.value
-      // });
+      const { value = '' } = this.data.roles[selectedIndex] || {};
+      wx.setStorageSync('userRole', '');
+      wx.setStorageSync('token', '');
+      router.redirectTo({
+        url: `/pages/authorize/authorize?role=${value}`
+      });
     }
   },
   onLoad(){
@@ -71,13 +64,23 @@ Page({
         phone,
         score,
         logoUrl,
+        roles = []
       } = data;
+
+      const currentRole = wx.getStorageSync('userRole');
+
+      const index = roles.findIndex((item)=>{
+        return item.value === currentRole;
+      });
+
 
       this.setData({
         name,
         phone,
         score,
         userLogoUrl: logoUrl,
+        roles,
+        selectedRoleIndex: index > -1 ? index : 0
       })
     })
   },

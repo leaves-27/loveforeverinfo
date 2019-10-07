@@ -1,5 +1,8 @@
 <view class="orders">
-  <view class="order" wx:for="{{ newOrders }}">
+  <view
+    wx:for="{{ newOrders }}"
+    wx:key="{{ index }}"
+    class="order">
     <view class="order_header" wx:if="{{ selectedTabId ===  '01' }}">
       {{ item.createTime }}
     </view>
