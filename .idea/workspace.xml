@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tab/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab/tab.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/medical.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/medical.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="222">
+              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -47,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="94" column="73" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="73" />
+            <state relative-caret-position="526">
+              <caret line="67" column="22" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="67" selection-end-column="22" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -59,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="57" column="7" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="7" />
+            <state relative-caret-position="481">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -69,10 +57,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="305">
+              <caret line="71" column="22" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="71" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tabChange</find>
       <find>wx.navigate</find>
       <find>wx</find>
       <find>console.log</find>
@@ -111,6 +101,7 @@
       <find>main_bar</find>
       <find>getUserInfo</find>
       <find>selectedRoleIndex</find>
+      <find>wx.showToast</find>
     </findStrings>
     <replaceStrings>
       <replace>request.request</replace>
@@ -410,12 +401,12 @@
       <workItem from="1569891458587" duration="6757000" />
       <workItem from="1569997417110" duration="6610000" />
       <workItem from="1570067467361" duration="516000" />
-      <workItem from="1570331864647" duration="8410000" />
+      <workItem from="1570331864647" duration="8808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="413536000" />
+    <option name="totallyTimeSpent" value="413934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="346" y="23" width="1193" height="877" extended-state="0" />
@@ -502,16 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2511">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="22" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -865,30 +846,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
+    <entry file="file://$PROJECT_DIR$/pages/order-confirm/order-confirm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="57" column="7" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="7" />
+        <state relative-caret-position="305">
+          <caret line="71" column="22" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="71" selection-end-column="22" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="94" column="73" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="73" />
+        <state relative-caret-position="526">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/my/my.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="222">
+          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

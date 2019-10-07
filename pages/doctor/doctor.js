@@ -52,7 +52,7 @@ Page({
     })
   },
   pickerChange(e){
-    const selectedIndex = e.detail.value;
+    const selectedIndex = e.detail.value * 1;
     const { value = '', name } = this.data.roles[selectedIndex] || {};
 
     if (this.data.selectedRoleIndex !== selectedIndex) {
@@ -63,7 +63,9 @@ Page({
       });
     } else {
       wx.showToast({
-        title: `你当前已经是${name}`
+        title: `你当前已经是${name}`,
+        icon: 'none',
+        duration: 2000
       })
     }
   },
