@@ -7,27 +7,19 @@ Component({
     tabs: {
       type: Array,
       value: []
-    }
-  },
-  computed: {
-    selectedTabIndex(){
-      return getApp().globalData.selectedTabIndex || 0;
+    },
+    selectedTabIndex: {
+      type: Number,
+      value: 0
     }
   },
   methods: {
     select($event){
       const { index } = $event.currentTarget.dataset;
-      getApp().globalData.selectedTabIndex = index;
       const { pagePath = '' } = this.data.tabs[index];
-
       router.redirectTo({
         url: pagePath
       });
-    }
-  },
-  pageLifetimes: {
-    show: function () {
-      console.log('===getApp().globalData.selectedTabIndex:', getApp().globalData.selectedTabIndex);
     }
   }
 })

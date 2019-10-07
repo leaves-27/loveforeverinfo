@@ -10,17 +10,6 @@
         </view>
       </view>
       <view class="main_bar">
-        <picker
-          value="{{ selectedRoleIndex }}"
-          range="{{ roles }}"
-          mode="selector"
-          bindchange="pickerChange"
-          range-key="name"
-          class="address_desc">
-          <view class="picker">
-            切换：{{ roles[selectedRoleIndex].name }}
-          </view>
-        </picker>
         <image
           class="qr"
           src="{{ qrUrl }}"
@@ -37,6 +26,20 @@
     <view class="column" bind:tap="goMyOrder">
       <view class="column_value">{{ orderCount }}</view>
       <view class="column_label">订单管理</view>
+    </view>
+    <view class="column">
+      <picker
+        value="{{ selectedRoleIndex }}"
+        range="{{ roles }}"
+
+        mode="selector"
+        bindchange="pickerChange"
+        range-key="name"
+        class="address_desc">
+        <view class="picker">
+          切换设置
+        </view>
+      </picker>
     </view>
   </view>
   <doctors

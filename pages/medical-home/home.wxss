@@ -74,6 +74,9 @@
 .column:nth-child(1){
   border-right: 1rpx solid #DEDEDE;
 }
+.column:nth-child(2){
+  border-right: 1rpx solid #DEDEDE;
+}
 .column_label{
   font-family: PingFangSC-Regular;
   font-size: 24rpx;

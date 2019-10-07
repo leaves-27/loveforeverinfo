@@ -55,15 +55,11 @@ Page({
       url: `/pages/order-confirm/order-confirm?$${qs.stringify(query)}`
     });
   },
-  onShow(){
-    getApp().globalData.selectedTabIndex = 0;
-  },
   onLoad() {
     const role = wx.getStorageSync('userRole');
     if (!!role && role !== Role['customer']){
       goUserHome(role);
     } else {
-      getApp().globalData.selectedTabIndex = 0;
       getGood().then((result)=>{
         const { code, data, message } = result;
         if (code * 1 !== 1) {

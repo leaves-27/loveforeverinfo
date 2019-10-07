@@ -9,6 +9,13 @@
           <view class="phone">{{ phone }}</view>
         </view>
       </view>
+      <view class="main_bar">
+        <image
+            class="qr"
+            src="{{ qrUrl }}"
+            bind:tap="goMyQr"
+        />
+      </view>
     </view>
   </view>
   <view class="columns">
@@ -22,10 +29,11 @@
     </view>
     <view class="column">
       <picker
-        mode="selector"
-        bindchange="pickerChange"
         value="{{ selectedRoleIndex }}"
         range="{{ roles }}"
+
+        mode="selector"
+        bindchange="pickerChange"
         range-key="name"
         class="address_desc">
         <view class="picker">

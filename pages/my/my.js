@@ -44,13 +44,18 @@ Page({
   },
   pickerChange(e){
     const selectedIndex = e.detail.value;
+    const { value = '', name } = this.data.roles[selectedIndex] || {};
+
     if (this.data.selectedRoleIndex !== selectedIndex) {
-      const { value = '' } = this.data.roles[selectedIndex] || {};
       wx.setStorageSync('userRole', '');
       wx.setStorageSync('token', '');
       router.redirectTo({
         url: `/pages/authorize/authorize?role=${value}`
       });
+    } else {
+      wx.showToast({
+        title: `你当前已经是${name}`
+      })
     }
   },
   onLoad(){
@@ -67,12 +72,10 @@ Page({
         roles = []
       } = data;
 
-      const currentRole = wx.getStorageSync('userRole');
-
-      const index = roles.findIndex((item)=>{
-        return item.value === currentRole;
+      const selectedRoleIndex = roles.findIndex((item)=>{
+        const role = wx.getStorageSync('userRole');
+        return item.value === role;
       });
-
 
       this.setData({
         name,
@@ -80,7 +83,7 @@ Page({
         score,
         userLogoUrl: logoUrl,
         roles,
-        selectedRoleIndex: index > -1 ? index : 0
+        selectedRoleIndex: selectedRoleIndex === -1 ? 0 : selectedRoleIndex
       })
     })
   },

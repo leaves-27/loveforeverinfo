@@ -9,10 +9,7 @@ export default [{
 }, {
 	path: '/pages/medical-my-order/my-order',
 	role: [UserRole['medical']]
-}, {
-	path: '/pages/medical-my-qr/my-qr',
-	role: [UserRole['medical']]
-}, {
+},{
 	path: '/pages/medical-order-detail/order-detail',
 	role: [UserRole['medical']]
 }, {

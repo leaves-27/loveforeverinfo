@@ -1,7 +1,6 @@
 import { getQuery, createQrCode, saveImageToPhotosAlbum } from "../../utils/util";
 import { baseUrlPrefix, staticPrefix } from '../../config/index'
-
-import getInviteCode from "../../apis/user/getInviteCode";
+import getUserInfo from "../../apis/user/getUserInfo";
 
 Page({
   data: {
@@ -32,20 +31,21 @@ Page({
     });
   },
   onLoad: function () {
-    const { name = '', userLogoUrl = '' } = getQuery();
-    this.setData({
-      name,
-      userLogoUrl
-    });
-    getInviteCode().then((result)=>{
+    getUserInfo().then((result)=>{
       const { code, data, message } = result;
       if (code * 1 !== 1) {
         throw new Error(message || '请求错误');
       }
       const {
         inviteCode,
+        name,
+        logoUrl
       } = data;
-      // const inviteCode = 'ivt11889';
+
+      this.setData({
+        name,
+        userLogoUrl: logoUrl
+      });
 
       const url = `${ baseUrlPrefix }/?cc=${inviteCode}`;
       const canvasId = 'myQrcode';

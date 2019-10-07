@@ -35,6 +35,10 @@
   display: flex;
   align-items: center;
 }
+.qr{
+  width: 52rpx;
+  height: 52rpx;
+}
 
 .logo{
   width: 120rpx;

@@ -5,39 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscriber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/apis/login/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/tab/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab/tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tab/tab.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/tab/tab.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-request/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram-qr-code/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram-qr-code/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/miniprogram_npm/qs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@leaves-27/utils/miniprogram_npm/qs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/axios/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/axios/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/debug/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/debug/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/follow-redirects/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/follow-redirects/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/is-buffer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/is-buffer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/ms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/ms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/qs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/qs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/authorize/authorize.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/authorize/authorize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/components/imgs/imgs.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/components/imgs/imgs.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/medical-home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/medical-home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-home/home.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/goUserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/goUserHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/my.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/medical.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/medical.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,49 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/authorize/authorize.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/authorize/authorize.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/my/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="44" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/util.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="103" selection-start-column="81" selection-end-column="103" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/role.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="11" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+            <state relative-caret-position="474">
+              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -101,28 +45,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="505">
+              <caret line="94" column="73" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/components/imgs/imgs.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+            <state relative-caret-position="798">
+              <caret line="57" column="7" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/tab/tab.wxss">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state relative-caret-position="439">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -131,10 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>goBindPhone</find>
-      <find>$event</find>
-      <find>$even</find>
-      <find>showModal</find>
       <find>tabChange</find>
       <find>wx.navigate</find>
       <find>wx</find>
@@ -156,11 +102,15 @@
       <find>confirmSign</find>
       <find>appTabs</find>
       <find>selectedTabIndex</find>
-      <find>selectedRoleIndex</find>
       <find>pickerChange</find>
       <find>selectedTabId</find>
       <find>goUserHome</find>
       <find>喜燕</find>
+      <find>qrUrl</find>
+      <find>qr</find>
+      <find>main_bar</find>
+      <find>getUserInfo</find>
+      <find>selectedRoleIndex</find>
     </findStrings>
     <replaceStrings>
       <replace>request.request</replace>
@@ -192,9 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.js" />
-        <option value="$PROJECT_DIR$/pages/my-order/my-order.js" />
-        <option value="$PROJECT_DIR$/pages/points-addresses/address.js" />
         <option value="$PROJECT_DIR$/pages/my/my.wxss" />
         <option value="$PROJECT_DIR$/pages/my-address/my-address.wxss" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.json" />
@@ -208,7 +155,6 @@
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxml" />
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" />
         <option value="$PROJECT_DIR$/pages/order-confirm/order-confirm.wxml" />
-        <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/router.js" />
@@ -218,7 +164,6 @@
         <option value="$PROJECT_DIR$/routes/customer.js" />
         <option value="$PROJECT_DIR$/pages/create-address/address.js" />
         <option value="$PROJECT_DIR$/request.js" />
-        <option value="$PROJECT_DIR$/pages/my/my.wxml" />
         <option value="$PROJECT_DIR$/pages/my-order/components/orders/orders.wxml" />
         <option value="$PROJECT_DIR$/pages/order-detail/components/order-body/order-body.js" />
         <option value="$PROJECT_DIR$/pages/order-detail/order-detail.wxml" />
@@ -227,22 +172,27 @@
         <option value="$PROJECT_DIR$/subscriber.js" />
         <option value="$PROJECT_DIR$/store.js" />
         <option value="$PROJECT_DIR$/pages/authorize/authorize.js" />
-        <option value="$PROJECT_DIR$/pages/my/my.js" />
         <option value="$PROJECT_DIR$/apis/login/login.js" />
         <option value="$PROJECT_DIR$/utils/goUserHome.js" />
         <option value="$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-router/index.js" />
-        <option value="$PROJECT_DIR$/pages/medical-home/home.wxml" />
-        <option value="$PROJECT_DIR$/pages/medical-home/home.js" />
-        <option value="$PROJECT_DIR$/components/tab/tab.js" />
         <option value="$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pages/doctor/doctor.js" />
-        <option value="$PROJECT_DIR$/pages/doctor/doctor.wxss" />
-        <option value="$PROJECT_DIR$/pages/doctor/doctor.wxml" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/index/components/imgs/imgs.wxml" />
         <option value="$PROJECT_DIR$/components/tab/tab.wxss" />
+        <option value="$PROJECT_DIR$/components/tab/tab.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/doctor/doctor.wxss" />
+        <option value="$PROJECT_DIR$/pages/my/my.wxml" />
+        <option value="$PROJECT_DIR$/pages/doctor/doctor.wxml" />
+        <option value="$PROJECT_DIR$/pages/medical-home/home.wxml" />
+        <option value="$PROJECT_DIR$/pages/medical-home/home.wxss" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pages/medical-my-qr/my-qr.js" />
+        <option value="$PROJECT_DIR$/routes/medical.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/pages/doctor/doctor.js" />
+        <option value="$PROJECT_DIR$/pages/medical-home/home.js" />
+        <option value="$PROJECT_DIR$/pages/my/my.js" />
       </list>
     </option>
   </component>
@@ -268,18 +218,25 @@
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tab" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="doctor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="wxss" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="medical-home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -453,12 +410,12 @@
       <workItem from="1569891458587" duration="6757000" />
       <workItem from="1569997417110" duration="6610000" />
       <workItem from="1570067467361" duration="516000" />
-      <workItem from="1570331864647" duration="5474000" />
+      <workItem from="1570331864647" duration="8410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410600000" />
+    <option name="totallyTimeSpent" value="413536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="346" y="23" width="1193" height="877" extended-state="0" />
@@ -521,71 +478,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/goBindPhone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="65" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniprogram_npm/@leaves-27/miniprogram/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/authorize-phone/authorize-phone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miniprogram_npm/@leaves-27/mingrogram-request/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@leaves-27/miniprogram/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/customer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -774,95 +670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="44" selection-start-line="44" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/tab/tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="98" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="90" lean-forward="true" selection-start-line="57" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="79" column="12" lean-forward="true" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -903,23 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/components/imgs/imgs.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -931,6 +725,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/components/modal/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/tab/tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-doctor-detail/doctor-detail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/customer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/medical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-my-qr/my-qr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/medical-home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="57" column="7" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="94" column="73" lean-forward="true" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -59,5 +59,8 @@
         bind:cancel="cancelModal"
         bind:confirm="confirmModal"
     />
-    <tabs tabs="{{ appTabs }}" />
+    <tabs
+        tabs="{{ appTabs }}"
+        selectedTabIndex="0"
+    />
 </view>

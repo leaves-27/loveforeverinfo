@@ -18,15 +18,27 @@ Page({
     selectedRoleIndex: 0,
   },
   goMyQr() {
-    const query = {
-      name: this.data.name,
-      userLogoUrl: this.data.logoUrl
-    };
     router.navigateTo({
-      url: `/pages/medical-my-qr/my-qr?$${qs.stringify(query,  { encode: false })}`
+      url: `/pages/medical-my-qr/my-qr`
     })
   },
   goMyOrder() {},
+  pickerChange(e){
+    const selectedIndex = e.detail.value;
+    const { value = '', name } = this.data.roles[selectedIndex] || {};
+
+    if (this.data.selectedRoleIndex !== selectedIndex) {
+      wx.setStorageSync('userRole', '');
+      wx.setStorageSync('token', '');
+      router.redirectTo({
+        url: `/pages/authorize/authorize?role=${value}`
+      });
+    } else {
+      wx.showToast({
+        title: `你当前已经是${name}`
+      })
+    }
+  },
   setUserInfo({ code, data, message }){
     if (code * 1 !== 1) {
       throw new Error(message || '请求错误');
@@ -40,13 +52,19 @@ Page({
       roles = []
     } = data;
 
+    const selectedRoleIndex = roles.findIndex((item)=>{
+      const role = wx.getStorageSync('userRole');
+      return item.value === role;
+    });
+
     this.setData({
       name,
       phone,
       score,
       logoUrl,
       orderCount,
-      roles
+      roles,
+      selectedRoleIndex: selectedRoleIndex === -1 ? 0 : selectedRoleIndex
     });
   },
   setDoctors({ code, data, message }){
