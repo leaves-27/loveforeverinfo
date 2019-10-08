@@ -14,9 +14,12 @@
                     <view class="menu-intro">
                         <view class="menu-intro_name">
                             {{ item.name }}
+                            <view class="menu-intro_name--strong">
+                                （{{ item.desc }}）
+                            </view>
                         </view>
                         <view class="menu-intro_price">
-                            {{ item.desc }}
+                            {{ item.price }}元
                         </view>
                     </view>
                 </view>
