@@ -62,8 +62,7 @@ Page({
       memo: value
     })
   },
-  submitOrder(){
-
+  submitOrder(){// 活动id、商品id
 
     if (!this.data.payId){
       wx.showToast({
@@ -101,7 +100,7 @@ Page({
     this.setData({
       isOrdering: true
     });
-    const { featureId = '', id: goodId } = getQuery();
+    const { featureId = '', id: goodId, inviteCode = '' } = getQuery();
 
     // 提交订单成功后
     submitOrder({
@@ -112,6 +111,7 @@ Page({
       featureId,
       count: this.data.amount,
       memo: this.data.memo,
+      inviteCode
     }).then((result)=>{
       // 校验信息正确，然后调出支付进行支付，支付完成后跳转到支付结果页
       const { code, data = {}, message } = result;

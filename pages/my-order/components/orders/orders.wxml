@@ -75,10 +75,10 @@
             class="fee fee--default">实付款：</view>
 
           <view class="fee fee--strong">￥{{
-             item.good.price * item.count + item.delivery.fee * 1
-            }}(含运费 ￥{{
+            item.shouldPayAmount
+            }}元(含运费 ￥{{
               item.delivery.fee
-            }})
+            }}元)
           </view>
         </view>
       </view>

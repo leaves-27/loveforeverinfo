@@ -25,10 +25,11 @@ Component({
     newOrders(){
       const orders = [];
       this.data.orders.forEach((item)=>{
-        if (this.data.selectedTabId === OrderStatus['all']){
-          orders.push(item);
-        } else if(this.data.selectedTabId === item.status){
-          orders.push(item);
+        if (this.data.selectedTabId === OrderStatus['all'] || this.data.selectedTabId === item.status){
+          orders.push({
+            ...item,
+            shouldPayAmount: (item.good.price * item.count + item.delivery.fee * 1).toFixed(2)
+          });
         }
       });
 
