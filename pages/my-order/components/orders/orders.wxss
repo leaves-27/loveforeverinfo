@@ -122,4 +122,8 @@ button::after {
 .empty{
   background-color: #FFFFFF;
 }
+.menu-intro_name--strong{
+  color: #FE0000;
+  display: inline-block;
+}
 
