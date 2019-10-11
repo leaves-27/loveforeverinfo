@@ -18,14 +18,15 @@
       </view>
     </view>
   </view>
+  <view class="notice">我的专员:{{ commissioner.username }} 联系方式:{{ commissioner.phone}}</view>
   <view class="columns">
     <view class="column">
       <view class="column_value">{{ score }}</view>
-      <view class="column_label">我的积分</view>
+      <view class="column_label">本月积分</view>
     </view>
     <view class="column">
       <view class="column_value">{{ orderCount }}</view>
-      <view class="column_label">订单管理</view>
+      <view class="column_label">当日积分</view>
     </view>
     <view class="column">
       <picker

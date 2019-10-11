@@ -35,7 +35,7 @@
     <view class="address_desc">我的地址</view>
   </view>
   <view
-    class="address">
+    class="address" wx:if="{{ roles.length > 1 }}">
     <image class="address_icon" src="{{ addressIconUrl }}" />
     <picker
       mode="selector"

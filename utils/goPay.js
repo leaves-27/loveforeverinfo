@@ -6,8 +6,13 @@ import router from "../router";
  *
  * */
 export default function($event){
-	const { id } = $event.detail;
-	fetchPayInfo({ orderId: id }).then(({ code, data })=>{
+	console.log('$event:', $event);
+	const { id = '' } = $event.detail;
+	const { id: idFromCurrentTarget = '' } = $event.currentTarget.dataset;
+
+	const orderId = id || idFromCurrentTarget;
+
+	fetchPayInfo({ orderId }).then(({ code, data })=>{
 		if (code * 1 === 1){
 			const {
 				timeStamp,

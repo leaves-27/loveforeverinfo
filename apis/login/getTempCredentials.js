@@ -11,6 +11,7 @@ export default ()=>{
 				}
 			},
 			fail(error){
+				const { errMsg = '' } = error;
 				reject(errMsg);
 			}
 		})

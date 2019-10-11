@@ -22,6 +22,7 @@ Page({
     roles: [],
     selectedRoleIndex: 0,
     qrUrl: `${staticPrefix}/qr.png`,
+    commissioner: ''
   },
   tabChange($event){
     const { item = {} } = $event.currentTarget.dataset;
@@ -35,7 +36,7 @@ Page({
       throw new Error(message || '请求错误');
     }
     this.setData({
-      ConsumerOrderFlow: data
+      consumerOrderFlow: data
     });
   },
   setConsumers({ code = 0, data = [], message = '' } = {}){
@@ -79,7 +80,8 @@ Page({
       score,
       logoUrl,
       roles = [],
-      orderCount = 0
+      orderCount = 0,
+      commissioner
     } = data;
 
     const selectedRoleIndex = roles.findIndex((item)=>{
@@ -94,7 +96,8 @@ Page({
       userLogoUrl: logoUrl,
       roles,
       orderCount,
-      selectedRoleIndex: selectedRoleIndex === -1 ? 0 : selectedRoleIndex
+      selectedRoleIndex: selectedRoleIndex === -1 ? 0 : selectedRoleIndex,
+      commissioner
     });
   },
   onLoad(){

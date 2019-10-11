@@ -129,4 +129,12 @@
   letter-spacing: 0;
   text-align: center;
 }
+.notice{
+  color: #FFFFFF;
+  background-color: #F38C00;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 

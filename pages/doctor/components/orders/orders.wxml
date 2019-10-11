@@ -9,7 +9,8 @@
     <view class="order_body">
       <view class="good">
         <view class="good_main">
-          <image class="menu-logo" src="{{ item.good.logoUrl }}" />
+          <image wx:if="{{ selectedTabId ===  '01' }}" class="menu-logo" src="{{ item.good.logoUrl }}" />
+          <image wx:else class="menu-logo" src="{{ item.user.avatarUri }}" />
           <view class="menu-intro">
             <view wx:if="{{ selectedTabId ===  '01' }}" class="menu-intro_name">{{ item.good.name }}</view>
             <view wx:else class="menu-intro_name">{{ item.user.name }}</view>
