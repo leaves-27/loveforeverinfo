@@ -21,6 +21,10 @@ Component({
     addressChange($event){
       const { id } = $event.currentTarget.dataset;
       this.triggerEvent('addressChange', { id }, $event)
+    },
+    deleteAddress($event){
+      const { id } = $event.currentTarget.dataset;
+      this.triggerEvent('delete', { id }, $event);
     }
   }
 })

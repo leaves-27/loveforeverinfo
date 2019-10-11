@@ -4,6 +4,7 @@
     addresses="{{ addresses }}"
     selectedAddressId="{{ selectedAddressId }}"
     bind:addressChange="addressChange"
+    bind:delete="deleteAddress"
   />
   <view
     class="button button--disabled"

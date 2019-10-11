@@ -6,11 +6,20 @@
       wx:key="{{ index }}"
       class="addresses-item">
       <view class="item_main">
-        <view class="name-phone">
-          {{ item.name }} {{ item.phone }}
+        <view class="main_main">
+          <view class="name-phone">
+            {{ item.name }} {{ item.phone }}
+          </view>
+          <view class="address">
+            {{ item.address }}
+          </view>
         </view>
-        <view class="address">
-          {{ item.address }}
+        <view
+          bindtap="deleteAddress"
+          class="main_button"
+          data-id="{{ item.id }}"
+        >
+          删除
         </view>
       </view>
       <view class="boundary"></view>

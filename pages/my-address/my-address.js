@@ -2,6 +2,7 @@ import { getQuery } from '../../utils/util.js';
 import getAddresses from "../../apis/address/getAddresses";
 import updateDefaultAddress from '../../apis/address/updateDefaultAddress';
 import getUserDefaultAddress from "../../apis/address/getUserDefaultAddress";
+import deleteAddress from "../../apis/address/delete";
 import router from '../../router';
 
 Page({
@@ -32,6 +33,42 @@ Page({
         icon: 'none',
         title: '设置默认地址成功'
       });
+    })
+  },
+  deleteAddress($event){
+    const { id } = $event.detail || {};
+    const _self = this;
+
+    wx.showModal({
+      title: '删除',
+      content: '你确认要删除当前地址吗?',
+      success (res) {
+        if (res.confirm) {
+          deleteAddress({ id }).then((result)=>{
+            const { code, data = {}, message } = result;
+            if (code * 1 !== 1) {
+              wx.showToast({
+                icon: 'none',
+                title: '删除失败，请稍后重试或联系客服'
+              });
+              throw new Error(message || '请求错误');
+            }
+            const index = _self.data.addresses.findIndex((item)=>{
+              return item.id === id;
+            });
+            const addresses = JSON.parse(JSON.stringify(_self.data.addresses)).splice(index, 1);
+            _self.setData({
+              addresses
+            });
+            wx.showToast({
+              icon: 'none',
+              title: '删除成功'
+            });
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   },
   onShow(){
