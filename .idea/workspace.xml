@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apis/address/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my-address/my-address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/my-address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-address/my-address.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/my-address.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="488">
+              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -364,12 +358,12 @@
       <workItem from="1570580604229" duration="74000" />
       <workItem from="1570590813545" duration="623000" />
       <workItem from="1570687157101" duration="1000" />
-      <workItem from="1570801666704" duration="4405000" />
+      <workItem from="1570801666704" duration="4731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421378000" />
+    <option name="totallyTimeSpent" value="421704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="125" y="54" width="1193" height="877" extended-state="0" />
@@ -838,8 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        <state relative-caret-position="488">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>

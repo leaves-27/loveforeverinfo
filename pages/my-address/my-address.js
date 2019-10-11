@@ -45,7 +45,7 @@ Page({
       success (res) {
         if (res.confirm) {
           deleteAddress({ id }).then((result)=>{
-            const { code, data = {}, message } = result;
+            const { code,  message } = result;
             if (code * 1 !== 1) {
               wx.showToast({
                 icon: 'none',
@@ -56,7 +56,11 @@ Page({
             const index = _self.data.addresses.findIndex((item)=>{
               return item.id === id;
             });
-            const addresses = JSON.parse(JSON.stringify(_self.data.addresses)).splice(index, 1);
+            let addresses = [];
+            if (_self.data.addresses.length > 1){
+              addresses = JSON.parse(JSON.stringify(_self.data.addresses)).splice(index, 1);
+            }
+            
             _self.setData({
               addresses
             });
