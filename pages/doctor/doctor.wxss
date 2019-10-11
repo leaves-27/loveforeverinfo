@@ -132,9 +132,10 @@
 .notice{
   color: #FFFFFF;
   background-color: #F38C00;
-  height: 44px;
-  line-height: 44px;
-  padding-left: 16px;
-  padding-right: 16px;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  font-size: 24rpx;
 }
 

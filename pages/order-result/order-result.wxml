@@ -2,6 +2,7 @@
 <view class="order-detail">
   <view  class="order-detail_body">
     <order-status
+      wx:if="{{ !!status }}"
       status="{{ status }}"/>
     <view class="good content_main">
       <view class="main_main">
@@ -13,6 +14,14 @@
       </view>
     </view>
     <view class="order">
+      <view class="order-item">
+        <view class="order-item_key">
+          订单编号
+        </view>
+        <view class="order-item_value">
+          {{ orderCode }}
+        </view>
+      </view>
       <view class="order-item">
         <view class="order-item_key">
           购买数量
