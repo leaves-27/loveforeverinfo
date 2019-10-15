@@ -18,7 +18,12 @@
       </view>
     </view>
   </view>
-  <view class="notice">我的专员:{{ commissioner.username }} 联系方式:{{ commissioner.phone}}</view>
+  <view class="notice" wx:if="{{ !!commissioner.username }}">
+    我的专员:{{ commissioner.username }}
+    <view
+      wx:if="{{ !!commissioner.phone }}"
+      style="display:inline-block;margin-left:20rpx;">联系方式:{{ commissioner.phone }}</view>
+  </view>
   <view class="columns">
     <view class="column">
       <view class="column_value">{{ score }}</view>
