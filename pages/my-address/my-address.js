@@ -56,11 +56,13 @@ Page({
             const index = _self.data.addresses.findIndex((item)=>{
               return item.id === id;
             });
+
             let addresses = [];
             if (_self.data.addresses.length > 1){
-              addresses = JSON.parse(JSON.stringify(_self.data.addresses)).splice(index, 1);
+              addresses = JSON.parse(JSON.stringify(_self.data.addresses));
+              addresses.splice(index, 1);
             }
-            
+
             _self.setData({
               addresses
             });

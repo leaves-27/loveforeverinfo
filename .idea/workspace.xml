@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594e2587-ba34-4de1-83e9-ed72133055ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/doctor/doctor.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/doctor/doctor.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-address/my-address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-address/my-address.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+            <state relative-caret-position="460">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -32,22 +32,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="31" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="31" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+            <state relative-caret-position="314">
+              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -55,16 +43,9 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -181,14 +162,14 @@
         <option value="$PROJECT_DIR$/pages/my-address/components/addresses/addresses.js" />
         <option value="$PROJECT_DIR$/pages/my-address/my-address.wxml" />
         <option value="$PROJECT_DIR$/apis/address/delete.js" />
-        <option value="$PROJECT_DIR$/pages/my-address/my-address.js" />
         <option value="$PROJECT_DIR$/pages/doctor/doctor.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-address/my-address.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="150" />
-    <option name="y" value="119" />
+    <option name="x" value="369" />
+    <option name="y" value="77" />
     <option name="width" value="1193" />
     <option name="height" value="877" />
   </component>
@@ -214,7 +195,7 @@
               <item name="loveforeverinfo" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveforeverinfo" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="doctor" type="462c0819:PsiDirectoryNode" />
+              <item name="my-address" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -397,15 +378,15 @@
       <workItem from="1570687157101" duration="1000" />
       <workItem from="1570801666704" duration="4878000" />
       <workItem from="1570807960661" duration="110000" />
-      <workItem from="1571182874837" duration="217000" />
+      <workItem from="1571182874837" duration="1106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422178000" />
+    <option name="totallyTimeSpent" value="423067000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="150" y="119" width="1193" height="877" extended-state="0" />
+    <frame x="369" y="77" width="1193" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242246" />
@@ -640,9 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-detail/order-detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -842,12 +820,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
+    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        <state relative-caret-position="296">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,20 +842,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="18" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+        <state relative-caret-position="314">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/doctor/doctor.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/doctor/components/orders/orders.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-address/my-address.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="460">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
-            <element signature="n#style#0;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
